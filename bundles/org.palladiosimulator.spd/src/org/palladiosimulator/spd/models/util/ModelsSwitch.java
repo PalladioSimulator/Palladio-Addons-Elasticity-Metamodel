@@ -13,6 +13,7 @@ import org.palladiosimulator.spd.models.FuzzySARSAModel;
 import org.palladiosimulator.spd.models.LearningBasedModel;
 import org.palladiosimulator.spd.models.ModelsPackage;
 import org.palladiosimulator.spd.models.RandomModel;
+import org.palladiosimulator.spd.models.ResponseTimeSpecification;
 
 /**
  * <!-- begin-user-doc --> The <b>Switch</b> for the model's inheritance hierarchy. It supports the
@@ -145,6 +146,14 @@ public class ModelsSwitch<T> extends Switch<T> {
             }
             return result;
         }
+        case ModelsPackage.RESPONSE_TIME_SPECIFICATION: {
+            final ResponseTimeSpecification responseTimeSpecification = (ResponseTimeSpecification) theEObject;
+            T result = this.caseResponseTimeSpecification(responseTimeSpecification);
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
+            return result;
+        }
         default:
             return this.defaultCase(theEObject);
         }
@@ -240,6 +249,22 @@ public class ModelsSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseFuzzySARSAModel(final FuzzySARSAModel object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Response Time
+     * Specification</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Response Time
+     *         Specification</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseResponseTimeSpecification(final ResponseTimeSpecification object) {
         return null;
     }
 

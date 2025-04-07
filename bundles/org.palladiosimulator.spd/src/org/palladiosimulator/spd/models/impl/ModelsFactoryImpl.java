@@ -15,6 +15,7 @@ import org.palladiosimulator.spd.models.InitializationType;
 import org.palladiosimulator.spd.models.ModelsFactory;
 import org.palladiosimulator.spd.models.ModelsPackage;
 import org.palladiosimulator.spd.models.RandomModel;
+import org.palladiosimulator.spd.models.ResponseTimeSpecification;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
@@ -63,6 +64,8 @@ public class ModelsFactoryImpl extends EFactoryImpl implements ModelsFactory {
             return this.createFuzzyQLearningModel();
         case ModelsPackage.FUZZY_SARSA_MODEL:
             return this.createFuzzySARSAModel();
+        case ModelsPackage.RESPONSE_TIME_SPECIFICATION:
+            return this.createResponseTimeSpecification();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -129,6 +132,17 @@ public class ModelsFactoryImpl extends EFactoryImpl implements ModelsFactory {
     public FuzzySARSAModel createFuzzySARSAModel() {
         final FuzzySARSAModelImpl fuzzySARSAModel = new FuzzySARSAModelImpl();
         return fuzzySARSAModel;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public ResponseTimeSpecification createResponseTimeSpecification() {
+        final ResponseTimeSpecificationImpl responseTimeSpecification = new ResponseTimeSpecificationImpl();
+        return responseTimeSpecification;
     }
 
     /**

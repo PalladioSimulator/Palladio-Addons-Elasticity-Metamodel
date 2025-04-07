@@ -143,6 +143,31 @@ public class ModelsItemProviderAdapterFactory extends ModelsAdapterFactory
     }
 
     /**
+     * This keeps track of the one adapter used for all
+     * {@link org.palladiosimulator.spd.models.ResponseTimeSpecification} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected ResponseTimeSpecificationItemProvider responseTimeSpecificationItemProvider;
+
+    /**
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.spd.models.ResponseTimeSpecification}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Adapter createResponseTimeSpecificationAdapter() {
+        if (this.responseTimeSpecificationItemProvider == null) {
+            this.responseTimeSpecificationItemProvider = new ResponseTimeSpecificationItemProvider(this);
+        }
+
+        return this.responseTimeSpecificationItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      *
@@ -253,6 +278,9 @@ public class ModelsItemProviderAdapterFactory extends ModelsAdapterFactory
         }
         if (this.fuzzySARSAModelItemProvider != null) {
             this.fuzzySARSAModelItemProvider.dispose();
+        }
+        if (this.responseTimeSpecificationItemProvider != null) {
+            this.responseTimeSpecificationItemProvider.dispose();
         }
     }
 

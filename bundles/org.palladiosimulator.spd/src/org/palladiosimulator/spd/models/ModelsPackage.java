@@ -270,40 +270,13 @@ public interface ModelsPackage extends EPackage {
     int FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS = LEARNING_BASED_MODEL_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Response Time Stimulus</b></em>' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS = LEARNING_BASED_MODEL_FEATURE_COUNT + 1;
-
-    /**
-     * The feature id for the '<em><b>Target Response Time</b></em>' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_LEARNING_MODEL__TARGET_RESPONSE_TIME = LEARNING_BASED_MODEL_FEATURE_COUNT + 2;
-
-    /**
-     * The feature id for the '<em><b>Response Time Aggregation Method</b></em>' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_LEARNING_MODEL__RESPONSE_TIME_AGGREGATION_METHOD = LEARNING_BASED_MODEL_FEATURE_COUNT + 3;
-
-    /**
      * The feature id for the '<em><b>Epsilon</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int FUZZY_LEARNING_MODEL__EPSILON = LEARNING_BASED_MODEL_FEATURE_COUNT + 4;
+    int FUZZY_LEARNING_MODEL__EPSILON = LEARNING_BASED_MODEL_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Discount Factor</b></em>' attribute. <!-- begin-user-doc -->
@@ -312,7 +285,7 @@ public interface ModelsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FUZZY_LEARNING_MODEL__DISCOUNT_FACTOR = LEARNING_BASED_MODEL_FEATURE_COUNT + 5;
+    int FUZZY_LEARNING_MODEL__DISCOUNT_FACTOR = LEARNING_BASED_MODEL_FEATURE_COUNT + 2;
 
     /**
      * The feature id for the '<em><b>Initialization Type</b></em>' attribute. <!-- begin-user-doc
@@ -321,7 +294,16 @@ public interface ModelsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FUZZY_LEARNING_MODEL__INITIALIZATION_TYPE = LEARNING_BASED_MODEL_FEATURE_COUNT + 6;
+    int FUZZY_LEARNING_MODEL__INITIALIZATION_TYPE = LEARNING_BASED_MODEL_FEATURE_COUNT + 3;
+
+    /**
+     * The feature id for the '<em><b>Response Time Specification</b></em>' containment reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FUZZY_LEARNING_MODEL__RESPONSE_TIME_SPECIFICATION = LEARNING_BASED_MODEL_FEATURE_COUNT + 4;
 
     /**
      * The number of structural features of the '<em>Fuzzy Learning Model</em>' class. <!--
@@ -330,7 +312,7 @@ public interface ModelsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int FUZZY_LEARNING_MODEL_FEATURE_COUNT = LEARNING_BASED_MODEL_FEATURE_COUNT + 7;
+    int FUZZY_LEARNING_MODEL_FEATURE_COUNT = LEARNING_BASED_MODEL_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Interval</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -369,33 +351,6 @@ public interface ModelsPackage extends EPackage {
     int FUZZY_QLEARNING_MODEL__WORKLOAD_STIMULUS = FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS;
 
     /**
-     * The feature id for the '<em><b>Response Time Stimulus</b></em>' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_QLEARNING_MODEL__RESPONSE_TIME_STIMULUS = FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS;
-
-    /**
-     * The feature id for the '<em><b>Target Response Time</b></em>' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_QLEARNING_MODEL__TARGET_RESPONSE_TIME = FUZZY_LEARNING_MODEL__TARGET_RESPONSE_TIME;
-
-    /**
-     * The feature id for the '<em><b>Response Time Aggregation Method</b></em>' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_QLEARNING_MODEL__RESPONSE_TIME_AGGREGATION_METHOD = FUZZY_LEARNING_MODEL__RESPONSE_TIME_AGGREGATION_METHOD;
-
-    /**
      * The feature id for the '<em><b>Epsilon</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -421,6 +376,15 @@ public interface ModelsPackage extends EPackage {
      * @ordered
      */
     int FUZZY_QLEARNING_MODEL__INITIALIZATION_TYPE = FUZZY_LEARNING_MODEL__INITIALIZATION_TYPE;
+
+    /**
+     * The feature id for the '<em><b>Response Time Specification</b></em>' containment reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FUZZY_QLEARNING_MODEL__RESPONSE_TIME_SPECIFICATION = FUZZY_LEARNING_MODEL__RESPONSE_TIME_SPECIFICATION;
 
     /**
      * The number of structural features of the '<em>Fuzzy QLearning Model</em>' class. <!--
@@ -468,33 +432,6 @@ public interface ModelsPackage extends EPackage {
     int FUZZY_SARSA_MODEL__WORKLOAD_STIMULUS = FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS;
 
     /**
-     * The feature id for the '<em><b>Response Time Stimulus</b></em>' containment reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_SARSA_MODEL__RESPONSE_TIME_STIMULUS = FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS;
-
-    /**
-     * The feature id for the '<em><b>Target Response Time</b></em>' attribute. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_SARSA_MODEL__TARGET_RESPONSE_TIME = FUZZY_LEARNING_MODEL__TARGET_RESPONSE_TIME;
-
-    /**
-     * The feature id for the '<em><b>Response Time Aggregation Method</b></em>' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int FUZZY_SARSA_MODEL__RESPONSE_TIME_AGGREGATION_METHOD = FUZZY_LEARNING_MODEL__RESPONSE_TIME_AGGREGATION_METHOD;
-
-    /**
      * The feature id for the '<em><b>Epsilon</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -522,6 +459,15 @@ public interface ModelsPackage extends EPackage {
     int FUZZY_SARSA_MODEL__INITIALIZATION_TYPE = FUZZY_LEARNING_MODEL__INITIALIZATION_TYPE;
 
     /**
+     * The feature id for the '<em><b>Response Time Specification</b></em>' containment reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int FUZZY_SARSA_MODEL__RESPONSE_TIME_SPECIFICATION = FUZZY_LEARNING_MODEL__RESPONSE_TIME_SPECIFICATION;
+
+    /**
      * The number of structural features of the '<em>Fuzzy SARSA Model</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
@@ -531,6 +477,53 @@ public interface ModelsPackage extends EPackage {
     int FUZZY_SARSA_MODEL_FEATURE_COUNT = FUZZY_LEARNING_MODEL_FEATURE_COUNT + 0;
 
     /**
+     * The meta object id for the
+     * '{@link org.palladiosimulator.spd.models.impl.ResponseTimeSpecificationImpl <em>Response Time
+     * Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @see org.palladiosimulator.spd.models.impl.ResponseTimeSpecificationImpl
+     * @see org.palladiosimulator.spd.models.impl.ModelsPackageImpl#getResponseTimeSpecification()
+     * @generated
+     */
+    int RESPONSE_TIME_SPECIFICATION = 6;
+
+    /**
+     * The feature id for the '<em><b>Response Time Stimulus</b></em>' reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS = 0;
+
+    /**
+     * The feature id for the '<em><b>Target Response Time</b></em>' attribute. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int RESPONSE_TIME_SPECIFICATION__TARGET_RESPONSE_TIME = 1;
+
+    /**
+     * The feature id for the '<em><b>Response Time Aggregation Method</b></em>' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_AGGREGATION_METHOD = 2;
+
+    /**
+     * The number of structural features of the '<em>Response Time Specification</em>' class. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int RESPONSE_TIME_SPECIFICATION_FEATURE_COUNT = 3;
+
+    /**
      * The meta object id for the '{@link org.palladiosimulator.spd.models.InitializationType
      * <em>Initialization Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -538,7 +531,7 @@ public interface ModelsPackage extends EPackage {
      * @see org.palladiosimulator.spd.models.impl.ModelsPackageImpl#getInitializationType()
      * @generated
      */
-    int INITIALIZATION_TYPE = 6;
+    int INITIALIZATION_TYPE = 7;
 
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.spd.models.BaseModel <em>Base
@@ -676,42 +669,6 @@ public interface ModelsPackage extends EPackage {
     EReference getFuzzyLearningModel_WorkloadStimulus();
 
     /**
-     * Returns the meta object for the containment reference
-     * '{@link org.palladiosimulator.spd.models.FuzzyLearningModel#getResponseTimeStimulus
-     * <em>Response Time Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the containment reference '<em>Response Time Stimulus</em>'.
-     * @see org.palladiosimulator.spd.models.FuzzyLearningModel#getResponseTimeStimulus()
-     * @see #getFuzzyLearningModel()
-     * @generated
-     */
-    EReference getFuzzyLearningModel_ResponseTimeStimulus();
-
-    /**
-     * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.spd.models.FuzzyLearningModel#getTargetResponseTime <em>Target
-     * Response Time</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the attribute '<em>Target Response Time</em>'.
-     * @see org.palladiosimulator.spd.models.FuzzyLearningModel#getTargetResponseTime()
-     * @see #getFuzzyLearningModel()
-     * @generated
-     */
-    EAttribute getFuzzyLearningModel_TargetResponseTime();
-
-    /**
-     * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.spd.models.FuzzyLearningModel#getResponseTimeAggregationMethod
-     * <em>Response Time Aggregation Method</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the attribute '<em>Response Time Aggregation Method</em>'.
-     * @see org.palladiosimulator.spd.models.FuzzyLearningModel#getResponseTimeAggregationMethod()
-     * @see #getFuzzyLearningModel()
-     * @generated
-     */
-    EAttribute getFuzzyLearningModel_ResponseTimeAggregationMethod();
-
-    /**
      * Returns the meta object for the attribute
      * '{@link org.palladiosimulator.spd.models.FuzzyLearningModel#getEpsilon <em>Epsilon</em>}'.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -748,6 +705,18 @@ public interface ModelsPackage extends EPackage {
     EAttribute getFuzzyLearningModel_InitializationType();
 
     /**
+     * Returns the meta object for the containment reference
+     * '{@link org.palladiosimulator.spd.models.FuzzyLearningModel#getResponseTimeSpecification
+     * <em>Response Time Specification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the containment reference '<em>Response Time Specification</em>'.
+     * @see org.palladiosimulator.spd.models.FuzzyLearningModel#getResponseTimeSpecification()
+     * @see #getFuzzyLearningModel()
+     * @generated
+     */
+    EReference getFuzzyLearningModel_ResponseTimeSpecification();
+
+    /**
      * Returns the meta object for class '{@link org.palladiosimulator.spd.models.FuzzySARSAModel
      * <em>Fuzzy SARSA Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -756,6 +725,53 @@ public interface ModelsPackage extends EPackage {
      * @generated
      */
     EClass getFuzzySARSAModel();
+
+    /**
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.spd.models.ResponseTimeSpecification <em>Response Time
+     * Specification</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for class '<em>Response Time Specification</em>'.
+     * @see org.palladiosimulator.spd.models.ResponseTimeSpecification
+     * @generated
+     */
+    EClass getResponseTimeSpecification();
+
+    /**
+     * Returns the meta object for the reference
+     * '{@link org.palladiosimulator.spd.models.ResponseTimeSpecification#getResponseTimeStimulus
+     * <em>Response Time Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the reference '<em>Response Time Stimulus</em>'.
+     * @see org.palladiosimulator.spd.models.ResponseTimeSpecification#getResponseTimeStimulus()
+     * @see #getResponseTimeSpecification()
+     * @generated
+     */
+    EReference getResponseTimeSpecification_ResponseTimeStimulus();
+
+    /**
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.spd.models.ResponseTimeSpecification#getTargetResponseTime
+     * <em>Target Response Time</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Target Response Time</em>'.
+     * @see org.palladiosimulator.spd.models.ResponseTimeSpecification#getTargetResponseTime()
+     * @see #getResponseTimeSpecification()
+     * @generated
+     */
+    EAttribute getResponseTimeSpecification_TargetResponseTime();
+
+    /**
+     * Returns the meta object for the attribute
+     * '{@link org.palladiosimulator.spd.models.ResponseTimeSpecification#getResponseTimeAggregationMethod
+     * <em>Response Time Aggregation Method</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the attribute '<em>Response Time Aggregation Method</em>'.
+     * @see org.palladiosimulator.spd.models.ResponseTimeSpecification#getResponseTimeAggregationMethod()
+     * @see #getResponseTimeSpecification()
+     * @generated
+     */
+    EAttribute getResponseTimeSpecification_ResponseTimeAggregationMethod();
 
     /**
      * Returns the meta object for enum '{@link org.palladiosimulator.spd.models.InitializationType
@@ -901,32 +917,6 @@ public interface ModelsPackage extends EPackage {
         EReference FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS = eINSTANCE.getFuzzyLearningModel_WorkloadStimulus();
 
         /**
-         * The meta object literal for the '<em><b>Response Time Stimulus</b></em>' containment
-         * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS = eINSTANCE
-            .getFuzzyLearningModel_ResponseTimeStimulus();
-
-        /**
-         * The meta object literal for the '<em><b>Target Response Time</b></em>' attribute feature.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EAttribute FUZZY_LEARNING_MODEL__TARGET_RESPONSE_TIME = eINSTANCE.getFuzzyLearningModel_TargetResponseTime();
-
-        /**
-         * The meta object literal for the '<em><b>Response Time Aggregation Method</b></em>'
-         * attribute feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EAttribute FUZZY_LEARNING_MODEL__RESPONSE_TIME_AGGREGATION_METHOD = eINSTANCE
-            .getFuzzyLearningModel_ResponseTimeAggregationMethod();
-
-        /**
          * The meta object literal for the '<em><b>Epsilon</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
          *
@@ -951,6 +941,15 @@ public interface ModelsPackage extends EPackage {
         EAttribute FUZZY_LEARNING_MODEL__INITIALIZATION_TYPE = eINSTANCE.getFuzzyLearningModel_InitializationType();
 
         /**
+         * The meta object literal for the '<em><b>Response Time Specification</b></em>' containment
+         * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EReference FUZZY_LEARNING_MODEL__RESPONSE_TIME_SPECIFICATION = eINSTANCE
+            .getFuzzyLearningModel_ResponseTimeSpecification();
+
+        /**
          * The meta object literal for the
          * '{@link org.palladiosimulator.spd.models.impl.FuzzySARSAModelImpl <em>Fuzzy SARSA
          * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -960,6 +959,44 @@ public interface ModelsPackage extends EPackage {
          * @generated
          */
         EClass FUZZY_SARSA_MODEL = eINSTANCE.getFuzzySARSAModel();
+
+        /**
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.spd.models.impl.ResponseTimeSpecificationImpl <em>Response
+         * Time Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @see org.palladiosimulator.spd.models.impl.ResponseTimeSpecificationImpl
+         * @see org.palladiosimulator.spd.models.impl.ModelsPackageImpl#getResponseTimeSpecification()
+         * @generated
+         */
+        EClass RESPONSE_TIME_SPECIFICATION = eINSTANCE.getResponseTimeSpecification();
+
+        /**
+         * The meta object literal for the '<em><b>Response Time Stimulus</b></em>' reference
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EReference RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS = eINSTANCE
+            .getResponseTimeSpecification_ResponseTimeStimulus();
+
+        /**
+         * The meta object literal for the '<em><b>Target Response Time</b></em>' attribute feature.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute RESPONSE_TIME_SPECIFICATION__TARGET_RESPONSE_TIME = eINSTANCE
+            .getResponseTimeSpecification_TargetResponseTime();
+
+        /**
+         * The meta object literal for the '<em><b>Response Time Aggregation Method</b></em>'
+         * attribute feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EAttribute RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_AGGREGATION_METHOD = eINSTANCE
+            .getResponseTimeSpecification_ResponseTimeAggregationMethod();
 
         /**
          * The meta object literal for the

@@ -214,14 +214,18 @@
       </genClasses>
       <genClasses image="false" ecoreClass="SPD.ecore#//models/FuzzyLearningModel">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPD.ecore#//models/FuzzyLearningModel/workloadStimulus"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPD.ecore#//models/FuzzyLearningModel/responseTimeStimulus"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPD.ecore#//models/FuzzyLearningModel/targetResponseTime"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPD.ecore#//models/FuzzyLearningModel/responseTimeAggregationMethod"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPD.ecore#//models/FuzzyLearningModel/epsilon"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPD.ecore#//models/FuzzyLearningModel/discountFactor"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPD.ecore#//models/FuzzyLearningModel/initializationType"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPD.ecore#//models/FuzzyLearningModel/responseTimeSpecification"/>
       </genClasses>
       <genClasses ecoreClass="SPD.ecore#//models/FuzzySARSAModel"/>
+      <genClasses ecoreClass="SPD.ecore#//models/ResponseTimeSpecification">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference SPD.ecore#//models/ResponseTimeSpecification/responseTimeStimulus"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPD.ecore#//models/ResponseTimeSpecification/targetResponseTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPD.ecore#//models/ResponseTimeSpecification/responseTimeAggregationMethod"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Datatypes" basePackage="org.palladiosimulator.spd"
         disposableProviderFactory="true" ecorePackage="SPD.ecore#//datatypes">

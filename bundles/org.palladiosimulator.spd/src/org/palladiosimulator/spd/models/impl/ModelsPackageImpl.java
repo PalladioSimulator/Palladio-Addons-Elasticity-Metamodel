@@ -32,6 +32,7 @@ import org.palladiosimulator.spd.models.LearningBasedModel;
 import org.palladiosimulator.spd.models.ModelsFactory;
 import org.palladiosimulator.spd.models.ModelsPackage;
 import org.palladiosimulator.spd.models.RandomModel;
+import org.palladiosimulator.spd.models.ResponseTimeSpecification;
 import org.palladiosimulator.spd.targets.TargetsPackage;
 import org.palladiosimulator.spd.targets.impl.TargetsPackageImpl;
 import org.palladiosimulator.spd.triggers.TriggersPackage;
@@ -93,6 +94,13 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
      * @generated
      */
     private EClass fuzzySARSAModelEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    private EClass responseTimeSpecificationEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -370,42 +378,9 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
      * @generated
      */
     @Override
-    public EReference getFuzzyLearningModel_ResponseTimeStimulus() {
-        return (EReference) this.fuzzyLearningModelEClass.getEStructuralFeatures()
-            .get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EAttribute getFuzzyLearningModel_TargetResponseTime() {
-        return (EAttribute) this.fuzzyLearningModelEClass.getEStructuralFeatures()
-            .get(2);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EAttribute getFuzzyLearningModel_ResponseTimeAggregationMethod() {
-        return (EAttribute) this.fuzzyLearningModelEClass.getEStructuralFeatures()
-            .get(3);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
     public EAttribute getFuzzyLearningModel_Epsilon() {
         return (EAttribute) this.fuzzyLearningModelEClass.getEStructuralFeatures()
-            .get(4);
+            .get(1);
     }
 
     /**
@@ -416,7 +391,7 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
     @Override
     public EAttribute getFuzzyLearningModel_DiscountFactor() {
         return (EAttribute) this.fuzzyLearningModelEClass.getEStructuralFeatures()
-            .get(5);
+            .get(2);
     }
 
     /**
@@ -427,7 +402,18 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
     @Override
     public EAttribute getFuzzyLearningModel_InitializationType() {
         return (EAttribute) this.fuzzyLearningModelEClass.getEStructuralFeatures()
-            .get(6);
+            .get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EReference getFuzzyLearningModel_ResponseTimeSpecification() {
+        return (EReference) this.fuzzyLearningModelEClass.getEStructuralFeatures()
+            .get(4);
     }
 
     /**
@@ -438,6 +424,49 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
     @Override
     public EClass getFuzzySARSAModel() {
         return this.fuzzySARSAModelEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EClass getResponseTimeSpecification() {
+        return this.responseTimeSpecificationEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EReference getResponseTimeSpecification_ResponseTimeStimulus() {
+        return (EReference) this.responseTimeSpecificationEClass.getEStructuralFeatures()
+            .get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getResponseTimeSpecification_TargetResponseTime() {
+        return (EAttribute) this.responseTimeSpecificationEClass.getEStructuralFeatures()
+            .get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EAttribute getResponseTimeSpecification_ResponseTimeAggregationMethod() {
+        return (EAttribute) this.responseTimeSpecificationEClass.getEStructuralFeatures()
+            .get(2);
     }
 
     /**
@@ -496,14 +525,19 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
 
         this.fuzzyLearningModelEClass = this.createEClass(FUZZY_LEARNING_MODEL);
         this.createEReference(this.fuzzyLearningModelEClass, FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS);
-        this.createEReference(this.fuzzyLearningModelEClass, FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS);
-        this.createEAttribute(this.fuzzyLearningModelEClass, FUZZY_LEARNING_MODEL__TARGET_RESPONSE_TIME);
-        this.createEAttribute(this.fuzzyLearningModelEClass, FUZZY_LEARNING_MODEL__RESPONSE_TIME_AGGREGATION_METHOD);
         this.createEAttribute(this.fuzzyLearningModelEClass, FUZZY_LEARNING_MODEL__EPSILON);
         this.createEAttribute(this.fuzzyLearningModelEClass, FUZZY_LEARNING_MODEL__DISCOUNT_FACTOR);
         this.createEAttribute(this.fuzzyLearningModelEClass, FUZZY_LEARNING_MODEL__INITIALIZATION_TYPE);
+        this.createEReference(this.fuzzyLearningModelEClass, FUZZY_LEARNING_MODEL__RESPONSE_TIME_SPECIFICATION);
 
         this.fuzzySARSAModelEClass = this.createEClass(FUZZY_SARSA_MODEL);
+
+        this.responseTimeSpecificationEClass = this.createEClass(RESPONSE_TIME_SPECIFICATION);
+        this.createEReference(this.responseTimeSpecificationEClass,
+                RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS);
+        this.createEAttribute(this.responseTimeSpecificationEClass, RESPONSE_TIME_SPECIFICATION__TARGET_RESPONSE_TIME);
+        this.createEAttribute(this.responseTimeSpecificationEClass,
+                RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_AGGREGATION_METHOD);
 
         // Create enums
         this.initializationTypeEEnum = this.createEEnum(INITIALIZATION_TYPE);
@@ -595,17 +629,6 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
         this.initEReference(this.getFuzzyLearningModel_WorkloadStimulus(), theStimuliPackage.getStimulus(), null,
                 "workloadStimulus", null, 1, 1, FuzzyLearningModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getFuzzyLearningModel_ResponseTimeStimulus(),
-                theStimuliPackage.getOperationResponseTime(), null, "responseTimeStimulus", null, 1, 1,
-                FuzzyLearningModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getFuzzyLearningModel_TargetResponseTime(), theDatatypesPackage.getPositiveDouble(),
-                "targetResponseTime", null, 1, 1, FuzzyLearningModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getFuzzyLearningModel_ResponseTimeAggregationMethod(),
-                theTriggersPackage.getAGGREGATIONMETHOD(), "responseTimeAggregationMethod", null, 0, 1,
-                FuzzyLearningModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getFuzzyLearningModel_Epsilon(), theDatatypesPackage.getPercentDouble(), "epsilon",
                 "0.01", 0, 1, FuzzyLearningModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
                 !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -615,9 +638,27 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
         this.initEAttribute(this.getFuzzyLearningModel_InitializationType(), this.getInitializationType(),
                 "initializationType", null, 0, 1, FuzzyLearningModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getFuzzyLearningModel_ResponseTimeSpecification(), this.getResponseTimeSpecification(),
+                null, "responseTimeSpecification", null, 1, 1, FuzzyLearningModel.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.fuzzySARSAModelEClass, FuzzySARSAModel.class, "FuzzySARSAModel", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        this.initEClass(this.responseTimeSpecificationEClass, ResponseTimeSpecification.class,
+                "ResponseTimeSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getResponseTimeSpecification_ResponseTimeStimulus(),
+                theStimuliPackage.getOperationResponseTime(), null, "responseTimeStimulus", null, 1, 1,
+                ResponseTimeSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getResponseTimeSpecification_TargetResponseTime(),
+                theDatatypesPackage.getPositiveDouble(), "targetResponseTime", null, 0, 1,
+                ResponseTimeSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getResponseTimeSpecification_ResponseTimeAggregationMethod(),
+                theTriggersPackage.getAGGREGATIONMETHOD(), "responseTimeAggregationMethod", null, 0, 1,
+                ResponseTimeSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         this.initEEnum(this.initializationTypeEEnum, InitializationType.class, "InitializationType");

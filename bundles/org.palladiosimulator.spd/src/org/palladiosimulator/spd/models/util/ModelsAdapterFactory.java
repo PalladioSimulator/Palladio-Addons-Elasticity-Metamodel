@@ -14,6 +14,7 @@ import org.palladiosimulator.spd.models.FuzzySARSAModel;
 import org.palladiosimulator.spd.models.LearningBasedModel;
 import org.palladiosimulator.spd.models.ModelsPackage;
 import org.palladiosimulator.spd.models.RandomModel;
+import org.palladiosimulator.spd.models.ResponseTimeSpecification;
 
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
@@ -96,6 +97,11 @@ public class ModelsAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseFuzzySARSAModel(final FuzzySARSAModel object) {
             return ModelsAdapterFactory.this.createFuzzySARSAModelAdapter();
+        }
+
+        @Override
+        public Adapter caseResponseTimeSpecification(final ResponseTimeSpecification object) {
+            return ModelsAdapterFactory.this.createResponseTimeSpecificationAdapter();
         }
 
         @Override
@@ -203,6 +209,21 @@ public class ModelsAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createFuzzySARSAModelAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class
+     * '{@link org.palladiosimulator.spd.models.ResponseTimeSpecification <em>Response Time
+     * Specification</em>}'. <!-- begin-user-doc --> This default implementation returns null so
+     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
+     * the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.spd.models.ResponseTimeSpecification
+     * @generated
+     */
+    public Adapter createResponseTimeSpecificationAdapter() {
         return null;
     }
 

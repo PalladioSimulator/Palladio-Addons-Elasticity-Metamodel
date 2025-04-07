@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.spd.models.FuzzyQLearningModel;
-import org.palladiosimulator.spd.models.ModelsPackage;
 
 /**
  * This is the item provider adapter for a
@@ -89,28 +88,6 @@ public class FuzzyQLearningModelItemProvider extends FuzzyLearningModelItemProvi
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
-    }
-
-    /**
-     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String getCreateChildText(final Object owner, final Object feature, final Object child,
-            final Collection<?> selection) {
-        final Object childFeature = feature;
-        final Object childObject = child;
-
-        final boolean qualify = childFeature == ModelsPackage.Literals.FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS
-                || childFeature == ModelsPackage.Literals.FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS;
-
-        if (qualify) {
-            return this.getString("_UI_CreateChild_text2", new Object[] { this.getTypeText(childObject),
-                    this.getFeatureText(childFeature), this.getTypeText(owner) });
-        }
-        return super.getCreateChildText(owner, feature, child, selection);
     }
 
 }

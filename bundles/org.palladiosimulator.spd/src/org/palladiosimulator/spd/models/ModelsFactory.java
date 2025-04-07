@@ -48,6 +48,15 @@ public interface ModelsFactory extends EFactory {
     FuzzySARSAModel createFuzzySARSAModel();
 
     /**
+     * Returns a new object of class '<em>Response Time Specification</em>'. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     *
+     * @return a new object of class '<em>Response Time Specification</em>'.
+     * @generated
+     */
+    ResponseTimeSpecification createResponseTimeSpecification();
+
+    /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the package supported by this factory.

@@ -14,6 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.spd.models.FuzzyLearningModel;
+import org.palladiosimulator.spd.models.ModelsFactory;
 import org.palladiosimulator.spd.models.ModelsPackage;
 import org.palladiosimulator.spd.triggers.stimuli.StimuliFactory;
 
@@ -46,45 +47,11 @@ public class FuzzyLearningModelItemProvider extends LearningBasedModelItemProvid
         if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            this.addTargetResponseTimePropertyDescriptor(object);
-            this.addResponseTimeAggregationMethodPropertyDescriptor(object);
             this.addEpsilonPropertyDescriptor(object);
             this.addDiscountFactorPropertyDescriptor(object);
             this.addInitializationTypePropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the Target Response Time feature. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    protected void addTargetResponseTimePropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_FuzzyLearningModel_targetResponseTime_feature"),
-                this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_FuzzyLearningModel_targetResponseTime_feature", "_UI_FuzzyLearningModel_type"),
-                ModelsPackage.Literals.FUZZY_LEARNING_MODEL__TARGET_RESPONSE_TIME, true, false, false,
-                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
-    }
-
-    /**
-     * This adds a property descriptor for the Response Time Aggregation Method feature. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    protected void addResponseTimeAggregationMethodPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_FuzzyLearningModel_responseTimeAggregationMethod_feature"),
-                this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_FuzzyLearningModel_responseTimeAggregationMethod_feature", "_UI_FuzzyLearningModel_type"),
-                ModelsPackage.Literals.FUZZY_LEARNING_MODEL__RESPONSE_TIME_AGGREGATION_METHOD, true, false, false,
-                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -149,7 +116,7 @@ public class FuzzyLearningModelItemProvider extends LearningBasedModelItemProvid
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
             this.childrenFeatures.add(ModelsPackage.Literals.FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS);
-            this.childrenFeatures.add(ModelsPackage.Literals.FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS);
+            this.childrenFeatures.add(ModelsPackage.Literals.FUZZY_LEARNING_MODEL__RESPONSE_TIME_SPECIFICATION);
         }
         return this.childrenFeatures;
     }
@@ -191,15 +158,13 @@ public class FuzzyLearningModelItemProvider extends LearningBasedModelItemProvid
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(FuzzyLearningModel.class)) {
-        case ModelsPackage.FUZZY_LEARNING_MODEL__TARGET_RESPONSE_TIME:
-        case ModelsPackage.FUZZY_LEARNING_MODEL__RESPONSE_TIME_AGGREGATION_METHOD:
         case ModelsPackage.FUZZY_LEARNING_MODEL__EPSILON:
         case ModelsPackage.FUZZY_LEARNING_MODEL__DISCOUNT_FACTOR:
         case ModelsPackage.FUZZY_LEARNING_MODEL__INITIALIZATION_TYPE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case ModelsPackage.FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS:
-        case ModelsPackage.FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS:
+        case ModelsPackage.FUZZY_LEARNING_MODEL__RESPONSE_TIME_SPECIFICATION:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -253,30 +218,8 @@ public class FuzzyLearningModelItemProvider extends LearningBasedModelItemProvid
                     StimuliFactory.eINSTANCE.createNetworkUtilization()));
 
         newChildDescriptors
-            .add(this.createChildParameter(ModelsPackage.Literals.FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS,
-                    StimuliFactory.eINSTANCE.createOperationResponseTime()));
-    }
-
-    /**
-     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public String getCreateChildText(final Object owner, final Object feature, final Object child,
-            final Collection<?> selection) {
-        final Object childFeature = feature;
-        final Object childObject = child;
-
-        final boolean qualify = childFeature == ModelsPackage.Literals.FUZZY_LEARNING_MODEL__WORKLOAD_STIMULUS
-                || childFeature == ModelsPackage.Literals.FUZZY_LEARNING_MODEL__RESPONSE_TIME_STIMULUS;
-
-        if (qualify) {
-            return this.getString("_UI_CreateChild_text2", new Object[] { this.getTypeText(childObject),
-                    this.getFeatureText(childFeature), this.getTypeText(owner) });
-        }
-        return super.getCreateChildText(owner, feature, child, selection);
+            .add(this.createChildParameter(ModelsPackage.Literals.FUZZY_LEARNING_MODEL__RESPONSE_TIME_SPECIFICATION,
+                    ModelsFactory.eINSTANCE.createResponseTimeSpecification()));
     }
 
 }
