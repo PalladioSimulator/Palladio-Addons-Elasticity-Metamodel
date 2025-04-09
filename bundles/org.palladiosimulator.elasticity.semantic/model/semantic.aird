@@ -27,6 +27,7 @@
     <semanticResources>platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.genmodel</semanticResources>
     <semanticResources>platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore</semanticResources>
     <semanticResources>platform:/resource/org.palladiosimulator.elasticity/model/Elasticity.ecore</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.elasticity/model/Elasticity.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_mmzIYNCNEe2hWdskljsu2A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mnwKoNCNEe2hWdskljsu2A" name="semantic" repPath="#_mnZlUNCNEe2hWdskljsu2A" changeId="4174d87e-8270-4255-800b-97dec8610bed">

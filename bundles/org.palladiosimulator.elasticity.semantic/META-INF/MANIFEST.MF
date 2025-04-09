@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.elasticity.semantic;singleton:=true
-Automatic-Module-Name: org.palladiosimulator.spd.semantic
+Automatic-Module-Name: org.palladiosimulator.elasticity.semantic
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
