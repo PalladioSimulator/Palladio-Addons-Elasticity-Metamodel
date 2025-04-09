@@ -26,8 +26,8 @@ package org.palladiosimulator.elasticity.triggers;
 public interface SimpleFireOnValue extends BaseTrigger {
     /**
      * Returns the value of the '<em><b>Relational Operator</b></em>' attribute. The literals are
-     * from the enumeration {@link org.palladiosimulator.elasticity.triggers.RelationalOperator}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * from the enumeration {@link org.palladiosimulator.elasticity.triggers.RelationalOperator}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the value of the '<em>Relational Operator</em>' attribute.
      * @see org.palladiosimulator.elasticity.triggers.RelationalOperator

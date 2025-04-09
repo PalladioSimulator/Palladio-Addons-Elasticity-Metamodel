@@ -33,7 +33,7 @@ public class ScalingPolicyDefinitionAllTests extends TestSuite {
      */
     public static Test suite() {
         final TestSuite suite = new ScalingPolicyDefinitionAllTests("ScalingPolicyDefinition Tests");
-        suite.addTest(SpdTests.suite());
+        suite.addTest(ElasticityTests.suite());
         suite.addTest(TargetsTests.suite());
         return suite;
     }

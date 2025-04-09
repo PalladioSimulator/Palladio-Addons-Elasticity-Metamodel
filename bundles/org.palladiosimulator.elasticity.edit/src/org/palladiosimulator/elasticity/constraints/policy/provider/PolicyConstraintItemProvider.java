@@ -12,12 +12,12 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint;
 import org.palladiosimulator.elasticity.constraints.provider.AbstractConstraintItemProvider;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint} object. <!-- begin-user-doc
- * --> <!-- end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
@@ -92,7 +92,7 @@ public class PolicyConstraintItemProvider extends AbstractConstraintItemProvider
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
 }

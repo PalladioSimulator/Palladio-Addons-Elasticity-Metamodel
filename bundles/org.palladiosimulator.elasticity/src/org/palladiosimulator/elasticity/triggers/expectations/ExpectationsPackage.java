@@ -35,7 +35,7 @@ public interface ExpectationsPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/Expectations/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Triggers/Expectations/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -49,12 +49,13 @@ public interface ExpectationsPackage extends EPackage {
      *
      * @generated
      */
-    ExpectationsPackage eINSTANCE = org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsPackageImpl.init();
+    ExpectationsPackage eINSTANCE = org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsPackageImpl
+        .init();
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedValueImpl <em>Expected
-     * Value</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedValueImpl
+     * <em>Expected Value</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedValueImpl
      * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsPackageImpl#getExpectedValue()
@@ -142,8 +143,8 @@ public interface ExpectationsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedCountImpl <em>Expected
-     * Count</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedCountImpl
+     * <em>Expected Count</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedCountImpl
      * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsPackageImpl#getExpectedCount()
@@ -171,8 +172,8 @@ public interface ExpectationsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedTimeImpl <em>Expected
-     * Time</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedTimeImpl
+     * <em>Expected Time</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedTimeImpl
      * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsPackageImpl#getExpectedTime()
@@ -200,8 +201,8 @@ public interface ExpectationsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedTrendImpl <em>Expected
-     * Trend</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedTrendImpl
+     * <em>Expected Trend</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectedTrendImpl
      * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsPackageImpl#getExpectedTrend()
@@ -262,8 +263,8 @@ public interface ExpectationsPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedPercentage <em>Expected
-     * Percentage</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedPercentage
+     * <em>Expected Percentage</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Expected Percentage</em>'.
      * @see org.palladiosimulator.elasticity.triggers.expectations.ExpectedPercentage
@@ -398,8 +399,8 @@ public interface ExpectationsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.NoExpectationImpl <em>No
-         * Expectation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.expectations.impl.NoExpectationImpl
+         * <em>No Expectation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.expectations.impl.NoExpectationImpl
          * @see org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsPackageImpl#getNoExpectation()

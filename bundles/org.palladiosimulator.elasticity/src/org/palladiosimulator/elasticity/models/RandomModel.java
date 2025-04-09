@@ -18,7 +18,8 @@ package org.palladiosimulator.elasticity.models;
  * Adjustment</em>}</li>
  * <li>{@link org.palladiosimulator.elasticity.models.RandomModel#getMaxAdjustment <em>Max
  * Adjustment</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.models.RandomModel#getProbability <em>Probability</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.models.RandomModel#getProbability
+ * <em>Probability</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.models.ModelsPackage#getRandomModel()
@@ -39,8 +40,9 @@ public interface RandomModel extends BaseModel {
     int getMinAdjustment();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.models.RandomModel#getMinAdjustment
-     * <em>Min Adjustment</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.models.RandomModel#getMinAdjustment <em>Min
+     * Adjustment</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Min Adjustment</em>' attribute.
@@ -62,8 +64,9 @@ public interface RandomModel extends BaseModel {
     int getMaxAdjustment();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.models.RandomModel#getMaxAdjustment
-     * <em>Max Adjustment</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.models.RandomModel#getMaxAdjustment <em>Max
+     * Adjustment</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Max Adjustment</em>' attribute.
@@ -79,14 +82,15 @@ public interface RandomModel extends BaseModel {
      * @return the value of the '<em>Probability</em>' attribute.
      * @see #setProbability(double)
      * @see org.palladiosimulator.elasticity.models.ModelsPackage#getRandomModel_Probability()
-     * @model default="1.0" dataType="org.palladiosimulator.spd.datatypes.PercentDouble"
+     * @model default="1.0" dataType="org.palladiosimulator.elasticity.datatypes.PercentDouble"
      *        required="true"
      * @generated
      */
     double getProbability();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.models.RandomModel#getProbability
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.models.RandomModel#getProbability
      * <em>Probability</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value

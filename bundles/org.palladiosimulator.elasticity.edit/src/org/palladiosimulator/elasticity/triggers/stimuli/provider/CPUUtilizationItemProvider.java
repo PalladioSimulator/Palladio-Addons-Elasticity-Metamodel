@@ -14,8 +14,8 @@ import org.palladiosimulator.elasticity.triggers.stimuli.CPUUtilization;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.triggers.stimuli.CPUUtilization} object. <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.triggers.stimuli.CPUUtilization} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */

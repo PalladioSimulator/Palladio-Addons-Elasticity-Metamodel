@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.elasticity.constraints.policy.IntervalConstraint;
 import org.palladiosimulator.elasticity.constraints.policy.PolicyPackage;
 import org.palladiosimulator.elasticity.constraints.provider.TemporalConstraintItemProvider;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 
 /**
  * This is the item provider adapter for a
@@ -166,7 +166,7 @@ public class IntervalConstraintItemProvider extends TemporalConstraintItemProvid
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
 }

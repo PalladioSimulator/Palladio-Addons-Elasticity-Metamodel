@@ -3,26 +3,26 @@
  */
 package org.palladiosimulator.elasticity.tests;
 
-import org.palladiosimulator.elasticity.SPD;
-import org.palladiosimulator.elasticity.SpdFactory;
+import org.palladiosimulator.elasticity.ElasticityFactory;
+import org.palladiosimulator.elasticity.ElasticitySpec;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc --> A test case for the model object '<em><b>SPD</b></em>'. <!-- end-user-doc
- * -->
+ * <!-- begin-user-doc --> A test case for the model object '<em><b>Spec</b></em>'. <!--
+ * end-user-doc -->
  *
  * @generated
  */
-public class SPDTest extends TestCase {
+public class ElasticitySpecTest extends TestCase {
 
     /**
-     * The fixture for this SPD test case. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The fixture for this Spec test case. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected SPD fixture = null;
+    protected ElasticitySpec fixture = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -30,34 +30,34 @@ public class SPDTest extends TestCase {
      * @generated
      */
     public static void main(final String[] args) {
-        TestRunner.run(SPDTest.class);
+        TestRunner.run(ElasticitySpecTest.class);
     }
 
     /**
-     * Constructs a new SPD test case with the given name. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
+     * Constructs a new Spec test case with the given name. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      *
      * @generated
      */
-    public SPDTest(final String name) {
+    public ElasticitySpecTest(final String name) {
         super(name);
     }
 
     /**
-     * Sets the fixture for this SPD test case. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Sets the fixture for this Spec test case. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected void setFixture(final SPD fixture) {
+    protected void setFixture(final ElasticitySpec fixture) {
         this.fixture = fixture;
     }
 
     /**
-     * Returns the fixture for this SPD test case. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the fixture for this Spec test case. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected SPD getFixture() {
+    protected ElasticitySpec getFixture() {
         return this.fixture;
     }
 
@@ -69,7 +69,7 @@ public class SPDTest extends TestCase {
      */
     @Override
     protected void setUp() throws Exception {
-        this.setFixture(SpdFactory.eINSTANCE.createSPD());
+        this.setFixture(ElasticityFactory.eINSTANCE.createElasticitySpec());
     }
 
     /**
@@ -83,4 +83,4 @@ public class SPDTest extends TestCase {
         this.setFixture(null);
     }
 
-} // SPDTest
+} // ElasticitySpecTest

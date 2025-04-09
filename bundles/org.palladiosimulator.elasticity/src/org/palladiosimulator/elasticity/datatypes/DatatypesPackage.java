@@ -34,7 +34,7 @@ public interface DatatypesPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Datatypes/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Datatypes/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->

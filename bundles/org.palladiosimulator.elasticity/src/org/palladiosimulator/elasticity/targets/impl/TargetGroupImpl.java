@@ -22,8 +22,8 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.targets.impl.TargetGroupImpl#getTargetConstraints <em>Target
- * Constraints</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.targets.impl.TargetGroupImpl#getTargetConstraints
+ * <em>Target Constraints</em>}</li>
  * </ul>
  *
  * @generated

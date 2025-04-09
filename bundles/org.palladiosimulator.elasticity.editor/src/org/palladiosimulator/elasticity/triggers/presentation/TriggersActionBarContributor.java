@@ -174,7 +174,7 @@ public class TriggersActionBarContributor extends EditingDomainActionBarContribu
 
         final IMenuManager submenuManager = new MenuManager(
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_TriggersEditor_menu"),
-                "org.palladiosimulator.spd.triggersMenuID");
+                "org.palladiosimulator.elasticity.triggersMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));

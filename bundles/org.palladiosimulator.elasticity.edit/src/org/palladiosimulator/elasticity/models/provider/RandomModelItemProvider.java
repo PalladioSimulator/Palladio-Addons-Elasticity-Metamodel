@@ -16,8 +16,9 @@ import org.palladiosimulator.elasticity.models.ModelsPackage;
 import org.palladiosimulator.elasticity.models.RandomModel;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.models.RandomModel}
- * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.palladiosimulator.elasticity.models.RandomModel} object. <!-- begin-user-doc --> <!--
+ * end-user-doc -->
  *
  * @generated
  */

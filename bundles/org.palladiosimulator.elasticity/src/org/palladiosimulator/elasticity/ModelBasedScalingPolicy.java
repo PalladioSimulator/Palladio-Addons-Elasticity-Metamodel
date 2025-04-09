@@ -21,7 +21,7 @@ import org.palladiosimulator.elasticity.models.BaseModel;
  * <em>Adjustment</em>}</li>
  * </ul>
  *
- * @see org.palladiosimulator.elasticity.SpdPackage#getModelBasedScalingPolicy()
+ * @see org.palladiosimulator.elasticity.ElasticityPackage#getModelBasedScalingPolicy()
  * @model
  * @generated
  */
@@ -32,15 +32,16 @@ public interface ModelBasedScalingPolicy extends ScalingPolicy {
      *
      * @return the value of the '<em>Model</em>' containment reference.
      * @see #setModel(BaseModel)
-     * @see org.palladiosimulator.elasticity.SpdPackage#getModelBasedScalingPolicy_Model()
+     * @see org.palladiosimulator.elasticity.ElasticityPackage#getModelBasedScalingPolicy_Model()
      * @model containment="true" required="true"
      * @generated
      */
     BaseModel getModel();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy#getModel
-     * <em>Model</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy#getModel <em>Model</em>}'
+     * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Model</em>' containment reference.
@@ -55,14 +56,15 @@ public interface ModelBasedScalingPolicy extends ScalingPolicy {
      *
      * @return the value of the '<em>Adjustment</em>' attribute.
      * @see #setAdjustment(int)
-     * @see org.palladiosimulator.elasticity.SpdPackage#getModelBasedScalingPolicy_Adjustment()
+     * @see org.palladiosimulator.elasticity.ElasticityPackage#getModelBasedScalingPolicy_Adjustment()
      * @model transient="true"
      * @generated
      */
     int getAdjustment();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy#getAdjustment
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy#getAdjustment
      * <em>Adjustment</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value

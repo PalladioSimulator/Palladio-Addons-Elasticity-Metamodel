@@ -19,8 +19,8 @@ import org.palladiosimulator.elasticity.triggers.TriggersPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.triggers.ComposedTrigger} object. <!-- begin-user-doc --> <!--
- * end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.triggers.ComposedTrigger} object. <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
  *
  * @generated
  */

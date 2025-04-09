@@ -16,13 +16,13 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 import org.palladiosimulator.elasticity.triggers.stimuli.Stimulus;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.triggers.stimuli.Stimulus} object. <!-- begin-user-doc --> <!--
- * end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.triggers.stimuli.Stimulus} object. <!-- begin-user-doc
+ * --> <!-- end-user-doc -->
  *
  * @generated
  */
@@ -116,7 +116,7 @@ public class StimulusItemProvider extends ItemProviderAdapter implements IEditin
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
 }

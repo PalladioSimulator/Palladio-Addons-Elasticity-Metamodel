@@ -36,7 +36,7 @@ public interface StimuliPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/Stimuli/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Triggers/Stimuli/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -54,8 +54,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.StimulusImpl <em>Stimulus</em>}'
-     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.StimulusImpl
+     * <em>Stimulus</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimulusImpl
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getStimulus()
@@ -163,8 +163,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.NumberOfElementsImpl <em>Number Of
-     * Elements</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.NumberOfElementsImpl
+     * <em>Number Of Elements</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.NumberOfElementsImpl
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getNumberOfElements()
@@ -271,8 +271,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.MemoryUtilizationImpl <em>Memory
-     * Utilization</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.MemoryUtilizationImpl
+     * <em>Memory Utilization</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.MemoryUtilizationImpl
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getMemoryUtilization()
@@ -300,8 +300,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.SimulationTimeImpl <em>Simulation
-     * Time</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.SimulationTimeImpl
+     * <em>Simulation Time</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.SimulationTimeImpl
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getSimulationTime()
@@ -358,8 +358,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.TaskCountImpl <em>Task Count</em>}'
-     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.TaskCountImpl <em>Task
+     * Count</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.TaskCountImpl
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getTaskCount()
@@ -416,8 +416,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.NetworkUtilizationImpl <em>Network
-     * Utilization</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.NetworkUtilizationImpl
+     * <em>Network Utilization</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.NetworkUtilizationImpl
      * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getNetworkUtilization()
@@ -453,8 +453,9 @@ public interface StimuliPackage extends EPackage {
     int NETWORK_UTILIZATION_FEATURE_COUNT = RESOURCE_UTILIZATION_STIMULUS_FEATURE_COUNT + 1;
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.triggers.stimuli.Stimulus
-     * <em>Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.Stimulus <em>Stimulus</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Stimulus</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.Stimulus
@@ -464,8 +465,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.TargetGroupStateStimulus <em>Target Group
-     * State Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.TargetGroupStateStimulus <em>Target
+     * Group State Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Target Group State Stimulus</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.TargetGroupStateStimulus
@@ -475,8 +476,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.SimulationStateStimulus <em>Simulation
-     * State Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.SimulationStateStimulus
+     * <em>Simulation State Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Simulation State Stimulus</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.SimulationStateStimulus
@@ -531,8 +532,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.ManagedElementsStateStimulus <em>Managed
-     * Elements State Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.ManagedElementsStateStimulus
+     * <em>Managed Elements State Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Managed Elements State Stimulus</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.ManagedElementsStateStimulus
@@ -554,8 +555,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.CPUUtilization <em>CPU Utilization</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.CPUUtilization <em>CPU
+     * Utilization</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>CPU Utilization</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.CPUUtilization
@@ -576,8 +577,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.SimulationTime <em>Simulation Time</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.SimulationTime <em>Simulation
+     * Time</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Simulation Time</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.SimulationTime
@@ -587,8 +588,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization <em>HDD Utilization</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization <em>HDD
+     * Utilization</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>HDD Utilization</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization
@@ -598,8 +599,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization#getUsageType <em>Usage
-     * Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization#getUsageType
+     * <em>Usage Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Usage Type</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization#getUsageType()
@@ -610,8 +611,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.ResourceUtilizationStimulus <em>Resource
-     * Utilization Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.ResourceUtilizationStimulus
+     * <em>Resource Utilization Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Resource Utilization Stimulus</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.ResourceUtilizationStimulus
@@ -621,8 +622,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.TaskCount <em>Task Count</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.TaskCount <em>Task Count</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Task Count</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.TaskCount
@@ -632,8 +633,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength <em>Queue Length</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength <em>Queue
+     * Length</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Queue Length</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.QueueLength
@@ -643,8 +644,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength#getPassiveResource <em>Passive
-     * Resource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength#getPassiveResource
+     * <em>Passive Resource</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Passive Resource</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.QueueLength#getPassiveResource()
@@ -666,8 +667,8 @@ public interface StimuliPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization#getUsageType <em>Usage
-     * Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization#getUsageType
+     * <em>Usage Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Usage Type</em>'.
      * @see org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization#getUsageType()
@@ -700,8 +701,8 @@ public interface StimuliPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.StimulusImpl <em>Stimulus</em>}'
-         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.StimulusImpl
+         * <em>Stimulus</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimulusImpl
          * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getStimulus()
@@ -765,8 +766,8 @@ public interface StimuliPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.NumberOfElementsImpl <em>Number
-         * Of Elements</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.NumberOfElementsImpl
+         * <em>Number Of Elements</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.NumberOfElementsImpl
          * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getNumberOfElements()
@@ -808,8 +809,8 @@ public interface StimuliPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.MemoryUtilizationImpl <em>Memory
-         * Utilization</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.MemoryUtilizationImpl
+         * <em>Memory Utilization</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.MemoryUtilizationImpl
          * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getMemoryUtilization()
@@ -819,8 +820,8 @@ public interface StimuliPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.SimulationTimeImpl <em>Simulation
-         * Time</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.stimuli.impl.SimulationTimeImpl
+         * <em>Simulation Time</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.SimulationTimeImpl
          * @see org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl#getSimulationTime()

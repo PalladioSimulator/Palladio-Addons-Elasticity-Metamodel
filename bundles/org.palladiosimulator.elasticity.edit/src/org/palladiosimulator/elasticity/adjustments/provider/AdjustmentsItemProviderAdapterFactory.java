@@ -81,8 +81,8 @@ public class AdjustmentsItemProviderAdapterFactory extends AdjustmentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.adjustments.RelativeAdjustment}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.adjustments.RelativeAdjustment}. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -106,8 +106,8 @@ public class AdjustmentsItemProviderAdapterFactory extends AdjustmentsAdapterFac
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.adjustments.AbsoluteAdjustment}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.adjustments.AbsoluteAdjustment}. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -122,16 +122,17 @@ public class AdjustmentsItemProviderAdapterFactory extends AdjustmentsAdapterFac
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.adjustments.StepAdjustment} instances. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.adjustments.StepAdjustment} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected StepAdjustmentItemProvider stepAdjustmentItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.adjustments.StepAdjustment}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.adjustments.StepAdjustment}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */

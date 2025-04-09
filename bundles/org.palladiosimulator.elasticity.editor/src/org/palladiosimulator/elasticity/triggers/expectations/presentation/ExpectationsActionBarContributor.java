@@ -174,7 +174,7 @@ public class ExpectationsActionBarContributor extends EditingDomainActionBarCont
 
         final IMenuManager submenuManager = new MenuManager(
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ExpectationsEditor_menu"),
-                "org.palladiosimulator.spd.triggers.expectationsMenuID");
+                "org.palladiosimulator.elasticity.triggers.expectationsMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));

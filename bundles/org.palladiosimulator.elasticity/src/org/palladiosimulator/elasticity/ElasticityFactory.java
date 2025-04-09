@@ -9,16 +9,16 @@ import org.eclipse.emf.ecore.EFactory;
  * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a create method for each
  * non-abstract class of the model. <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.elasticity.SpdPackage
+ * @see org.palladiosimulator.elasticity.ElasticityPackage
  * @generated
  */
-public interface SpdFactory extends EFactory {
+public interface ElasticityFactory extends EFactory {
     /**
      * The singleton instance of the factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    SpdFactory eINSTANCE = org.palladiosimulator.elasticity.impl.SpdFactoryImpl.init();
+    ElasticityFactory eINSTANCE = org.palladiosimulator.elasticity.impl.ElasticityFactoryImpl.init();
 
     /**
      * Returns a new object of class '<em>Trigger Based Scaling Policy</em>'. <!-- begin-user-doc
@@ -30,12 +30,12 @@ public interface SpdFactory extends EFactory {
     TriggerBasedScalingPolicy createTriggerBasedScalingPolicy();
 
     /**
-     * Returns a new object of class '<em>SPD</em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns a new object of class '<em>Spec</em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return a new object of class '<em>SPD</em>'.
+     * @return a new object of class '<em>Spec</em>'.
      * @generated
      */
-    SPD createSPD();
+    ElasticitySpec createElasticitySpec();
 
     /**
      * Returns a new object of class '<em>Model Based Scaling Policy</em>'. <!-- begin-user-doc -->
@@ -52,6 +52,6 @@ public interface SpdFactory extends EFactory {
      * @return the package supported by this factory.
      * @generated
      */
-    SpdPackage getSpdPackage();
+    ElasticityPackage getElasticityPackage();
 
-} // SpdFactory
+} // ElasticityFactory

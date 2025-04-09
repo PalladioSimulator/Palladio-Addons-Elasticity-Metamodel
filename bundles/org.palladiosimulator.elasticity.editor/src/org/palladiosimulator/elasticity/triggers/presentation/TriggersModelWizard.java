@@ -56,7 +56,7 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 import org.palladiosimulator.elasticity.presentation.ScalingPolicyDefinitionEditorPlugin;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 import org.palladiosimulator.elasticity.triggers.TriggersFactory;
 import org.palladiosimulator.elasticity.triggers.TriggersPackage;
 
@@ -514,7 +514,7 @@ public class TriggersModelWizard extends Wizard implements INewWizard {
          */
         protected String getLabel(final String typeName) {
             try {
-                return ScalingPolicyDefinitionEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+                return ElasticityEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
             } catch (final MissingResourceException mre) {
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(mre);
             }

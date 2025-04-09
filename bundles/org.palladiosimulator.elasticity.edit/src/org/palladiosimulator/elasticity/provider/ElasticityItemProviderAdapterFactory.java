@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.palladiosimulator.elasticity.util.SpdAdapterFactory;
+import org.palladiosimulator.elasticity.util.ElasticityAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers. The
@@ -31,7 +31,7 @@ import org.palladiosimulator.elasticity.util.SpdAdapterFactory;
  *
  * @generated
  */
-public class SpdItemProviderAdapterFactory extends SpdAdapterFactory
+public class ElasticityItemProviderAdapterFactory extends ElasticityAdapterFactory
         implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory. <!--
@@ -62,7 +62,7 @@ public class SpdItemProviderAdapterFactory extends SpdAdapterFactory
      *
      * @generated
      */
-    public SpdItemProviderAdapterFactory() {
+    public ElasticityItemProviderAdapterFactory() {
         this.supportedTypes.add(IEditingDomainItemProvider.class);
         this.supportedTypes.add(IStructuredItemContentProvider.class);
         this.supportedTypes.add(ITreeItemContentProvider.class);
@@ -72,16 +72,17 @@ public class SpdItemProviderAdapterFactory extends SpdAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy} instances. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected TriggerBasedScalingPolicyItemProvider triggerBasedScalingPolicyItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
@@ -95,40 +96,42 @@ public class SpdItemProviderAdapterFactory extends SpdAdapterFactory
     }
 
     /**
-     * This keeps track of the one adapter used for all {@link org.palladiosimulator.elasticity.SPD}
-     * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This keeps track of the one adapter used for all
+     * {@link org.palladiosimulator.elasticity.ElasticitySpec} instances. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
-    protected SPDItemProvider spdItemProvider;
+    protected ElasticitySpecItemProvider elasticitySpecItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.SPD}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * This creates an adapter for a {@link org.palladiosimulator.elasticity.ElasticitySpec}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
-    public Adapter createSPDAdapter() {
-        if (this.spdItemProvider == null) {
-            this.spdItemProvider = new SPDItemProvider(this);
+    public Adapter createElasticitySpecAdapter() {
+        if (this.elasticitySpecItemProvider == null) {
+            this.elasticitySpecItemProvider = new ElasticitySpecItemProvider(this);
         }
 
-        return this.spdItemProvider;
+        return this.elasticitySpecItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy} instances. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected ModelBasedScalingPolicyItemProvider modelBasedScalingPolicyItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
@@ -247,8 +250,8 @@ public class SpdItemProviderAdapterFactory extends SpdAdapterFactory
         if (this.triggerBasedScalingPolicyItemProvider != null) {
             this.triggerBasedScalingPolicyItemProvider.dispose();
         }
-        if (this.spdItemProvider != null) {
-            this.spdItemProvider.dispose();
+        if (this.elasticitySpecItemProvider != null) {
+            this.elasticitySpecItemProvider.dispose();
         }
         if (this.modelBasedScalingPolicyItemProvider != null) {
             this.modelBasedScalingPolicyItemProvider.dispose();

@@ -23,10 +23,11 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * <li>{@link org.palladiosimulator.elasticity.ScalingPolicy#isActive <em>Active</em>}</li>
  * <li>{@link org.palladiosimulator.elasticity.ScalingPolicy#getPolicyConstraints <em>Policy
  * Constraints</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.ScalingPolicy#getTargetGroup <em>Target Group</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.ScalingPolicy#getTargetGroup <em>Target
+ * Group</em>}</li>
  * </ul>
  *
- * @see org.palladiosimulator.elasticity.SpdPackage#getScalingPolicy()
+ * @see org.palladiosimulator.elasticity.ElasticityPackage#getScalingPolicy()
  * @model abstract="true" annotation="http://www.eclipse.org/emf/2002/Ecore
  *        constraints='policyNameInvariant'"
  * @generated
@@ -38,7 +39,7 @@ public interface ScalingPolicy extends Entity {
      *
      * @return the value of the '<em>Active</em>' attribute.
      * @see #setActive(boolean)
-     * @see org.palladiosimulator.elasticity.SpdPackage#getScalingPolicy_Active()
+     * @see org.palladiosimulator.elasticity.ElasticityPackage#getScalingPolicy_Active()
      * @model
      * @generated
      */
@@ -61,7 +62,7 @@ public interface ScalingPolicy extends Entity {
      *
      * @return the value of the '<em>Target Group</em>' reference.
      * @see #setTargetGroup(TargetGroup)
-     * @see org.palladiosimulator.elasticity.SpdPackage#getScalingPolicy_TargetGroup()
+     * @see org.palladiosimulator.elasticity.ElasticityPackage#getScalingPolicy_TargetGroup()
      * @model required="true"
      * @generated
      */
@@ -81,11 +82,11 @@ public interface ScalingPolicy extends Entity {
     /**
      * Returns the value of the '<em><b>Policy Constraints</b></em>' containment reference list. The
      * list contents are of type
-     * {@link org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the value of the '<em>Policy Constraints</em>' containment reference list.
-     * @see org.palladiosimulator.elasticity.SpdPackage#getScalingPolicy_PolicyConstraints()
+     * @see org.palladiosimulator.elasticity.ElasticityPackage#getScalingPolicy_PolicyConstraints()
      * @model containment="true"
      * @generated
      */

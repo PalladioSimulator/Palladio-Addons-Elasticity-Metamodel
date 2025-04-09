@@ -14,8 +14,9 @@ import org.palladiosimulator.elasticity.targets.ServiceGroup;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.targets.ServiceGroup}
- * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.palladiosimulator.elasticity.targets.ServiceGroup} object. <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
  *
  * @generated
  */

@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.elasticity.models.BaseModel;
 import org.palladiosimulator.elasticity.models.ModelsPackage;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.models.BaseModel}
@@ -141,7 +141,7 @@ public class BaseModelItemProvider extends ItemProviderAdapter implements IEditi
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
     /**

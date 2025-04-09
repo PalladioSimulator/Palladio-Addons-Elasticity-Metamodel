@@ -16,8 +16,8 @@ import org.palladiosimulator.pcm.repository.PassiveResource;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength#getPassiveResource <em>Passive
- * Resource</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength#getPassiveResource
+ * <em>Passive Resource</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage#getQueueLength()
@@ -39,8 +39,8 @@ public interface QueueLength extends SourceInterfaceStimulus {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength#getPassiveResource <em>Passive
-     * Resource</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength#getPassiveResource
+     * <em>Passive Resource</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Passive Resource</em>' reference.

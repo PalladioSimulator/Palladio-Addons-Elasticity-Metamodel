@@ -84,8 +84,8 @@ public interface ResponseTimeSpecification extends CDOObject {
     /**
      * Returns the value of the '<em><b>Response Time Aggregation Method</b></em>' attribute. The
      * literals are from the enumeration
-     * {@link org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD}. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @return the value of the '<em>Response Time Aggregation Method</em>' attribute.
      * @see org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD

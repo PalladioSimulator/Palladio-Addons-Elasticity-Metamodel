@@ -120,8 +120,8 @@ public class TriggersAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.triggers.ScalingTrigger <em>Scaling Trigger</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
+     * '{@link org.palladiosimulator.elasticity.triggers.ScalingTrigger <em>Scaling Trigger</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      *
@@ -150,10 +150,10 @@ public class TriggersAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger <em>Composed Trigger</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger <em>Composed
+     * Trigger</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
+     * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
+     * cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
      * @see org.palladiosimulator.elasticity.triggers.ComposedTrigger
@@ -165,10 +165,10 @@ public class TriggersAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.triggers.SimpleFireOnValue <em>Simple Fire On Value</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.SimpleFireOnValue <em>Simple Fire On
+     * Value</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can
+     * easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases
+     * anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
      * @see org.palladiosimulator.elasticity.triggers.SimpleFireOnValue
@@ -180,10 +180,10 @@ public class TriggersAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend <em>Simple Fire On Trend</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend <em>Simple Fire On
+     * Trend</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can
+     * easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases
+     * anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
      * @see org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend

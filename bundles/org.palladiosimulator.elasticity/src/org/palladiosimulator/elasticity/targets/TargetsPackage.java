@@ -36,7 +36,7 @@ public interface TargetsPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Targets/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Targets/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -53,8 +53,9 @@ public interface TargetsPackage extends EPackage {
     TargetsPackage eINSTANCE = org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl.init();
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.targets.impl.TargetGroupImpl
-     * <em>Target Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.targets.impl.TargetGroupImpl <em>Target Group</em>}'
+     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.targets.impl.TargetGroupImpl
      * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getTargetGroup()
@@ -164,8 +165,9 @@ public interface TargetsPackage extends EPackage {
     int ELASTIC_INFRASTRUCTURE_FEATURE_COUNT = TARGET_GROUP_FEATURE_COUNT + 2;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl
-     * <em>Service Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl <em>Service
+     * Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl
      * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getServiceGroup()
@@ -220,8 +222,8 @@ public interface TargetsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl <em>Competing
-     * Consumers Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl
+     * <em>Competing Consumers Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl
      * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getCompetingConsumersGroup()
@@ -275,8 +277,9 @@ public interface TargetsPackage extends EPackage {
     int COMPETING_CONSUMERS_GROUP_FEATURE_COUNT = TARGET_GROUP_FEATURE_COUNT + 1;
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.targets.TargetGroup
-     * <em>Target Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.targets.TargetGroup <em>Target Group</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Target Group</em>'.
      * @see org.palladiosimulator.elasticity.targets.TargetGroup
@@ -321,8 +324,8 @@ public interface TargetsPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getUnit <em>Unit</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getUnit
+     * <em>Unit</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Unit</em>'.
      * @see org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getUnit()
@@ -332,8 +335,9 @@ public interface TargetsPackage extends EPackage {
     EReference getElasticInfrastructure_Unit();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.targets.ServiceGroup
-     * <em>Service Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroup <em>Service Group</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Service Group</em>'.
      * @see org.palladiosimulator.elasticity.targets.ServiceGroup
@@ -355,8 +359,8 @@ public interface TargetsPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup <em>Competing Consumers
-     * Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup <em>Competing
+     * Consumers Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Competing Consumers Group</em>'.
      * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroup
@@ -366,8 +370,8 @@ public interface TargetsPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getUnitAssembly <em>Unit
-     * Assembly</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getUnitAssembly
+     * <em>Unit Assembly</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Unit Assembly</em>'.
      * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getUnitAssembly()
@@ -400,8 +404,8 @@ public interface TargetsPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.targets.impl.TargetGroupImpl <em>Target Group</em>}'
-         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.targets.impl.TargetGroupImpl <em>Target
+         * Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.targets.impl.TargetGroupImpl
          * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getTargetGroup()
@@ -419,8 +423,8 @@ public interface TargetsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.targets.impl.ElasticInfrastructureImpl <em>Elastic
-         * Infrastructure</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.targets.impl.ElasticInfrastructureImpl
+         * <em>Elastic Infrastructure</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.targets.impl.ElasticInfrastructureImpl
          * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getElasticInfrastructure()
@@ -447,8 +451,8 @@ public interface TargetsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl <em>Service Group</em>}'
-         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl <em>Service
+         * Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl
          * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getServiceGroup()
@@ -466,8 +470,8 @@ public interface TargetsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl <em>Competing
-         * Consumers Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl
+         * <em>Competing Consumers Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl
          * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getCompetingConsumersGroup()

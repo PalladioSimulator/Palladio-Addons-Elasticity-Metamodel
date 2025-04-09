@@ -36,7 +36,7 @@ public interface ConstraintsPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Constraints/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -112,8 +112,8 @@ public interface ConstraintsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.constraints.impl.StateBasedContraintImpl <em>State Based
-     * Contraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.constraints.impl.StateBasedContraintImpl <em>State
+     * Based Contraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.constraints.impl.StateBasedContraintImpl
      * @see org.palladiosimulator.elasticity.constraints.impl.ConstraintsPackageImpl#getStateBasedContraint()
@@ -196,8 +196,8 @@ public interface ConstraintsPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.constraints.impl.AbstractConstraintImpl <em>Abstract
-         * Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.constraints.impl.AbstractConstraintImpl
+         * <em>Abstract Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.constraints.impl.AbstractConstraintImpl
          * @see org.palladiosimulator.elasticity.constraints.impl.ConstraintsPackageImpl#getAbstractConstraint()
@@ -207,8 +207,8 @@ public interface ConstraintsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.constraints.impl.TemporalConstraintImpl <em>Temporal
-         * Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.constraints.impl.TemporalConstraintImpl
+         * <em>Temporal Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.constraints.impl.TemporalConstraintImpl
          * @see org.palladiosimulator.elasticity.constraints.impl.ConstraintsPackageImpl#getTemporalConstraint()
@@ -218,8 +218,8 @@ public interface ConstraintsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.constraints.impl.StateBasedContraintImpl <em>State
-         * Based Contraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.constraints.impl.StateBasedContraintImpl
+         * <em>State Based Contraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.constraints.impl.StateBasedContraintImpl
          * @see org.palladiosimulator.elasticity.constraints.impl.ConstraintsPackageImpl#getStateBasedContraint()

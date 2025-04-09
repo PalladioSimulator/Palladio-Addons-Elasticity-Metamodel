@@ -17,11 +17,12 @@ import org.palladiosimulator.elasticity.triggers.stimuli.Stimulus;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getWorkloadStimulus <em>Workload
- * Stimulus</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getEpsilon <em>Epsilon</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getDiscountFactor <em>Discount
- * Factor</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getWorkloadStimulus
+ * <em>Workload Stimulus</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getEpsilon
+ * <em>Epsilon</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getDiscountFactor
+ * <em>Discount Factor</em>}</li>
  * <li>{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getInitializationType
  * <em>Initialization Type</em>}</li>
  * <li>{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getResponseTimeSpecification
@@ -47,8 +48,9 @@ public interface FuzzyLearningModel extends LearningBasedModel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getWorkloadStimulus <em>Workload
-     * Stimulus</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getWorkloadStimulus
+     * <em>Workload Stimulus</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
      *
      * @param value
      *            the new value of the '<em>Workload Stimulus</em>' containment reference.
@@ -64,13 +66,14 @@ public interface FuzzyLearningModel extends LearningBasedModel {
      * @return the value of the '<em>Epsilon</em>' attribute.
      * @see #setEpsilon(double)
      * @see org.palladiosimulator.elasticity.models.ModelsPackage#getFuzzyLearningModel_Epsilon()
-     * @model default="0.01" dataType="org.palladiosimulator.spd.datatypes.PercentDouble"
+     * @model default="0.01" dataType="org.palladiosimulator.elasticity.datatypes.PercentDouble"
      * @generated
      */
     double getEpsilon();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getEpsilon
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getEpsilon
      * <em>Epsilon</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
@@ -87,15 +90,15 @@ public interface FuzzyLearningModel extends LearningBasedModel {
      * @return the value of the '<em>Discount Factor</em>' attribute.
      * @see #setDiscountFactor(double)
      * @see org.palladiosimulator.elasticity.models.ModelsPackage#getFuzzyLearningModel_DiscountFactor()
-     * @model default="0.5" dataType="org.palladiosimulator.spd.datatypes.PercentDouble"
+     * @model default="0.5" dataType="org.palladiosimulator.elasticity.datatypes.PercentDouble"
      * @generated
      */
     double getDiscountFactor();
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getDiscountFactor <em>Discount
-     * Factor</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getDiscountFactor
+     * <em>Discount Factor</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Discount Factor</em>' attribute.

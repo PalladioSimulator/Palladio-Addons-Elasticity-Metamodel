@@ -10,8 +10,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.ScalingPolicy;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint;
 import org.palladiosimulator.elasticity.targets.TargetGroup;
 import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
@@ -24,8 +24,8 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
  * </p>
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.impl.ScalingPolicyImpl#isActive <em>Active</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.impl.ScalingPolicyImpl#getPolicyConstraints <em>Policy
- * Constraints</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.impl.ScalingPolicyImpl#getPolicyConstraints
+ * <em>Policy Constraints</em>}</li>
  * <li>{@link org.palladiosimulator.elasticity.impl.ScalingPolicyImpl#getTargetGroup <em>Target
  * Group</em>}</li>
  * </ul>
@@ -59,7 +59,7 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
      */
     @Override
     protected EClass eStaticClass() {
-        return SpdPackage.Literals.SCALING_POLICY;
+        return ElasticityPackage.Literals.SCALING_POLICY;
     }
 
     /**
@@ -69,8 +69,8 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
      */
     @Override
     public boolean isActive() {
-        return (Boolean) this.eDynamicGet(SpdPackage.SCALING_POLICY__ACTIVE, SpdPackage.Literals.SCALING_POLICY__ACTIVE,
-                true, true);
+        return (Boolean) this.eDynamicGet(ElasticityPackage.SCALING_POLICY__ACTIVE,
+                ElasticityPackage.Literals.SCALING_POLICY__ACTIVE, true, true);
     }
 
     /**
@@ -80,7 +80,8 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
      */
     @Override
     public void setActive(final boolean newActive) {
-        this.eDynamicSet(SpdPackage.SCALING_POLICY__ACTIVE, SpdPackage.Literals.SCALING_POLICY__ACTIVE, newActive);
+        this.eDynamicSet(ElasticityPackage.SCALING_POLICY__ACTIVE, ElasticityPackage.Literals.SCALING_POLICY__ACTIVE,
+                newActive);
     }
 
     /**
@@ -90,8 +91,8 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
      */
     @Override
     public TargetGroup getTargetGroup() {
-        return (TargetGroup) this.eDynamicGet(SpdPackage.SCALING_POLICY__TARGET_GROUP,
-                SpdPackage.Literals.SCALING_POLICY__TARGET_GROUP, true, true);
+        return (TargetGroup) this.eDynamicGet(ElasticityPackage.SCALING_POLICY__TARGET_GROUP,
+                ElasticityPackage.Literals.SCALING_POLICY__TARGET_GROUP, true, true);
     }
 
     /**
@@ -100,8 +101,8 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
      * @generated
      */
     public TargetGroup basicGetTargetGroup() {
-        return (TargetGroup) this.eDynamicGet(SpdPackage.SCALING_POLICY__TARGET_GROUP,
-                SpdPackage.Literals.SCALING_POLICY__TARGET_GROUP, false, true);
+        return (TargetGroup) this.eDynamicGet(ElasticityPackage.SCALING_POLICY__TARGET_GROUP,
+                ElasticityPackage.Literals.SCALING_POLICY__TARGET_GROUP, false, true);
     }
 
     /**
@@ -111,8 +112,8 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
      */
     @Override
     public void setTargetGroup(final TargetGroup newTargetGroup) {
-        this.eDynamicSet(SpdPackage.SCALING_POLICY__TARGET_GROUP, SpdPackage.Literals.SCALING_POLICY__TARGET_GROUP,
-                newTargetGroup);
+        this.eDynamicSet(ElasticityPackage.SCALING_POLICY__TARGET_GROUP,
+                ElasticityPackage.Literals.SCALING_POLICY__TARGET_GROUP, newTargetGroup);
     }
 
     /**
@@ -123,8 +124,8 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
     @SuppressWarnings("unchecked")
     @Override
     public EList<PolicyConstraint> getPolicyConstraints() {
-        return (EList<PolicyConstraint>) this.eDynamicGet(SpdPackage.SCALING_POLICY__POLICY_CONSTRAINTS,
-                SpdPackage.Literals.SCALING_POLICY__POLICY_CONSTRAINTS, true, true);
+        return (EList<PolicyConstraint>) this.eDynamicGet(ElasticityPackage.SCALING_POLICY__POLICY_CONSTRAINTS,
+                ElasticityPackage.Literals.SCALING_POLICY__POLICY_CONSTRAINTS, true, true);
     }
 
     /**
@@ -136,7 +137,7 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case SpdPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
+        case ElasticityPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
             return ((InternalEList<?>) this.getPolicyConstraints()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -150,11 +151,11 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case SpdPackage.SCALING_POLICY__ACTIVE:
+        case ElasticityPackage.SCALING_POLICY__ACTIVE:
             return this.isActive();
-        case SpdPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
+        case ElasticityPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
             return this.getPolicyConstraints();
-        case SpdPackage.SCALING_POLICY__TARGET_GROUP:
+        case ElasticityPackage.SCALING_POLICY__TARGET_GROUP:
             if (resolve) {
                 return this.getTargetGroup();
             }
@@ -172,16 +173,16 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case SpdPackage.SCALING_POLICY__ACTIVE:
+        case ElasticityPackage.SCALING_POLICY__ACTIVE:
             this.setActive((Boolean) newValue);
             return;
-        case SpdPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
+        case ElasticityPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
             this.getPolicyConstraints()
                 .clear();
             this.getPolicyConstraints()
                 .addAll((Collection<? extends PolicyConstraint>) newValue);
             return;
-        case SpdPackage.SCALING_POLICY__TARGET_GROUP:
+        case ElasticityPackage.SCALING_POLICY__TARGET_GROUP:
             this.setTargetGroup((TargetGroup) newValue);
             return;
         }
@@ -196,14 +197,14 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case SpdPackage.SCALING_POLICY__ACTIVE:
+        case ElasticityPackage.SCALING_POLICY__ACTIVE:
             this.setActive(ACTIVE_EDEFAULT);
             return;
-        case SpdPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
+        case ElasticityPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
             this.getPolicyConstraints()
                 .clear();
             return;
-        case SpdPackage.SCALING_POLICY__TARGET_GROUP:
+        case ElasticityPackage.SCALING_POLICY__TARGET_GROUP:
             this.setTargetGroup((TargetGroup) null);
             return;
         }
@@ -218,12 +219,12 @@ public abstract class ScalingPolicyImpl extends EntityImpl implements ScalingPol
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case SpdPackage.SCALING_POLICY__ACTIVE:
+        case ElasticityPackage.SCALING_POLICY__ACTIVE:
             return this.isActive() != ACTIVE_EDEFAULT;
-        case SpdPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
+        case ElasticityPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
             return !this.getPolicyConstraints()
                 .isEmpty();
-        case SpdPackage.SCALING_POLICY__TARGET_GROUP:
+        case ElasticityPackage.SCALING_POLICY__TARGET_GROUP:
             return this.basicGetTargetGroup() != null;
         }
         return super.eIsSet(featureID);

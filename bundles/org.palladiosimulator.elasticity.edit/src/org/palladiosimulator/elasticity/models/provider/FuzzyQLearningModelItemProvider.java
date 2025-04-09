@@ -13,8 +13,8 @@ import org.palladiosimulator.elasticity.models.FuzzyQLearningModel;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.models.FuzzyQLearningModel} object. <!-- begin-user-doc --> <!--
- * end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.models.FuzzyQLearningModel} object. <!-- begin-user-doc
+ * --> <!-- end-user-doc -->
  *
  * @generated
  */

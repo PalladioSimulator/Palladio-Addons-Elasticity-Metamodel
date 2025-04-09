@@ -24,8 +24,8 @@ import org.palladiosimulator.elasticity.triggers.TrendPattern;
 public interface ExpectedTrend extends ExpectedValue {
     /**
      * Returns the value of the '<em><b>Trend</b></em>' attribute. The literals are from the
-     * enumeration {@link org.palladiosimulator.elasticity.triggers.TrendPattern}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * enumeration {@link org.palladiosimulator.elasticity.triggers.TrendPattern}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the value of the '<em>Trend</em>' attribute.
      * @see org.palladiosimulator.elasticity.triggers.TrendPattern

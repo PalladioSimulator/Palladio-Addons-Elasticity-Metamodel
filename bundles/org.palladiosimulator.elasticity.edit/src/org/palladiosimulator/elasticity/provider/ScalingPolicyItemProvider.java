@@ -14,14 +14,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.ScalingPolicy;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.constraints.policy.PolicyFactory;
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.ScalingPolicy} object.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.ScalingPolicy}
+ * object. <!-- begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
@@ -65,7 +65,7 @@ public class ScalingPolicyItemProvider extends EntityItemProvider {
                 this.getString("_UI_ScalingPolicy_active_feature"),
                 this.getString("_UI_PropertyDescriptor_description", "_UI_ScalingPolicy_active_feature",
                         "_UI_ScalingPolicy_type"),
-                SpdPackage.Literals.SCALING_POLICY__ACTIVE, true, false, false,
+                ElasticityPackage.Literals.SCALING_POLICY__ACTIVE, true, false, false,
                 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
@@ -81,7 +81,7 @@ public class ScalingPolicyItemProvider extends EntityItemProvider {
                 this.getString("_UI_ScalingPolicy_targetGroup_feature"),
                 this.getString("_UI_PropertyDescriptor_description", "_UI_ScalingPolicy_targetGroup_feature",
                         "_UI_ScalingPolicy_type"),
-                SpdPackage.Literals.SCALING_POLICY__TARGET_GROUP, true, false, true, null, null, null));
+                ElasticityPackage.Literals.SCALING_POLICY__TARGET_GROUP, true, false, true, null, null, null));
     }
 
     /**
@@ -97,7 +97,7 @@ public class ScalingPolicyItemProvider extends EntityItemProvider {
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures.add(SpdPackage.Literals.SCALING_POLICY__POLICY_CONSTRAINTS);
+            this.childrenFeatures.add(ElasticityPackage.Literals.SCALING_POLICY__POLICY_CONSTRAINTS);
         }
         return this.childrenFeatures;
     }
@@ -140,10 +140,10 @@ public class ScalingPolicyItemProvider extends EntityItemProvider {
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(ScalingPolicy.class)) {
-        case SpdPackage.SCALING_POLICY__ACTIVE:
+        case ElasticityPackage.SCALING_POLICY__ACTIVE:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
-        case SpdPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
+        case ElasticityPackage.SCALING_POLICY__POLICY_CONSTRAINTS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -160,10 +160,10 @@ public class ScalingPolicyItemProvider extends EntityItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.SCALING_POLICY__POLICY_CONSTRAINTS,
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.SCALING_POLICY__POLICY_CONSTRAINTS,
                 PolicyFactory.eINSTANCE.createIntervalConstraint()));
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.SCALING_POLICY__POLICY_CONSTRAINTS,
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.SCALING_POLICY__POLICY_CONSTRAINTS,
                 PolicyFactory.eINSTANCE.createCooldownConstraint()));
     }
 
@@ -175,7 +175,7 @@ public class ScalingPolicyItemProvider extends EntityItemProvider {
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
 }

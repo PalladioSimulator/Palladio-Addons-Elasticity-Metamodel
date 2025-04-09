@@ -8,10 +8,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.palladiosimulator.elasticity.ElasticityFactory;
+import org.palladiosimulator.elasticity.ElasticityPackage;
+import org.palladiosimulator.elasticity.ElasticitySpec;
 import org.palladiosimulator.elasticity.ModelBasedScalingPolicy;
-import org.palladiosimulator.elasticity.SPD;
-import org.palladiosimulator.elasticity.SpdFactory;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
 
 /**
@@ -19,22 +19,23 @@ import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
  *
  * @generated
  */
-public class SpdFactoryImpl extends EFactoryImpl implements SpdFactory {
+public class ElasticityFactoryImpl extends EFactoryImpl implements ElasticityFactory {
     /**
      * Creates the default factory implementation. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public static SpdFactory init() {
+    public static ElasticityFactory init() {
         try {
-            final SpdFactory theSpdFactory = (SpdFactory) EPackage.Registry.INSTANCE.getEFactory(SpdPackage.eNS_URI);
-            if (theSpdFactory != null) {
-                return theSpdFactory;
+            final ElasticityFactory theElasticityFactory = (ElasticityFactory) EPackage.Registry.INSTANCE
+                .getEFactory(ElasticityPackage.eNS_URI);
+            if (theElasticityFactory != null) {
+                return theElasticityFactory;
             }
         } catch (final Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
-        return new SpdFactoryImpl();
+        return new ElasticityFactoryImpl();
     }
 
     /**
@@ -42,7 +43,7 @@ public class SpdFactoryImpl extends EFactoryImpl implements SpdFactory {
      *
      * @generated
      */
-    public SpdFactoryImpl() {
+    public ElasticityFactoryImpl() {
         super();
     }
 
@@ -54,11 +55,11 @@ public class SpdFactoryImpl extends EFactoryImpl implements SpdFactory {
     @Override
     public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY:
             return this.createTriggerBasedScalingPolicy();
-        case SpdPackage.SPD:
-            return this.createSPD();
-        case SpdPackage.MODEL_BASED_SCALING_POLICY:
+        case ElasticityPackage.ELASTICITY_SPEC:
+            return this.createElasticitySpec();
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY:
             return this.createModelBasedScalingPolicy();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -82,9 +83,9 @@ public class SpdFactoryImpl extends EFactoryImpl implements SpdFactory {
      * @generated
      */
     @Override
-    public SPD createSPD() {
-        final SPDImpl spd = new SPDImpl();
-        return spd;
+    public ElasticitySpec createElasticitySpec() {
+        final ElasticitySpecImpl elasticitySpec = new ElasticitySpecImpl();
+        return elasticitySpec;
     }
 
     /**
@@ -104,8 +105,8 @@ public class SpdFactoryImpl extends EFactoryImpl implements SpdFactory {
      * @generated
      */
     @Override
-    public SpdPackage getSpdPackage() {
-        return (SpdPackage) this.getEPackage();
+    public ElasticityPackage getElasticityPackage() {
+        return (ElasticityPackage) this.getEPackage();
     }
 
     /**
@@ -115,8 +116,8 @@ public class SpdFactoryImpl extends EFactoryImpl implements SpdFactory {
      * @generated
      */
     @Deprecated
-    public static SpdPackage getPackage() {
-        return SpdPackage.eINSTANCE;
+    public static ElasticityPackage getPackage() {
+        return ElasticityPackage.eINSTANCE;
     }
 
-} // SpdFactoryImpl
+} // ElasticityFactoryImpl

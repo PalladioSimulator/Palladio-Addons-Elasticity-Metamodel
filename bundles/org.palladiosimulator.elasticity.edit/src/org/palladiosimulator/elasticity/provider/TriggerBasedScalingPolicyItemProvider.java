@@ -11,15 +11,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.palladiosimulator.elasticity.SpdPackage;
+import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
 import org.palladiosimulator.elasticity.adjustments.AdjustmentsFactory;
 import org.palladiosimulator.elasticity.triggers.TriggersFactory;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy} object. <!-- begin-user-doc --> <!--
- * end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy} object. <!-- begin-user-doc
+ * --> <!-- end-user-doc -->
  *
  * @generated
  */
@@ -62,8 +62,8 @@ public class TriggerBasedScalingPolicyItemProvider extends ScalingPolicyItemProv
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures.add(SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE);
-            this.childrenFeatures.add(SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER);
+            this.childrenFeatures.add(ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE);
+            this.childrenFeatures.add(ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER);
         }
         return this.childrenFeatures;
     }
@@ -117,8 +117,8 @@ public class TriggerBasedScalingPolicyItemProvider extends ScalingPolicyItemProv
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(TriggerBasedScalingPolicy.class)) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -136,27 +136,27 @@ public class TriggerBasedScalingPolicyItemProvider extends ScalingPolicyItemProv
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors
-            .add(this.createChildParameter(SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
+            .add(this.createChildParameter(ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
                     AdjustmentsFactory.eINSTANCE.createRelativeAdjustment()));
 
         newChildDescriptors
-            .add(this.createChildParameter(SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
+            .add(this.createChildParameter(ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
                     AdjustmentsFactory.eINSTANCE.createAbsoluteAdjustment()));
 
         newChildDescriptors
-            .add(this.createChildParameter(SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
+            .add(this.createChildParameter(ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
                     AdjustmentsFactory.eINSTANCE.createStepAdjustment()));
 
         newChildDescriptors
-            .add(this.createChildParameter(SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
+            .add(this.createChildParameter(ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
                     TriggersFactory.eINSTANCE.createComposedTrigger()));
 
         newChildDescriptors
-            .add(this.createChildParameter(SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
+            .add(this.createChildParameter(ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
                     TriggersFactory.eINSTANCE.createSimpleFireOnValue()));
 
         newChildDescriptors
-            .add(this.createChildParameter(SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
+            .add(this.createChildParameter(ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
                     TriggersFactory.eINSTANCE.createSimpleFireOnTrend()));
     }
 

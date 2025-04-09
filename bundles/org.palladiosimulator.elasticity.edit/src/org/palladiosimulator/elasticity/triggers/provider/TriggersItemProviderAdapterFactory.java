@@ -72,16 +72,17 @@ public class TriggersItemProviderAdapterFactory extends TriggersAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.triggers.ComposedTrigger} instances. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.ComposedTrigger} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected ComposedTriggerItemProvider composedTriggerItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.triggers.ComposedTrigger}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.triggers.ComposedTrigger}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
@@ -96,16 +97,17 @@ public class TriggersItemProviderAdapterFactory extends TriggersAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.triggers.SimpleFireOnValue} instances. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.SimpleFireOnValue} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected SimpleFireOnValueItemProvider simpleFireOnValueItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.triggers.SimpleFireOnValue}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.triggers.SimpleFireOnValue}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
@@ -120,16 +122,17 @@ public class TriggersItemProviderAdapterFactory extends TriggersAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend} instances. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected SimpleFireOnTrendItemProvider simpleFireOnTrendItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */

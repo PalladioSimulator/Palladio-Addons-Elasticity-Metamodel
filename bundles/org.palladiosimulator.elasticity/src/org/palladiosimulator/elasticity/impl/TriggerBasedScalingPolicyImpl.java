@@ -6,7 +6,7 @@ package org.palladiosimulator.elasticity.impl;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.palladiosimulator.elasticity.SpdPackage;
+import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
 import org.palladiosimulator.elasticity.adjustments.AdjustmentType;
 import org.palladiosimulator.elasticity.triggers.ScalingTrigger;
@@ -43,7 +43,7 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
      */
     @Override
     protected EClass eStaticClass() {
-        return SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY;
+        return ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY;
     }
 
     /**
@@ -53,8 +53,8 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
      */
     @Override
     public AdjustmentType getAdjustmentType() {
-        return (AdjustmentType) this.eDynamicGet(SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
-                SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE, true, true);
+        return (AdjustmentType) this.eDynamicGet(ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
+                ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE, true, true);
     }
 
     /**
@@ -64,7 +64,7 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
      */
     public NotificationChain basicSetAdjustmentType(final AdjustmentType newAdjustmentType, NotificationChain msgs) {
         msgs = this.eDynamicInverseAdd((InternalEObject) newAdjustmentType,
-                SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE, msgs);
+                ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE, msgs);
         return msgs;
     }
 
@@ -75,8 +75,8 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
      */
     @Override
     public void setAdjustmentType(final AdjustmentType newAdjustmentType) {
-        this.eDynamicSet(SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
-                SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE, newAdjustmentType);
+        this.eDynamicSet(ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE,
+                ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE, newAdjustmentType);
     }
 
     /**
@@ -86,8 +86,8 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
      */
     @Override
     public ScalingTrigger getScalingTrigger() {
-        return (ScalingTrigger) this.eDynamicGet(SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
-                SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER, true, true);
+        return (ScalingTrigger) this.eDynamicGet(ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
+                ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER, true, true);
     }
 
     /**
@@ -97,7 +97,7 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
      */
     public NotificationChain basicSetScalingTrigger(final ScalingTrigger newScalingTrigger, NotificationChain msgs) {
         msgs = this.eDynamicInverseAdd((InternalEObject) newScalingTrigger,
-                SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER, msgs);
+                ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER, msgs);
         return msgs;
     }
 
@@ -108,8 +108,8 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
      */
     @Override
     public void setScalingTrigger(final ScalingTrigger newScalingTrigger) {
-        this.eDynamicSet(SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
-                SpdPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER, newScalingTrigger);
+        this.eDynamicSet(ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER,
+                ElasticityPackage.Literals.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER, newScalingTrigger);
     }
 
     /**
@@ -121,9 +121,9 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
             return this.basicSetAdjustmentType(null, msgs);
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
             return this.basicSetScalingTrigger(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -137,9 +137,9 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
             return this.getAdjustmentType();
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
             return this.getScalingTrigger();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -153,10 +153,10 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
             this.setAdjustmentType((AdjustmentType) newValue);
             return;
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
             this.setScalingTrigger((ScalingTrigger) newValue);
             return;
         }
@@ -171,10 +171,10 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
             this.setAdjustmentType((AdjustmentType) null);
             return;
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
             this.setScalingTrigger((ScalingTrigger) null);
             return;
         }
@@ -189,9 +189,9 @@ public class TriggerBasedScalingPolicyImpl extends ScalingPolicyImpl implements 
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE:
             return this.getAdjustmentType() != null;
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER:
             return this.getScalingTrigger() != null;
         }
         return super.eIsSet(featureID);

@@ -36,7 +36,7 @@ public interface PolicyPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/Policy/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -83,8 +83,8 @@ public interface PolicyPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.constraints.policy.impl.IntervalConstraintImpl <em>Interval
-     * Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.constraints.policy.impl.IntervalConstraintImpl
+     * <em>Interval Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.constraints.policy.impl.IntervalConstraintImpl
      * @see org.palladiosimulator.elasticity.constraints.policy.impl.PolicyPackageImpl#getIntervalConstraint()
@@ -139,8 +139,8 @@ public interface PolicyPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.constraints.policy.impl.CooldownConstraintImpl <em>Cooldown
-     * Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.constraints.policy.impl.CooldownConstraintImpl
+     * <em>Cooldown Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.constraints.policy.impl.CooldownConstraintImpl
      * @see org.palladiosimulator.elasticity.constraints.policy.impl.PolicyPackageImpl#getCooldownConstraint()
@@ -186,8 +186,8 @@ public interface PolicyPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint <em>Constraint</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint
+     * <em>Constraint</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Constraint</em>'.
      * @see org.palladiosimulator.elasticity.constraints.policy.PolicyConstraint

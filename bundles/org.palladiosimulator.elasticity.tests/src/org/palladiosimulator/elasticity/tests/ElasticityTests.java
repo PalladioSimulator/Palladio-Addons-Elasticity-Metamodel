@@ -8,11 +8,12 @@ import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc --> A test suite for the '<em><b>spd</b></em>' package. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A test suite for the '<em><b>elasticity</b></em>' package. <!--
+ * end-user-doc -->
  *
  * @generated
  */
-public class SpdTests extends TestSuite {
+public class ElasticityTests extends TestSuite {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -29,9 +30,9 @@ public class SpdTests extends TestSuite {
      * @generated
      */
     public static Test suite() {
-        final TestSuite suite = new SpdTests("spd Tests");
+        final TestSuite suite = new ElasticityTests("elasticity Tests");
         suite.addTestSuite(TriggerBasedScalingPolicyTest.class);
-        suite.addTestSuite(SPDTest.class);
+        suite.addTestSuite(ElasticitySpecTest.class);
         suite.addTestSuite(ModelBasedScalingPolicyTest.class);
         return suite;
     }
@@ -41,8 +42,8 @@ public class SpdTests extends TestSuite {
      *
      * @generated
      */
-    public SpdTests(final String name) {
+    public ElasticityTests(final String name) {
         super(name);
     }
 
-} // SpdTests
+} // ElasticityTests

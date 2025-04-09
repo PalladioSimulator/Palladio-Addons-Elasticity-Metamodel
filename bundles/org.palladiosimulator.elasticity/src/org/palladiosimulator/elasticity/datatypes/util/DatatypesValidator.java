@@ -34,7 +34,7 @@ public class DatatypesValidator extends EObjectValidator {
      * @see org.eclipse.emf.common.util.Diagnostic#getCode()
      * @generated
      */
-    public static final String DIAGNOSTIC_SOURCE = "org.palladiosimulator.spd.datatypes";
+    public static final String DIAGNOSTIC_SOURCE = "org.palladiosimulator.elasticity.datatypes";
 
     /**
      * A constant with a fixed name that can be used as the base value for additional hand written

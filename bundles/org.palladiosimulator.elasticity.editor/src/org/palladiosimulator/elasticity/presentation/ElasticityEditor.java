@@ -124,7 +124,7 @@ import org.palladiosimulator.elasticity.constraints.policy.provider.PolicyItemPr
 import org.palladiosimulator.elasticity.constraints.provider.ConstraintsItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.constraints.target.provider.TargetItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.models.provider.ModelsItemProviderAdapterFactory;
-import org.palladiosimulator.elasticity.provider.SpdItemProviderAdapterFactory;
+import org.palladiosimulator.elasticity.provider.ElasticityItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.targets.provider.TargetsItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.triggers.expectations.provider.ExpectationsItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.triggers.provider.TriggersItemProviderAdapterFactory;
@@ -156,11 +156,11 @@ import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 
 /**
- * This is an example of a Spd model editor. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is an example of a Elasticity model editor. <!-- begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
-public class SpdEditor extends MultiPageEditorPart
+public class ElasticityEditor extends MultiPageEditorPart
         implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
     /**
      * This keeps track of the editing domain that is used to track all changes to the model. <!--
@@ -309,20 +309,20 @@ public class SpdEditor extends MultiPageEditorPart
         @Override
         public void partActivated(final IWorkbenchPart p) {
             if (p instanceof ContentOutline) {
-                if (((ContentOutline) p).getCurrentPage() == SpdEditor.this.contentOutlinePage) {
-                    SpdEditor.this.getActionBarContributor()
-                        .setActiveEditor(SpdEditor.this);
+                if (((ContentOutline) p).getCurrentPage() == ElasticityEditor.this.contentOutlinePage) {
+                    ElasticityEditor.this.getActionBarContributor()
+                        .setActiveEditor(ElasticityEditor.this);
 
-                    SpdEditor.this.setCurrentViewer(SpdEditor.this.contentOutlineViewer);
+                    ElasticityEditor.this.setCurrentViewer(ElasticityEditor.this.contentOutlineViewer);
                 }
             } else if (p instanceof PropertySheet) {
-                if (SpdEditor.this.propertySheetPages.contains(((PropertySheet) p).getCurrentPage())) {
-                    SpdEditor.this.getActionBarContributor()
-                        .setActiveEditor(SpdEditor.this);
-                    SpdEditor.this.handleActivate();
+                if (ElasticityEditor.this.propertySheetPages.contains(((PropertySheet) p).getCurrentPage())) {
+                    ElasticityEditor.this.getActionBarContributor()
+                        .setActiveEditor(ElasticityEditor.this);
+                    ElasticityEditor.this.handleActivate();
                 }
-            } else if (p == SpdEditor.this) {
-                SpdEditor.this.handleActivate();
+            } else if (p == ElasticityEditor.this) {
+                ElasticityEditor.this.handleActivate();
             }
         }
 
@@ -403,11 +403,11 @@ public class SpdEditor extends MultiPageEditorPart
                 case Resource.RESOURCE__ERRORS:
                 case Resource.RESOURCE__WARNINGS: {
                     final Resource resource = (Resource) notification.getNotifier();
-                    final Diagnostic diagnostic = SpdEditor.this.analyzeResourceProblems(resource, null);
+                    final Diagnostic diagnostic = ElasticityEditor.this.analyzeResourceProblems(resource, null);
                     if (diagnostic.getSeverity() != Diagnostic.OK) {
-                        SpdEditor.this.resourceToDiagnosticMap.put(resource, diagnostic);
+                        ElasticityEditor.this.resourceToDiagnosticMap.put(resource, diagnostic);
                     } else {
-                        SpdEditor.this.resourceToDiagnosticMap.remove(resource);
+                        ElasticityEditor.this.resourceToDiagnosticMap.remove(resource);
                     }
                     this.dispatchUpdateProblemIndication();
                     break;
@@ -419,16 +419,16 @@ public class SpdEditor extends MultiPageEditorPart
         }
 
         protected void dispatchUpdateProblemIndication() {
-            if (SpdEditor.this.updateProblemIndication && !this.dispatching) {
+            if (ElasticityEditor.this.updateProblemIndication && !this.dispatching) {
                 this.dispatching = true;
-                SpdEditor.this.getSite()
+                ElasticityEditor.this.getSite()
                     .getShell()
                     .getDisplay()
                     .asyncExec(new Runnable() {
                         @Override
                         public void run() {
                             dispatching = false;
-                            SpdEditor.this.updateProblemIndication();
+                            ElasticityEditor.this.updateProblemIndication();
                         }
                     });
             }
@@ -442,7 +442,7 @@ public class SpdEditor extends MultiPageEditorPart
         @Override
         protected void unsetTarget(final Resource target) {
             this.basicUnsetTarget(target);
-            SpdEditor.this.resourceToDiagnosticMap.remove(target);
+            ElasticityEditor.this.resourceToDiagnosticMap.remove(target);
             this.dispatchUpdateProblemIndication();
         }
     };
@@ -458,7 +458,7 @@ public class SpdEditor extends MultiPageEditorPart
             final IResourceDelta delta = event.getDelta();
             try {
                 class ResourceDeltaVisitor implements IResourceDeltaVisitor {
-                    protected ResourceSet resourceSet = SpdEditor.this.editingDomain.getResourceSet();
+                    protected ResourceSet resourceSet = ElasticityEditor.this.editingDomain.getResourceSet();
                     protected Collection<Resource> changedResources = new ArrayList<>();
                     protected Collection<Resource> removedResources = new ArrayList<>();
 
@@ -474,7 +474,7 @@ public class SpdEditor extends MultiPageEditorPart
                                 if (resource != null) {
                                     if (delta.getKind() == IResourceDelta.REMOVED) {
                                         this.removedResources.add(resource);
-                                    } else if (!SpdEditor.this.savedResources.remove(resource)) {
+                                    } else if (!ElasticityEditor.this.savedResources.remove(resource)) {
                                         this.changedResources.add(resource);
                                     }
                                 }
@@ -499,17 +499,17 @@ public class SpdEditor extends MultiPageEditorPart
 
                 if (!visitor.getRemovedResources()
                     .isEmpty()) {
-                    SpdEditor.this.getSite()
+                    ElasticityEditor.this.getSite()
                         .getShell()
                         .getDisplay()
                         .asyncExec(new Runnable() {
                             @Override
                             public void run() {
-                                SpdEditor.this.removedResources.addAll(visitor.getRemovedResources());
-                                if (!SpdEditor.this.isDirty()) {
-                                    SpdEditor.this.getSite()
+                                ElasticityEditor.this.removedResources.addAll(visitor.getRemovedResources());
+                                if (!ElasticityEditor.this.isDirty()) {
+                                    ElasticityEditor.this.getSite()
                                         .getPage()
-                                        .closeEditor(SpdEditor.this, false);
+                                        .closeEditor(ElasticityEditor.this, false);
                                 }
                             }
                         });
@@ -517,17 +517,17 @@ public class SpdEditor extends MultiPageEditorPart
 
                 if (!visitor.getChangedResources()
                     .isEmpty()) {
-                    SpdEditor.this.getSite()
+                    ElasticityEditor.this.getSite()
                         .getShell()
                         .getDisplay()
                         .asyncExec(new Runnable() {
                             @Override
                             public void run() {
-                                SpdEditor.this.changedResources.addAll(visitor.getChangedResources());
-                                if (SpdEditor.this.getSite()
+                                ElasticityEditor.this.changedResources.addAll(visitor.getChangedResources());
+                                if (ElasticityEditor.this.getSite()
                                     .getPage()
-                                    .getActiveEditor() == SpdEditor.this) {
-                                    SpdEditor.this.handleActivate();
+                                    .getActiveEditor() == ElasticityEditor.this) {
+                                    ElasticityEditor.this.handleActivate();
                                 }
                             }
                         });
@@ -560,7 +560,7 @@ public class SpdEditor extends MultiPageEditorPart
             if (this.handleDirtyConflict()) {
                 this.getSite()
                     .getPage()
-                    .closeEditor(SpdEditor.this, false);
+                    .closeEditor(ElasticityEditor.this, false);
             } else {
                 this.removedResources.clear();
                 this.changedResources.clear();
@@ -621,8 +621,9 @@ public class SpdEditor extends MultiPageEditorPart
      */
     protected void updateProblemIndication() {
         if (this.updateProblemIndication) {
-            final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK, "org.palladiosimulator.spd.editor", 0,
-                    null, new Object[] { this.editingDomain.getResourceSet() });
+            final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
+                    "org.palladiosimulator.elasticity.editor", 0, null,
+                    new Object[] { this.editingDomain.getResourceSet() });
             for (final Diagnostic childDiagnostic : this.resourceToDiagnosticMap.values()) {
                 if (childDiagnostic.getSeverity() != Diagnostic.OK) {
                     diagnostic.add(childDiagnostic);
@@ -675,7 +676,7 @@ public class SpdEditor extends MultiPageEditorPart
      *
      * @generated
      */
-    public SpdEditor() {
+    public ElasticityEditor() {
         super();
         this.initializeEditingDomain();
     }
@@ -692,7 +693,7 @@ public class SpdEditor extends MultiPageEditorPart
         this.adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
         this.adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-        this.adapterFactory.addAdapterFactory(new SpdItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new ElasticityItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new TargetsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new AdjustmentsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ConstraintsItemProviderAdapterFactory());
@@ -739,21 +740,21 @@ public class SpdEditor extends MultiPageEditorPart
         commandStack.addCommandStackListener(new CommandStackListener() {
             @Override
             public void commandStackChanged(final EventObject event) {
-                SpdEditor.this.getContainer()
+                ElasticityEditor.this.getContainer()
                     .getDisplay()
                     .asyncExec(new Runnable() {
                         @Override
                         public void run() {
-                            SpdEditor.this.firePropertyChange(IEditorPart.PROP_DIRTY);
+                            ElasticityEditor.this.firePropertyChange(IEditorPart.PROP_DIRTY);
 
                             // Try to select the affected objects.
                             //
                             final Command mostRecentCommand = ((CommandStack) event.getSource()).getMostRecentCommand();
                             if (mostRecentCommand != null) {
-                                SpdEditor.this.setSelectionToViewer(mostRecentCommand.getAffectedObjects());
+                                ElasticityEditor.this.setSelectionToViewer(mostRecentCommand.getAffectedObjects());
                             }
-                            for (final Iterator<PropertySheetPage> i = SpdEditor.this.propertySheetPages.iterator(); i
-                                .hasNext();) {
+                            for (final Iterator<PropertySheetPage> i = ElasticityEditor.this.propertySheetPages
+                                .iterator(); i.hasNext();) {
                                 final PropertySheetPage propertySheetPage = i.next();
                                 if (propertySheetPage.getControl() == null || propertySheetPage.getControl()
                                     .isDisposed()) {
@@ -800,9 +801,9 @@ public class SpdEditor extends MultiPageEditorPart
                 public void run() {
                     // Try to select the items in the current content viewer of the editor.
                     //
-                    if (SpdEditor.this.currentViewer != null) {
-                        SpdEditor.this.currentViewer.setSelection(new StructuredSelection(theSelection.toArray()),
-                                true);
+                    if (ElasticityEditor.this.currentViewer != null) {
+                        ElasticityEditor.this.currentViewer
+                            .setSelection(new StructuredSelection(theSelection.toArray()), true);
                     }
                 }
             };
@@ -918,7 +919,7 @@ public class SpdEditor extends MultiPageEditorPart
                     //
                     @Override
                     public void selectionChanged(final SelectionChangedEvent selectionChangedEvent) {
-                        SpdEditor.this.setSelection(selectionChangedEvent.getSelection());
+                        ElasticityEditor.this.setSelection(selectionChangedEvent.getSelection());
                     }
                 };
             }
@@ -1024,13 +1025,13 @@ public class SpdEditor extends MultiPageEditorPart
         if (hasErrors || !resource.getWarnings()
             .isEmpty()) {
             final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(
-                    hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING, "org.palladiosimulator.spd.editor", 0,
+                    hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING, "org.palladiosimulator.elasticity.editor", 0,
                     getString("_UI_CreateModelError_message", resource.getURI()),
                     new Object[] { exception == null ? (Object) resource : exception });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
-            return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.spd.editor", 0,
+            return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.elasticity.editor", 0,
                     getString("_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
         } else {
             return Diagnostic.OK_INSTANCE;
@@ -1059,7 +1060,7 @@ public class SpdEditor extends MultiPageEditorPart
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite()
-                    .getPage(), SpdEditor.this) {
+                    .getPage(), ElasticityEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         final Tree tree = new Tree(composite, SWT.MULTI);
@@ -1070,7 +1071,7 @@ public class SpdEditor extends MultiPageEditorPart
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        SpdEditor.this.setCurrentViewerPane(this);
+                        ElasticityEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1097,7 +1098,7 @@ public class SpdEditor extends MultiPageEditorPart
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite()
-                    .getPage(), SpdEditor.this) {
+                    .getPage(), ElasticityEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         final Tree tree = new Tree(composite, SWT.MULTI);
@@ -1108,7 +1109,7 @@ public class SpdEditor extends MultiPageEditorPart
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        SpdEditor.this.setCurrentViewerPane(this);
+                        ElasticityEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1127,7 +1128,7 @@ public class SpdEditor extends MultiPageEditorPart
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite()
-                    .getPage(), SpdEditor.this) {
+                    .getPage(), ElasticityEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new ListViewer(composite);
@@ -1136,7 +1137,7 @@ public class SpdEditor extends MultiPageEditorPart
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        SpdEditor.this.setCurrentViewerPane(this);
+                        ElasticityEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1153,7 +1154,7 @@ public class SpdEditor extends MultiPageEditorPart
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite()
-                    .getPage(), SpdEditor.this) {
+                    .getPage(), ElasticityEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TreeViewer(composite);
@@ -1162,7 +1163,7 @@ public class SpdEditor extends MultiPageEditorPart
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        SpdEditor.this.setCurrentViewerPane(this);
+                        ElasticityEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1181,7 +1182,7 @@ public class SpdEditor extends MultiPageEditorPart
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite()
-                    .getPage(), SpdEditor.this) {
+                    .getPage(), ElasticityEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TableViewer(composite);
@@ -1190,7 +1191,7 @@ public class SpdEditor extends MultiPageEditorPart
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        SpdEditor.this.setCurrentViewerPane(this);
+                        ElasticityEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1225,7 +1226,7 @@ public class SpdEditor extends MultiPageEditorPart
             //
             {
                 final ViewerPane viewerPane = new ViewerPane(this.getSite()
-                    .getPage(), SpdEditor.this) {
+                    .getPage(), ElasticityEditor.this) {
                     @Override
                     public Viewer createViewer(final Composite composite) {
                         return new TreeViewer(composite);
@@ -1234,7 +1235,7 @@ public class SpdEditor extends MultiPageEditorPart
                     @Override
                     public void requestActivation() {
                         super.requestActivation();
-                        SpdEditor.this.setCurrentViewerPane(this);
+                        ElasticityEditor.this.setCurrentViewerPane(this);
                     }
                 };
                 viewerPane.createControl(this.getContainer());
@@ -1271,9 +1272,9 @@ public class SpdEditor extends MultiPageEditorPart
                 .asyncExec(new Runnable() {
                     @Override
                     public void run() {
-                        if (!SpdEditor.this.getContainer()
+                        if (!ElasticityEditor.this.getContainer()
                             .isDisposed()) {
-                            SpdEditor.this.setActivePage(0);
+                            ElasticityEditor.this.setActivePage(0);
                         }
                     }
                 });
@@ -1290,7 +1291,7 @@ public class SpdEditor extends MultiPageEditorPart
                 public void controlResized(final ControlEvent event) {
                     if (!this.guard) {
                         this.guard = true;
-                        SpdEditor.this.hideTabs();
+                        ElasticityEditor.this.hideTabs();
                         this.guard = false;
                     }
                 }
@@ -1302,7 +1303,7 @@ public class SpdEditor extends MultiPageEditorPart
             .asyncExec(new Runnable() {
                 @Override
                 public void run() {
-                    SpdEditor.this.updateProblemIndication();
+                    ElasticityEditor.this.updateProblemIndication();
                 }
             });
     }
@@ -1394,29 +1395,30 @@ public class SpdEditor extends MultiPageEditorPart
                 @Override
                 public void createControl(final Composite parent) {
                     super.createControl(parent);
-                    SpdEditor.this.contentOutlineViewer = this.getTreeViewer();
-                    SpdEditor.this.contentOutlineViewer.addSelectionChangedListener(this);
+                    ElasticityEditor.this.contentOutlineViewer = this.getTreeViewer();
+                    ElasticityEditor.this.contentOutlineViewer.addSelectionChangedListener(this);
 
                     // Set up the tree viewer.
                     //
-                    SpdEditor.this.contentOutlineViewer.setUseHashlookup(true);
-                    SpdEditor.this.contentOutlineViewer
-                        .setContentProvider(new AdapterFactoryContentProvider(SpdEditor.this.adapterFactory));
-                    SpdEditor.this.contentOutlineViewer
-                        .setLabelProvider(new AdapterFactoryLabelProvider(SpdEditor.this.adapterFactory));
-                    SpdEditor.this.contentOutlineViewer.setInput(SpdEditor.this.editingDomain.getResourceSet());
+                    ElasticityEditor.this.contentOutlineViewer.setUseHashlookup(true);
+                    ElasticityEditor.this.contentOutlineViewer
+                        .setContentProvider(new AdapterFactoryContentProvider(ElasticityEditor.this.adapterFactory));
+                    ElasticityEditor.this.contentOutlineViewer
+                        .setLabelProvider(new AdapterFactoryLabelProvider(ElasticityEditor.this.adapterFactory));
+                    ElasticityEditor.this.contentOutlineViewer
+                        .setInput(ElasticityEditor.this.editingDomain.getResourceSet());
 
                     // Make sure our popups work.
                     //
-                    SpdEditor.this.createContextMenuFor(SpdEditor.this.contentOutlineViewer);
+                    ElasticityEditor.this.createContextMenuFor(ElasticityEditor.this.contentOutlineViewer);
 
-                    if (!SpdEditor.this.editingDomain.getResourceSet()
+                    if (!ElasticityEditor.this.editingDomain.getResourceSet()
                         .getResources()
                         .isEmpty()) {
                         // Select the root object in the view.
                         //
-                        SpdEditor.this.contentOutlineViewer
-                            .setSelection(new StructuredSelection(SpdEditor.this.editingDomain.getResourceSet()
+                        ElasticityEditor.this.contentOutlineViewer
+                            .setSelection(new StructuredSelection(ElasticityEditor.this.editingDomain.getResourceSet()
                                 .getResources()
                                 .get(0)), true);
                     }
@@ -1426,13 +1428,13 @@ public class SpdEditor extends MultiPageEditorPart
                 public void makeContributions(final IMenuManager menuManager, final IToolBarManager toolBarManager,
                         final IStatusLineManager statusLineManager) {
                     super.makeContributions(menuManager, toolBarManager, statusLineManager);
-                    SpdEditor.this.contentOutlineStatusLineManager = statusLineManager;
+                    ElasticityEditor.this.contentOutlineStatusLineManager = statusLineManager;
                 }
 
                 @Override
                 public void setActionBars(final IActionBars actionBars) {
                     super.setActionBars(actionBars);
-                    SpdEditor.this.getActionBarContributor()
+                    ElasticityEditor.this.getActionBarContributor()
                         .shareGlobalActions(this, actionBars);
                 }
             }
@@ -1446,7 +1448,7 @@ public class SpdEditor extends MultiPageEditorPart
                 //
                 @Override
                 public void selectionChanged(final SelectionChangedEvent event) {
-                    SpdEditor.this.handleContentOutlineSelection(event.getSelection());
+                    ElasticityEditor.this.handleContentOutlineSelection(event.getSelection());
                 }
             });
         }
@@ -1465,14 +1467,14 @@ public class SpdEditor extends MultiPageEditorPart
                 ExtendedPropertySheetPage.Decoration.NONE, null, 0, false) {
             @Override
             public void setSelectionToViewer(final List<?> selection) {
-                SpdEditor.this.setSelectionToViewer(selection);
-                SpdEditor.this.setFocus();
+                ElasticityEditor.this.setSelectionToViewer(selection);
+                ElasticityEditor.this.setFocus();
             }
 
             @Override
             public void setActionBars(final IActionBars actionBars) {
                 super.setActionBars(actionBars);
-                SpdEditor.this.getActionBarContributor()
+                ElasticityEditor.this.getActionBarContributor()
                     .shareGlobalActions(this, actionBars);
             }
         };
@@ -1559,21 +1561,21 @@ public class SpdEditor extends MultiPageEditorPart
                 // Save the resources to the file system.
                 //
                 boolean first = true;
-                final List<Resource> resources = SpdEditor.this.editingDomain.getResourceSet()
+                final List<Resource> resources = ElasticityEditor.this.editingDomain.getResourceSet()
                     .getResources();
                 for (final Resource resource : resources) {
                     if ((first || !resource.getContents()
-                        .isEmpty() || SpdEditor.this.isPersisted(resource))
-                            && !SpdEditor.this.editingDomain.isReadOnly(resource)) {
+                        .isEmpty() || ElasticityEditor.this.isPersisted(resource))
+                            && !ElasticityEditor.this.editingDomain.isReadOnly(resource)) {
                         try {
                             final long timeStamp = resource.getTimeStamp();
                             resource.save(saveOptions);
                             if (resource.getTimeStamp() != timeStamp) {
-                                SpdEditor.this.savedResources.add(resource);
+                                ElasticityEditor.this.savedResources.add(resource);
                             }
                         } catch (final Exception exception) {
-                            SpdEditor.this.resourceToDiagnosticMap.put(resource,
-                                    SpdEditor.this.analyzeResourceProblems(resource, exception));
+                            ElasticityEditor.this.resourceToDiagnosticMap.put(resource,
+                                    ElasticityEditor.this.analyzeResourceProblems(resource, exception));
                         }
                         first = false;
                     }

@@ -10,10 +10,11 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.palladiosimulator.elasticity.ElasticityFactory;
+import org.palladiosimulator.elasticity.ElasticityPackage;
+import org.palladiosimulator.elasticity.ElasticitySpec;
 import org.palladiosimulator.elasticity.ModelBasedScalingPolicy;
 import org.palladiosimulator.elasticity.ScalingPolicy;
-import org.palladiosimulator.elasticity.SpdFactory;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
 import org.palladiosimulator.elasticity.adjustments.AdjustmentsPackage;
 import org.palladiosimulator.elasticity.adjustments.impl.AdjustmentsPackageImpl;
@@ -35,7 +36,7 @@ import org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsP
 import org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl;
 import org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage;
 import org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl;
-import org.palladiosimulator.elasticity.util.SpdValidator;
+import org.palladiosimulator.elasticity.util.ElasticityValidator;
 import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.core.entity.EntityPackage;
 
@@ -49,13 +50,20 @@ import de.uka.ipd.sdq.units.UnitsPackage;
  *
  * @generated
  */
-public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
+public class ElasticityPackageImpl extends EPackageImpl implements ElasticityPackage {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     private EClass triggerBasedScalingPolicyEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    private EClass elasticitySpecEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -72,13 +80,6 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
     private EClass modelBasedScalingPolicyEClass = null;
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    private EClass spdEClass = null;
-
-    /**
      * Creates an instance of the model <b>Package</b>, registered with
      * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package package URI
      * value.
@@ -88,12 +89,12 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.eclipse.emf.ecore.EPackage.Registry
-     * @see org.palladiosimulator.elasticity.SpdPackage#eNS_URI
+     * @see org.palladiosimulator.elasticity.ElasticityPackage#eNS_URI
      * @see #init()
      * @generated
      */
-    private SpdPackageImpl() {
-        super(eNS_URI, SpdFactory.eINSTANCE);
+    private ElasticityPackageImpl() {
+        super(eNS_URI, ElasticityFactory.eINSTANCE);
     }
 
     /**
@@ -108,25 +109,25 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
      * upon which it depends.
      *
      * <p>
-     * This method is used to initialize {@link SpdPackage#eINSTANCE} when that field is accessed.
-     * Clients should not invoke it directly. Instead, they should simply access that field to
-     * obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This method is used to initialize {@link ElasticityPackage#eINSTANCE} when that field is
+     * accessed. Clients should not invoke it directly. Instead, they should simply access that
+     * field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
      * @generated
      */
-    public static SpdPackage init() {
+    public static ElasticityPackage init() {
         if (isInited) {
-            return (SpdPackage) EPackage.Registry.INSTANCE.getEPackage(SpdPackage.eNS_URI);
+            return (ElasticityPackage) EPackage.Registry.INSTANCE.getEPackage(ElasticityPackage.eNS_URI);
         }
 
         // Obtain or create and register package
-        final Object registeredSpdPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-        final SpdPackageImpl theSpdPackage = registeredSpdPackage instanceof SpdPackageImpl
-                ? (SpdPackageImpl) registeredSpdPackage
-                : new SpdPackageImpl();
+        final Object registeredElasticityPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+        final ElasticityPackageImpl theElasticityPackage = registeredElasticityPackage instanceof ElasticityPackageImpl
+                ? (ElasticityPackageImpl) registeredElasticityPackage
+                : new ElasticityPackageImpl();
 
         isInited = true;
 
@@ -181,7 +182,7 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
                 : DatatypesPackage.eINSTANCE);
 
         // Create package meta-data objects
-        theSpdPackage.createPackageContents();
+        theElasticityPackage.createPackageContents();
         theTargetsPackage.createPackageContents();
         theAdjustmentsPackage.createPackageContents();
         theConstraintsPackage.createPackageContents();
@@ -194,7 +195,7 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
         theDatatypesPackage.createPackageContents();
 
         // Initialize created meta-data
-        theSpdPackage.initializePackageContents();
+        theElasticityPackage.initializePackageContents();
         theTargetsPackage.initializePackageContents();
         theAdjustmentsPackage.initializePackageContents();
         theConstraintsPackage.initializePackageContents();
@@ -207,19 +208,19 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
         theDatatypesPackage.initializePackageContents();
 
         // Register package validator
-        EValidator.Registry.INSTANCE.put(theSpdPackage, new EValidator.Descriptor() {
+        EValidator.Registry.INSTANCE.put(theElasticityPackage, new EValidator.Descriptor() {
             @Override
             public EValidator getEValidator() {
-                return SpdValidator.INSTANCE;
+                return ElasticityValidator.INSTANCE;
             }
         });
 
         // Mark meta-data to indicate it can't be changed
-        theSpdPackage.freeze();
+        theElasticityPackage.freeze();
 
         // Update the registry and return the package
-        EPackage.Registry.INSTANCE.put(SpdPackage.eNS_URI, theSpdPackage);
-        return theSpdPackage;
+        EPackage.Registry.INSTANCE.put(ElasticityPackage.eNS_URI, theElasticityPackage);
+        return theElasticityPackage;
     }
 
     /**
@@ -260,6 +261,38 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
      * @generated
      */
     @Override
+    public EClass getElasticitySpec() {
+        return this.elasticitySpecEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EReference getElasticitySpec_ScalingPolicies() {
+        return (EReference) this.elasticitySpecEClass.getEStructuralFeatures()
+            .get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EReference getElasticitySpec_TargetGroups() {
+        return (EReference) this.elasticitySpecEClass.getEStructuralFeatures()
+            .get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public EClass getScalingPolicy() {
         return this.scalingPolicyEClass;
     }
@@ -273,6 +306,17 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
     public EAttribute getScalingPolicy_Active() {
         return (EAttribute) this.scalingPolicyEClass.getEStructuralFeatures()
             .get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public EReference getScalingPolicy_PolicyConstraints() {
+        return (EReference) this.scalingPolicyEClass.getEStructuralFeatures()
+            .get(1);
     }
 
     /**
@@ -324,51 +368,8 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
      * @generated
      */
     @Override
-    public EReference getScalingPolicy_PolicyConstraints() {
-        return (EReference) this.scalingPolicyEClass.getEStructuralFeatures()
-            .get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EClass getSPD() {
-        return this.spdEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EReference getSPD_ScalingPolicies() {
-        return (EReference) this.spdEClass.getEStructuralFeatures()
-            .get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EReference getSPD_TargetGroups() {
-        return (EReference) this.spdEClass.getEStructuralFeatures()
-            .get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public SpdFactory getSpdFactory() {
-        return (SpdFactory) this.getEFactoryInstance();
+    public ElasticityFactory getElasticityFactory() {
+        return (ElasticityFactory) this.getEFactoryInstance();
     }
 
     /**
@@ -395,9 +396,9 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
         this.createEReference(this.triggerBasedScalingPolicyEClass, TRIGGER_BASED_SCALING_POLICY__ADJUSTMENT_TYPE);
         this.createEReference(this.triggerBasedScalingPolicyEClass, TRIGGER_BASED_SCALING_POLICY__SCALING_TRIGGER);
 
-        this.spdEClass = this.createEClass(SPD);
-        this.createEReference(this.spdEClass, SPD__SCALING_POLICIES);
-        this.createEReference(this.spdEClass, SPD__TARGET_GROUPS);
+        this.elasticitySpecEClass = this.createEClass(ELASTICITY_SPEC);
+        this.createEReference(this.elasticitySpecEClass, ELASTICITY_SPEC__SCALING_POLICIES);
+        this.createEReference(this.elasticitySpecEClass, ELASTICITY_SPEC__TARGET_GROUPS);
 
         this.scalingPolicyEClass = this.createEClass(SCALING_POLICY);
         this.createEAttribute(this.scalingPolicyEClass, SCALING_POLICY__ACTIVE);
@@ -474,7 +475,7 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
         // Add supertypes to classes
         this.triggerBasedScalingPolicyEClass.getESuperTypes()
             .add(this.getScalingPolicy());
-        this.spdEClass.getESuperTypes()
+        this.elasticitySpecEClass.getESuperTypes()
             .add(theEntityPackage.getEntity());
         this.scalingPolicyEClass.getESuperTypes()
             .add(theEntityPackage.getEntity());
@@ -492,14 +493,14 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
                 null, "scalingTrigger", null, 1, 1, TriggerBasedScalingPolicy.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        this.initEClass(this.spdEClass, org.palladiosimulator.elasticity.SPD.class, "SPD", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.elasticitySpecEClass, ElasticitySpec.class, "ElasticitySpec", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getSPD_ScalingPolicies(), this.getScalingPolicy(), null, "scalingPolicies", null, 1,
-                -1, org.palladiosimulator.elasticity.SPD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+        this.initEReference(this.getElasticitySpec_ScalingPolicies(), this.getScalingPolicy(), null, "scalingPolicies",
+                null, 1, -1, ElasticitySpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
                 !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getSPD_TargetGroups(), theTargetsPackage.getTargetGroup(), null, "targetGroups", null,
-                1, -1, org.palladiosimulator.elasticity.SPD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getElasticitySpec_TargetGroups(), theTargetsPackage.getTargetGroup(), null,
+                "targetGroups", null, 1, -1, ElasticitySpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.scalingPolicyEClass, ScalingPolicy.class, "ScalingPolicy", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -538,8 +539,9 @@ public class SpdPackageImpl extends EPackageImpl implements SpdPackage {
      */
     protected void createEcoreAnnotations() {
         final String source = "http://www.eclipse.org/emf/2002/Ecore";
-        this.addAnnotation(this.spdEClass, source, new String[] { "constraints", "nameInvariant noSameTargetGroup" });
+        this.addAnnotation(this.elasticitySpecEClass, source,
+                new String[] { "constraints", "nameInvariant noSameTargetGroup" });
         this.addAnnotation(this.scalingPolicyEClass, source, new String[] { "constraints", "policyNameInvariant" });
     }
 
-} // SpdPackageImpl
+} // ElasticityPackageImpl

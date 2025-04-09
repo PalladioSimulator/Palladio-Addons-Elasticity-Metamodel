@@ -10,10 +10,10 @@ import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+import org.palladiosimulator.elasticity.ElasticityPackage;
+import org.palladiosimulator.elasticity.ElasticitySpec;
 import org.palladiosimulator.elasticity.ModelBasedScalingPolicy;
-import org.palladiosimulator.elasticity.SPD;
 import org.palladiosimulator.elasticity.ScalingPolicy;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
 
 import de.uka.ipd.sdq.identifier.util.IdentifierValidator;
@@ -21,16 +21,16 @@ import de.uka.ipd.sdq.identifier.util.IdentifierValidator;
 /**
  * <!-- begin-user-doc --> The <b>Validator</b> for the model. <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.elasticity.SpdPackage
+ * @see org.palladiosimulator.elasticity.ElasticityPackage
  * @generated
  */
-public class SpdValidator extends EObjectValidator {
+public class ElasticityValidator extends EObjectValidator {
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public static final SpdValidator INSTANCE = new SpdValidator();
+    public static final ElasticityValidator INSTANCE = new ElasticityValidator();
 
     /**
      * A constant for the {@link org.eclipse.emf.common.util.Diagnostic#getSource() source} of
@@ -41,7 +41,7 @@ public class SpdValidator extends EObjectValidator {
      * @see org.eclipse.emf.common.util.Diagnostic#getCode()
      * @generated
      */
-    public static final String DIAGNOSTIC_SOURCE = "org.palladiosimulator.spd";
+    public static final String DIAGNOSTIC_SOURCE = "org.palladiosimulator.elasticity";
 
     /**
      * A constant with a fixed name that can be used as the base value for additional hand written
@@ -71,7 +71,7 @@ public class SpdValidator extends EObjectValidator {
      *
      * @generated
      */
-    public SpdValidator() {
+    public ElasticityValidator() {
         super();
         this.identifierValidator = IdentifierValidator.INSTANCE;
     }
@@ -83,7 +83,7 @@ public class SpdValidator extends EObjectValidator {
      */
     @Override
     protected EPackage getEPackage() {
-        return SpdPackage.eINSTANCE;
+        return ElasticityPackage.eINSTANCE;
     }
 
     /**
@@ -96,13 +96,13 @@ public class SpdValidator extends EObjectValidator {
     protected boolean validate(final int classifierID, final Object value, final DiagnosticChain diagnostics,
             final Map<Object, Object> context) {
         switch (classifierID) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY:
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY:
             return this.validateTriggerBasedScalingPolicy((TriggerBasedScalingPolicy) value, diagnostics, context);
-        case SpdPackage.SPD:
-            return this.validateSPD((SPD) value, diagnostics, context);
-        case SpdPackage.SCALING_POLICY:
+        case ElasticityPackage.ELASTICITY_SPEC:
+            return this.validateElasticitySpec((ElasticitySpec) value, diagnostics, context);
+        case ElasticityPackage.SCALING_POLICY:
             return this.validateScalingPolicy((ScalingPolicy) value, diagnostics, context);
-        case SpdPackage.MODEL_BASED_SCALING_POLICY:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY:
             return this.validateModelBasedScalingPolicy((ModelBasedScalingPolicy) value, diagnostics, context);
         default:
             return true;
@@ -150,6 +150,99 @@ public class SpdValidator extends EObjectValidator {
             result &= this.validateScalingPolicy_policyNameInvariant(triggerBasedScalingPolicy, diagnostics, context);
         }
         return result;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public boolean validateElasticitySpec(final ElasticitySpec elasticitySpec, final DiagnosticChain diagnostics,
+            final Map<Object, Object> context) {
+        if (!this.validate_NoCircularContainment(elasticitySpec, diagnostics, context)) {
+            return false;
+        }
+        boolean result = this.validate_EveryMultiplicityConforms(elasticitySpec, diagnostics, context);
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryDataValueConforms(elasticitySpec, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryReferenceIsContained(elasticitySpec, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryBidirectionalReferenceIsPaired(elasticitySpec, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryProxyResolves(elasticitySpec, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_UniqueID(elasticitySpec, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryKeyUnique(elasticitySpec, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validate_EveryMapEntryUnique(elasticitySpec, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.identifierValidator.validateIdentifier_identifierIsUnique(elasticitySpec, diagnostics,
+                    context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validateElasticitySpec_nameInvariant(elasticitySpec, diagnostics, context);
+        }
+        if (result || diagnostics != null) {
+            result &= this.validateElasticitySpec_noSameTargetGroup(elasticitySpec, diagnostics, context);
+        }
+        return result;
+    }
+
+    /**
+     * Validates the nameInvariant constraint of '<em>Spec</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    public boolean validateElasticitySpec_nameInvariant(final ElasticitySpec elasticitySpec,
+            final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+        // TODO implement the constraint
+        // -> specify the condition that violates the constraint
+        // -> verify the diagnostic details, including severity, code, and message
+        // Ensure that you remove @generated or mark it @generated NOT
+        if (false) {
+            if (diagnostics != null) {
+                diagnostics.add(this.createDiagnostic(Diagnostic.ERROR, DIAGNOSTIC_SOURCE, 0,
+                        "_UI_GenericConstraint_diagnostic",
+                        new Object[] { "nameInvariant", getObjectLabel(elasticitySpec, context) },
+                        new Object[] { elasticitySpec }, context));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Validates the noSameTargetGroup constraint of '<em>Spec</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    public boolean validateElasticitySpec_noSameTargetGroup(final ElasticitySpec elasticitySpec,
+            final DiagnosticChain diagnostics, final Map<Object, Object> context) {
+        // TODO implement the constraint
+        // -> specify the condition that violates the constraint
+        // -> verify the diagnostic details, including severity, code, and message
+        // Ensure that you remove @generated or mark it @generated NOT
+        if (false) {
+            if (diagnostics != null) {
+                diagnostics.add(this.createDiagnostic(Diagnostic.ERROR, DIAGNOSTIC_SOURCE, 0,
+                        "_UI_GenericConstraint_diagnostic",
+                        new Object[] { "noSameTargetGroup", getObjectLabel(elasticitySpec, context) },
+                        new Object[] { elasticitySpec }, context));
+            }
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -261,96 +354,6 @@ public class SpdValidator extends EObjectValidator {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    public boolean validateSPD(final SPD spd, final DiagnosticChain diagnostics, final Map<Object, Object> context) {
-        if (!this.validate_NoCircularContainment(spd, diagnostics, context)) {
-            return false;
-        }
-        boolean result = this.validate_EveryMultiplicityConforms(spd, diagnostics, context);
-        if (result || diagnostics != null) {
-            result &= this.validate_EveryDataValueConforms(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.validate_EveryReferenceIsContained(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.validate_EveryBidirectionalReferenceIsPaired(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.validate_EveryProxyResolves(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.validate_UniqueID(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.validate_EveryKeyUnique(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.validate_EveryMapEntryUnique(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.identifierValidator.validateIdentifier_identifierIsUnique(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.validateSPD_nameInvariant(spd, diagnostics, context);
-        }
-        if (result || diagnostics != null) {
-            result &= this.validateSPD_noSameTargetGroup(spd, diagnostics, context);
-        }
-        return result;
-    }
-
-    /**
-     * Validates the nameInvariant constraint of '<em>SPD</em>'. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @generated
-     */
-    public boolean validateSPD_nameInvariant(final SPD spd, final DiagnosticChain diagnostics,
-            final Map<Object, Object> context) {
-        // TODO implement the constraint
-        // -> specify the condition that violates the constraint
-        // -> verify the diagnostic details, including severity, code, and message
-        // Ensure that you remove @generated or mark it @generated NOT
-        if (false) {
-            if (diagnostics != null) {
-                diagnostics.add(this.createDiagnostic(Diagnostic.ERROR, DIAGNOSTIC_SOURCE, 0,
-                        "_UI_GenericConstraint_diagnostic",
-                        new Object[] { "nameInvariant", getObjectLabel(spd, context) }, new Object[] { spd }, context));
-            }
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * Validates the noSameTargetGroup constraint of '<em>SPD</em>'. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @generated
-     */
-    public boolean validateSPD_noSameTargetGroup(final SPD spd, final DiagnosticChain diagnostics,
-            final Map<Object, Object> context) {
-        // TODO implement the constraint
-        // -> specify the condition that violates the constraint
-        // -> verify the diagnostic details, including severity, code, and message
-        // Ensure that you remove @generated or mark it @generated NOT
-        if (false) {
-            if (diagnostics != null) {
-                diagnostics.add(this.createDiagnostic(Diagnostic.ERROR, DIAGNOSTIC_SOURCE, 0,
-                        "_UI_GenericConstraint_diagnostic",
-                        new Object[] { "noSameTargetGroup", getObjectLabel(spd, context) }, new Object[] { spd },
-                        context));
-            }
-            return false;
-        }
-        return true;
-    }
-
-    /**
      * Returns the resource locator that will be used to fetch messages for this validator's
      * diagnostics. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
@@ -364,4 +367,4 @@ public class SpdValidator extends EObjectValidator {
         return super.getResourceLocator();
     }
 
-} // SpdValidator
+} // ElasticityValidator

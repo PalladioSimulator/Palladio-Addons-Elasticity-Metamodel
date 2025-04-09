@@ -125,7 +125,7 @@ import org.palladiosimulator.elasticity.constraints.provider.ConstraintsItemProv
 import org.palladiosimulator.elasticity.constraints.target.provider.TargetItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.models.provider.ModelsItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.presentation.ScalingPolicyDefinitionEditorPlugin;
-import org.palladiosimulator.elasticity.provider.SpdItemProviderAdapterFactory;
+import org.palladiosimulator.elasticity.provider.ElasticityItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.targets.provider.TargetsItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.triggers.expectations.provider.ExpectationsItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.triggers.provider.TriggersItemProviderAdapterFactory;
@@ -622,8 +622,9 @@ public class PolicyEditor extends MultiPageEditorPart
      */
     protected void updateProblemIndication() {
         if (this.updateProblemIndication) {
-            final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK, "org.palladiosimulator.spd.editor", 0,
-                    null, new Object[] { this.editingDomain.getResourceSet() });
+            final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
+                    "org.palladiosimulator.elasticity.editor", 0, null,
+                    new Object[] { this.editingDomain.getResourceSet() });
             for (final Diagnostic childDiagnostic : this.resourceToDiagnosticMap.values()) {
                 if (childDiagnostic.getSeverity() != Diagnostic.OK) {
                     diagnostic.add(childDiagnostic);
@@ -693,7 +694,7 @@ public class PolicyEditor extends MultiPageEditorPart
         this.adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
         this.adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-        this.adapterFactory.addAdapterFactory(new SpdItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new ElasticityItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new TargetsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new AdjustmentsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ConstraintsItemProviderAdapterFactory());
@@ -1025,13 +1026,13 @@ public class PolicyEditor extends MultiPageEditorPart
         if (hasErrors || !resource.getWarnings()
             .isEmpty()) {
             final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(
-                    hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING, "org.palladiosimulator.spd.editor", 0,
+                    hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING, "org.palladiosimulator.elasticity.editor", 0,
                     getString("_UI_CreateModelError_message", resource.getURI()),
                     new Object[] { exception == null ? (Object) resource : exception });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
-            return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.spd.editor", 0,
+            return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.elasticity.editor", 0,
                     getString("_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
         } else {
             return Diagnostic.OK_INSTANCE;

@@ -17,8 +17,8 @@ import org.palladiosimulator.elasticity.models.ModelsPackage;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.models.impl.BaseModelImpl#getInterval
  * <em>Interval</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.models.impl.BaseModelImpl#getIntervalOffset <em>Interval
- * Offset</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.models.impl.BaseModelImpl#getIntervalOffset
+ * <em>Interval Offset</em>}</li>
  * </ul>
  *
  * @generated

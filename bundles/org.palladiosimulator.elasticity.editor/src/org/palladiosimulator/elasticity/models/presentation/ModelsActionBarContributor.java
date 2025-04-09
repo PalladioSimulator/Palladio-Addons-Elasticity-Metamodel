@@ -172,7 +172,7 @@ public class ModelsActionBarContributor extends EditingDomainActionBarContributo
 
         final IMenuManager submenuManager = new MenuManager(
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ModelsEditor_menu"),
-                "org.palladiosimulator.spd.modelsMenuID");
+                "org.palladiosimulator.elasticity.modelsMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));

@@ -19,8 +19,8 @@ package org.palladiosimulator.elasticity.adjustments;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.adjustments.RelativeAdjustment#getPercentageGrowthValue
  * <em>Percentage Growth Value</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.adjustments.RelativeAdjustment#getMinAdjustmentValue <em>Min
- * Adjustment Value</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.adjustments.RelativeAdjustment#getMinAdjustmentValue
+ * <em>Min Adjustment Value</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.adjustments.AdjustmentsPackage#getRelativeAdjustment()

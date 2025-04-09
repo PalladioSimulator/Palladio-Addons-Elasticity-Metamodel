@@ -67,8 +67,9 @@ public interface BaseModel extends CDOObject {
     double getIntervalOffset();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.models.BaseModel#getIntervalOffset
-     * <em>Interval Offset</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.models.BaseModel#getIntervalOffset <em>Interval
+     * Offset</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Interval Offset</em>' attribute.

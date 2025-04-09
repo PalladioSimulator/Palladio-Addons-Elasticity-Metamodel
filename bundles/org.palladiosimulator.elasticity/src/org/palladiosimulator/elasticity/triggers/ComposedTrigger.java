@@ -19,8 +19,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger#getScalingtrigger
  * <em>Scalingtrigger</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger#getLogicalOperator <em>Logical
- * Operator</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger#getLogicalOperator
+ * <em>Logical Operator</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.triggers.TriggersPackage#getComposedTrigger()
@@ -30,8 +30,8 @@ import org.eclipse.emf.common.util.EList;
 public interface ComposedTrigger extends ScalingTrigger {
     /**
      * Returns the value of the '<em><b>Scalingtrigger</b></em>' containment reference list. The
-     * list contents are of type {@link org.palladiosimulator.elasticity.triggers.ScalingTrigger}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * list contents are of type {@link org.palladiosimulator.elasticity.triggers.ScalingTrigger}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the value of the '<em>Scalingtrigger</em>' containment reference list.
      * @see org.palladiosimulator.elasticity.triggers.TriggersPackage#getComposedTrigger_Scalingtrigger()
@@ -56,8 +56,8 @@ public interface ComposedTrigger extends ScalingTrigger {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger#getLogicalOperator <em>Logical
-     * Operator</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger#getLogicalOperator
+     * <em>Logical Operator</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Logical Operator</em>' attribute.

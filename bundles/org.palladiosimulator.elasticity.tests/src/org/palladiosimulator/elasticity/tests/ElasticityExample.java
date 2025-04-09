@@ -14,17 +14,17 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.palladiosimulator.elasticity.SpdFactory;
-import org.palladiosimulator.elasticity.SpdPackage;
+import org.palladiosimulator.elasticity.ElasticityFactory;
+import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
 
 /**
- * <!-- begin-user-doc --> A sample utility for the '<em><b>spd</b></em>' package. <!-- end-user-doc
- * -->
+ * <!-- begin-user-doc --> A sample utility for the '<em><b>elasticity</b></em>' package. <!--
+ * end-user-doc -->
  *
  * @generated
  */
-public class SpdExample {
+public class ElasticityExample {
     /**
      * <!-- begin-user-doc --> Load all the argument file paths or URIs as instances of the model.
      * <!-- end-user-doc -->
@@ -47,15 +47,15 @@ public class SpdExample {
         // Register the package to ensure it is available during loading.
         //
         resourceSet.getPackageRegistry()
-            .put(SpdPackage.eNS_URI, SpdPackage.eINSTANCE);
+            .put(ElasticityPackage.eNS_URI, ElasticityPackage.eINSTANCE);
 
         // If there are no arguments, emit an appropriate usage message.
         //
         if (args.length == 0) {
             System.out.println("Enter a list of file paths or URIs that have content like this:");
             try {
-                final Resource resource = resourceSet.createResource(URI.createURI("http:///My.spd"));
-                final TriggerBasedScalingPolicy root = SpdFactory.eINSTANCE.createTriggerBasedScalingPolicy();
+                final Resource resource = resourceSet.createResource(URI.createURI("http:///My.elasticity"));
+                final TriggerBasedScalingPolicy root = ElasticityFactory.eINSTANCE.createTriggerBasedScalingPolicy();
                 resource.getContents()
                     .add(root);
                 resource.save(System.out, null);
@@ -112,4 +112,4 @@ public class SpdExample {
         }
     }
 
-} // SpdExample
+} // ElasticityExample

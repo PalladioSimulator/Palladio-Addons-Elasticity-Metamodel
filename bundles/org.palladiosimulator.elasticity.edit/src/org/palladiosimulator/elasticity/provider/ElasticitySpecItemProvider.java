@@ -12,26 +12,26 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.palladiosimulator.elasticity.SPD;
-import org.palladiosimulator.elasticity.SpdFactory;
-import org.palladiosimulator.elasticity.SpdPackage;
+import org.palladiosimulator.elasticity.ElasticityFactory;
+import org.palladiosimulator.elasticity.ElasticityPackage;
+import org.palladiosimulator.elasticity.ElasticitySpec;
 import org.palladiosimulator.elasticity.targets.TargetsFactory;
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.SPD} object. <!--
- * begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.ElasticitySpec}
+ * object. <!-- begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
-public class SPDItemProvider extends EntityItemProvider {
+public class ElasticitySpecItemProvider extends EntityItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
-    public SPDItemProvider(final AdapterFactory adapterFactory) {
+    public ElasticitySpecItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -63,8 +63,8 @@ public class SPDItemProvider extends EntityItemProvider {
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures.add(SpdPackage.Literals.SPD__SCALING_POLICIES);
-            this.childrenFeatures.add(SpdPackage.Literals.SPD__TARGET_GROUPS);
+            this.childrenFeatures.add(ElasticityPackage.Literals.ELASTICITY_SPEC__SCALING_POLICIES);
+            this.childrenFeatures.add(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS);
         }
         return this.childrenFeatures;
     }
@@ -83,7 +83,8 @@ public class SPDItemProvider extends EntityItemProvider {
     }
 
     /**
-     * This returns the icon for SPD. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This returns the icon for an Elasticity Spec item. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
      *
      * @generated NOT
      */
@@ -101,9 +102,9 @@ public class SPDItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((SPD) object).getEntityName();
-        return label == null || label.length() == 0 ? this.getString("_UI_SPD_type")
-                : this.getString("_UI_SPD_type") + " " + label;
+        final String label = ((ElasticitySpec) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_ElasticitySpec_type")
+                : this.getString("_UI_ElasticitySpec_type") + " " + label;
     }
 
     /**
@@ -117,9 +118,9 @@ public class SPDItemProvider extends EntityItemProvider {
     public void notifyChanged(final Notification notification) {
         this.updateChildren(notification);
 
-        switch (notification.getFeatureID(SPD.class)) {
-        case SpdPackage.SPD__SCALING_POLICIES:
-        case SpdPackage.SPD__TARGET_GROUPS:
+        switch (notification.getFeatureID(ElasticitySpec.class)) {
+        case ElasticityPackage.ELASTICITY_SPEC__SCALING_POLICIES:
+        case ElasticityPackage.ELASTICITY_SPEC__TARGET_GROUPS:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -136,19 +137,19 @@ public class SPDItemProvider extends EntityItemProvider {
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.SPD__SCALING_POLICIES,
-                SpdFactory.eINSTANCE.createTriggerBasedScalingPolicy()));
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__SCALING_POLICIES,
+                ElasticityFactory.eINSTANCE.createTriggerBasedScalingPolicy()));
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.SPD__SCALING_POLICIES,
-                SpdFactory.eINSTANCE.createModelBasedScalingPolicy()));
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__SCALING_POLICIES,
+                ElasticityFactory.eINSTANCE.createModelBasedScalingPolicy()));
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.SPD__TARGET_GROUPS,
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS,
                 TargetsFactory.eINSTANCE.createElasticInfrastructure()));
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.SPD__TARGET_GROUPS,
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS,
                 TargetsFactory.eINSTANCE.createServiceGroup()));
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.SPD__TARGET_GROUPS,
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS,
                 TargetsFactory.eINSTANCE.createCompetingConsumersGroup()));
     }
 
@@ -160,7 +161,7 @@ public class SPDItemProvider extends EntityItemProvider {
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
 }

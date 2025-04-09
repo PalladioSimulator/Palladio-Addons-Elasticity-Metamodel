@@ -39,7 +39,7 @@ public interface TriggersPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Triggers/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -56,8 +56,9 @@ public interface TriggersPackage extends EPackage {
     TriggersPackage eINSTANCE = org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl.init();
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.triggers.impl.ScalingTriggerImpl
-     * <em>Scaling Trigger</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.triggers.impl.ScalingTriggerImpl <em>Scaling
+     * Trigger</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.impl.ScalingTriggerImpl
      * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getScalingTrigger()
@@ -84,8 +85,9 @@ public interface TriggersPackage extends EPackage {
     int SCALING_TRIGGER_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl
-     * <em>Base Trigger</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl <em>Base
+     * Trigger</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl
      * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getBaseTrigger()
@@ -178,8 +180,8 @@ public interface TriggersPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnValueImpl <em>Simple Fire On
-     * Value</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnValueImpl <em>Simple Fire
+     * On Value</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnValueImpl
      * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getSimpleFireOnValue()
@@ -234,8 +236,8 @@ public interface TriggersPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnTrendImpl <em>Simple Fire On
-     * Trend</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnTrendImpl <em>Simple Fire
+     * On Trend</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnTrendImpl
      * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getSimpleFireOnTrend()
@@ -280,7 +282,8 @@ public interface TriggersPackage extends EPackage {
     int SIMPLE_FIRE_ON_TREND_FEATURE_COUNT = BASE_TRIGGER_FEATURE_COUNT + 0;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD
      * <em>AGGREGATIONMETHOD</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD
@@ -320,8 +323,9 @@ public interface TriggersPackage extends EPackage {
     int LOGICAL_OPERATOR = 8;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.triggers.RelationalOperator
-     * <em>Relational Operator</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.triggers.RelationalOperator <em>Relational
+     * Operator</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.RelationalOperator
      * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getRelationalOperator()
@@ -330,8 +334,8 @@ public interface TriggersPackage extends EPackage {
     int RELATIONAL_OPERATOR = 9;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.triggers.TrendPattern <em>Trend
-     * Pattern</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link org.palladiosimulator.elasticity.triggers.TrendPattern
+     * <em>Trend Pattern</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.triggers.TrendPattern
      * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getTrendPattern()
@@ -340,8 +344,9 @@ public interface TriggersPackage extends EPackage {
     int TREND_PATTERN = 10;
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.triggers.ScalingTrigger
-     * <em>Scaling Trigger</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.triggers.ScalingTrigger <em>Scaling Trigger</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Scaling Trigger</em>'.
      * @see org.palladiosimulator.elasticity.triggers.ScalingTrigger
@@ -350,8 +355,9 @@ public interface TriggersPackage extends EPackage {
     EClass getScalingTrigger();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.triggers.BaseTrigger
-     * <em>Base Trigger</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.triggers.BaseTrigger <em>Base Trigger</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Base Trigger</em>'.
      * @see org.palladiosimulator.elasticity.triggers.BaseTrigger
@@ -361,8 +367,8 @@ public interface TriggersPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference
-     * '{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getStimulus <em>Stimulus</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getStimulus
+     * <em>Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the containment reference '<em>Stimulus</em>'.
      * @see org.palladiosimulator.elasticity.triggers.BaseTrigger#getStimulus()
@@ -384,8 +390,9 @@ public interface TriggersPackage extends EPackage {
     EReference getBaseTrigger_ExpectedValue();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger
-     * <em>Composed Trigger</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger <em>Composed
+     * Trigger</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Composed Trigger</em>'.
      * @see org.palladiosimulator.elasticity.triggers.ComposedTrigger
@@ -407,8 +414,8 @@ public interface TriggersPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger#getLogicalOperator <em>Logical
-     * Operator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.ComposedTrigger#getLogicalOperator
+     * <em>Logical Operator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Logical Operator</em>'.
      * @see org.palladiosimulator.elasticity.triggers.ComposedTrigger#getLogicalOperator()
@@ -419,8 +426,8 @@ public interface TriggersPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.SimpleFireOnValue <em>Simple Fire On Value</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.SimpleFireOnValue <em>Simple Fire On
+     * Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Simple Fire On Value</em>'.
      * @see org.palladiosimulator.elasticity.triggers.SimpleFireOnValue
@@ -442,8 +449,8 @@ public interface TriggersPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend <em>Simple Fire On Trend</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend <em>Simple Fire On
+     * Trend</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Simple Fire On Trend</em>'.
      * @see org.palladiosimulator.elasticity.triggers.SimpleFireOnTrend
@@ -452,7 +459,8 @@ public interface TriggersPackage extends EPackage {
     EClass getSimpleFireOnTrend();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD
+     * Returns the meta object for enum
+     * '{@link org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD
      * <em>AGGREGATIONMETHOD</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for enum '<em>AGGREGATIONMETHOD</em>'.
@@ -462,8 +470,9 @@ public interface TriggersPackage extends EPackage {
     EEnum getAGGREGATIONMETHOD();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE
-     * <em>HDDUSAGETYPE</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for enum
+     * '{@link org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE <em>HDDUSAGETYPE</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for enum '<em>HDDUSAGETYPE</em>'.
      * @see org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE
@@ -472,7 +481,8 @@ public interface TriggersPackage extends EPackage {
     EEnum getHDDUSAGETYPE();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE
+     * Returns the meta object for enum
+     * '{@link org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE
      * <em>NETWORKUSAGETYPE</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for enum '<em>NETWORKUSAGETYPE</em>'.
@@ -482,8 +492,9 @@ public interface TriggersPackage extends EPackage {
     EEnum getNETWORKUSAGETYPE();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.elasticity.triggers.LogicalOperator
-     * <em>Logical Operator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for enum
+     * '{@link org.palladiosimulator.elasticity.triggers.LogicalOperator <em>Logical
+     * Operator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for enum '<em>Logical Operator</em>'.
      * @see org.palladiosimulator.elasticity.triggers.LogicalOperator
@@ -493,8 +504,8 @@ public interface TriggersPackage extends EPackage {
 
     /**
      * Returns the meta object for enum
-     * '{@link org.palladiosimulator.elasticity.triggers.RelationalOperator <em>Relational Operator</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.RelationalOperator <em>Relational
+     * Operator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for enum '<em>Relational Operator</em>'.
      * @see org.palladiosimulator.elasticity.triggers.RelationalOperator
@@ -503,8 +514,9 @@ public interface TriggersPackage extends EPackage {
     EEnum getRelationalOperator();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.elasticity.triggers.TrendPattern
-     * <em>Trend Pattern</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for enum
+     * '{@link org.palladiosimulator.elasticity.triggers.TrendPattern <em>Trend Pattern</em>}'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for enum '<em>Trend Pattern</em>'.
      * @see org.palladiosimulator.elasticity.triggers.TrendPattern
@@ -547,8 +559,8 @@ public interface TriggersPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl <em>Base Trigger</em>}'
-         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl <em>Base
+         * Trigger</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl
          * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getBaseTrigger()
@@ -601,8 +613,8 @@ public interface TriggersPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnValueImpl <em>Simple Fire On
-         * Value</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnValueImpl <em>Simple
+         * Fire On Value</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnValueImpl
          * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getSimpleFireOnValue()
@@ -620,8 +632,8 @@ public interface TriggersPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnTrendImpl <em>Simple Fire On
-         * Trend</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnTrendImpl <em>Simple
+         * Fire On Trend</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.impl.SimpleFireOnTrendImpl
          * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getSimpleFireOnTrend()
@@ -631,8 +643,8 @@ public interface TriggersPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD <em>AGGREGATIONMETHOD</em>}'
-         * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD
+         * <em>AGGREGATIONMETHOD</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD
          * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getAGGREGATIONMETHOD()
@@ -641,8 +653,9 @@ public interface TriggersPackage extends EPackage {
         EEnum AGGREGATIONMETHOD = eINSTANCE.getAGGREGATIONMETHOD();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE
-         * <em>HDDUSAGETYPE</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE <em>HDDUSAGETYPE</em>}'
+         * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE
          * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getHDDUSAGETYPE()
@@ -652,8 +665,8 @@ public interface TriggersPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE <em>NETWORKUSAGETYPE</em>}'
-         * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE
+         * <em>NETWORKUSAGETYPE</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE
          * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getNETWORKUSAGETYPE()
@@ -663,8 +676,8 @@ public interface TriggersPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.triggers.LogicalOperator <em>Logical Operator</em>}'
-         * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.triggers.LogicalOperator <em>Logical
+         * Operator</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.LogicalOperator
          * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getLogicalOperator()
@@ -684,8 +697,9 @@ public interface TriggersPackage extends EPackage {
         EEnum RELATIONAL_OPERATOR = eINSTANCE.getRelationalOperator();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.elasticity.triggers.TrendPattern
-         * <em>Trend Pattern</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.elasticity.triggers.TrendPattern <em>Trend Pattern</em>}'
+         * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.triggers.TrendPattern
          * @see org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl#getTrendPattern()

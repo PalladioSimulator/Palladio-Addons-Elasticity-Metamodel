@@ -7,10 +7,10 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.palladiosimulator.elasticity.ElasticityPackage;
+import org.palladiosimulator.elasticity.ElasticitySpec;
 import org.palladiosimulator.elasticity.ModelBasedScalingPolicy;
-import org.palladiosimulator.elasticity.SPD;
 import org.palladiosimulator.elasticity.ScalingPolicy;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
 import org.palladiosimulator.pcm.PCMBaseClass;
 import org.palladiosimulator.pcm.PCMClass;
@@ -23,25 +23,25 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.elasticity.SpdPackage
+ * @see org.palladiosimulator.elasticity.ElasticityPackage
  * @generated
  */
-public class SpdAdapterFactory extends AdapterFactoryImpl {
+public class ElasticityAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected static SpdPackage modelPackage;
+    protected static ElasticityPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public SpdAdapterFactory() {
+    public ElasticityAdapterFactory() {
         if (modelPackage == null) {
-            modelPackage = SpdPackage.eINSTANCE;
+            modelPackage = ElasticityPackage.eINSTANCE;
         }
     }
 
@@ -71,55 +71,55 @@ public class SpdAdapterFactory extends AdapterFactoryImpl {
      *
      * @generated
      */
-    protected SpdSwitch<Adapter> modelSwitch = new SpdSwitch<>() {
+    protected ElasticitySwitch<Adapter> modelSwitch = new ElasticitySwitch<>() {
         @Override
         public Adapter caseTriggerBasedScalingPolicy(final TriggerBasedScalingPolicy object) {
-            return SpdAdapterFactory.this.createTriggerBasedScalingPolicyAdapter();
+            return ElasticityAdapterFactory.this.createTriggerBasedScalingPolicyAdapter();
         }
 
         @Override
-        public Adapter caseSPD(final SPD object) {
-            return SpdAdapterFactory.this.createSPDAdapter();
+        public Adapter caseElasticitySpec(final ElasticitySpec object) {
+            return ElasticityAdapterFactory.this.createElasticitySpecAdapter();
         }
 
         @Override
         public Adapter caseScalingPolicy(final ScalingPolicy object) {
-            return SpdAdapterFactory.this.createScalingPolicyAdapter();
+            return ElasticityAdapterFactory.this.createScalingPolicyAdapter();
         }
 
         @Override
         public Adapter caseModelBasedScalingPolicy(final ModelBasedScalingPolicy object) {
-            return SpdAdapterFactory.this.createModelBasedScalingPolicyAdapter();
+            return ElasticityAdapterFactory.this.createModelBasedScalingPolicyAdapter();
         }
 
         @Override
         public Adapter caseIdentifier(final Identifier object) {
-            return SpdAdapterFactory.this.createIdentifierAdapter();
+            return ElasticityAdapterFactory.this.createIdentifierAdapter();
         }
 
         @Override
         public Adapter casePCMClass(final PCMClass object) {
-            return SpdAdapterFactory.this.createPCMClassAdapter();
+            return ElasticityAdapterFactory.this.createPCMClassAdapter();
         }
 
         @Override
         public Adapter casePCMBaseClass(final PCMBaseClass object) {
-            return SpdAdapterFactory.this.createPCMBaseClassAdapter();
+            return ElasticityAdapterFactory.this.createPCMBaseClassAdapter();
         }
 
         @Override
         public Adapter caseNamedElement(final NamedElement object) {
-            return SpdAdapterFactory.this.createNamedElementAdapter();
+            return ElasticityAdapterFactory.this.createNamedElementAdapter();
         }
 
         @Override
         public Adapter caseEntity(final Entity object) {
-            return SpdAdapterFactory.this.createEntityAdapter();
+            return ElasticityAdapterFactory.this.createEntityAdapter();
         }
 
         @Override
         public Adapter defaultCase(final EObject object) {
-            return SpdAdapterFactory.this.createEObjectAdapter();
+            return ElasticityAdapterFactory.this.createEObjectAdapter();
         }
     };
 
@@ -152,10 +152,25 @@ public class SpdAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.palladiosimulator.elasticity.ScalingPolicy
-     * <em>Scaling Policy</em>}'. <!-- begin-user-doc --> This default implementation returns null
-     * so that we can easily ignore cases; it's useful to ignore a case when inheritance will catch
-     * all the cases anyway. <!-- end-user-doc -->
+     * Creates a new adapter for an object of class
+     * '{@link org.palladiosimulator.elasticity.ElasticitySpec <em>Spec</em>}'. <!-- begin-user-doc
+     * --> This default implementation returns null so that we can easily ignore cases; it's useful
+     * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     *
+     * @return the new adapter.
+     * @see org.palladiosimulator.elasticity.ElasticitySpec
+     * @generated
+     */
+    public Adapter createElasticitySpecAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class
+     * '{@link org.palladiosimulator.elasticity.ScalingPolicy <em>Scaling Policy</em>}'. <!--
+     * begin-user-doc --> This default implementation returns null so that we can easily ignore
+     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+     * end-user-doc -->
      *
      * @return the new adapter.
      * @see org.palladiosimulator.elasticity.ScalingPolicy
@@ -177,20 +192,6 @@ public class SpdAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createModelBasedScalingPolicyAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link org.palladiosimulator.elasticity.SPD
-     * <em>SPD</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
-     * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
-     * cases anyway. <!-- end-user-doc -->
-     *
-     * @return the new adapter.
-     * @see org.palladiosimulator.elasticity.SPD
-     * @generated
-     */
-    public Adapter createSPDAdapter() {
         return null;
     }
 
@@ -276,4 +277,4 @@ public class SpdAdapterFactory extends AdapterFactoryImpl {
         return null;
     }
 
-} // SpdAdapterFactory
+} // ElasticityAdapterFactory

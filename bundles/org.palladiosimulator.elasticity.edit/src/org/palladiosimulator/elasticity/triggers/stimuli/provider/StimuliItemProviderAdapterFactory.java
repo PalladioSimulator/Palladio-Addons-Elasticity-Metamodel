@@ -72,8 +72,8 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.OperationResponseTime} instances. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.OperationResponseTime} instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -81,8 +81,8 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.OperationResponseTime}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.OperationResponseTime}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -106,8 +106,8 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.NumberOfElements}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.NumberOfElements}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -131,8 +131,8 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.CPUUtilization}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.CPUUtilization}. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -156,8 +156,8 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.MemoryUtilization}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.MemoryUtilization}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -181,8 +181,8 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.SimulationTime}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.SimulationTime}. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -206,8 +206,8 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization}. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -222,16 +222,17 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.TaskCount} instances. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.TaskCount} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected TaskCountItemProvider taskCountItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.triggers.stimuli.TaskCount}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.TaskCount}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
@@ -246,16 +247,17 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength} instances. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected QueueLengthItemProvider queueLengthItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.QueueLength}. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -279,8 +281,8 @@ public class StimuliItemProviderAdapterFactory extends StimuliAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

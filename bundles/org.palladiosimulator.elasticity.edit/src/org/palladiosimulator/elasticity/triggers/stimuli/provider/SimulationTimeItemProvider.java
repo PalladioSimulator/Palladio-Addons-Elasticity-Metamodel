@@ -12,8 +12,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.triggers.stimuli.SimulationTime} object. <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.triggers.stimuli.SimulationTime} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */

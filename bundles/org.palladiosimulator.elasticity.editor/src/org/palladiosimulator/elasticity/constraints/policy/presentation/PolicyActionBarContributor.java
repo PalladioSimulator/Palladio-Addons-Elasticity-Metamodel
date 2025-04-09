@@ -172,7 +172,7 @@ public class PolicyActionBarContributor extends EditingDomainActionBarContributo
 
         final IMenuManager submenuManager = new MenuManager(
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_PolicyEditor_menu"),
-                "org.palladiosimulator.spd.constraints.policyMenuID");
+                "org.palladiosimulator.elasticity.constraints.policyMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));

@@ -81,8 +81,8 @@ public class ExpectationsItemProviderAdapterFactory extends ExpectationsAdapterF
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.expectations.NoExpectation}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.expectations.NoExpectation}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -97,8 +97,8 @@ public class ExpectationsItemProviderAdapterFactory extends ExpectationsAdapterF
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedPercentage} instances. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedPercentage} instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -131,8 +131,8 @@ public class ExpectationsItemProviderAdapterFactory extends ExpectationsAdapterF
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedCount}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedCount}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -156,8 +156,8 @@ public class ExpectationsItemProviderAdapterFactory extends ExpectationsAdapterF
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedTime}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedTime}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -181,8 +181,8 @@ public class ExpectationsItemProviderAdapterFactory extends ExpectationsAdapterF
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedTrend}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedTrend}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

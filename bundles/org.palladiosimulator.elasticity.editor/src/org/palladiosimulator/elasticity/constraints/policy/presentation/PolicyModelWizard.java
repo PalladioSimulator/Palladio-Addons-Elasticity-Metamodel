@@ -58,7 +58,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 import org.palladiosimulator.elasticity.constraints.policy.PolicyFactory;
 import org.palladiosimulator.elasticity.constraints.policy.PolicyPackage;
 import org.palladiosimulator.elasticity.presentation.ScalingPolicyDefinitionEditorPlugin;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 
 /**
  * This is a simple wizard for creating a new model file. <!-- begin-user-doc --> <!-- end-user-doc
@@ -514,7 +514,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
          */
         protected String getLabel(final String typeName) {
             try {
-                return ScalingPolicyDefinitionEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+                return ElasticityEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
             } catch (final MissingResourceException mre) {
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(mre);
             }

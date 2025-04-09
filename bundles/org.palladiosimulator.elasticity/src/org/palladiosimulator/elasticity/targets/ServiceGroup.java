@@ -43,8 +43,9 @@ public interface ServiceGroup extends TargetGroup {
     AssemblyContext getUnitAssembly();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.targets.ServiceGroup#getUnitAssembly
-     * <em>Unit Assembly</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroup#getUnitAssembly <em>Unit
+     * Assembly</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Unit Assembly</em>' reference.

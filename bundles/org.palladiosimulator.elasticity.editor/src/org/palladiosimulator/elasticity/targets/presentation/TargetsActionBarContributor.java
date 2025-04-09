@@ -173,7 +173,7 @@ public class TargetsActionBarContributor extends EditingDomainActionBarContribut
 
         final IMenuManager submenuManager = new MenuManager(
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_TargetsEditor_menu"),
-                "org.palladiosimulator.spd.targetsMenuID");
+                "org.palladiosimulator.elasticity.targetsMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));

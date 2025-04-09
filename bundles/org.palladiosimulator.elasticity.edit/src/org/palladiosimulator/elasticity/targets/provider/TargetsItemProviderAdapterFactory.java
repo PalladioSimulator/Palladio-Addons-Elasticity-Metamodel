@@ -81,8 +81,8 @@ public class TargetsItemProviderAdapterFactory extends TargetsAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure}. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure}. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -97,16 +97,16 @@ public class TargetsItemProviderAdapterFactory extends TargetsAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.targets.ServiceGroup} instances. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.targets.ServiceGroup} instances. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected ServiceGroupItemProvider serviceGroupItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.targets.ServiceGroup}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a {@link org.palladiosimulator.elasticity.targets.ServiceGroup}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -130,8 +130,8 @@ public class TargetsItemProviderAdapterFactory extends TargetsAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup}. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */

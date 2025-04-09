@@ -17,8 +17,8 @@ import org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization#getUsageType <em>Usage
- * Type</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization#getUsageType
+ * <em>Usage Type</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage#getNetworkUtilization()
@@ -28,9 +28,9 @@ import org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE;
 public interface NetworkUtilization extends ResourceUtilizationStimulus {
     /**
      * Returns the value of the '<em><b>Usage Type</b></em>' attribute. The literals are from the
-     * enumeration {@link org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE}. <!-- begin-user-doc
-     * --> <!-- end-user-doc --> <!-- begin-model-doc --> The type of network usage. <!--
-     * end-model-doc -->
+     * enumeration {@link org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE}. <!--
+     * begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The type of network usage.
+     * <!-- end-model-doc -->
      *
      * @return the value of the '<em>Usage Type</em>' attribute.
      * @see org.palladiosimulator.elasticity.triggers.NETWORKUSAGETYPE
@@ -43,8 +43,8 @@ public interface NetworkUtilization extends ResourceUtilizationStimulus {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization#getUsageType <em>Usage
-     * Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.NetworkUtilization#getUsageType
+     * <em>Usage Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Usage Type</em>' attribute.

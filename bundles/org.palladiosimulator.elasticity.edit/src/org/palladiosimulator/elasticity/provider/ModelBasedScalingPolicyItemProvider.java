@@ -13,13 +13,14 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.ModelBasedScalingPolicy;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.models.ModelsFactory;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy}
- * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy} object. <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
  *
  * @generated
  */
@@ -62,7 +63,7 @@ public class ModelBasedScalingPolicyItemProvider extends ScalingPolicyItemProvid
                 this.getString("_UI_ModelBasedScalingPolicy_adjustment_feature"),
                 this.getString("_UI_PropertyDescriptor_description", "_UI_ModelBasedScalingPolicy_adjustment_feature",
                         "_UI_ModelBasedScalingPolicy_type"),
-                SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__ADJUSTMENT, true, false, false,
+                ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__ADJUSTMENT, true, false, false,
                 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
     }
 
@@ -79,7 +80,7 @@ public class ModelBasedScalingPolicyItemProvider extends ScalingPolicyItemProvid
     public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
         if (this.childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            this.childrenFeatures.add(SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL);
+            this.childrenFeatures.add(ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL);
         }
         return this.childrenFeatures;
     }
@@ -133,10 +134,10 @@ public class ModelBasedScalingPolicyItemProvider extends ScalingPolicyItemProvid
         this.updateChildren(notification);
 
         switch (notification.getFeatureID(ModelBasedScalingPolicy.class)) {
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
@@ -153,13 +154,13 @@ public class ModelBasedScalingPolicyItemProvider extends ScalingPolicyItemProvid
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL,
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL,
                 ModelsFactory.eINSTANCE.createRandomModel()));
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL,
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL,
                 ModelsFactory.eINSTANCE.createFuzzyQLearningModel()));
 
-        newChildDescriptors.add(this.createChildParameter(SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL,
+        newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL,
                 ModelsFactory.eINSTANCE.createFuzzySARSAModel()));
     }
 

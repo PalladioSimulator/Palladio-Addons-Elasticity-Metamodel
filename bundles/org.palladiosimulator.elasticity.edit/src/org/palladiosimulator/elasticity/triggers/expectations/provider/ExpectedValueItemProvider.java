@@ -16,12 +16,12 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedValue} object. <!-- begin-user-doc
- * --> <!-- end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.triggers.expectations.ExpectedValue} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
@@ -95,7 +95,7 @@ public class ExpectedValueItemProvider extends ItemProviderAdapter implements IE
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
 }

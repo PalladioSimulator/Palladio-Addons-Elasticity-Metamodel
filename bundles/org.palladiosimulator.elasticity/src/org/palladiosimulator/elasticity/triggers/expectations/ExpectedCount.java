@@ -27,7 +27,7 @@ public interface ExpectedCount extends ExpectedPrimitive {
      * @return the value of the '<em>Count</em>' attribute.
      * @see #setCount(int)
      * @see org.palladiosimulator.elasticity.triggers.expectations.ExpectationsPackage#getExpectedCount_Count()
-     * @model dataType="org.palladiosimulator.spd.datatypes.PositiveInteger"
+     * @model dataType="org.palladiosimulator.elasticity.datatypes.PositiveInteger"
      * @generated
      */
     int getCount();

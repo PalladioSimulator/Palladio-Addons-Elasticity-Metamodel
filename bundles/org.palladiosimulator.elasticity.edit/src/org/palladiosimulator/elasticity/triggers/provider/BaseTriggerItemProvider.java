@@ -17,8 +17,9 @@ import org.palladiosimulator.elasticity.triggers.expectations.ExpectationsFactor
 import org.palladiosimulator.elasticity.triggers.stimuli.StimuliFactory;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.triggers.BaseTrigger}
- * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.palladiosimulator.elasticity.triggers.BaseTrigger} object. <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
  *
  * @generated
  */

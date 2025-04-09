@@ -37,7 +37,7 @@ public interface ModelsPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Adjustments/Models/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Models/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -92,8 +92,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.models.impl.LearningBasedModelImpl <em>Learning Based
-     * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.impl.LearningBasedModelImpl <em>Learning
+     * Based Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.models.impl.LearningBasedModelImpl
      * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getLearningBasedModel()
@@ -103,8 +103,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.models.impl.FuzzyLearningModelImpl <em>Fuzzy Learning
-     * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.impl.FuzzyLearningModelImpl <em>Fuzzy
+     * Learning Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.models.impl.FuzzyLearningModelImpl
      * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getFuzzyLearningModel()
@@ -114,8 +114,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.models.impl.FuzzyQLearningModelImpl <em>Fuzzy QLearning
-     * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.impl.FuzzyQLearningModelImpl <em>Fuzzy
+     * QLearning Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.models.impl.FuzzyQLearningModelImpl
      * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getFuzzyQLearningModel()
@@ -124,8 +124,9 @@ public interface ModelsPackage extends EPackage {
     int FUZZY_QLEARNING_MODEL = 2;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.models.impl.FuzzySARSAModelImpl
-     * <em>Fuzzy SARSA Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.models.impl.FuzzySARSAModelImpl <em>Fuzzy SARSA
+     * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.models.impl.FuzzySARSAModelImpl
      * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getFuzzySARSAModel()
@@ -134,8 +135,9 @@ public interface ModelsPackage extends EPackage {
     int FUZZY_SARSA_MODEL = 5;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.models.impl.RandomModelImpl
-     * <em>Random Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.models.impl.RandomModelImpl <em>Random Model</em>}'
+     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.models.impl.RandomModelImpl
      * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getRandomModel()
@@ -478,8 +480,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.models.impl.ResponseTimeSpecificationImpl <em>Response Time
-     * Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.impl.ResponseTimeSpecificationImpl
+     * <em>Response Time Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.models.impl.ResponseTimeSpecificationImpl
      * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getResponseTimeSpecification()
@@ -534,8 +536,8 @@ public interface ModelsPackage extends EPackage {
     int INITIALIZATION_TYPE = 7;
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.models.BaseModel <em>Base
-     * Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.models.BaseModel
+     * <em>Base Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Base Model</em>'.
      * @see org.palladiosimulator.elasticity.models.BaseModel
@@ -545,8 +547,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.elasticity.models.BaseModel#getInterval <em>Interval</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.BaseModel#getInterval <em>Interval</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Interval</em>'.
      * @see org.palladiosimulator.elasticity.models.BaseModel#getInterval()
@@ -603,8 +605,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.elasticity.models.RandomModel#getProbability <em>Probability</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.RandomModel#getProbability
+     * <em>Probability</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Probability</em>'.
      * @see org.palladiosimulator.elasticity.models.RandomModel#getProbability()
@@ -625,8 +627,9 @@ public interface ModelsPackage extends EPackage {
     EClass getFuzzyQLearningModel();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.models.LearningBasedModel
-     * <em>Learning Based Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.models.LearningBasedModel <em>Learning Based
+     * Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Learning Based Model</em>'.
      * @see org.palladiosimulator.elasticity.models.LearningBasedModel
@@ -636,8 +639,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.elasticity.models.LearningBasedModel#getLearningRate <em>Learning
-     * Rate</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.LearningBasedModel#getLearningRate
+     * <em>Learning Rate</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Learning Rate</em>'.
      * @see org.palladiosimulator.elasticity.models.LearningBasedModel#getLearningRate()
@@ -647,8 +650,9 @@ public interface ModelsPackage extends EPackage {
     EAttribute getLearningBasedModel_LearningRate();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel
-     * <em>Fuzzy Learning Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel <em>Fuzzy Learning
+     * Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Fuzzy Learning Model</em>'.
      * @see org.palladiosimulator.elasticity.models.FuzzyLearningModel
@@ -658,8 +662,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference
-     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getWorkloadStimulus <em>Workload
-     * Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getWorkloadStimulus
+     * <em>Workload Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the containment reference '<em>Workload Stimulus</em>'.
      * @see org.palladiosimulator.elasticity.models.FuzzyLearningModel#getWorkloadStimulus()
@@ -670,8 +674,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getEpsilon <em>Epsilon</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getEpsilon
+     * <em>Epsilon</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Epsilon</em>'.
      * @see org.palladiosimulator.elasticity.models.FuzzyLearningModel#getEpsilon()
@@ -682,8 +686,8 @@ public interface ModelsPackage extends EPackage {
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getDiscountFactor <em>Discount
-     * Factor</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel#getDiscountFactor
+     * <em>Discount Factor</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the attribute '<em>Discount Factor</em>'.
      * @see org.palladiosimulator.elasticity.models.FuzzyLearningModel#getDiscountFactor()
@@ -717,8 +721,9 @@ public interface ModelsPackage extends EPackage {
     EReference getFuzzyLearningModel_ResponseTimeSpecification();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.models.FuzzySARSAModel
-     * <em>Fuzzy SARSA Model</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.models.FuzzySARSAModel <em>Fuzzy SARSA Model</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Fuzzy SARSA Model</em>'.
      * @see org.palladiosimulator.elasticity.models.FuzzySARSAModel
@@ -774,8 +779,9 @@ public interface ModelsPackage extends EPackage {
     EAttribute getResponseTimeSpecification_ResponseTimeAggregationMethod();
 
     /**
-     * Returns the meta object for enum '{@link org.palladiosimulator.elasticity.models.InitializationType
-     * <em>Initialization Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for enum
+     * '{@link org.palladiosimulator.elasticity.models.InitializationType <em>Initialization
+     * Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for enum '<em>Initialization Type</em>'.
      * @see org.palladiosimulator.elasticity.models.InitializationType
@@ -807,8 +813,8 @@ public interface ModelsPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.models.impl.BaseModelImpl <em>Base Model</em>}' class.
-         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.models.impl.BaseModelImpl <em>Base Model</em>}'
+         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.models.impl.BaseModelImpl
          * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getBaseModel()
@@ -834,8 +840,8 @@ public interface ModelsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.models.impl.RandomModelImpl <em>Random Model</em>}'
-         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.models.impl.RandomModelImpl <em>Random
+         * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.models.impl.RandomModelImpl
          * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getRandomModel()
@@ -869,8 +875,8 @@ public interface ModelsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.models.impl.FuzzyQLearningModelImpl <em>Fuzzy QLearning
-         * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.models.impl.FuzzyQLearningModelImpl <em>Fuzzy
+         * QLearning Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.models.impl.FuzzyQLearningModelImpl
          * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getFuzzyQLearningModel()
@@ -880,8 +886,8 @@ public interface ModelsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.models.impl.LearningBasedModelImpl <em>Learning Based
-         * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.models.impl.LearningBasedModelImpl <em>Learning
+         * Based Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.models.impl.LearningBasedModelImpl
          * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getLearningBasedModel()
@@ -899,8 +905,8 @@ public interface ModelsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.models.impl.FuzzyLearningModelImpl <em>Fuzzy Learning
-         * Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.models.impl.FuzzyLearningModelImpl <em>Fuzzy
+         * Learning Model</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.models.impl.FuzzyLearningModelImpl
          * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getFuzzyLearningModel()
@@ -962,8 +968,9 @@ public interface ModelsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.models.impl.ResponseTimeSpecificationImpl <em>Response
-         * Time Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.models.impl.ResponseTimeSpecificationImpl
+         * <em>Response Time Specification</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+         * -->
          *
          * @see org.palladiosimulator.elasticity.models.impl.ResponseTimeSpecificationImpl
          * @see org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl#getResponseTimeSpecification()

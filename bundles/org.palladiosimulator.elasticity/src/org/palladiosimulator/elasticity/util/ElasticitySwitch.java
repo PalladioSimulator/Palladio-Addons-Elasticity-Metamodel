@@ -6,10 +6,10 @@ package org.palladiosimulator.elasticity.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.palladiosimulator.elasticity.ElasticityPackage;
+import org.palladiosimulator.elasticity.ElasticitySpec;
 import org.palladiosimulator.elasticity.ModelBasedScalingPolicy;
-import org.palladiosimulator.elasticity.SPD;
 import org.palladiosimulator.elasticity.ScalingPolicy;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.TriggerBasedScalingPolicy;
 import org.palladiosimulator.pcm.PCMBaseClass;
 import org.palladiosimulator.pcm.PCMClass;
@@ -25,25 +25,25 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.elasticity.SpdPackage
+ * @see org.palladiosimulator.elasticity.ElasticityPackage
  * @generated
  */
-public class SpdSwitch<T> extends Switch<T> {
+public class ElasticitySwitch<T> extends Switch<T> {
     /**
      * The cached model package <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected static SpdPackage modelPackage;
+    protected static ElasticityPackage modelPackage;
 
     /**
      * Creates an instance of the switch. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public SpdSwitch() {
+    public ElasticitySwitch() {
         if (modelPackage == null) {
-            modelPackage = SpdPackage.eINSTANCE;
+            modelPackage = ElasticityPackage.eINSTANCE;
         }
     }
 
@@ -71,7 +71,7 @@ public class SpdSwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(final int classifierID, final EObject theEObject) {
         switch (classifierID) {
-        case SpdPackage.TRIGGER_BASED_SCALING_POLICY: {
+        case ElasticityPackage.TRIGGER_BASED_SCALING_POLICY: {
             final TriggerBasedScalingPolicy triggerBasedScalingPolicy = (TriggerBasedScalingPolicy) theEObject;
             T result = this.caseTriggerBasedScalingPolicy(triggerBasedScalingPolicy);
             if (result == null) {
@@ -97,30 +97,30 @@ public class SpdSwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case SpdPackage.SPD: {
-            final SPD spd = (SPD) theEObject;
-            T result = this.caseSPD(spd);
+        case ElasticityPackage.ELASTICITY_SPEC: {
+            final ElasticitySpec elasticitySpec = (ElasticitySpec) theEObject;
+            T result = this.caseElasticitySpec(elasticitySpec);
             if (result == null) {
-                result = this.caseEntity(spd);
+                result = this.caseEntity(elasticitySpec);
             }
             if (result == null) {
-                result = this.caseIdentifier(spd);
+                result = this.caseIdentifier(elasticitySpec);
             }
             if (result == null) {
-                result = this.caseNamedElement(spd);
+                result = this.caseNamedElement(elasticitySpec);
             }
             if (result == null) {
-                result = this.casePCMBaseClass(spd);
+                result = this.casePCMBaseClass(elasticitySpec);
             }
             if (result == null) {
-                result = this.casePCMClass(spd);
+                result = this.casePCMClass(elasticitySpec);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
         }
-        case SpdPackage.SCALING_POLICY: {
+        case ElasticityPackage.SCALING_POLICY: {
             final ScalingPolicy scalingPolicy = (ScalingPolicy) theEObject;
             T result = this.caseScalingPolicy(scalingPolicy);
             if (result == null) {
@@ -143,7 +143,7 @@ public class SpdSwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case SpdPackage.MODEL_BASED_SCALING_POLICY: {
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY: {
             final ModelBasedScalingPolicy modelBasedScalingPolicy = (ModelBasedScalingPolicy) theEObject;
             T result = this.caseModelBasedScalingPolicy(modelBasedScalingPolicy);
             if (result == null) {
@@ -191,6 +191,21 @@ public class SpdSwitch<T> extends Switch<T> {
     }
 
     /**
+     * Returns the result of interpreting the object as an instance of '<em>Spec</em>'. <!--
+     * begin-user-doc --> This implementation returns null; returning a non-null result will
+     * terminate the switch. <!-- end-user-doc -->
+     *
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Spec</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseElasticitySpec(final ElasticitySpec object) {
+        return null;
+    }
+
+    /**
      * Returns the result of interpreting the object as an instance of '<em>Scaling Policy</em>'.
      * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
@@ -218,21 +233,6 @@ public class SpdSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseModelBasedScalingPolicy(final ModelBasedScalingPolicy object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>SPD</em>'. <!--
-     * begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     *
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>SPD</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseSPD(final SPD object) {
         return null;
     }
 
@@ -327,4 +327,4 @@ public class SpdSwitch<T> extends Switch<T> {
         return null;
     }
 
-} // SpdSwitch
+} // ElasticitySwitch

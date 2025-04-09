@@ -6,8 +6,8 @@ package org.palladiosimulator.elasticity.impl;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.ModelBasedScalingPolicy;
-import org.palladiosimulator.elasticity.SpdPackage;
 import org.palladiosimulator.elasticity.models.BaseModel;
 
 /**
@@ -52,7 +52,7 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
      */
     @Override
     protected EClass eStaticClass() {
-        return SpdPackage.Literals.MODEL_BASED_SCALING_POLICY;
+        return ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY;
     }
 
     /**
@@ -62,8 +62,8 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
      */
     @Override
     public BaseModel getModel() {
-        return (BaseModel) this.eDynamicGet(SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL,
-                SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL, true, true);
+        return (BaseModel) this.eDynamicGet(ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL,
+                ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL, true, true);
     }
 
     /**
@@ -72,7 +72,8 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
      * @generated
      */
     public NotificationChain basicSetModel(final BaseModel newModel, NotificationChain msgs) {
-        msgs = this.eDynamicInverseAdd((InternalEObject) newModel, SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL, msgs);
+        msgs = this.eDynamicInverseAdd((InternalEObject) newModel, ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL,
+                msgs);
         return msgs;
     }
 
@@ -83,8 +84,8 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
      */
     @Override
     public void setModel(final BaseModel newModel) {
-        this.eDynamicSet(SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL,
-                SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL, newModel);
+        this.eDynamicSet(ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL,
+                ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__MODEL, newModel);
     }
 
     /**
@@ -94,8 +95,8 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
      */
     @Override
     public int getAdjustment() {
-        return (Integer) this.eDynamicGet(SpdPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT,
-                SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__ADJUSTMENT, true, true);
+        return (Integer) this.eDynamicGet(ElasticityPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT,
+                ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__ADJUSTMENT, true, true);
     }
 
     /**
@@ -105,8 +106,8 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
      */
     @Override
     public void setAdjustment(final int newAdjustment) {
-        this.eDynamicSet(SpdPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT,
-                SpdPackage.Literals.MODEL_BASED_SCALING_POLICY__ADJUSTMENT, newAdjustment);
+        this.eDynamicSet(ElasticityPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT,
+                ElasticityPackage.Literals.MODEL_BASED_SCALING_POLICY__ADJUSTMENT, newAdjustment);
     }
 
     /**
@@ -118,7 +119,7 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL:
             return this.basicSetModel(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -132,9 +133,9 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL:
             return this.getModel();
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
             return this.getAdjustment();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -148,10 +149,10 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL:
             this.setModel((BaseModel) newValue);
             return;
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
             this.setAdjustment((Integer) newValue);
             return;
         }
@@ -166,10 +167,10 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL:
             this.setModel((BaseModel) null);
             return;
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
             this.setAdjustment(ADJUSTMENT_EDEFAULT);
             return;
         }
@@ -184,9 +185,9 @@ public class ModelBasedScalingPolicyImpl extends ScalingPolicyImpl implements Mo
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__MODEL:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__MODEL:
             return this.getModel() != null;
-        case SpdPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
+        case ElasticityPackage.MODEL_BASED_SCALING_POLICY__ADJUSTMENT:
             return this.getAdjustment() != ADJUSTMENT_EDEFAULT;
         }
         return super.eIsSet(featureID);

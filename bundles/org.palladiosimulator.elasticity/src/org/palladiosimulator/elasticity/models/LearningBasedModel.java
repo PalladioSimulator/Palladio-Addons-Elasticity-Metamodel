@@ -14,8 +14,8 @@ package org.palladiosimulator.elasticity.models;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.models.LearningBasedModel#getLearningRate <em>Learning
- * Rate</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.models.LearningBasedModel#getLearningRate
+ * <em>Learning Rate</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.models.ModelsPackage#getLearningBasedModel()
@@ -31,7 +31,7 @@ public interface LearningBasedModel extends BaseModel {
      * @return the value of the '<em>Learning Rate</em>' attribute.
      * @see #setLearningRate(double)
      * @see org.palladiosimulator.elasticity.models.ModelsPackage#getLearningBasedModel_LearningRate()
-     * @model default="0.7" dataType="org.palladiosimulator.spd.datatypes.PercentDouble"
+     * @model default="0.7" dataType="org.palladiosimulator.elasticity.datatypes.PercentDouble"
      *        required="true"
      * @generated
      */
@@ -39,8 +39,8 @@ public interface LearningBasedModel extends BaseModel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.models.LearningBasedModel#getLearningRate <em>Learning
-     * Rate</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.LearningBasedModel#getLearningRate
+     * <em>Learning Rate</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Learning Rate</em>' attribute.

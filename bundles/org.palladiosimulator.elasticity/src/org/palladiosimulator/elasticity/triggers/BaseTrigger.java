@@ -21,7 +21,8 @@ import org.palladiosimulator.elasticity.triggers.stimuli.Stimulus;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getStimulus <em>Stimulus</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getStimulus
+ * <em>Stimulus</em>}</li>
  * <li>{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getExpectedValue <em>Expected
  * Value</em>}</li>
  * </ul>
@@ -44,8 +45,9 @@ public interface BaseTrigger extends ScalingTrigger {
     Stimulus getStimulus();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getStimulus
-     * <em>Stimulus</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getStimulus <em>Stimulus</em>}'
+     * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Stimulus</em>' containment reference.
@@ -67,9 +69,9 @@ public interface BaseTrigger extends ScalingTrigger {
     ExpectedValue getExpectedValue();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getExpectedValue
-     * <em>Expected Value</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.triggers.BaseTrigger#getExpectedValue <em>Expected
+     * Value</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Expected Value</em>' containment reference.

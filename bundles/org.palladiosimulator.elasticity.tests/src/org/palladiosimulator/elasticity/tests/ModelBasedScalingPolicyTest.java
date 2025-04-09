@@ -3,8 +3,8 @@
  */
 package org.palladiosimulator.elasticity.tests;
 
+import org.palladiosimulator.elasticity.ElasticityFactory;
 import org.palladiosimulator.elasticity.ModelBasedScalingPolicy;
-import org.palladiosimulator.elasticity.SpdFactory;
 
 import junit.textui.TestRunner;
 
@@ -54,7 +54,7 @@ public class ModelBasedScalingPolicyTest extends ScalingPolicyTest {
      */
     @Override
     protected void setUp() throws Exception {
-        this.setFixture(SpdFactory.eINSTANCE.createModelBasedScalingPolicy());
+        this.setFixture(ElasticityFactory.eINSTANCE.createModelBasedScalingPolicy());
     }
 
     /**

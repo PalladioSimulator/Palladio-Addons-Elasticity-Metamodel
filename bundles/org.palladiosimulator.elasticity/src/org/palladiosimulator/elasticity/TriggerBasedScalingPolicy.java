@@ -18,13 +18,13 @@ import org.palladiosimulator.elasticity.triggers.ScalingTrigger;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getAdjustmentType <em>Adjustment
- * Type</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getScalingTrigger <em>Scaling
- * Trigger</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getAdjustmentType
+ * <em>Adjustment Type</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getScalingTrigger
+ * <em>Scaling Trigger</em>}</li>
  * </ul>
  *
- * @see org.palladiosimulator.elasticity.SpdPackage#getTriggerBasedScalingPolicy()
+ * @see org.palladiosimulator.elasticity.ElasticityPackage#getTriggerBasedScalingPolicy()
  * @model
  * @generated
  */
@@ -43,8 +43,9 @@ public interface TriggerBasedScalingPolicy extends ScalingPolicy {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getAdjustmentType <em>Adjustment
-     * Type</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getAdjustmentType
+     * <em>Adjustment Type</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
      *
      * @param value
      *            the new value of the '<em>Adjustment Type</em>' containment reference.
@@ -67,8 +68,9 @@ public interface TriggerBasedScalingPolicy extends ScalingPolicy {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getScalingTrigger <em>Scaling
-     * Trigger</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getScalingTrigger
+     * <em>Scaling Trigger</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
      *
      * @param value
      *            the new value of the '<em>Scaling Trigger</em>' containment reference.

@@ -18,7 +18,8 @@ public interface ExpectationsFactory extends EFactory {
      *
      * @generated
      */
-    ExpectationsFactory eINSTANCE = org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsFactoryImpl.init();
+    ExpectationsFactory eINSTANCE = org.palladiosimulator.elasticity.triggers.expectations.impl.ExpectationsFactoryImpl
+        .init();
 
     /**
      * Returns a new object of class '<em>No Expectation</em>'. <!-- begin-user-doc --> <!--

@@ -125,9 +125,10 @@ public class ModelsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.models.BaseModel <em>Base Model</em>}'. <!-- begin-user-doc
-     * --> This default implementation returns null so that we can easily ignore cases; it's useful
-     * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.BaseModel <em>Base Model</em>}'. <!--
+     * begin-user-doc --> This default implementation returns null so that we can easily ignore
+     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+     * end-user-doc -->
      *
      * @return the new adapter.
      * @see org.palladiosimulator.elasticity.models.BaseModel
@@ -169,10 +170,10 @@ public class ModelsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.models.LearningBasedModel <em>Learning Based Model</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.LearningBasedModel <em>Learning Based
+     * Model</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can
+     * easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases
+     * anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
      * @see org.palladiosimulator.elasticity.models.LearningBasedModel
@@ -184,10 +185,10 @@ public class ModelsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel <em>Fuzzy Learning Model</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.models.FuzzyLearningModel <em>Fuzzy Learning
+     * Model</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can
+     * easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases
+     * anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
      * @see org.palladiosimulator.elasticity.models.FuzzyLearningModel
@@ -199,8 +200,8 @@ public class ModelsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.models.FuzzySARSAModel <em>Fuzzy SARSA Model</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
+     * '{@link org.palladiosimulator.elasticity.models.FuzzySARSAModel <em>Fuzzy SARSA Model</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
      *

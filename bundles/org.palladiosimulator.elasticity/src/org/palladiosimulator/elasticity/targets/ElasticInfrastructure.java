@@ -22,7 +22,8 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceEnvironment;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getPCM_ResourceEnvironment
  * <em>PCM Resource Environment</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getUnit <em>Unit</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getUnit
+ * <em>Unit</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.targets.TargetsPackage#getElasticInfrastructure()
@@ -67,7 +68,8 @@ public interface ElasticInfrastructure extends TargetGroup {
     ResourceContainer getUnit();
 
     /**
-     * Sets the value of the '{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getUnit
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getUnit
      * <em>Unit</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value

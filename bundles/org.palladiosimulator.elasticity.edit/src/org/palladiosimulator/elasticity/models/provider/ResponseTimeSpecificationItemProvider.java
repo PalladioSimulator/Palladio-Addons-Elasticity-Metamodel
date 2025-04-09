@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.elasticity.models.ModelsPackage;
 import org.palladiosimulator.elasticity.models.ResponseTimeSpecification;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.models.ResponseTimeSpecification} object. <!-- begin-user-doc
- * --> <!-- end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.models.ResponseTimeSpecification} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
@@ -174,7 +174,7 @@ public class ResponseTimeSpecificationItemProvider extends ItemProviderAdapter i
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
 }

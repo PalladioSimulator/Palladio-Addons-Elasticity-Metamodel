@@ -20,8 +20,8 @@ import org.palladiosimulator.elasticity.triggers.stimuli.Stimulus;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl#getStimulus
  * <em>Stimulus</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl#getExpectedValue <em>Expected
- * Value</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.triggers.impl.BaseTriggerImpl#getExpectedValue
+ * <em>Expected Value</em>}</li>
  * </ul>
  *
  * @generated

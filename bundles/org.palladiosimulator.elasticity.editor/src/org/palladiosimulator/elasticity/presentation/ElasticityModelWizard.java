@@ -55,9 +55,9 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
-import org.palladiosimulator.elasticity.SpdFactory;
-import org.palladiosimulator.elasticity.SpdPackage;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.ElasticityFactory;
+import org.palladiosimulator.elasticity.ElasticityPackage;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 
 /**
  * This is a simple wizard for creating a new model file. <!-- begin-user-doc --> <!-- end-user-doc
@@ -65,15 +65,15 @@ import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlug
  *
  * @generated
  */
-public class SpdModelWizard extends Wizard implements INewWizard {
+public class ElasticityModelWizard extends Wizard implements INewWizard {
     /**
      * The supported extensions for created files. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(
-            Arrays.asList(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_SpdEditorFilenameExtensions")
-                .split("\\s*,\\s*")));
+    public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays
+        .asList(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ElasticityEditorFilenameExtensions")
+            .split("\\s*,\\s*")));
 
     /**
      * A formatted list of supported file extensions, suitable for display. <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     public static final String FORMATTED_FILE_EXTENSIONS = ScalingPolicyDefinitionEditorPlugin.INSTANCE
-        .getString("_UI_SpdEditorFilenameExtensions")
+        .getString("_UI_ElasticityEditorFilenameExtensions")
         .replaceAll("\\s*,\\s*", ", ");
 
     /**
@@ -90,28 +90,28 @@ public class SpdModelWizard extends Wizard implements INewWizard {
      *
      * @generated
      */
-    protected SpdPackage spdPackage = SpdPackage.eINSTANCE;
+    protected ElasticityPackage elasticityPackage = ElasticityPackage.eINSTANCE;
 
     /**
      * This caches an instance of the model factory. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected SpdFactory spdFactory = this.spdPackage.getSpdFactory();
+    protected ElasticityFactory elasticityFactory = this.elasticityPackage.getElasticityFactory();
 
     /**
      * This is the file creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected SpdModelWizardNewFileCreationPage newFileCreationPage;
+    protected ElasticityModelWizardNewFileCreationPage newFileCreationPage;
 
     /**
      * This is the initial object creation page. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected SpdModelWizardInitialObjectCreationPage initialObjectCreationPage;
+    protected ElasticityModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
     /**
      * Remember the selection during initialization for populating the default container. <!--
@@ -147,7 +147,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
         this.selection = selection;
         this.setWindowTitle(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
         this.setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
-            .getImageDescriptor(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getImage("full/wizban/NewSpd")));
+            .getImageDescriptor(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getImage("full/wizban/NewElasticity")));
     }
 
     /**
@@ -159,7 +159,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
     protected Collection<String> getInitialObjectNames() {
         if (this.initialObjectNames == null) {
             this.initialObjectNames = new ArrayList<>();
-            for (final EClassifier eClassifier : this.spdPackage.getEClassifiers()) {
+            for (final EClassifier eClassifier : this.elasticityPackage.getEClassifiers()) {
                 if (eClassifier instanceof EClass) {
                     final EClass eClass = (EClass) eClassifier;
                     if (!eClass.isAbstract()) {
@@ -178,9 +178,9 @@ public class SpdModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     protected EObject createInitialModel() {
-        final EClass eClass = (EClass) this.spdPackage
+        final EClass eClass = (EClass) this.elasticityPackage
             .getEClassifier(this.initialObjectCreationPage.getInitialObjectName());
-        final EObject rootObject = this.spdFactory.create(eClass);
+        final EObject rootObject = this.elasticityFactory.create(eClass);
         return rootObject;
     }
 
@@ -217,7 +217,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
 
                         // Add the initial model object to the contents.
                         //
-                        final EObject rootObject = SpdModelWizard.this.createInitialModel();
+                        final EObject rootObject = ElasticityModelWizard.this.createInitialModel();
                         if (rootObject != null) {
                             resource.getContents()
                                 .add(rootObject);
@@ -227,7 +227,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
                         //
                         final Map<Object, Object> options = new HashMap<>();
                         options.put(XMLResource.OPTION_ENCODING,
-                                SpdModelWizard.this.initialObjectCreationPage.getEncoding());
+                                ElasticityModelWizard.this.initialObjectCreationPage.getEncoding());
                         resource.save(options);
                     } catch (final Exception exception) {
                         ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(exception);
@@ -283,13 +283,13 @@ public class SpdModelWizard extends Wizard implements INewWizard {
      *
      * @generated
      */
-    public class SpdModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+    public class ElasticityModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
         /**
          * Pass in the selection. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @generated
          */
-        public SpdModelWizardNewFileCreationPage(final String pageId, final IStructuredSelection selection) {
+        public ElasticityModelWizardNewFileCreationPage(final String pageId, final IStructuredSelection selection) {
             super(pageId, selection);
         }
 
@@ -334,7 +334,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
      *
      * @generated
      */
-    public class SpdModelWizardInitialObjectCreationPage extends WizardPage {
+    public class ElasticityModelWizardInitialObjectCreationPage extends WizardPage {
         /**
          * <!-- begin-user-doc --> <!-- end-user-doc -->
          *
@@ -359,7 +359,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
          *
          * @generated
          */
-        public SpdModelWizardInitialObjectCreationPage(final String pageId) {
+        public ElasticityModelWizardInitialObjectCreationPage(final String pageId) {
             super(pageId);
         }
 
@@ -401,7 +401,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
                 this.initialObjectField.setLayoutData(data);
             }
 
-            for (final String objectName : SpdModelWizard.this.getInitialObjectNames()) {
+            for (final String objectName : ElasticityModelWizard.this.getInitialObjectNames()) {
                 this.initialObjectField.add(this.getLabel(objectName));
             }
 
@@ -445,8 +445,8 @@ public class SpdModelWizard extends Wizard implements INewWizard {
         protected ModifyListener validator = new ModifyListener() {
             @Override
             public void modifyText(final ModifyEvent e) {
-                SpdModelWizardInitialObjectCreationPage.this
-                    .setPageComplete(SpdModelWizardInitialObjectCreationPage.this.validatePage());
+                ElasticityModelWizardInitialObjectCreationPage.this
+                    .setPageComplete(ElasticityModelWizardInitialObjectCreationPage.this.validatePage());
             }
         };
 
@@ -487,7 +487,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
         public String getInitialObjectName() {
             final String label = this.initialObjectField.getText();
 
-            for (final String name : SpdModelWizard.this.getInitialObjectNames()) {
+            for (final String name : ElasticityModelWizard.this.getInitialObjectNames()) {
                 if (this.getLabel(name)
                     .equals(label)) {
                     return name;
@@ -513,7 +513,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
          */
         protected String getLabel(final String typeName) {
             try {
-                return ScalingPolicyDefinitionEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+                return ElasticityEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
             } catch (final MissingResourceException mre) {
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(mre);
             }
@@ -548,14 +548,14 @@ public class SpdModelWizard extends Wizard implements INewWizard {
     public void addPages() {
         // Create a page, set the title, and the initial model file name.
         //
-        this.newFileCreationPage = new SpdModelWizardNewFileCreationPage("Whatever", this.selection);
+        this.newFileCreationPage = new ElasticityModelWizardNewFileCreationPage("Whatever", this.selection);
         this.newFileCreationPage
-            .setTitle(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_SpdModelWizard_label"));
-        this.newFileCreationPage
-            .setDescription(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_SpdModelWizard_description"));
-        this.newFileCreationPage
-            .setFileName(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_SpdEditorFilenameDefaultBase")
-                    + "." + FILE_EXTENSIONS.get(0));
+            .setTitle(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ElasticityModelWizard_label"));
+        this.newFileCreationPage.setDescription(
+                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ElasticityModelWizard_description"));
+        this.newFileCreationPage.setFileName(
+                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ElasticityEditorFilenameDefaultBase") + "."
+                        + FILE_EXTENSIONS.get(0));
         this.addPage(this.newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -583,7 +583,7 @@ public class SpdModelWizard extends Wizard implements INewWizard {
                     // Make up a unique new name here.
                     //
                     final String defaultModelBaseFilename = ScalingPolicyDefinitionEditorPlugin.INSTANCE
-                        .getString("_UI_SpdEditorFilenameDefaultBase");
+                        .getString("_UI_ElasticityEditorFilenameDefaultBase");
                     final String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
                     String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
                     for (int i = 1; ((IContainer) selectedResource).findMember(modelFilename) != null; ++i) {
@@ -593,9 +593,9 @@ public class SpdModelWizard extends Wizard implements INewWizard {
                 }
             }
         }
-        this.initialObjectCreationPage = new SpdModelWizardInitialObjectCreationPage("Whatever2");
+        this.initialObjectCreationPage = new ElasticityModelWizardInitialObjectCreationPage("Whatever2");
         this.initialObjectCreationPage
-            .setTitle(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_SpdModelWizard_label"));
+            .setTitle(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ElasticityModelWizard_label"));
         this.initialObjectCreationPage.setDescription(
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
         this.addPage(this.initialObjectCreationPage);

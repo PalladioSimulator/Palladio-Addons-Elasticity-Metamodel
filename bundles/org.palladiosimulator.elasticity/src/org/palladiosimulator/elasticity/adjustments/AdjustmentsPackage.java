@@ -35,7 +35,7 @@ public interface AdjustmentsPackage extends EPackage {
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/Adjustments/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/Adjustments/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -169,8 +169,8 @@ public interface AdjustmentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.adjustments.AdjustmentType <em>Adjustment Type</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.adjustments.AdjustmentType <em>Adjustment
+     * Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Adjustment Type</em>'.
      * @see org.palladiosimulator.elasticity.adjustments.AdjustmentType
@@ -238,8 +238,8 @@ public interface AdjustmentsPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.adjustments.StepAdjustment <em>Step Adjustment</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.adjustments.StepAdjustment <em>Step
+     * Adjustment</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Step Adjustment</em>'.
      * @see org.palladiosimulator.elasticity.adjustments.StepAdjustment
@@ -283,8 +283,8 @@ public interface AdjustmentsPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.adjustments.impl.AdjustmentTypeImpl <em>Adjustment
-         * Type</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.adjustments.impl.AdjustmentTypeImpl
+         * <em>Adjustment Type</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.adjustments.impl.AdjustmentTypeImpl
          * @see org.palladiosimulator.elasticity.adjustments.impl.AdjustmentsPackageImpl#getAdjustmentType()
@@ -294,8 +294,8 @@ public interface AdjustmentsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.adjustments.impl.RelativeAdjustmentImpl <em>Relative
-         * Adjustment</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.adjustments.impl.RelativeAdjustmentImpl
+         * <em>Relative Adjustment</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.adjustments.impl.RelativeAdjustmentImpl
          * @see org.palladiosimulator.elasticity.adjustments.impl.AdjustmentsPackageImpl#getRelativeAdjustment()
@@ -322,8 +322,8 @@ public interface AdjustmentsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.adjustments.impl.AbsoluteAdjustmentImpl <em>Absolute
-         * Adjustment</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.adjustments.impl.AbsoluteAdjustmentImpl
+         * <em>Absolute Adjustment</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.adjustments.impl.AbsoluteAdjustmentImpl
          * @see org.palladiosimulator.elasticity.adjustments.impl.AdjustmentsPackageImpl#getAbsoluteAdjustment()

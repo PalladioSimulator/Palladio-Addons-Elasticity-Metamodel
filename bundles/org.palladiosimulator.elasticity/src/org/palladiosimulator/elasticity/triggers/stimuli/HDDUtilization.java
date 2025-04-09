@@ -16,8 +16,8 @@ import org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization#getUsageType <em>Usage
- * Type</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization#getUsageType
+ * <em>Usage Type</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage#getHDDUtilization()
@@ -27,8 +27,8 @@ import org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE;
 public interface HDDUtilization extends ResourceUtilizationStimulus {
     /**
      * Returns the value of the '<em><b>Usage Type</b></em>' attribute. The literals are from the
-     * enumeration {@link org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * enumeration {@link org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the value of the '<em>Usage Type</em>' attribute.
      * @see org.palladiosimulator.elasticity.triggers.HDDUSAGETYPE
@@ -41,8 +41,8 @@ public interface HDDUtilization extends ResourceUtilizationStimulus {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization#getUsageType <em>Usage
-     * Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.triggers.stimuli.HDDUtilization#getUsageType
+     * <em>Usage Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value
      *            the new value of the '<em>Usage Type</em>' attribute.

@@ -15,8 +15,8 @@ import org.palladiosimulator.pcm.core.composition.AssemblyContext;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl#getUnitAssembly <em>Unit
- * Assembly</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl#getUnitAssembly
+ * <em>Unit Assembly</em>}</li>
  * </ul>
  *
  * @generated

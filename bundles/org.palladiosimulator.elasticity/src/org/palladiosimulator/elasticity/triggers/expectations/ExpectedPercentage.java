@@ -27,7 +27,7 @@ public interface ExpectedPercentage extends ExpectedPrimitive {
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(double)
      * @see org.palladiosimulator.elasticity.triggers.expectations.ExpectationsPackage#getExpectedPercentage_Value()
-     * @model dataType="org.palladiosimulator.spd.datatypes.WholePercentDouble"
+     * @model dataType="org.palladiosimulator.elasticity.datatypes.WholePercentDouble"
      * @generated
      */
     double getValue();

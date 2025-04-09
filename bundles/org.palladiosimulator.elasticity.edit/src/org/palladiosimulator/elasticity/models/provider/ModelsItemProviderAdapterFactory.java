@@ -72,16 +72,16 @@ public class ModelsItemProviderAdapterFactory extends ModelsAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.models.RandomModel} instances. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.models.RandomModel} instances. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected RandomModelItemProvider randomModelItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.models.RandomModel}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a {@link org.palladiosimulator.elasticity.models.RandomModel}.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -96,16 +96,17 @@ public class ModelsItemProviderAdapterFactory extends ModelsAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.models.FuzzyQLearningModel} instances. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.models.FuzzyQLearningModel} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected FuzzyQLearningModelItemProvider fuzzyQLearningModelItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.models.FuzzyQLearningModel}.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.models.FuzzyQLearningModel}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
@@ -120,16 +121,17 @@ public class ModelsItemProviderAdapterFactory extends ModelsAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.models.FuzzySARSAModel} instances. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.models.FuzzySARSAModel} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
     protected FuzzySARSAModelItemProvider fuzzySARSAModelItemProvider;
 
     /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.models.FuzzySARSAModel}. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.models.FuzzySARSAModel}. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      *
      * @generated
      */
@@ -153,8 +155,8 @@ public class ModelsItemProviderAdapterFactory extends ModelsAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.models.ResponseTimeSpecification}. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.models.ResponseTimeSpecification}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */

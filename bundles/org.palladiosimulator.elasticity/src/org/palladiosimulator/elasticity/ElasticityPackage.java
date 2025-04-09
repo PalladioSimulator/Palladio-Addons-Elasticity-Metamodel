@@ -20,45 +20,45 @@ import org.palladiosimulator.pcm.core.entity.EntityPackage;
  * </ul>
  * <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.elasticity.SpdFactory
+ * @see org.palladiosimulator.elasticity.ElasticityFactory
  * @model kind="package"
  * @generated
  */
-public interface SpdPackage extends EPackage {
+public interface ElasticityPackage extends EPackage {
     /**
      * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    String eNAME = "spd";
+    String eNAME = "elasticity";
 
     /**
      * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    String eNS_URI = "http://palladiosimulator.org/ScalingPolicyDefinition/1.0";
+    String eNS_URI = "http://palladiosimulator.org/Elasticity/1.0";
 
     /**
      * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    String eNS_PREFIX = "spd";
+    String eNS_PREFIX = "elasticity";
 
     /**
      * The singleton instance of the package. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    SpdPackage eINSTANCE = org.palladiosimulator.elasticity.impl.SpdPackageImpl.init();
+    ElasticityPackage eINSTANCE = org.palladiosimulator.elasticity.impl.ElasticityPackageImpl.init();
 
     /**
      * The meta object id for the '{@link org.palladiosimulator.elasticity.impl.ScalingPolicyImpl
      * <em>Scaling Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.impl.ScalingPolicyImpl
-     * @see org.palladiosimulator.elasticity.impl.SpdPackageImpl#getScalingPolicy()
+     * @see org.palladiosimulator.elasticity.impl.ElasticityPackageImpl#getScalingPolicy()
      * @generated
      */
     int SCALING_POLICY = 2;
@@ -123,7 +123,7 @@ public interface SpdPackage extends EPackage {
      * Scaling Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.impl.TriggerBasedScalingPolicyImpl
-     * @see org.palladiosimulator.elasticity.impl.SpdPackageImpl#getTriggerBasedScalingPolicy()
+     * @see org.palladiosimulator.elasticity.impl.ElasticityPackageImpl#getTriggerBasedScalingPolicy()
      * @generated
      */
     int TRIGGER_BASED_SCALING_POLICY = 0;
@@ -201,14 +201,14 @@ public interface SpdPackage extends EPackage {
     int TRIGGER_BASED_SCALING_POLICY_FEATURE_COUNT = SCALING_POLICY_FEATURE_COUNT + 2;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.impl.SPDImpl <em>SPD</em>}'
-     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the '{@link org.palladiosimulator.elasticity.impl.ElasticitySpecImpl
+     * <em>Spec</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @see org.palladiosimulator.elasticity.impl.SPDImpl
-     * @see org.palladiosimulator.elasticity.impl.SpdPackageImpl#getSPD()
+     * @see org.palladiosimulator.elasticity.impl.ElasticitySpecImpl
+     * @see org.palladiosimulator.elasticity.impl.ElasticityPackageImpl#getElasticitySpec()
      * @generated
      */
-    int SPD = 1;
+    int ELASTICITY_SPEC = 1;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -217,7 +217,7 @@ public interface SpdPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SPD__ID = EntityPackage.ENTITY__ID;
+    int ELASTICITY_SPEC__ID = EntityPackage.ENTITY__ID;
 
     /**
      * The feature id for the '<em><b>Entity Name</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -226,7 +226,7 @@ public interface SpdPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SPD__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+    int ELASTICITY_SPEC__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
 
     /**
      * The feature id for the '<em><b>Scaling Policies</b></em>' containment reference list. <!--
@@ -235,7 +235,7 @@ public interface SpdPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SPD__SCALING_POLICIES = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+    int ELASTICITY_SPEC__SCALING_POLICIES = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Target Groups</b></em>' containment reference list. <!--
@@ -244,23 +244,24 @@ public interface SpdPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SPD__TARGET_GROUPS = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+    int ELASTICITY_SPEC__TARGET_GROUPS = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
     /**
-     * The number of structural features of the '<em>SPD</em>' class. <!-- begin-user-doc --> <!--
+     * The number of structural features of the '<em>Spec</em>' class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int SPD_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+    int ELASTICITY_SPEC_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
     /**
-     * The meta object id for the '{@link org.palladiosimulator.elasticity.impl.ModelBasedScalingPolicyImpl
-     * <em>Model Based Scaling Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * The meta object id for the
+     * '{@link org.palladiosimulator.elasticity.impl.ModelBasedScalingPolicyImpl <em>Model Based
+     * Scaling Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.palladiosimulator.elasticity.impl.ModelBasedScalingPolicyImpl
-     * @see org.palladiosimulator.elasticity.impl.SpdPackageImpl#getModelBasedScalingPolicy()
+     * @see org.palladiosimulator.elasticity.impl.ElasticityPackageImpl#getModelBasedScalingPolicy()
      * @generated
      */
     int MODEL_BASED_SCALING_POLICY = 3;
@@ -338,8 +339,9 @@ public interface SpdPackage extends EPackage {
     int MODEL_BASED_SCALING_POLICY_FEATURE_COUNT = SCALING_POLICY_FEATURE_COUNT + 2;
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy
-     * <em>Trigger Based Scaling Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy <em>Trigger Based Scaling
+     * Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Trigger Based Scaling Policy</em>'.
      * @see org.palladiosimulator.elasticity.TriggerBasedScalingPolicy
@@ -349,8 +351,8 @@ public interface SpdPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference
-     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getAdjustmentType <em>Adjustment
-     * Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getAdjustmentType
+     * <em>Adjustment Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the containment reference '<em>Adjustment Type</em>'.
      * @see org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getAdjustmentType()
@@ -361,8 +363,8 @@ public interface SpdPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference
-     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getScalingTrigger <em>Scaling
-     * Trigger</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getScalingTrigger
+     * <em>Scaling Trigger</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the containment reference '<em>Scaling Trigger</em>'.
      * @see org.palladiosimulator.elasticity.TriggerBasedScalingPolicy#getScalingTrigger()
@@ -372,8 +374,42 @@ public interface SpdPackage extends EPackage {
     EReference getTriggerBasedScalingPolicy_ScalingTrigger();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.ScalingPolicy <em>Scaling
-     * Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.ElasticitySpec
+     * <em>Spec</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for class '<em>Spec</em>'.
+     * @see org.palladiosimulator.elasticity.ElasticitySpec
+     * @generated
+     */
+    EClass getElasticitySpec();
+
+    /**
+     * Returns the meta object for the containment reference list
+     * '{@link org.palladiosimulator.elasticity.ElasticitySpec#getScalingPolicies <em>Scaling
+     * Policies</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the containment reference list '<em>Scaling Policies</em>'.
+     * @see org.palladiosimulator.elasticity.ElasticitySpec#getScalingPolicies()
+     * @see #getElasticitySpec()
+     * @generated
+     */
+    EReference getElasticitySpec_ScalingPolicies();
+
+    /**
+     * Returns the meta object for the containment reference list
+     * '{@link org.palladiosimulator.elasticity.ElasticitySpec#getTargetGroups <em>Target
+     * Groups</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the containment reference list '<em>Target Groups</em>'.
+     * @see org.palladiosimulator.elasticity.ElasticitySpec#getTargetGroups()
+     * @see #getElasticitySpec()
+     * @generated
+     */
+    EReference getElasticitySpec_TargetGroups();
+
+    /**
+     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.ScalingPolicy
+     * <em>Scaling Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Scaling Policy</em>'.
      * @see org.palladiosimulator.elasticity.ScalingPolicy
@@ -394,9 +430,21 @@ public interface SpdPackage extends EPackage {
     EAttribute getScalingPolicy_Active();
 
     /**
+     * Returns the meta object for the containment reference list
+     * '{@link org.palladiosimulator.elasticity.ScalingPolicy#getPolicyConstraints <em>Policy
+     * Constraints</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the meta object for the containment reference list '<em>Policy Constraints</em>'.
+     * @see org.palladiosimulator.elasticity.ScalingPolicy#getPolicyConstraints()
+     * @see #getScalingPolicy()
+     * @generated
+     */
+    EReference getScalingPolicy_PolicyConstraints();
+
+    /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.ScalingPolicy#getTargetGroup <em>Target Group</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.ScalingPolicy#getTargetGroup <em>Target
+     * Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Target Group</em>'.
      * @see org.palladiosimulator.elasticity.ScalingPolicy#getTargetGroup()
@@ -406,8 +454,9 @@ public interface SpdPackage extends EPackage {
     EReference getScalingPolicy_TargetGroup();
 
     /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy
-     * <em>Model Based Scaling Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy <em>Model Based Scaling
+     * Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Model Based Scaling Policy</em>'.
      * @see org.palladiosimulator.elasticity.ModelBasedScalingPolicy
@@ -417,8 +466,8 @@ public interface SpdPackage extends EPackage {
 
     /**
      * Returns the meta object for the containment reference
-     * '{@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy#getModel <em>Model</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.ModelBasedScalingPolicy#getModel <em>Model</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the containment reference '<em>Model</em>'.
      * @see org.palladiosimulator.elasticity.ModelBasedScalingPolicy#getModel()
@@ -440,59 +489,13 @@ public interface SpdPackage extends EPackage {
     EAttribute getModelBasedScalingPolicy_Adjustment();
 
     /**
-     * Returns the meta object for the containment reference list
-     * '{@link org.palladiosimulator.elasticity.ScalingPolicy#getPolicyConstraints <em>Policy
-     * Constraints</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the containment reference list '<em>Policy Constraints</em>'.
-     * @see org.palladiosimulator.elasticity.ScalingPolicy#getPolicyConstraints()
-     * @see #getScalingPolicy()
-     * @generated
-     */
-    EReference getScalingPolicy_PolicyConstraints();
-
-    /**
-     * Returns the meta object for class '{@link org.palladiosimulator.elasticity.SPD <em>SPD</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for class '<em>SPD</em>'.
-     * @see org.palladiosimulator.elasticity.SPD
-     * @generated
-     */
-    EClass getSPD();
-
-    /**
-     * Returns the meta object for the containment reference list
-     * '{@link org.palladiosimulator.elasticity.SPD#getScalingPolicies <em>Scaling Policies</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the containment reference list '<em>Scaling Policies</em>'.
-     * @see org.palladiosimulator.elasticity.SPD#getScalingPolicies()
-     * @see #getSPD()
-     * @generated
-     */
-    EReference getSPD_ScalingPolicies();
-
-    /**
-     * Returns the meta object for the containment reference list
-     * '{@link org.palladiosimulator.elasticity.SPD#getTargetGroups <em>Target Groups</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the containment reference list '<em>Target Groups</em>'.
-     * @see org.palladiosimulator.elasticity.SPD#getTargetGroups()
-     * @see #getSPD()
-     * @generated
-     */
-    EReference getSPD_TargetGroups();
-
-    /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @return the factory that creates the instances of the model.
      * @generated
      */
-    SpdFactory getSpdFactory();
+    ElasticityFactory getElasticityFactory();
 
     /**
      * <!-- begin-user-doc --> Defines literals for the meta objects that represent
@@ -509,11 +512,11 @@ public interface SpdPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.impl.TriggerBasedScalingPolicyImpl <em>Trigger Based
-         * Scaling Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.impl.TriggerBasedScalingPolicyImpl <em>Trigger
+         * Based Scaling Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.impl.TriggerBasedScalingPolicyImpl
-         * @see org.palladiosimulator.elasticity.impl.SpdPackageImpl#getTriggerBasedScalingPolicy()
+         * @see org.palladiosimulator.elasticity.impl.ElasticityPackageImpl#getTriggerBasedScalingPolicy()
          * @generated
          */
         EClass TRIGGER_BASED_SCALING_POLICY = eINSTANCE.getTriggerBasedScalingPolicy();
@@ -537,11 +540,39 @@ public interface SpdPackage extends EPackage {
             .getTriggerBasedScalingPolicy_ScalingTrigger();
 
         /**
-         * The meta object literal for the '{@link org.palladiosimulator.elasticity.impl.ScalingPolicyImpl
-         * <em>Scaling Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.elasticity.impl.ElasticitySpecImpl <em>Spec</em>}' class.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @see org.palladiosimulator.elasticity.impl.ElasticitySpecImpl
+         * @see org.palladiosimulator.elasticity.impl.ElasticityPackageImpl#getElasticitySpec()
+         * @generated
+         */
+        EClass ELASTICITY_SPEC = eINSTANCE.getElasticitySpec();
+
+        /**
+         * The meta object literal for the '<em><b>Scaling Policies</b></em>' containment reference
+         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EReference ELASTICITY_SPEC__SCALING_POLICIES = eINSTANCE.getElasticitySpec_ScalingPolicies();
+
+        /**
+         * The meta object literal for the '<em><b>Target Groups</b></em>' containment reference
+         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EReference ELASTICITY_SPEC__TARGET_GROUPS = eINSTANCE.getElasticitySpec_TargetGroups();
+
+        /**
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.elasticity.impl.ScalingPolicyImpl <em>Scaling Policy</em>}'
+         * class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.impl.ScalingPolicyImpl
-         * @see org.palladiosimulator.elasticity.impl.SpdPackageImpl#getScalingPolicy()
+         * @see org.palladiosimulator.elasticity.impl.ElasticityPackageImpl#getScalingPolicy()
          * @generated
          */
         EClass SCALING_POLICY = eINSTANCE.getScalingPolicy();
@@ -553,6 +584,14 @@ public interface SpdPackage extends EPackage {
          * @generated
          */
         EAttribute SCALING_POLICY__ACTIVE = eINSTANCE.getScalingPolicy_Active();
+
+        /**
+         * The meta object literal for the '<em><b>Policy Constraints</b></em>' containment
+         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @generated
+         */
+        EReference SCALING_POLICY__POLICY_CONSTRAINTS = eINSTANCE.getScalingPolicy_PolicyConstraints();
 
         /**
          * The meta object literal for the '<em><b>Target Group</b></em>' reference feature. <!--
@@ -568,7 +607,7 @@ public interface SpdPackage extends EPackage {
          * Scaling Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @see org.palladiosimulator.elasticity.impl.ModelBasedScalingPolicyImpl
-         * @see org.palladiosimulator.elasticity.impl.SpdPackageImpl#getModelBasedScalingPolicy()
+         * @see org.palladiosimulator.elasticity.impl.ElasticityPackageImpl#getModelBasedScalingPolicy()
          * @generated
          */
         EClass MODEL_BASED_SCALING_POLICY = eINSTANCE.getModelBasedScalingPolicy();
@@ -589,40 +628,6 @@ public interface SpdPackage extends EPackage {
          */
         EAttribute MODEL_BASED_SCALING_POLICY__ADJUSTMENT = eINSTANCE.getModelBasedScalingPolicy_Adjustment();
 
-        /**
-         * The meta object literal for the '<em><b>Policy Constraints</b></em>' containment
-         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference SCALING_POLICY__POLICY_CONSTRAINTS = eINSTANCE.getScalingPolicy_PolicyConstraints();
-
-        /**
-         * The meta object literal for the '{@link org.palladiosimulator.elasticity.impl.SPDImpl
-         * <em>SPD</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @see org.palladiosimulator.elasticity.impl.SPDImpl
-         * @see org.palladiosimulator.elasticity.impl.SpdPackageImpl#getSPD()
-         * @generated
-         */
-        EClass SPD = eINSTANCE.getSPD();
-
-        /**
-         * The meta object literal for the '<em><b>Scaling Policies</b></em>' containment reference
-         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference SPD__SCALING_POLICIES = eINSTANCE.getSPD_ScalingPolicies();
-
-        /**
-         * The meta object literal for the '<em><b>Target Groups</b></em>' containment reference
-         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference SPD__TARGET_GROUPS = eINSTANCE.getSPD_TargetGroups();
-
     }
 
-} // SpdPackage
+} // ElasticityPackage

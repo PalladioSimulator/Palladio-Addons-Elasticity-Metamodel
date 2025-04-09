@@ -173,7 +173,7 @@ public class StimuliActionBarContributor extends EditingDomainActionBarContribut
 
         final IMenuManager submenuManager = new MenuManager(
                 ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_StimuliEditor_menu"),
-                "org.palladiosimulator.spd.triggers.stimuliMenuID");
+                "org.palladiosimulator.elasticity.triggers.stimuliMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
         submenuManager.add(new Separator("actions"));

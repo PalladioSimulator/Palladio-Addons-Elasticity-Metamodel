@@ -13,14 +13,15 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.elasticity.constraints.target.TargetFactory;
-import org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin;
+import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 import org.palladiosimulator.elasticity.targets.TargetGroup;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.targets.TargetGroup}
- * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.palladiosimulator.elasticity.targets.TargetGroup} object. <!-- begin-user-doc --> <!--
+ * end-user-doc -->
  *
  * @generated
  */
@@ -149,7 +150,7 @@ public class TargetGroupItemProvider extends EntityItemProvider {
      */
     @Override
     public ResourceLocator getResourceLocator() {
-        return ScalingPolicyDefinitionEditPlugin.INSTANCE;
+        return ElasticityEditPlugin.INSTANCE;
     }
 
 }

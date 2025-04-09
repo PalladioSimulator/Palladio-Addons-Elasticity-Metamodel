@@ -12,8 +12,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.elasticity.models.FuzzySARSAModel;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.elasticity.models.FuzzySARSAModel}
- * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a
+ * {@link org.palladiosimulator.elasticity.models.FuzzySARSAModel} object. <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
  *
  * @generated
  */

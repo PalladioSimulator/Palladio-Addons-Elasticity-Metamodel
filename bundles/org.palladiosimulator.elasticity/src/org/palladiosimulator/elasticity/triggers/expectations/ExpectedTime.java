@@ -27,7 +27,7 @@ public interface ExpectedTime extends ExpectedPrimitive {
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(double)
      * @see org.palladiosimulator.elasticity.triggers.expectations.ExpectationsPackage#getExpectedTime_Value()
-     * @model dataType="org.palladiosimulator.spd.datatypes.PositiveDouble"
+     * @model dataType="org.palladiosimulator.elasticity.datatypes.PositiveDouble"
      * @generated
      */
     double getValue();

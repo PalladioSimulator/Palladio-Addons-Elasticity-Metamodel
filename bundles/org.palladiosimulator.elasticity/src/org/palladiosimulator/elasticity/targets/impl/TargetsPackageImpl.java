@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.palladiosimulator.elasticity.SpdPackage;
+import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.adjustments.AdjustmentsPackage;
 import org.palladiosimulator.elasticity.adjustments.impl.AdjustmentsPackageImpl;
 import org.palladiosimulator.elasticity.constraints.ConstraintsPackage;
@@ -19,7 +19,7 @@ import org.palladiosimulator.elasticity.constraints.target.TargetPackage;
 import org.palladiosimulator.elasticity.constraints.target.impl.TargetPackageImpl;
 import org.palladiosimulator.elasticity.datatypes.DatatypesPackage;
 import org.palladiosimulator.elasticity.datatypes.impl.DatatypesPackageImpl;
-import org.palladiosimulator.elasticity.impl.SpdPackageImpl;
+import org.palladiosimulator.elasticity.impl.ElasticityPackageImpl;
 import org.palladiosimulator.elasticity.models.ModelsPackage;
 import org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl;
 import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
@@ -139,10 +139,10 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
         UnitsPackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
-        Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SpdPackage.eNS_URI);
-        final SpdPackageImpl theSpdPackage = (SpdPackageImpl) (registeredPackage instanceof SpdPackageImpl
+        Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ElasticityPackage.eNS_URI);
+        final ElasticityPackageImpl theElasticityPackage = (ElasticityPackageImpl) (registeredPackage instanceof ElasticityPackageImpl
                 ? registeredPackage
-                : SpdPackage.eINSTANCE);
+                : ElasticityPackage.eINSTANCE);
         registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AdjustmentsPackage.eNS_URI);
         final AdjustmentsPackageImpl theAdjustmentsPackage = (AdjustmentsPackageImpl) (registeredPackage instanceof AdjustmentsPackageImpl
                 ? registeredPackage
@@ -182,7 +182,7 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
 
         // Create package meta-data objects
         theTargetsPackage.createPackageContents();
-        theSpdPackage.createPackageContents();
+        theElasticityPackage.createPackageContents();
         theAdjustmentsPackage.createPackageContents();
         theConstraintsPackage.createPackageContents();
         thePolicyPackage.createPackageContents();
@@ -195,7 +195,7 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
 
         // Initialize created meta-data
         theTargetsPackage.initializePackageContents();
-        theSpdPackage.initializePackageContents();
+        theElasticityPackage.initializePackageContents();
         theAdjustmentsPackage.initializePackageContents();
         theConstraintsPackage.initializePackageContents();
         thePolicyPackage.initializePackageContents();

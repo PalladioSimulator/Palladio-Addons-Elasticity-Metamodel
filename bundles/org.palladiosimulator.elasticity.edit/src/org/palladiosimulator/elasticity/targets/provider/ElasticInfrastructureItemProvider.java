@@ -15,8 +15,8 @@ import org.palladiosimulator.elasticity.targets.TargetsPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure} object. <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */

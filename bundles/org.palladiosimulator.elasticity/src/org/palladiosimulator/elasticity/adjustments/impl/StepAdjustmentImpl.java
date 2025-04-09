@@ -14,8 +14,8 @@ import org.palladiosimulator.elasticity.adjustments.StepAdjustment;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.adjustments.impl.StepAdjustmentImpl#getStepValue <em>Step
- * Value</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.adjustments.impl.StepAdjustmentImpl#getStepValue
+ * <em>Step Value</em>}</li>
  * </ul>
  *
  * @generated

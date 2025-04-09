@@ -2,10 +2,10 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.elasticity.edit;singleton:=true
-Automatic-Module-Name: org.palladiosimulator.spd.edit
+Automatic-Module-Name: org.palladiosimulator.elasticity.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.palladiosimulator.elasticity.provider.ScalingPolicyDefinitionEditPlugin$Implementation
+Bundle-Activator: org.palladiosimulator.elasticity.provider.ElasticityEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17

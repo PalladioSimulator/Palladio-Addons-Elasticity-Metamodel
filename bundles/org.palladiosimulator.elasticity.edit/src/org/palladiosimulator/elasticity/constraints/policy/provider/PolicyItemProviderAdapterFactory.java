@@ -72,8 +72,8 @@ public class PolicyItemProviderAdapterFactory extends PolicyAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.constraints.policy.IntervalConstraint} instances. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.constraints.policy.IntervalConstraint} instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -81,8 +81,8 @@ public class PolicyItemProviderAdapterFactory extends PolicyAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.constraints.policy.IntervalConstraint}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.constraints.policy.IntervalConstraint}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -97,8 +97,8 @@ public class PolicyItemProviderAdapterFactory extends PolicyAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.constraints.policy.CooldownConstraint} instances. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.constraints.policy.CooldownConstraint} instances.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
@@ -106,8 +106,8 @@ public class PolicyItemProviderAdapterFactory extends PolicyAdapterFactory
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.constraints.policy.CooldownConstraint}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.constraints.policy.CooldownConstraint}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
