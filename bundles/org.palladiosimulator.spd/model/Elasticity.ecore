@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="spd" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/1.0"
-    nsPrefix="spd">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="elasticity" nsURI="http://palladiosimulator.org/Elasticity/1.0"
+    nsPrefix="elasticity">
   <eClassifiers xsi:type="ecore:EClass" name="TriggerBasedScalingPolicy" eSuperTypes="#//ScalingPolicy">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A trigger-based scaling policy contains a scaling trigger that determines whether an adjustment should be made and an adjustment that defines the performed adjustment."/>
@@ -11,12 +11,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="scalingTrigger" lowerBound="1"
         eType="#//triggers/ScalingTrigger" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SPD" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="ElasticitySpec" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="nameInvariant noSameTargetGroup"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="The root elements that consists of all scaling policies under analysis for a given cloud application. The SPD is an Entity (PCM), it has a unique identifier and it has a name.  "/>
+      <details key="documentation" value="The root elements that consists of all scaling policies under analysis for a given cloud application. The Elasticity Spec is an Entity (PCM), it has a unique identifier and it has a name.  "/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scalingPolicies" lowerBound="1"
         upperBound="-1" eType="#//ScalingPolicy" containment="true">
@@ -49,11 +49,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="adjustment" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"
         transient="true"/>
   </eClassifiers>
-  <eSubpackages name="targets" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Targets/1.0"
+  <eSubpackages name="targets" nsURI="http://palladiosimulator.org/Elasticity/Targets/1.0"
       nsPrefix="targets">
     <eClassifiers xsi:type="ecore:EClass" name="TargetGroup" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A TargetGroup defines a management group in SPD. It is both uniqely identified as well as it has a name, thus it extends from the Entity class of the PCM. "/>
+        <details key="documentation" value="A TargetGroup defines a management group of an Elasticity Spec. It is both uniqely identified as well as it has a name, thus it extends from the Entity class of the PCM. "/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="targetConstraints" upperBound="-1"
           eType="#//constraints/target/TargetConstraint" containment="true"/>
@@ -79,7 +79,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CompetingConsumersGroup" eSuperTypes="#//targets/TargetGroup">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The CompetingConsumersGroup represents a set of elements that consume messages from a channel/queue asynchronously. In SPD and Palladio it is represented as a set of assembly context that deplete a queue modelled through a PassiveResource. The intention of use behind CompetingConsumersGroup is to represent services that asynchronously process workload by fetching messages from a queue. For understanding the pattern itself one can read https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html.  "/>
+        <details key="documentation" value="The CompetingConsumersGroup represents a set of elements that consume messages from a channel/queue asynchronously. In Palladio and the Elasticity extension it is represented as a set of assembly context that deplete a queue modelled through a PassiveResource. The intention of use behind CompetingConsumersGroup is to represent services that asynchronously process workload by fetching messages from a queue. For understanding the pattern itself one can read https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html.  "/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="unitAssembly" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -88,7 +88,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="adjustments" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Adjustments/1.0"
+  <eSubpackages name="adjustments" nsURI="http://palladiosimulator.org/Elasticity/Adjustments/1.0"
       nsPrefix="adjustments">
     <eClassifiers xsi:type="ecore:EClass" name="AdjustmentType" abstract="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -136,7 +136,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="constraints" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/1.0"
+  <eSubpackages name="constraints" nsURI="http://palladiosimulator.org/Elasticity/Constraints/1.0"
       nsPrefix="constraints">
     <eClassifiers xsi:type="ecore:EClass" name="AbstractConstraint" abstract="true"
         eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier"/>
@@ -144,7 +144,7 @@
         eSuperTypes="#//constraints/AbstractConstraint"/>
     <eClassifiers xsi:type="ecore:EClass" name="StateBasedContraint" abstract="true"
         eSuperTypes="#//constraints/AbstractConstraint"/>
-    <eSubpackages name="policy" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/Policy/1.0"
+    <eSubpackages name="policy" nsURI="http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0"
         nsPrefix="policy">
       <eClassifiers xsi:type="ecore:EClass" name="PolicyConstraint" abstract="true"
           eSuperTypes="#//constraints/AbstractConstraint"/>
@@ -182,7 +182,7 @@
             defaultValueLiteral="0"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="target" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/Target/1.0"
+    <eSubpackages name="target" nsURI="http://palladiosimulator.org/Elasticity/Constraints/Target/1.0"
         nsPrefix="target">
       <eClassifiers xsi:type="ecore:EClass" name="TargetConstraint" abstract="true"
           eSuperTypes="#//constraints/AbstractConstraint"/>
@@ -201,7 +201,7 @@
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>
-  <eSubpackages name="triggers" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/1.0"
+  <eSubpackages name="triggers" nsURI="http://palladiosimulator.org/Elasticity/Triggers/1.0"
       nsPrefix="triggers">
     <eClassifiers xsi:type="ecore:EEnum" name="AGGREGATIONMETHOD">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -232,7 +232,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ScalingTrigger" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The ScalingTrigger is a core concept in SPD. It entails both the information that is fetched from the simulation and models as well as the type of analysis that is performed on that information. It is uniquely identified as it extends from Idenfier (PCM)."/>
+        <details key="documentation" value="The ScalingTrigger is a core concept of Elasticity Specs. It entails both the information that is fetched from the simulation and models as well as the type of analysis that is performed on that information. It is uniquely identified as it extends from Idenfier (PCM)."/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BaseTrigger" abstract="true" eSuperTypes="#//triggers/ScalingTrigger">
@@ -281,7 +281,7 @@
         <details key="documentation" value="The SimpleFireOnTrend trigger is a more advanced trigger that aggregates values and determines a trend and fires whenever this trend is as an expectedTrend value. "/>
       </eAnnotations>
     </eClassifiers>
-    <eSubpackages name="stimuli" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/Stimuli/1.0"
+    <eSubpackages name="stimuli" nsURI="http://palladiosimulator.org/Elasticity/Triggers/Stimuli/1.0"
         nsPrefix="stimuli">
       <eClassifiers xsi:type="ecore:EClass" name="Stimulus" abstract="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -379,7 +379,7 @@
         </eStructuralFeatures>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="expectations" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/Expectations/1.0"
+    <eSubpackages name="expectations" nsURI="http://palladiosimulator.org/Elasticity/Triggers/Expectations/1.0"
         nsPrefix="expectations">
       <eClassifiers xsi:type="ecore:EClass" name="ExpectedValue" abstract="true"/>
       <eClassifiers xsi:type="ecore:EClass" name="ExpectedPrimitive" abstract="true"
@@ -403,7 +403,7 @@
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>
-  <eSubpackages name="models" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Adjustments/Models/1.0"
+  <eSubpackages name="models" nsURI="http://palladiosimulator.org/Elasticity/Models/1.0"
       nsPrefix="models">
     <eClassifiers xsi:type="ecore:EClass" name="BaseModel" abstract="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -485,7 +485,7 @@
           eType="#//triggers/AGGREGATIONMETHOD"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="datatypes" nsURI="http://palladiosimulator.org/ScalingPolicyDefinition/Datatypes/1.0"
+  <eSubpackages name="datatypes" nsURI="http://palladiosimulator.org/Elasticity/Datatypes/1.0"
       nsPrefix="datatypes">
     <eClassifiers xsi:type="ecore:EDataType" name="PercentDouble" instanceClassName="double">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

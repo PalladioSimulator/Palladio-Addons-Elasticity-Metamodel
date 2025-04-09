@@ -9,9 +9,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated SPD -->
       <package
-            uri="http://palladiosimulator.org/ScalingPolicyDefinition/1.0"
-            class="org.palladiosimulator.spd.SpdPackage"
-            genModel="model/SPD.genmodel"/>
+            uri="http://palladiosimulator.org/Elasticity/1.0"
+            class="org.palladiosimulator.elasticity.SpdPackage"
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -19,7 +19,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Targets/1.0"
             class="org.palladiosimulator.spd.targets.TargetsPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -27,7 +27,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Adjustments/1.0"
             class="org.palladiosimulator.spd.adjustments.AdjustmentsPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -35,7 +35,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/1.0"
             class="org.palladiosimulator.spd.constraints.ConstraintsPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -43,7 +43,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/Policy/1.0"
             class="org.palladiosimulator.spd.constraints.policy.PolicyPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -51,7 +51,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/Target/1.0"
             class="org.palladiosimulator.spd.constraints.target.TargetPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -59,7 +59,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/1.0"
             class="org.palladiosimulator.spd.triggers.TriggersPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -67,7 +67,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/Stimuli/1.0"
             class="org.palladiosimulator.spd.triggers.stimuli.StimuliPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -75,7 +75,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/Expectations/1.0"
             class="org.palladiosimulator.spd.triggers.expectations.ExpectationsPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -83,7 +83,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Adjustments/Models/1.0"
             class="org.palladiosimulator.spd.models.ModelsPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
@@ -91,7 +91,7 @@
       <package
             uri="http://palladiosimulator.org/ScalingPolicyDefinition/Datatypes/1.0"
             class="org.palladiosimulator.spd.datatypes.DatatypesPackage"
-            genModel="model/SPD.genmodel"/>
+            genModel="model/Elasticity.genmodel"/>
    </extension>
 
 </plugin>
