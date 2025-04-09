@@ -5,10 +5,10 @@ import pcm.helpers.Commons;
 import pcm.helpers.Wiring;
 import spd.common.queries.SystemQueries;
 
-modeltype SPD_MOD uses 'http://palladiosimulator.org/ScalingPolicyDefinition/1.0';
-modeltype SPD_ADJ uses 'http://palladiosimulator.org/ScalingPolicyDefinition/Adjustments/1.0';
-modeltype SPD_TRI uses 'http://palladiosimulator.org/ScalingPolicyDefinition/Triggers/1.0';
-modeltype SPD_TAR uses 'http://palladiosimulator.org/ScalingPolicyDefinition/Targets/1.0';
+modeltype SPD_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype SPD_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
+modeltype SPD_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
+modeltype SPD_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
 modeltype PCM_RES_ENV uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2';
 modeltype SPD_SEM uses 'http://palladiosimulator.org/ScalingPolicyDefinitionSemantic/1.0';
 
@@ -25,9 +25,9 @@ modeltype PCM_PARAM uses 'http://palladiosimulator.org/PalladioComponentModel/Pa
 modeltype PCM_USG uses 'http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2';
 
 
-modeltype SPD_CON uses 'http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/1.0';
-modeltype SPD_CONP uses 'http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/Policy/1.0';
-modeltype SPD_CONT uses 'http://palladiosimulator.org/ScalingPolicyDefinition/Constraints/Target/1.0';
+modeltype SPD_CON uses 'http://palladiosimulator.org/Elasticity/Constraints/1.0';
+modeltype SPD_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
+modeltype SPD_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
 mapping inout UsageScenario::modifyUsageScenarioOnScaleOut(competingConsumersGroupCfg:CompetingConsumersGroupCfg, newRoles:Set(OperationProvidedRole)){
 	init {
