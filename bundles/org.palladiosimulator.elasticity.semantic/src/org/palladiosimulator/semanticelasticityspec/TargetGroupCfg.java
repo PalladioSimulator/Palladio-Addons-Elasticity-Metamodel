@@ -19,21 +19,21 @@ import org.palladiosimulator.elasticity.ScalingPolicy;
  *   <li>{@link org.palladiosimulator.semanticelasticityspec.TargetGroupCfg#getEnactedPolicies <em>Enacted Policies</em>}</li>
  * </ul>
  *
- * @see org.palladiosimulator.semanticelasticityspec.SemanticspdPackage#getTargetGroupCfg()
+ * @see org.palladiosimulator.semanticelasticityspec.SemanticelasticityPackage#getTargetGroupCfg()
  * @model abstract="true"
  * @generated
  */
 public interface TargetGroupCfg extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Enacted Policies</b></em>' reference list.
-	 * The list contents are of type {@link org.palladiosimulator.elasticity.ScalingPolicy}.
-	 * <!-- begin-user-doc -->
+     * Returns the value of the '<em><b>Enacted Policies</b></em>' reference list.
+     * The list contents are of type {@link org.palladiosimulator.elasticity.ScalingPolicy}.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Enacted Policies</em>' reference list.
-	 * @see org.palladiosimulator.semanticelasticityspec.SemanticspdPackage#getTargetGroupCfg_EnactedPolicies()
-	 * @model
-	 * @generated
-	 */
+     * @return the value of the '<em>Enacted Policies</em>' reference list.
+     * @see org.palladiosimulator.semanticelasticityspec.SemanticelasticityPackage#getTargetGroupCfg_EnactedPolicies()
+     * @model
+     * @generated
+     */
 	EList<ScalingPolicy> getEnactedPolicies();
 
 } // TargetGroupCfg

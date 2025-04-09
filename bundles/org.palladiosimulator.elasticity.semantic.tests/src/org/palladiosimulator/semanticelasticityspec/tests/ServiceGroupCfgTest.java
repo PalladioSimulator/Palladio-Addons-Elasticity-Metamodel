@@ -2,10 +2,10 @@
  */
 package org.palladiosimulator.semanticelasticityspec.tests;
 
-import org.palladiosimulator.semanticelasticityspec.SemanticspdFactory;
 import org.palladiosimulator.semanticelasticityspec.ServiceGroupCfg;
 
 import junit.textui.TestRunner;
+import org.palladiosimulator.semanticelasticityspec.SemanticelasticityFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,55 +16,55 @@ import junit.textui.TestRunner;
 public class ServiceGroupCfgTest extends TargetGroupCfgTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(ServiceGroupCfgTest.class);
-	}
+        TestRunner.run(ServiceGroupCfgTest.class);
+    }
 
 	/**
-	 * Constructs a new Service Group Cfg test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Service Group Cfg test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ServiceGroupCfgTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Service Group Cfg test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Service Group Cfg test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected ServiceGroupCfg getFixture() {
-		return (ServiceGroupCfg)fixture;
-	}
+        return (ServiceGroupCfg)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(SemanticspdFactory.eINSTANCE.createServiceGroupCfg());
-	}
+        setFixture(SemanticelasticityFactory.eINSTANCE.createServiceGroupCfg());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //ServiceGroupCfgTest

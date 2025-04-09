@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
-import org.palladiosimulator.semanticelasticityspec.SemanticspdPackage;
+import org.palladiosimulator.semanticelasticityspec.SemanticelasticityPackage;
 import org.palladiosimulator.semanticelasticityspec.ServiceGroupCfg;
 
 /**
@@ -36,222 +36,227 @@ import org.palladiosimulator.semanticelasticityspec.ServiceGroupCfg;
  */
 public class ServiceGroupCfgImpl extends TargetGroupCfgImpl implements ServiceGroupCfg {
 	/**
-	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getUnit() <em>Unit</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getUnit()
+     * @generated
+     * @ordered
+     */
 	protected AssemblyContext unit;
 
 	/**
-	 * The cached value of the '{@link #getElements() <em>Elements</em>}' reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getElements() <em>Elements</em>}' reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElements()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getElements()
+     * @generated
+     * @ordered
+     */
 	protected EList<AssemblyContext> elements;
 
 	/**
-	 * The cached value of the '{@link #getLoadBalancingAssembly() <em>Load Balancing Assembly</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getLoadBalancingAssembly() <em>Load Balancing Assembly</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLoadBalancingAssembly()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getLoadBalancingAssembly()
+     * @generated
+     * @ordered
+     */
 	protected AssemblyContext loadBalancingAssembly;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected ServiceGroupCfgImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return SemanticspdPackage.Literals.SERVICE_GROUP_CFG;
-	}
+        return SemanticelasticityPackage.Literals.SERVICE_GROUP_CFG;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AssemblyContext getUnit() {
-		if (unit != null && unit.eIsProxy()) {
-			InternalEObject oldUnit = (InternalEObject)unit;
-			unit = (AssemblyContext)eResolveProxy(oldUnit);
-			if (unit != oldUnit) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticspdPackage.SERVICE_GROUP_CFG__UNIT, oldUnit, unit));
-			}
-		}
-		return unit;
-	}
+     * @generated
+     */
+	@Override
+    public AssemblyContext getUnit() {
+        if (unit != null && unit.eIsProxy()) {
+            InternalEObject oldUnit = (InternalEObject)unit;
+            unit = (AssemblyContext)eResolveProxy(oldUnit);
+            if (unit != oldUnit) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticelasticityPackage.SERVICE_GROUP_CFG__UNIT, oldUnit, unit));
+            }
+        }
+        return unit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AssemblyContext basicGetUnit() {
-		return unit;
-	}
+        return unit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnit(AssemblyContext newUnit) {
-		AssemblyContext oldUnit = unit;
-		unit = newUnit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SemanticspdPackage.SERVICE_GROUP_CFG__UNIT, oldUnit, unit));
-	}
+     * @generated
+     */
+	@Override
+    public void setUnit(AssemblyContext newUnit) {
+        AssemblyContext oldUnit = unit;
+        unit = newUnit;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, SemanticelasticityPackage.SERVICE_GROUP_CFG__UNIT, oldUnit, unit));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<AssemblyContext> getElements() {
-		if (elements == null) {
-			elements = new EObjectResolvingEList<AssemblyContext>(AssemblyContext.class, this, SemanticspdPackage.SERVICE_GROUP_CFG__ELEMENTS);
-		}
-		return elements;
-	}
+     * @generated
+     */
+	@Override
+    public EList<AssemblyContext> getElements() {
+        if (elements == null) {
+            elements = new EObjectResolvingEList<AssemblyContext>(AssemblyContext.class, this, SemanticelasticityPackage.SERVICE_GROUP_CFG__ELEMENTS);
+        }
+        return elements;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AssemblyContext getLoadBalancingAssembly() {
-		if (loadBalancingAssembly != null && loadBalancingAssembly.eIsProxy()) {
-			InternalEObject oldLoadBalancingAssembly = (InternalEObject)loadBalancingAssembly;
-			loadBalancingAssembly = (AssemblyContext)eResolveProxy(oldLoadBalancingAssembly);
-			if (loadBalancingAssembly != oldLoadBalancingAssembly) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticspdPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY, oldLoadBalancingAssembly, loadBalancingAssembly));
-			}
-		}
-		return loadBalancingAssembly;
-	}
+     * @generated
+     */
+	@Override
+    public AssemblyContext getLoadBalancingAssembly() {
+        if (loadBalancingAssembly != null && loadBalancingAssembly.eIsProxy()) {
+            InternalEObject oldLoadBalancingAssembly = (InternalEObject)loadBalancingAssembly;
+            loadBalancingAssembly = (AssemblyContext)eResolveProxy(oldLoadBalancingAssembly);
+            if (loadBalancingAssembly != oldLoadBalancingAssembly) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticelasticityPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY, oldLoadBalancingAssembly, loadBalancingAssembly));
+            }
+        }
+        return loadBalancingAssembly;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AssemblyContext basicGetLoadBalancingAssembly() {
-		return loadBalancingAssembly;
-	}
+        return loadBalancingAssembly;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLoadBalancingAssembly(AssemblyContext newLoadBalancingAssembly) {
-		AssemblyContext oldLoadBalancingAssembly = loadBalancingAssembly;
-		loadBalancingAssembly = newLoadBalancingAssembly;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SemanticspdPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY, oldLoadBalancingAssembly, loadBalancingAssembly));
-	}
+     * @generated
+     */
+	@Override
+    public void setLoadBalancingAssembly(AssemblyContext newLoadBalancingAssembly) {
+        AssemblyContext oldLoadBalancingAssembly = loadBalancingAssembly;
+        loadBalancingAssembly = newLoadBalancingAssembly;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, SemanticelasticityPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY, oldLoadBalancingAssembly, loadBalancingAssembly));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case SemanticspdPackage.SERVICE_GROUP_CFG__UNIT:
-				if (resolve) return getUnit();
-				return basicGetUnit();
-			case SemanticspdPackage.SERVICE_GROUP_CFG__ELEMENTS:
-				return getElements();
-			case SemanticspdPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY:
-				if (resolve) return getLoadBalancingAssembly();
-				return basicGetLoadBalancingAssembly();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__UNIT:
+                if (resolve) return getUnit();
+                return basicGetUnit();
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__ELEMENTS:
+                return getElements();
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY:
+                if (resolve) return getLoadBalancingAssembly();
+                return basicGetLoadBalancingAssembly();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case SemanticspdPackage.SERVICE_GROUP_CFG__UNIT:
-				setUnit((AssemblyContext)newValue);
-				return;
-			case SemanticspdPackage.SERVICE_GROUP_CFG__ELEMENTS:
-				getElements().clear();
-				getElements().addAll((Collection<? extends AssemblyContext>)newValue);
-				return;
-			case SemanticspdPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY:
-				setLoadBalancingAssembly((AssemblyContext)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__UNIT:
+                setUnit((AssemblyContext)newValue);
+                return;
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__ELEMENTS:
+                getElements().clear();
+                getElements().addAll((Collection<? extends AssemblyContext>)newValue);
+                return;
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY:
+                setLoadBalancingAssembly((AssemblyContext)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case SemanticspdPackage.SERVICE_GROUP_CFG__UNIT:
-				setUnit((AssemblyContext)null);
-				return;
-			case SemanticspdPackage.SERVICE_GROUP_CFG__ELEMENTS:
-				getElements().clear();
-				return;
-			case SemanticspdPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY:
-				setLoadBalancingAssembly((AssemblyContext)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__UNIT:
+                setUnit((AssemblyContext)null);
+                return;
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__ELEMENTS:
+                getElements().clear();
+                return;
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY:
+                setLoadBalancingAssembly((AssemblyContext)null);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case SemanticspdPackage.SERVICE_GROUP_CFG__UNIT:
-				return unit != null;
-			case SemanticspdPackage.SERVICE_GROUP_CFG__ELEMENTS:
-				return elements != null && !elements.isEmpty();
-			case SemanticspdPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY:
-				return loadBalancingAssembly != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__UNIT:
+                return unit != null;
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__ELEMENTS:
+                return elements != null && !elements.isEmpty();
+            case SemanticelasticityPackage.SERVICE_GROUP_CFG__LOAD_BALANCING_ASSEMBLY:
+                return loadBalancingAssembly != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //ServiceGroupCfgImpl

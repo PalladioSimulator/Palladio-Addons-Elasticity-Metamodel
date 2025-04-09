@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated semantic -->
       <factory
-            uri="http://palladiosimulator.org/ScalingPolicyDefinitionSemantic/1.0"
-            class="org.palladiosimulator.semanticelasticityspec.provider.SemanticspdItemProviderAdapterFactory"
+            uri="http://palladiosimulator.org/ElasticitySpecSemantic/1.0"
+            class="org.palladiosimulator.semanticelasticityspec.provider.SemanticelasticityItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

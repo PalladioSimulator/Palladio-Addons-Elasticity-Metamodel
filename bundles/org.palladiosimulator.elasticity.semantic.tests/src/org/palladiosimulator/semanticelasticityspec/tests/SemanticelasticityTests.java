@@ -9,38 +9,38 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test suite for the '<em><b>Semantic</b></em>' model.
+ * A test suite for the '<em><b>semanticelasticityspec</b></em>' package.
  * <!-- end-user-doc -->
  * @generated
  */
-public class SemanticAllTests extends TestSuite {
+public class SemanticelasticityTests extends TestSuite {
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         TestRunner.run(suite());
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public static Test suite() {
-        TestSuite suite = new SemanticAllTests("Semantic Tests");
+    public static Test suite() {
+        TestSuite suite = new SemanticelasticityTests("semanticelasticityspec Tests");
         return suite;
     }
 
-	/**
+    /**
      * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-	public SemanticAllTests(String name) {
+    public SemanticelasticityTests(String name) {
         super(name);
     }
 
-} //SemanticAllTests
+} //SemanticelasticityTests

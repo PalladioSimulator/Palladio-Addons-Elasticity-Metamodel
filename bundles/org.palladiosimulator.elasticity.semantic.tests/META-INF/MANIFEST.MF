@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.elasticity.semantic.tests;singleton:=true
-Automatic-Module-Name: org.palladiosimulator.spd.semantic.tests
+Automatic-Module-Name: org.palladiosimulator.elasticity.semantic.tests
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.palladiosimulator.semanticelasticityspec.tests
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.elasticity.semantic;visibility:=reexport,

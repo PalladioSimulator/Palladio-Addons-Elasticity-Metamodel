@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.semanticelasticityspec.CompetingConsumersGroupCfg;
 import org.palladiosimulator.semanticelasticityspec.Queue;
-import org.palladiosimulator.semanticelasticityspec.SemanticspdPackage;
+import org.palladiosimulator.semanticelasticityspec.SemanticelasticityPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,269 +41,275 @@ import org.palladiosimulator.semanticelasticityspec.SemanticspdPackage;
  */
 public class CompetingConsumersGroupCfgImpl extends TargetGroupCfgImpl implements CompetingConsumersGroupCfg {
 	/**
-	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getUnit() <em>Unit</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnit()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getUnit()
+     * @generated
+     * @ordered
+     */
 	protected AssemblyContext unit;
 
 	/**
-	 * The cached value of the '{@link #getElements() <em>Elements</em>}' reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getElements() <em>Elements</em>}' reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElements()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getElements()
+     * @generated
+     * @ordered
+     */
 	protected EList<AssemblyContext> elements;
 
 	/**
-	 * The cached value of the '{@link #getBrokerAssembly() <em>Broker Assembly</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getBrokerAssembly() <em>Broker Assembly</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBrokerAssembly()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getBrokerAssembly()
+     * @generated
+     * @ordered
+     */
 	protected AssemblyContext brokerAssembly;
 
 	/**
-	 * The cached value of the '{@link #getUnitQueues() <em>Unit Queues</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getUnitQueues() <em>Unit Queues</em>}' containment reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnitQueues()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getUnitQueues()
+     * @generated
+     * @ordered
+     */
 	protected EList<Queue> unitQueues;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected CompetingConsumersGroupCfgImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return SemanticspdPackage.Literals.COMPETING_CONSUMERS_GROUP_CFG;
-	}
+        return SemanticelasticityPackage.Literals.COMPETING_CONSUMERS_GROUP_CFG;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AssemblyContext getUnit() {
-		if (unit != null && unit.eIsProxy()) {
-			InternalEObject oldUnit = (InternalEObject)unit;
-			unit = (AssemblyContext)eResolveProxy(oldUnit);
-			if (unit != oldUnit) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT, oldUnit, unit));
-			}
-		}
-		return unit;
-	}
+     * @generated
+     */
+	@Override
+    public AssemblyContext getUnit() {
+        if (unit != null && unit.eIsProxy()) {
+            InternalEObject oldUnit = (InternalEObject)unit;
+            unit = (AssemblyContext)eResolveProxy(oldUnit);
+            if (unit != oldUnit) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT, oldUnit, unit));
+            }
+        }
+        return unit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AssemblyContext basicGetUnit() {
-		return unit;
-	}
+        return unit;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnit(AssemblyContext newUnit) {
-		AssemblyContext oldUnit = unit;
-		unit = newUnit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT, oldUnit, unit));
-	}
+     * @generated
+     */
+	@Override
+    public void setUnit(AssemblyContext newUnit) {
+        AssemblyContext oldUnit = unit;
+        unit = newUnit;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT, oldUnit, unit));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<AssemblyContext> getElements() {
-		if (elements == null) {
-			elements = new EObjectResolvingEList<AssemblyContext>(AssemblyContext.class, this, SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS);
-		}
-		return elements;
-	}
+     * @generated
+     */
+	@Override
+    public EList<AssemblyContext> getElements() {
+        if (elements == null) {
+            elements = new EObjectResolvingEList<AssemblyContext>(AssemblyContext.class, this, SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS);
+        }
+        return elements;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AssemblyContext getBrokerAssembly() {
-		if (brokerAssembly != null && brokerAssembly.eIsProxy()) {
-			InternalEObject oldBrokerAssembly = (InternalEObject)brokerAssembly;
-			brokerAssembly = (AssemblyContext)eResolveProxy(oldBrokerAssembly);
-			if (brokerAssembly != oldBrokerAssembly) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY, oldBrokerAssembly, brokerAssembly));
-			}
-		}
-		return brokerAssembly;
-	}
+     * @generated
+     */
+	@Override
+    public AssemblyContext getBrokerAssembly() {
+        if (brokerAssembly != null && brokerAssembly.eIsProxy()) {
+            InternalEObject oldBrokerAssembly = (InternalEObject)brokerAssembly;
+            brokerAssembly = (AssemblyContext)eResolveProxy(oldBrokerAssembly);
+            if (brokerAssembly != oldBrokerAssembly) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY, oldBrokerAssembly, brokerAssembly));
+            }
+        }
+        return brokerAssembly;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public AssemblyContext basicGetBrokerAssembly() {
-		return brokerAssembly;
-	}
+        return brokerAssembly;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBrokerAssembly(AssemblyContext newBrokerAssembly) {
-		AssemblyContext oldBrokerAssembly = brokerAssembly;
-		brokerAssembly = newBrokerAssembly;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY, oldBrokerAssembly, brokerAssembly));
-	}
+     * @generated
+     */
+	@Override
+    public void setBrokerAssembly(AssemblyContext newBrokerAssembly) {
+        AssemblyContext oldBrokerAssembly = brokerAssembly;
+        brokerAssembly = newBrokerAssembly;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY, oldBrokerAssembly, brokerAssembly));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Queue> getUnitQueues() {
-		if (unitQueues == null) {
-			unitQueues = new EObjectContainmentEList<Queue>(Queue.class, this, SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES);
-		}
-		return unitQueues;
-	}
+     * @generated
+     */
+	@Override
+    public EList<Queue> getUnitQueues() {
+        if (unitQueues == null) {
+            unitQueues = new EObjectContainmentEList<Queue>(Queue.class, this, SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES);
+        }
+        return unitQueues;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
-				return ((InternalEList<?>)getUnitQueues()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
+                return ((InternalEList<?>)getUnitQueues()).basicRemove(otherEnd, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT:
-				if (resolve) return getUnit();
-				return basicGetUnit();
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS:
-				return getElements();
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY:
-				if (resolve) return getBrokerAssembly();
-				return basicGetBrokerAssembly();
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
-				return getUnitQueues();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT:
+                if (resolve) return getUnit();
+                return basicGetUnit();
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS:
+                return getElements();
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY:
+                if (resolve) return getBrokerAssembly();
+                return basicGetBrokerAssembly();
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
+                return getUnitQueues();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT:
-				setUnit((AssemblyContext)newValue);
-				return;
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS:
-				getElements().clear();
-				getElements().addAll((Collection<? extends AssemblyContext>)newValue);
-				return;
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY:
-				setBrokerAssembly((AssemblyContext)newValue);
-				return;
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
-				getUnitQueues().clear();
-				getUnitQueues().addAll((Collection<? extends Queue>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT:
+                setUnit((AssemblyContext)newValue);
+                return;
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS:
+                getElements().clear();
+                getElements().addAll((Collection<? extends AssemblyContext>)newValue);
+                return;
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY:
+                setBrokerAssembly((AssemblyContext)newValue);
+                return;
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
+                getUnitQueues().clear();
+                getUnitQueues().addAll((Collection<? extends Queue>)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT:
-				setUnit((AssemblyContext)null);
-				return;
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS:
-				getElements().clear();
-				return;
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY:
-				setBrokerAssembly((AssemblyContext)null);
-				return;
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
-				getUnitQueues().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT:
+                setUnit((AssemblyContext)null);
+                return;
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS:
+                getElements().clear();
+                return;
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY:
+                setBrokerAssembly((AssemblyContext)null);
+                return;
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
+                getUnitQueues().clear();
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT:
-				return unit != null;
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS:
-				return elements != null && !elements.isEmpty();
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY:
-				return brokerAssembly != null;
-			case SemanticspdPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
-				return unitQueues != null && !unitQueues.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT:
+                return unit != null;
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__ELEMENTS:
+                return elements != null && !elements.isEmpty();
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__BROKER_ASSEMBLY:
+                return brokerAssembly != null;
+            case SemanticelasticityPackage.COMPETING_CONSUMERS_GROUP_CFG__UNIT_QUEUES:
+                return unitQueues != null && !unitQueues.isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //CompetingConsumersGroupCfgImpl

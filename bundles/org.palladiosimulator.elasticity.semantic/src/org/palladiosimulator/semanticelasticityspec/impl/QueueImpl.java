@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.palladiosimulator.pcm.repository.PassiveResource;
 import org.palladiosimulator.pcm.usagemodel.UsageScenario;
 import org.palladiosimulator.semanticelasticityspec.Queue;
-import org.palladiosimulator.semanticelasticityspec.SemanticspdPackage;
+import org.palladiosimulator.semanticelasticityspec.SemanticelasticityPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,255 +32,261 @@ import org.palladiosimulator.semanticelasticityspec.SemanticspdPackage;
  */
 public class QueueImpl extends MinimalEObjectImpl.Container implements Queue {
 	/**
-	 * The cached value of the '{@link #getPassiveResourceQueueMessages() <em>Passive Resource Queue Messages</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getPassiveResourceQueueMessages() <em>Passive Resource Queue Messages</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPassiveResourceQueueMessages()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getPassiveResourceQueueMessages()
+     * @generated
+     * @ordered
+     */
 	protected PassiveResource passiveResourceQueueMessages;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
 	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getName()
+     * @generated
+     * @ordered
+     */
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getUsageScenarioForConsumption() <em>Usage Scenario For Consumption</em>}' reference.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getUsageScenarioForConsumption() <em>Usage Scenario For Consumption</em>}' reference.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUsageScenarioForConsumption()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getUsageScenarioForConsumption()
+     * @generated
+     * @ordered
+     */
 	protected UsageScenario usageScenarioForConsumption;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected QueueImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return SemanticspdPackage.Literals.QUEUE;
-	}
+        return SemanticelasticityPackage.Literals.QUEUE;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PassiveResource getPassiveResourceQueueMessages() {
-		if (passiveResourceQueueMessages != null && passiveResourceQueueMessages.eIsProxy()) {
-			InternalEObject oldPassiveResourceQueueMessages = (InternalEObject)passiveResourceQueueMessages;
-			passiveResourceQueueMessages = (PassiveResource)eResolveProxy(oldPassiveResourceQueueMessages);
-			if (passiveResourceQueueMessages != oldPassiveResourceQueueMessages) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticspdPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES, oldPassiveResourceQueueMessages, passiveResourceQueueMessages));
-			}
-		}
-		return passiveResourceQueueMessages;
-	}
+     * @generated
+     */
+	@Override
+    public PassiveResource getPassiveResourceQueueMessages() {
+        if (passiveResourceQueueMessages != null && passiveResourceQueueMessages.eIsProxy()) {
+            InternalEObject oldPassiveResourceQueueMessages = (InternalEObject)passiveResourceQueueMessages;
+            passiveResourceQueueMessages = (PassiveResource)eResolveProxy(oldPassiveResourceQueueMessages);
+            if (passiveResourceQueueMessages != oldPassiveResourceQueueMessages) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticelasticityPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES, oldPassiveResourceQueueMessages, passiveResourceQueueMessages));
+            }
+        }
+        return passiveResourceQueueMessages;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public PassiveResource basicGetPassiveResourceQueueMessages() {
-		return passiveResourceQueueMessages;
-	}
+        return passiveResourceQueueMessages;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPassiveResourceQueueMessages(PassiveResource newPassiveResourceQueueMessages) {
-		PassiveResource oldPassiveResourceQueueMessages = passiveResourceQueueMessages;
-		passiveResourceQueueMessages = newPassiveResourceQueueMessages;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SemanticspdPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES, oldPassiveResourceQueueMessages, passiveResourceQueueMessages));
-	}
+     * @generated
+     */
+	@Override
+    public void setPassiveResourceQueueMessages(PassiveResource newPassiveResourceQueueMessages) {
+        PassiveResource oldPassiveResourceQueueMessages = passiveResourceQueueMessages;
+        passiveResourceQueueMessages = newPassiveResourceQueueMessages;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, SemanticelasticityPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES, oldPassiveResourceQueueMessages, passiveResourceQueueMessages));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
+     * @generated
+     */
+	@Override
+    public String getName() {
+        return name;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SemanticspdPackage.QUEUE__NAME, oldName, name));
-	}
+     * @generated
+     */
+	@Override
+    public void setName(String newName) {
+        String oldName = name;
+        name = newName;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, SemanticelasticityPackage.QUEUE__NAME, oldName, name));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UsageScenario getUsageScenarioForConsumption() {
-		if (usageScenarioForConsumption != null && usageScenarioForConsumption.eIsProxy()) {
-			InternalEObject oldUsageScenarioForConsumption = (InternalEObject)usageScenarioForConsumption;
-			usageScenarioForConsumption = (UsageScenario)eResolveProxy(oldUsageScenarioForConsumption);
-			if (usageScenarioForConsumption != oldUsageScenarioForConsumption) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticspdPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION, oldUsageScenarioForConsumption, usageScenarioForConsumption));
-			}
-		}
-		return usageScenarioForConsumption;
-	}
+     * @generated
+     */
+	@Override
+    public UsageScenario getUsageScenarioForConsumption() {
+        if (usageScenarioForConsumption != null && usageScenarioForConsumption.eIsProxy()) {
+            InternalEObject oldUsageScenarioForConsumption = (InternalEObject)usageScenarioForConsumption;
+            usageScenarioForConsumption = (UsageScenario)eResolveProxy(oldUsageScenarioForConsumption);
+            if (usageScenarioForConsumption != oldUsageScenarioForConsumption) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, SemanticelasticityPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION, oldUsageScenarioForConsumption, usageScenarioForConsumption));
+            }
+        }
+        return usageScenarioForConsumption;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public UsageScenario basicGetUsageScenarioForConsumption() {
-		return usageScenarioForConsumption;
-	}
+        return usageScenarioForConsumption;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUsageScenarioForConsumption(UsageScenario newUsageScenarioForConsumption) {
-		UsageScenario oldUsageScenarioForConsumption = usageScenarioForConsumption;
-		usageScenarioForConsumption = newUsageScenarioForConsumption;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SemanticspdPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION, oldUsageScenarioForConsumption, usageScenarioForConsumption));
-	}
+     * @generated
+     */
+	@Override
+    public void setUsageScenarioForConsumption(UsageScenario newUsageScenarioForConsumption) {
+        UsageScenario oldUsageScenarioForConsumption = usageScenarioForConsumption;
+        usageScenarioForConsumption = newUsageScenarioForConsumption;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, SemanticelasticityPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION, oldUsageScenarioForConsumption, usageScenarioForConsumption));
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case SemanticspdPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES:
-				if (resolve) return getPassiveResourceQueueMessages();
-				return basicGetPassiveResourceQueueMessages();
-			case SemanticspdPackage.QUEUE__NAME:
-				return getName();
-			case SemanticspdPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION:
-				if (resolve) return getUsageScenarioForConsumption();
-				return basicGetUsageScenarioForConsumption();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES:
+                if (resolve) return getPassiveResourceQueueMessages();
+                return basicGetPassiveResourceQueueMessages();
+            case SemanticelasticityPackage.QUEUE__NAME:
+                return getName();
+            case SemanticelasticityPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION:
+                if (resolve) return getUsageScenarioForConsumption();
+                return basicGetUsageScenarioForConsumption();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case SemanticspdPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES:
-				setPassiveResourceQueueMessages((PassiveResource)newValue);
-				return;
-			case SemanticspdPackage.QUEUE__NAME:
-				setName((String)newValue);
-				return;
-			case SemanticspdPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION:
-				setUsageScenarioForConsumption((UsageScenario)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES:
+                setPassiveResourceQueueMessages((PassiveResource)newValue);
+                return;
+            case SemanticelasticityPackage.QUEUE__NAME:
+                setName((String)newValue);
+                return;
+            case SemanticelasticityPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION:
+                setUsageScenarioForConsumption((UsageScenario)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case SemanticspdPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES:
-				setPassiveResourceQueueMessages((PassiveResource)null);
-				return;
-			case SemanticspdPackage.QUEUE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case SemanticspdPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION:
-				setUsageScenarioForConsumption((UsageScenario)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES:
+                setPassiveResourceQueueMessages((PassiveResource)null);
+                return;
+            case SemanticelasticityPackage.QUEUE__NAME:
+                setName(NAME_EDEFAULT);
+                return;
+            case SemanticelasticityPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION:
+                setUsageScenarioForConsumption((UsageScenario)null);
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case SemanticspdPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES:
-				return passiveResourceQueueMessages != null;
-			case SemanticspdPackage.QUEUE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SemanticspdPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION:
-				return usageScenarioForConsumption != null;
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.QUEUE__PASSIVE_RESOURCE_QUEUE_MESSAGES:
+                return passiveResourceQueueMessages != null;
+            case SemanticelasticityPackage.QUEUE__NAME:
+                return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+            case SemanticelasticityPackage.QUEUE__USAGE_SCENARIO_FOR_CONSUMPTION:
+                return usageScenarioForConsumption != null;
+        }
+        return super.eIsSet(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+        if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
-	}
+        StringBuilder result = new StringBuilder(super.toString());
+        result.append(" (name: ");
+        result.append(name);
+        result.append(')');
+        return result.toString();
+    }
 
 } //QueueImpl

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.palladiosimulator.elasticity.ScalingPolicy;
-import org.palladiosimulator.semanticelasticityspec.SemanticspdPackage;
+import org.palladiosimulator.semanticelasticityspec.SemanticelasticityPackage;
 import org.palladiosimulator.semanticelasticityspec.TargetGroupCfg;
 
 /**
@@ -30,104 +30,105 @@ import org.palladiosimulator.semanticelasticityspec.TargetGroupCfg;
  */
 public abstract class TargetGroupCfgImpl extends MinimalEObjectImpl.Container implements TargetGroupCfg {
 	/**
-	 * The cached value of the '{@link #getEnactedPolicies() <em>Enacted Policies</em>}' reference list.
-	 * <!-- begin-user-doc -->
+     * The cached value of the '{@link #getEnactedPolicies() <em>Enacted Policies</em>}' reference list.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEnactedPolicies()
-	 * @generated
-	 * @ordered
-	 */
+     * @see #getEnactedPolicies()
+     * @generated
+     * @ordered
+     */
 	protected EList<ScalingPolicy> enactedPolicies;
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	protected TargetGroupCfgImpl() {
-		super();
-	}
+        super();
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected EClass eStaticClass() {
-		return SemanticspdPackage.Literals.TARGET_GROUP_CFG;
-	}
+        return SemanticelasticityPackage.Literals.TARGET_GROUP_CFG;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ScalingPolicy> getEnactedPolicies() {
-		if (enactedPolicies == null) {
-			enactedPolicies = new EObjectResolvingEList<ScalingPolicy>(ScalingPolicy.class, this, SemanticspdPackage.TARGET_GROUP_CFG__ENACTED_POLICIES);
-		}
-		return enactedPolicies;
-	}
+     * @generated
+     */
+	@Override
+    public EList<ScalingPolicy> getEnactedPolicies() {
+        if (enactedPolicies == null) {
+            enactedPolicies = new EObjectResolvingEList<ScalingPolicy>(ScalingPolicy.class, this, SemanticelasticityPackage.TARGET_GROUP_CFG__ENACTED_POLICIES);
+        }
+        return enactedPolicies;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case SemanticspdPackage.TARGET_GROUP_CFG__ENACTED_POLICIES:
-				return getEnactedPolicies();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.TARGET_GROUP_CFG__ENACTED_POLICIES:
+                return getEnactedPolicies();
+        }
+        return super.eGet(featureID, resolve, coreType);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case SemanticspdPackage.TARGET_GROUP_CFG__ENACTED_POLICIES:
-				getEnactedPolicies().clear();
-				getEnactedPolicies().addAll((Collection<? extends ScalingPolicy>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.TARGET_GROUP_CFG__ENACTED_POLICIES:
+                getEnactedPolicies().clear();
+                getEnactedPolicies().addAll((Collection<? extends ScalingPolicy>)newValue);
+                return;
+        }
+        super.eSet(featureID, newValue);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case SemanticspdPackage.TARGET_GROUP_CFG__ENACTED_POLICIES:
-				getEnactedPolicies().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.TARGET_GROUP_CFG__ENACTED_POLICIES:
+                getEnactedPolicies().clear();
+                return;
+        }
+        super.eUnset(featureID);
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case SemanticspdPackage.TARGET_GROUP_CFG__ENACTED_POLICIES:
-				return enactedPolicies != null && !enactedPolicies.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
+        switch (featureID) {
+            case SemanticelasticityPackage.TARGET_GROUP_CFG__ENACTED_POLICIES:
+                return enactedPolicies != null && !enactedPolicies.isEmpty();
+        }
+        return super.eIsSet(featureID);
+    }
 
 } //TargetGroupCfgImpl

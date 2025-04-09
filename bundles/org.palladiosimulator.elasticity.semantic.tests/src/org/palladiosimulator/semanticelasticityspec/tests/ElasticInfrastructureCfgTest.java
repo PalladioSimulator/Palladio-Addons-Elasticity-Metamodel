@@ -3,8 +3,7 @@
 package org.palladiosimulator.semanticelasticityspec.tests;
 
 import org.palladiosimulator.semanticelasticityspec.ElasticInfrastructureCfg;
-import org.palladiosimulator.semanticelasticityspec.SemanticspdFactory;
-
+import org.palladiosimulator.semanticelasticityspec.SemanticelasticityFactory;
 import junit.textui.TestRunner;
 
 /**
@@ -16,55 +15,55 @@ import junit.textui.TestRunner;
 public class ElasticInfrastructureCfgTest extends TargetGroupCfgTest {
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public static void main(String[] args) {
-		TestRunner.run(ElasticInfrastructureCfgTest.class);
-	}
+        TestRunner.run(ElasticInfrastructureCfgTest.class);
+    }
 
 	/**
-	 * Constructs a new Elastic Infrastructure Cfg test case with the given name.
-	 * <!-- begin-user-doc -->
+     * Constructs a new Elastic Infrastructure Cfg test case with the given name.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	public ElasticInfrastructureCfgTest(String name) {
-		super(name);
-	}
+        super(name);
+    }
 
 	/**
-	 * Returns the fixture for this Elastic Infrastructure Cfg test case.
-	 * <!-- begin-user-doc -->
+     * Returns the fixture for this Elastic Infrastructure Cfg test case.
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+     * @generated
+     */
 	@Override
 	protected ElasticInfrastructureCfg getFixture() {
-		return (ElasticInfrastructureCfg)fixture;
-	}
+        return (ElasticInfrastructureCfg)fixture;
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#setUp()
+     * @generated
+     */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(SemanticspdFactory.eINSTANCE.createElasticInfrastructureCfg());
-	}
+        setFixture(SemanticelasticityFactory.eINSTANCE.createElasticInfrastructureCfg());
+    }
 
 	/**
-	 * <!-- begin-user-doc -->
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
+     * @see junit.framework.TestCase#tearDown()
+     * @generated
+     */
 	@Override
 	protected void tearDown() throws Exception {
-		setFixture(null);
-	}
+        setFixture(null);
+    }
 
 } //ElasticInfrastructureCfgTest

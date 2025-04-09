@@ -47,8 +47,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated semantic -->
       <package
-            uri="http://palladiosimulator.org/ScalingPolicyDefinitionSemantic/1.0"
-            class="org.palladiosimulator.semanticelasticityspec.SemanticspdPackage"
+            uri="http://palladiosimulator.org/ElasticitySpecSemantic/1.0"
+            class="org.palladiosimulator.semanticelasticityspec.SemanticelasticityPackage"
             genModel="model/semantic.genmodel"/>
    </extension>
 
