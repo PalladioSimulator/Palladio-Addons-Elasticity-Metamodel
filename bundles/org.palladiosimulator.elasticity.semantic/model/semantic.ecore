@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="semanticspd" nsURI="http://palladiosimulator.org/ScalingPolicyDefinitionSemantic/1.0"
-    nsPrefix="semanticspd">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="semanticelasticityspec" nsURI="http://palladiosimulator.org/ElasticitySpecSemantic/1.0"
+    nsPrefix="semanticelasticityspec">
   <eClassifiers xsi:type="ecore:EClass" name="Configuration">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="spd" eType="ecore:EClass ../../org.palladiosimulator.spd/model/SPD.ecore#//SPD"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="enactedPolicy" eType="ecore:EClass ../../org.palladiosimulator.spd/model/SPD.ecore#//ScalingPolicy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elasticitySpec" eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//ElasticitySpec"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enactedPolicy" eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//ScalingPolicy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetCfgs" upperBound="-1"
         eType="#//TargetGroupCfg" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allocation" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation"/>
@@ -14,7 +14,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TargetGroupCfg" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="enactedPolicies" upperBound="-1"
-        eType="ecore:EClass ../../org.palladiosimulator.spd/model/SPD.ecore#//ScalingPolicy"/>
+        eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//ScalingPolicy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElasticInfrastructureCfg" eSuperTypes="#//TargetGroupCfg">
     <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceContainer"/>

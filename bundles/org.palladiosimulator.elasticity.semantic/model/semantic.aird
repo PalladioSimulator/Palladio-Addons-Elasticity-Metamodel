@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_mc2iMNCNEe2hWdskljsu2A" selectedViews="_mmzIYNCNEe2hWdskljsu2A" version="14.5.1.202106111100">
+  <viewpoint:DAnalysis uid="_mc2iMNCNEe2hWdskljsu2A" selectedViews="_mmzIYNCNEe2hWdskljsu2A" version="15.0.0.202209061200">
     <semanticResources>semantic.ecore</semanticResources>
     <semanticResources>platform:/resource/org.palladiosimulator.spd/model/SPD.ecore</semanticResources>
     <semanticResources>platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore</semanticResources>
@@ -18,6 +18,15 @@
     <semanticResources>platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel</semanticResources>
     <semanticResources>platform:/resource/org.palladiosimulator.spd/model/SPD.genmodel</semanticResources>
     <semanticResources>Configuration.xmi</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.edp2/model/EDP2.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.metricspec/model/metricspec.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.metricspec/model/metricspec.ecore</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.edp2/model/EDP2.ecore</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.monitorrepository/model/monitorrepository.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.monitorrepository/model/monitorrepository.ecore</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.genmodel</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.servicelevelobjective/model/servicelevelobjective.ecore</semanticResources>
+    <semanticResources>platform:/resource/org.palladiosimulator.elasticity/model/Elasticity.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_mmzIYNCNEe2hWdskljsu2A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mnwKoNCNEe2hWdskljsu2A" name="semantic" repPath="#_mnZlUNCNEe2hWdskljsu2A" changeId="4174d87e-8270-4255-800b-97dec8610bed">
