@@ -118,7 +118,7 @@
         <details key="documentation" value="The AbsoluteAdjustment denotes that the group is adjusted to a goal value."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="goalValue" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
+          eType="#//datatypes/PositiveInteger" defaultValueLiteral="0">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The goalValue determines the target number of elements for a particular group, e.g., a value 5 means that the group will have 5 elements."/>
         </eAnnotations>
@@ -390,13 +390,13 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="NoExpectation" eSuperTypes="#//triggers/expectations/ExpectedValue"/>
       <eClassifiers xsi:type="ecore:EClass" name="ExpectedPercentage" eSuperTypes="#//triggers/expectations/ExpectedPrimitive">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//datatypes/WholePercentDouble"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="ExpectedCount" eSuperTypes="#//triggers/expectations/ExpectedPrimitive">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" eType="#//datatypes/PositiveInteger"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="ExpectedTime" eSuperTypes="#//triggers/expectations/ExpectedPrimitive">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//datatypes/PositiveDouble"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="ExpectedTrend" eSuperTypes="#//triggers/expectations/ExpectedValue">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="trend" eType="#//triggers/TrendPattern"/>
@@ -500,6 +500,12 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EDataType" name="PositiveDouble" instanceClassName="double">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="minInclusive" value="0.0"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EDataType" name="WholePercentDouble" instanceClassName="double">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="maxInclusive" value="100.0"/>
         <details key="minInclusive" value="0.0"/>
       </eAnnotations>
     </eClassifiers>

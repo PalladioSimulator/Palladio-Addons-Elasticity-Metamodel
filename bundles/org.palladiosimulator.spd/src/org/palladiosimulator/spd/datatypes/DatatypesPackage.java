@@ -78,6 +78,15 @@ public interface DatatypesPackage extends EPackage {
     int POSITIVE_DOUBLE = 2;
 
     /**
+     * The meta object id for the '<em>Whole Percent Double</em>' data type. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     *
+     * @see org.palladiosimulator.spd.datatypes.impl.DatatypesPackageImpl#getWholePercentDouble()
+     * @generated
+     */
+    int WHOLE_PERCENT_DOUBLE = 3;
+
+    /**
      * Returns the meta object for data type '<em>Percent Double</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
@@ -106,6 +115,16 @@ public interface DatatypesPackage extends EPackage {
      * @generated
      */
     EDataType getPositiveDouble();
+
+    /**
+     * Returns the meta object for data type '<em>Whole Percent Double</em>'. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     *
+     * @return the meta object for data type '<em>Whole Percent Double</em>'.
+     * @model instanceClass="double" extendedMetaData="maxInclusive='100.0' minInclusive='0.0'"
+     * @generated
+     */
+    EDataType getWholePercentDouble();
 
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
@@ -155,6 +174,15 @@ public interface DatatypesPackage extends EPackage {
          * @generated
          */
         EDataType POSITIVE_DOUBLE = eINSTANCE.getPositiveDouble();
+
+        /**
+         * The meta object literal for the '<em>Whole Percent Double</em>' data type. <!--
+         * begin-user-doc --> <!-- end-user-doc -->
+         *
+         * @see org.palladiosimulator.spd.datatypes.impl.DatatypesPackageImpl#getWholePercentDouble()
+         * @generated
+         */
+        EDataType WHOLE_PERCENT_DOUBLE = eINSTANCE.getWholePercentDouble();
 
     }
 

@@ -423,8 +423,8 @@ public class ExpectationsPackageImpl extends EPackageImpl implements Expectation
         this.setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        final EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE
-            .getEPackage(EcorePackage.eNS_URI);
+        final DatatypesPackage theDatatypesPackage = (DatatypesPackage) EPackage.Registry.INSTANCE
+            .getEPackage(DatatypesPackage.eNS_URI);
         final TriggersPackage theTriggersPackage = (TriggersPackage) EPackage.Registry.INSTANCE
             .getEPackage(TriggersPackage.eNS_URI);
 
@@ -458,19 +458,19 @@ public class ExpectationsPackageImpl extends EPackageImpl implements Expectation
 
         this.initEClass(this.expectedPercentageEClass, ExpectedPercentage.class, "ExpectedPercentage", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getExpectedPercentage_Value(), theEcorePackage.getEDouble(), "value", null, 0, 1,
-                ExpectedPercentage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getExpectedPercentage_Value(), theDatatypesPackage.getWholePercentDouble(), "value",
+                null, 0, 1, ExpectedPercentage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+                !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.expectedCountEClass, ExpectedCount.class, "ExpectedCount", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getExpectedCount_Count(), theEcorePackage.getEInt(), "count", null, 0, 1,
-                ExpectedCount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+        this.initEAttribute(this.getExpectedCount_Count(), theDatatypesPackage.getPositiveInteger(), "count", null, 0,
+                1, ExpectedCount.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.expectedTimeEClass, ExpectedTime.class, "ExpectedTime", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getExpectedTime_Value(), theEcorePackage.getEDouble(), "value", null, 0, 1,
+        this.initEAttribute(this.getExpectedTime_Value(), theDatatypesPackage.getPositiveDouble(), "value", null, 0, 1,
                 ExpectedTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
 
