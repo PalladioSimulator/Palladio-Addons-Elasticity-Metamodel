@@ -362,6 +362,10 @@ public class AdjustmentsPackageImpl extends EPackageImpl implements AdjustmentsP
         this.setNsPrefix(eNS_PREFIX);
         this.setNsURI(eNS_URI);
 
+        // Obtain other dependent packages
+        final DatatypesPackage theDatatypesPackage = (DatatypesPackage) EPackage.Registry.INSTANCE
+            .getEPackage(DatatypesPackage.eNS_URI);
+
         // Create type parameters
 
         // Set bounds for type parameters
@@ -389,9 +393,9 @@ public class AdjustmentsPackageImpl extends EPackageImpl implements AdjustmentsP
 
         this.initEClass(this.absoluteAdjustmentEClass, AbsoluteAdjustment.class, "AbsoluteAdjustment", !IS_ABSTRACT,
                 !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getAbsoluteAdjustment_GoalValue(), this.ecorePackage.getEInt(), "goalValue", "0", 1, 1,
-                AbsoluteAdjustment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getAbsoluteAdjustment_GoalValue(), theDatatypesPackage.getPositiveInteger(),
+                "goalValue", "0", 1, 1, AbsoluteAdjustment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.stepAdjustmentEClass, StepAdjustment.class, "StepAdjustment", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);

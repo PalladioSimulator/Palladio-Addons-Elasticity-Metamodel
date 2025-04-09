@@ -87,6 +87,8 @@ public class DatatypesValidator extends EObjectValidator {
             return this.validatePositiveInteger((Integer) value, diagnostics, context);
         case DatatypesPackage.POSITIVE_DOUBLE:
             return this.validatePositiveDouble((Double) value, diagnostics, context);
+        case DatatypesPackage.WHOLE_PERCENT_DOUBLE:
+            return this.validateWholePercentDouble((Double) value, diagnostics, context);
         default:
             return true;
         }
@@ -220,6 +222,68 @@ public class DatatypesValidator extends EObjectValidator {
         if (!result && diagnostics != null) {
             this.reportMinViolation(DatatypesPackage.Literals.POSITIVE_DOUBLE, positiveDouble,
                     POSITIVE_DOUBLE__MIN__VALUE, true, diagnostics, context);
+        }
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public boolean validateWholePercentDouble(final double wholePercentDouble, final DiagnosticChain diagnostics,
+            final Map<Object, Object> context) {
+        boolean result = this.validateWholePercentDouble_Min(wholePercentDouble, diagnostics, context);
+        if (result || diagnostics != null) {
+            result &= this.validateWholePercentDouble_Max(wholePercentDouble, diagnostics, context);
+        }
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @see #validateWholePercentDouble_Min
+     */
+    public static final double WHOLE_PERCENT_DOUBLE__MIN__VALUE = 0.0;
+
+    /**
+     * Validates the Min constraint of '<em>Whole Percent Double</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    public boolean validateWholePercentDouble_Min(final double wholePercentDouble, final DiagnosticChain diagnostics,
+            final Map<Object, Object> context) {
+        final boolean result = wholePercentDouble >= WHOLE_PERCENT_DOUBLE__MIN__VALUE;
+        if (!result && diagnostics != null) {
+            this.reportMinViolation(DatatypesPackage.Literals.WHOLE_PERCENT_DOUBLE, wholePercentDouble,
+                    WHOLE_PERCENT_DOUBLE__MIN__VALUE, true, diagnostics, context);
+        }
+        return result;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @see #validateWholePercentDouble_Max
+     */
+    public static final double WHOLE_PERCENT_DOUBLE__MAX__VALUE = 100.0;
+
+    /**
+     * Validates the Max constraint of '<em>Whole Percent Double</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    public boolean validateWholePercentDouble_Max(final double wholePercentDouble, final DiagnosticChain diagnostics,
+            final Map<Object, Object> context) {
+        final boolean result = wholePercentDouble <= WHOLE_PERCENT_DOUBLE__MAX__VALUE;
+        if (!result && diagnostics != null) {
+            this.reportMaxViolation(DatatypesPackage.Literals.WHOLE_PERCENT_DOUBLE, wholePercentDouble,
+                    WHOLE_PERCENT_DOUBLE__MAX__VALUE, true, diagnostics, context);
         }
         return result;
     }
