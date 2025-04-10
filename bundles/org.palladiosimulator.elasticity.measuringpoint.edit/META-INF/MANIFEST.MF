@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.elasticity.measuringpoint.edit;singleton:=true
-Automatic-Module-Name: org.palladiosimulator.spd.measuringpoint.edit
+Automatic-Module-Name: org.palladiosimulator.elasticity.measuringpoint.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.spdmeasuringpoint.provider.SpdmeasuringpointEditPlugin$Implementation
