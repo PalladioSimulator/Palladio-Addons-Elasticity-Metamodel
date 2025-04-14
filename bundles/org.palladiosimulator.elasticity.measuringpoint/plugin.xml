@@ -19,4 +19,12 @@
             type="spdmeasuringpoint"
             class="org.palladiosimulator.elasticitymeasuringpoint.util.SpdmeasuringpointResourceFactoryImpl"/>
    </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated elasticitymeasuringpoint -->
+      <package
+            uri="http://palladiosimulator.org/PCM/ElasticityMeasuringPoint/1.0"
+            class="org.palladiosimulator.elasticitymeasuringpoint.ElasticitymeasuringpointPackage"
+            genModel="model/elasticitymeasuringpoint.genmodel"/>
+   </extension>
+
 </plugin>

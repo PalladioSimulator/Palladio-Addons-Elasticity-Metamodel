@@ -13,11 +13,10 @@ import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup
- * <em>Competing Consumer Group</em>}</li>
+ *   <li>{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup <em>Competing Consumer Group</em>}</li>
  * </ul>
  *
- * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage#getCompetingConsumerGroupReference()
+ * @see org.palladiosimulator.elasticitymeasuringpoint.ElasticitymeasuringpointPackage#getCompetingConsumerGroupReference()
  * @model abstract="true"
  * @generated
  */
@@ -35,12 +34,9 @@ public interface CompetingConsumerGroupReference extends EObject {
     CompetingConsumersGroup getCompetingConsumerGroup();
 
     /**
-     * Sets the value of the
-     * '{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup
-     * <em>Competing Consumer Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @param value
-     *            the new value of the '<em>Competing Consumer Group</em>' reference.
+     * Sets the value of the '{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup <em>Competing Consumer Group</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @param value the new value of the '<em>Competing Consumer Group</em>' reference.
      * @see #getCompetingConsumerGroup()
      * @generated
      */

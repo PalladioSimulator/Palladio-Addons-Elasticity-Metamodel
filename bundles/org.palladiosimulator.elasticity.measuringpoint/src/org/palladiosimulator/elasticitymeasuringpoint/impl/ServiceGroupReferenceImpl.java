@@ -5,8 +5,8 @@ package org.palladiosimulator.elasticitymeasuringpoint.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.palladiosimulator.elasticity.targets.ServiceGroup;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticitymeasuringpointPackage;
 import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference;
-import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Service Group
@@ -15,8 +15,7 @@ import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupReferenceImpl#getServiceGroup
- * <em>Service Group</em>}</li>
+ *   <li>{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupReferenceImpl#getServiceGroup <em>Service Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -24,7 +23,6 @@ import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Container implements ServiceGroupReference {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     protected ServiceGroupReferenceImpl() {
@@ -33,17 +31,15 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
-        return SpdmeasuringpointPackage.Literals.SERVICE_GROUP_REFERENCE;
+        return ElasticitymeasuringpointPackage.Literals.SERVICE_GROUP_REFERENCE;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
@@ -53,63 +49,57 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
     public ServiceGroup getServiceGroup() {
-        return (ServiceGroup) this.eDynamicGet(SpdmeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
-                SpdmeasuringpointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, true, true);
+        return (ServiceGroup) eDynamicGet(ElasticitymeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
+                ElasticitymeasuringpointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     public ServiceGroup basicGetServiceGroup() {
-        return (ServiceGroup) this.eDynamicGet(SpdmeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
-                SpdmeasuringpointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, false, true);
+        return (ServiceGroup) eDynamicGet(ElasticitymeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
+                ElasticitymeasuringpointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public void setServiceGroup(final ServiceGroup newServiceGroup) {
-        this.eDynamicSet(SpdmeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
-                SpdmeasuringpointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, newServiceGroup);
+    public void setServiceGroup(ServiceGroup newServiceGroup) {
+        eDynamicSet(ElasticitymeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
+                ElasticitymeasuringpointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, newServiceGroup);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case SpdmeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
-            if (resolve) {
-                return this.getServiceGroup();
-            }
-            return this.basicGetServiceGroup();
+        case ElasticitymeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
+            if (resolve)
+                return getServiceGroup();
+            return basicGetServiceGroup();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case SpdmeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
-            this.setServiceGroup((ServiceGroup) newValue);
+        case ElasticitymeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
+            setServiceGroup((ServiceGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -117,14 +107,13 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
-        case SpdmeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
-            this.setServiceGroup((ServiceGroup) null);
+        case ElasticitymeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
+            setServiceGroup((ServiceGroup) null);
             return;
         }
         super.eUnset(featureID);
@@ -132,14 +121,13 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case SpdmeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
-            return this.basicGetServiceGroup() != null;
+        case ElasticitymeasuringpointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
+            return basicGetServiceGroup() != null;
         }
         return super.eIsSet(featureID);
     }

@@ -10,7 +10,7 @@ import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPoint;
  * <!-- end-user-doc -->
  *
  *
- * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage#getElasticInfrastructureMeasuringPoint()
+ * @see org.palladiosimulator.elasticitymeasuringpoint.ElasticitymeasuringpointPackage#getElasticInfrastructureMeasuringPoint()
  * @model
  * @generated
  */

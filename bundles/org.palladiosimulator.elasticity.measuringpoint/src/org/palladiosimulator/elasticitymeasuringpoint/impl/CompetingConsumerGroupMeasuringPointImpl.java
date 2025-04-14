@@ -9,7 +9,7 @@ import org.palladiosimulator.edp2.models.measuringpoint.impl.MeasuringPointImpl;
 import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
 import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint;
 import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference;
-import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticitymeasuringpointPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Competing Consumer Group
@@ -18,8 +18,7 @@ import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl#getCompetingConsumerGroup
- * <em>Competing Consumer Group</em>}</li>
+ *   <li>{@link org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl#getCompetingConsumerGroup <em>Competing Consumer Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,7 +27,6 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
         implements CompetingConsumerGroupMeasuringPoint {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     protected CompetingConsumerGroupMeasuringPointImpl() {
@@ -37,78 +35,71 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
     protected EClass eStaticClass() {
-        return SpdmeasuringpointPackage.Literals.COMPETING_CONSUMER_GROUP_MEASURING_POINT;
+        return ElasticitymeasuringpointPackage.Literals.COMPETING_CONSUMER_GROUP_MEASURING_POINT;
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
     public CompetingConsumersGroup getCompetingConsumerGroup() {
-        return (CompetingConsumersGroup) this.eDynamicGet(
-                SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
-                SpdmeasuringpointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP, true,
-                true);
+        return (CompetingConsumersGroup) eDynamicGet(
+                ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
+                ElasticitymeasuringpointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
+                true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     public CompetingConsumersGroup basicGetCompetingConsumerGroup() {
-        return (CompetingConsumersGroup) this.eDynamicGet(
-                SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
-                SpdmeasuringpointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP, false,
-                true);
+        return (CompetingConsumersGroup) eDynamicGet(
+                ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
+                ElasticitymeasuringpointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
+                false, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public void setCompetingConsumerGroup(final CompetingConsumersGroup newCompetingConsumerGroup) {
-        this.eDynamicSet(SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
-                SpdmeasuringpointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
+    public void setCompetingConsumerGroup(CompetingConsumersGroup newCompetingConsumerGroup) {
+        eDynamicSet(ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
+                ElasticitymeasuringpointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
                 newCompetingConsumerGroup);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+    public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
-            if (resolve) {
-                return this.getCompetingConsumerGroup();
-            }
-            return this.basicGetCompetingConsumerGroup();
+        case ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
+            if (resolve)
+                return getCompetingConsumerGroup();
+            return basicGetCompetingConsumerGroup();
         }
         return super.eGet(featureID, resolve, coreType);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public void eSet(final int featureID, final Object newValue) {
+    public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
-            this.setCompetingConsumerGroup((CompetingConsumersGroup) newValue);
+        case ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
+            setCompetingConsumerGroup((CompetingConsumersGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -116,14 +107,13 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public void eUnset(final int featureID) {
+    public void eUnset(int featureID) {
         switch (featureID) {
-        case SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
-            this.setCompetingConsumerGroup((CompetingConsumersGroup) null);
+        case ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
+            setCompetingConsumerGroup((CompetingConsumersGroup) null);
             return;
         }
         super.eUnset(featureID);
@@ -131,29 +121,27 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public boolean eIsSet(final int featureID) {
+    public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
-            return this.basicGetCompetingConsumerGroup() != null;
+        case ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
+            return basicGetCompetingConsumerGroup() != null;
         }
         return super.eIsSet(featureID);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public int eBaseStructuralFeatureID(final int derivedFeatureID, final Class<?> baseClass) {
+    public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
         if (baseClass == CompetingConsumerGroupReference.class) {
             switch (derivedFeatureID) {
-            case SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
-                return SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP;
+            case ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
+                return ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP;
             default:
                 return -1;
             }
@@ -163,15 +151,14 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
      * @generated
      */
     @Override
-    public int eDerivedStructuralFeatureID(final int baseFeatureID, final Class<?> baseClass) {
+    public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
         if (baseClass == CompetingConsumerGroupReference.class) {
             switch (baseFeatureID) {
-            case SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP:
-                return SpdmeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP;
+            case ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP:
+                return ElasticitymeasuringpointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP;
             default:
                 return -1;
             }

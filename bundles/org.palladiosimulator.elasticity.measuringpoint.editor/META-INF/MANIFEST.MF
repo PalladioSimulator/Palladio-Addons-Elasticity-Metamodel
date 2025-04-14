@@ -5,11 +5,11 @@ Bundle-SymbolicName: org.palladiosimulator.elasticity.measuringpoint.editor;sing
 Automatic-Module-Name: org.palladiosimulator.elasticity.measuringpoint.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointEditorPlugin$Implementation
+Bundle-Activator: org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: org.palladiosimulator.spdmeasuringpoint.presentation
+Export-Package: org.palladiosimulator.elasticitymeasuringpoint.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.palladiosimulator.elasticity.measuringpoint.edit;visibility:=reexport,

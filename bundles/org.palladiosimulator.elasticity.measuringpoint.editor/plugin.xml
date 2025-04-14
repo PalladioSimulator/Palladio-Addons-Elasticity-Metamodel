@@ -16,7 +16,7 @@
             name="%_UI_SpdmeasuringpointModelWizard_label"
             class="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/SpdmeasuringpointModelFile.gif">
+            icon="icons/full/obj16/ElasticitymeasuringpointModelFile.gif">
          <description>%_UI_SpdmeasuringpointModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -27,11 +27,38 @@
       <editor
             id="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointEditorID"
             name="%_UI_SpdmeasuringpointEditor_label"
-            icon="icons/full/obj16/SpdmeasuringpointModelFile.gif"
+            icon="icons/full/obj16/ElasticitymeasuringpointModelFile.gif"
             extensions="spdmeasuringpoint"
             class="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointEditor"
             contributorClass="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointActionBarContributor">
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated elasticitymeasuringpoint -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointModelWizardID"
+            name="%_UI_ElasticitymeasuringpointModelWizard_label"
+            class="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ElasticitymeasuringpointModelFile.gif">
+         <description>%_UI_ElasticitymeasuringpointModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated elasticitymeasuringpoint -->
+      <editor
+            id="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointEditorID"
+            name="%_UI_ElasticitymeasuringpointEditor_label"
+            icon="icons/full/obj16/ElasticitymeasuringpointModelFile.gif"
+            extensions="elasticitymeasuringpoint"
+            class="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointEditor"
+            contributorClass="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointActionBarContributor">
+      </editor>
+   </extension>
 </plugin>
