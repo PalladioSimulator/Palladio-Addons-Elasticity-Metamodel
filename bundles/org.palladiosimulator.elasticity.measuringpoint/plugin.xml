@@ -6,20 +6,6 @@
 
 <plugin>
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated spdmeasuringpoint -->
-      <package
-            uri="http://palladiosimulator.org/PCM/SPDMeasuringPoint/1.0"
-            class="org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage"
-            genModel="model/elasticitymeasuringpoint.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <!-- @generated spdmeasuringpoint -->
-      <parser
-            type="spdmeasuringpoint"
-            class="org.palladiosimulator.elasticitymeasuringpoint.util.SpdmeasuringpointResourceFactoryImpl"/>
-   </extension>
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated elasticitymeasuringpoint -->
       <package
             uri="http://palladiosimulator.org/PCM/ElasticityMeasuringPoint/1.0"

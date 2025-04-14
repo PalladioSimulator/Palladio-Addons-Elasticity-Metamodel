@@ -7,34 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated spdmeasuringpoint -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointModelWizardID"
-            name="%_UI_SpdmeasuringpointModelWizard_label"
-            class="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/ElasticitymeasuringpointModelFile.gif">
-         <description>%_UI_SpdmeasuringpointModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated spdmeasuringpoint -->
-      <editor
-            id="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointEditorID"
-            name="%_UI_SpdmeasuringpointEditor_label"
-            icon="icons/full/obj16/ElasticitymeasuringpointModelFile.gif"
-            extensions="spdmeasuringpoint"
-            class="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointEditor"
-            contributorClass="org.palladiosimulator.spdmeasuringpoint.presentation.SpdmeasuringpointActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.newWizards">
       <!-- @generated elasticitymeasuringpoint -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"

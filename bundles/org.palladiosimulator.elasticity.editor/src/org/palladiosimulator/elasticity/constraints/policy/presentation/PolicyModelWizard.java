@@ -57,7 +57,7 @@ import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 import org.palladiosimulator.elasticity.constraints.policy.PolicyFactory;
 import org.palladiosimulator.elasticity.constraints.policy.PolicyPackage;
-import org.palladiosimulator.elasticity.presentation.ScalingPolicyDefinitionEditorPlugin;
+import org.palladiosimulator.elasticity.presentation.ElasticitySpecEditorPlugin;
 import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 
 /**
@@ -73,7 +73,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(
-            Arrays.asList(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_PolicyEditorFilenameExtensions")
+            Arrays.asList(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_PolicyEditorFilenameExtensions")
                 .split("\\s*,\\s*")));
 
     /**
@@ -82,7 +82,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
      *
      * @generated
      */
-    public static final String FORMATTED_FILE_EXTENSIONS = ScalingPolicyDefinitionEditorPlugin.INSTANCE
+    public static final String FORMATTED_FILE_EXTENSIONS = ElasticitySpecEditorPlugin.INSTANCE
         .getString("_UI_PolicyEditorFilenameExtensions")
         .replaceAll("\\s*,\\s*", ", ");
 
@@ -146,9 +146,9 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
     public void init(final IWorkbench workbench, final IStructuredSelection selection) {
         this.workbench = workbench;
         this.selection = selection;
-        this.setWindowTitle(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+        this.setWindowTitle(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
         this.setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
-            .getImageDescriptor(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getImage("full/wizban/NewPolicy")));
+            .getImageDescriptor(ElasticitySpecEditorPlugin.INSTANCE.getImage("full/wizban/NewPolicy")));
     }
 
     /**
@@ -231,7 +231,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
                                 PolicyModelWizard.this.initialObjectCreationPage.getEncoding());
                         resource.save(options);
                     } catch (final Exception exception) {
-                        ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(exception);
+                        ElasticitySpecEditorPlugin.INSTANCE.log(exception);
                     } finally {
                         progressMonitor.done();
                     }
@@ -267,14 +267,14 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
                     .getId());
             } catch (final PartInitException exception) {
                 MessageDialog.openError(workbenchWindow.getShell(),
-                        ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"),
+                        ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"),
                         exception.getMessage());
                 return false;
             }
 
             return true;
         } catch (final Exception exception) {
-            ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(exception);
+            ElasticitySpecEditorPlugin.INSTANCE.log(exception);
             return false;
         }
     }
@@ -307,7 +307,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
                 if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
                     final String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions"
                             : "_WARN_FilenameExtension";
-                    this.setErrorMessage(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString(key,
+                    this.setErrorMessage(ElasticitySpecEditorPlugin.INSTANCE.getString(key,
                             new Object[] { FORMATTED_FILE_EXTENSIONS }));
                     return false;
                 }
@@ -387,7 +387,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
 
             final Label containerLabel = new Label(composite, SWT.LEFT);
             {
-                containerLabel.setText(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
+                containerLabel.setText(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
                 final GridData data = new GridData();
                 data.horizontalAlignment = GridData.FILL;
@@ -413,7 +413,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
 
             final Label encodingLabel = new Label(composite, SWT.LEFT);
             {
-                encodingLabel.setText(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
+                encodingLabel.setText(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
                 final GridData data = new GridData();
                 data.horizontalAlignment = GridData.FILL;
@@ -516,7 +516,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
             try {
                 return ElasticityEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
             } catch (final MissingResourceException mre) {
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(mre);
+                ElasticitySpecEditorPlugin.INSTANCE.log(mre);
             }
             return typeName;
         }
@@ -530,8 +530,8 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
             if (this.encodings == null) {
                 this.encodings = new ArrayList<>();
                 for (final StringTokenizer stringTokenizer = new StringTokenizer(
-                        ScalingPolicyDefinitionEditorPlugin.INSTANCE
-                            .getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens();) {
+                        ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
+                            .hasMoreTokens();) {
                     this.encodings.add(stringTokenizer.nextToken());
                 }
             }
@@ -550,13 +550,12 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
         // Create a page, set the title, and the initial model file name.
         //
         this.newFileCreationPage = new PolicyModelWizardNewFileCreationPage("Whatever", this.selection);
+        this.newFileCreationPage.setTitle(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_PolicyModelWizard_label"));
         this.newFileCreationPage
-            .setTitle(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_PolicyModelWizard_label"));
-        this.newFileCreationPage.setDescription(
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_PolicyModelWizard_description"));
+            .setDescription(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_PolicyModelWizard_description"));
         this.newFileCreationPage
-            .setFileName(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_PolicyEditorFilenameDefaultBase")
-                    + "." + FILE_EXTENSIONS.get(0));
+            .setFileName(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_PolicyEditorFilenameDefaultBase") + "."
+                    + FILE_EXTENSIONS.get(0));
         this.addPage(this.newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -583,7 +582,7 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
 
                     // Make up a unique new name here.
                     //
-                    final String defaultModelBaseFilename = ScalingPolicyDefinitionEditorPlugin.INSTANCE
+                    final String defaultModelBaseFilename = ElasticitySpecEditorPlugin.INSTANCE
                         .getString("_UI_PolicyEditorFilenameDefaultBase");
                     final String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
                     String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
@@ -596,9 +595,9 @@ public class PolicyModelWizard extends Wizard implements INewWizard {
         }
         this.initialObjectCreationPage = new PolicyModelWizardInitialObjectCreationPage("Whatever2");
         this.initialObjectCreationPage
-            .setTitle(ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_PolicyModelWizard_label"));
-        this.initialObjectCreationPage.setDescription(
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+            .setTitle(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_PolicyModelWizard_label"));
+        this.initialObjectCreationPage
+            .setDescription(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
         this.addPage(this.initialObjectCreationPage);
     }
 

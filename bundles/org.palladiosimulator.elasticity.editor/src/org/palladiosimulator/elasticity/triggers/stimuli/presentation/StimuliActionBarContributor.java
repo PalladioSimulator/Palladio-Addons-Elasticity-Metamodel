@@ -34,7 +34,7 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
-import org.palladiosimulator.elasticity.presentation.ScalingPolicyDefinitionEditorPlugin;
+import org.palladiosimulator.elasticity.presentation.ElasticitySpecEditorPlugin;
 
 /**
  * This is the action bar contributor for the Stimuli model editor. <!-- begin-user-doc --> <!--
@@ -65,14 +65,14 @@ public class StimuliActionBarContributor extends EditingDomainActionBarContribut
      * @generated
      */
     protected IAction showPropertiesViewAction = new Action(
-            ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+            ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
         @Override
         public void run() {
             try {
                 StimuliActionBarContributor.this.getPage()
                     .showView("org.eclipse.ui.views.PropertySheet");
             } catch (final PartInitException exception) {
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(exception);
+                ElasticitySpecEditorPlugin.INSTANCE.log(exception);
             }
         }
     };
@@ -85,7 +85,7 @@ public class StimuliActionBarContributor extends EditingDomainActionBarContribut
      * @generated
      */
     protected IAction refreshViewerAction = new Action(
-            ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+            ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
         @Override
         public boolean isEnabled() {
             return StimuliActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
@@ -172,7 +172,7 @@ public class StimuliActionBarContributor extends EditingDomainActionBarContribut
         super.contributeToMenu(menuManager);
 
         final IMenuManager submenuManager = new MenuManager(
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_StimuliEditor_menu"),
+                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_StimuliEditor_menu"),
                 "org.palladiosimulator.elasticity.triggers.stimuliMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
@@ -183,13 +183,13 @@ public class StimuliActionBarContributor extends EditingDomainActionBarContribut
         // Prepare for CreateChild item addition or removal.
         //
         this.createChildMenuManager = new MenuManager(
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         submenuManager.insertBefore("additions", this.createChildMenuManager);
 
         // Prepare for CreateSibling item addition or removal.
         //
         this.createSiblingMenuManager = new MenuManager(
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         submenuManager.insertBefore("additions", this.createSiblingMenuManager);
 
         // Force an update because Eclipse hides empty menus now.
@@ -386,13 +386,11 @@ public class StimuliActionBarContributor extends EditingDomainActionBarContribut
         super.menuAboutToShow(menuManager);
         MenuManager submenuManager = null;
 
-        submenuManager = new MenuManager(
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+        submenuManager = new MenuManager(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         this.populateManager(submenuManager, this.createChildActions, null);
         menuManager.insertBefore("edit", submenuManager);
 
-        submenuManager = new MenuManager(
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+        submenuManager = new MenuManager(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         this.populateManager(submenuManager, this.createSiblingActions, null);
         menuManager.insertBefore("edit", submenuManager);
     }

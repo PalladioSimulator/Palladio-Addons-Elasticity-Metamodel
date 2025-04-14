@@ -1,9 +1,10 @@
 /**
  * Copyright 2022 by palladiosimulator.org
  */
-package org.palladiosimulator.elasticity.provider;
+package org.palladiosimulator.elasticity.presentation;
 
 import org.eclipse.emf.common.EMFPlugin;
+import org.eclipse.emf.common.ui.EclipseUIPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
@@ -14,18 +15,18 @@ import de.uka.ipd.sdq.stoex.provider.StoexEditPlugin;
 import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
 
 /**
- * This is the central singleton for the ElasticitySpec edit plugin. <!-- begin-user-doc --> <!--
+ * This is the central singleton for the ElasticitySpec editor plugin. <!-- begin-user-doc --> <!--
  * end-user-doc -->
  *
  * @generated
  */
-public final class ElasticityEditPlugin extends EMFPlugin {
+public final class ElasticitySpecEditorPlugin extends EMFPlugin {
     /**
      * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public static final ElasticityEditPlugin INSTANCE = new ElasticityEditPlugin();
+    public static final ElasticitySpecEditorPlugin INSTANCE = new ElasticitySpecEditorPlugin();
 
     /**
      * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -39,7 +40,7 @@ public final class ElasticityEditPlugin extends EMFPlugin {
      *
      * @generated
      */
-    public ElasticityEditPlugin() {
+    public ElasticitySpecEditorPlugin() {
         super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, IdentifierEditPlugin.INSTANCE,
                 PalladioComponentModelEditPlugin.INSTANCE, ProbabilityFunctionEditPlugin.INSTANCE,
                 StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE, });
@@ -74,7 +75,7 @@ public final class ElasticityEditPlugin extends EMFPlugin {
      *
      * @generated
      */
-    public static class Implementation extends EclipsePlugin {
+    public static class Implementation extends EclipseUIPlugin {
         /**
          * Creates an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
          *

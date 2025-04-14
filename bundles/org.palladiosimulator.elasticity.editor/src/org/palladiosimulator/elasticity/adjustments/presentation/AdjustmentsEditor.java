@@ -124,7 +124,7 @@ import org.palladiosimulator.elasticity.constraints.policy.provider.PolicyItemPr
 import org.palladiosimulator.elasticity.constraints.provider.ConstraintsItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.constraints.target.provider.TargetItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.models.provider.ModelsItemProviderAdapterFactory;
-import org.palladiosimulator.elasticity.presentation.ScalingPolicyDefinitionEditorPlugin;
+import org.palladiosimulator.elasticity.presentation.ElasticitySpecEditorPlugin;
 import org.palladiosimulator.elasticity.provider.ElasticityItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.targets.provider.TargetsItemProviderAdapterFactory;
 import org.palladiosimulator.elasticity.triggers.expectations.provider.ExpectationsItemProviderAdapterFactory;
@@ -534,7 +534,7 @@ public class AdjustmentsEditor extends MultiPageEditorPart
                         });
                 }
             } catch (final CoreException exception) {
-                ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(exception);
+                ElasticitySpecEditorPlugin.INSTANCE.log(exception);
             }
         }
     };
@@ -647,7 +647,7 @@ public class AdjustmentsEditor extends MultiPageEditorPart
                     this.setActivePage(lastEditorPage);
                     this.showTabs();
                 } catch (final PartInitException exception) {
-                    ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(exception);
+                    ElasticitySpecEditorPlugin.INSTANCE.log(exception);
                 }
             }
 
@@ -655,7 +655,7 @@ public class AdjustmentsEditor extends MultiPageEditorPart
                 try {
                     this.markerHelper.updateMarkers(diagnostic);
                 } catch (final CoreException exception) {
-                    ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(exception);
+                    ElasticitySpecEditorPlugin.INSTANCE.log(exception);
                 }
             }
         }
@@ -1598,7 +1598,7 @@ public class AdjustmentsEditor extends MultiPageEditorPart
         } catch (final Exception exception) {
             // Something went wrong that shouldn't.
             //
-            ScalingPolicyDefinitionEditorPlugin.INSTANCE.log(exception);
+            ElasticitySpecEditorPlugin.INSTANCE.log(exception);
         }
         this.updateProblemIndication = true;
         this.updateProblemIndication();
@@ -1818,7 +1818,7 @@ public class AdjustmentsEditor extends MultiPageEditorPart
      * @generated
      */
     private static String getString(final String key) {
-        return ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString(key);
+        return ElasticitySpecEditorPlugin.INSTANCE.getString(key);
     }
 
     /**
@@ -1828,7 +1828,7 @@ public class AdjustmentsEditor extends MultiPageEditorPart
      * @generated
      */
     private static String getString(final String key, final Object s1) {
-        return ScalingPolicyDefinitionEditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
+        return ElasticitySpecEditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
     }
 
     /**

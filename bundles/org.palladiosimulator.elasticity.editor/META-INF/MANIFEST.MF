@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.palladiosimulator.elasticity.editor;singleton:=true
 Automatic-Module-Name: org.palladiosimulator.elasticity.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.palladiosimulator.elasticity.presentation.ScalingPolicyDefinitionEditorPlugin$Implementation
+Bundle-Activator: org.palladiosimulator.elasticity.presentation.ElasticitySpecEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17

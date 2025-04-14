@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_cEj8cHSTEe6DiJQNrpiK2w" version="15.0.0.202209061200">
-  <semanticResources>spdmeasuringpoint.ecore</semanticResources>
+  <semanticResources>elasticitymeasuringpoint.ecore</semanticResources>
   <semanticResources>platform:/resource/org.palladiosimulator.edp2/model/EDP2.ecore</semanticResources>
   <semanticResources>platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore</semanticResources>
   <semanticResources>platform:/resource/org.palladiosimulator.metricspec/model/metricspec.ecore</semanticResources>
