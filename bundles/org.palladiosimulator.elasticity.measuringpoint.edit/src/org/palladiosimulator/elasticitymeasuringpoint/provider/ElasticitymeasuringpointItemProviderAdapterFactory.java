@@ -5,14 +5,20 @@ package org.palladiosimulator.elasticitymeasuringpoint.provider;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.edit.command.CommandParameter;
+import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IDisposable;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -21,6 +27,10 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
+import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPointRepository;
+import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointPackage;
+import org.palladiosimulator.edp2.models.measuringpoint.util.MeasuringpointSwitch;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticitymeasuringpointFactory;
 import org.palladiosimulator.elasticitymeasuringpoint.util.ElasticitymeasuringpointAdapterFactory;
 
 /**
@@ -253,6 +263,101 @@ public class ElasticitymeasuringpointItemProviderAdapterFactory extends Elastici
             serviceGroupMeasuringPointItemProvider.dispose();
         if (competingConsumerGroupMeasuringPointItemProvider != null)
             competingConsumerGroupMeasuringPointItemProvider.dispose();
+    }
+
+    /**
+     * A child creation extender for the {@link MeasuringpointPackage}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public static class MeasuringpointChildCreationExtender implements IChildCreationExtender {
+        /**
+         * The switch for creating child descriptors specific to each extended class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        protected static class CreationSwitch extends MeasuringpointSwitch<Object> {
+            /**
+             * The child descriptors being populated.
+             * <!-- begin-user-doc -->
+             * <!-- end-user-doc -->
+             * @generated
+             */
+            protected List<Object> newChildDescriptors;
+
+            /**
+             * The domain in which to create the children.
+             * <!-- begin-user-doc -->
+             * <!-- end-user-doc -->
+             * @generated
+             */
+            protected EditingDomain editingDomain;
+
+            /**
+             * Creates the a switch for populating child descriptors in the given domain.
+             * <!-- begin-user-doc -->
+             * <!-- end-user-doc -->
+             * @generated
+             */
+            CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
+                this.newChildDescriptors = newChildDescriptors;
+                this.editingDomain = editingDomain;
+            }
+
+            /**
+             * <!-- begin-user-doc -->
+             * <!-- end-user-doc -->
+             * @generated
+             */
+            @Override
+            public Object caseMeasuringPointRepository(MeasuringPointRepository object) {
+                newChildDescriptors.add(createChildParameter(
+                        MeasuringpointPackage.Literals.MEASURING_POINT_REPOSITORY__MEASURING_POINTS,
+                        ElasticitymeasuringpointFactory.eINSTANCE.createElasticInfrastructureMeasuringPoint()));
+
+                newChildDescriptors.add(createChildParameter(
+                        MeasuringpointPackage.Literals.MEASURING_POINT_REPOSITORY__MEASURING_POINTS,
+                        ElasticitymeasuringpointFactory.eINSTANCE.createServiceGroupMeasuringPoint()));
+
+                newChildDescriptors.add(createChildParameter(
+                        MeasuringpointPackage.Literals.MEASURING_POINT_REPOSITORY__MEASURING_POINTS,
+                        ElasticitymeasuringpointFactory.eINSTANCE.createCompetingConsumerGroupMeasuringPoint()));
+
+                return null;
+            }
+
+            /**
+             * <!-- begin-user-doc -->
+             * <!-- end-user-doc -->
+             * @generated
+             */
+            protected CommandParameter createChildParameter(Object feature, Object child) {
+                return new CommandParameter(null, feature, child);
+            }
+
+        }
+
+        /**
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
+            ArrayList<Object> result = new ArrayList<Object>();
+            new CreationSwitch(result, editingDomain).doSwitch((EObject) object);
+            return result;
+        }
+
+        /**
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        public ResourceLocator getResourceLocator() {
+            return ElasticitymeasuringpointEditPlugin.INSTANCE;
+        }
     }
 
 }

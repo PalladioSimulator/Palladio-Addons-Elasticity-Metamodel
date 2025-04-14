@@ -8,7 +8,7 @@
     importOrganizing="true" cleanup="true">
   <foreignModel>elasticitymeasuringpoint.ecore</foreignModel>
   <genPackages prefix="Elasticitymeasuringpoint" basePackage="org.palladiosimulator"
-      disposableProviderFactory="true" ecorePackage="elasticitymeasuringpoint.ecore#/">
+      disposableProviderFactory="true" childCreationExtenders="true" ecorePackage="elasticitymeasuringpoint.ecore#/">
     <genClasses ecoreClass="elasticitymeasuringpoint.ecore#//ElasticInfrastructureMeasuringPoint"/>
     <genClasses ecoreClass="elasticitymeasuringpoint.ecore#//ServiceGroupMeasuringPoint"/>
     <genClasses ecoreClass="elasticitymeasuringpoint.ecore#//CompetingConsumerGroupMeasuringPoint"/>

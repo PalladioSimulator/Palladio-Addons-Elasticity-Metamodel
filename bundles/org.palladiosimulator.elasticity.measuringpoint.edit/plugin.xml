@@ -6,12 +6,6 @@
 
 <plugin>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated spdmeasuringpoint -->
-      <extender
-            uri="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0"
-            class="org.palladiosimulator.spdmeasuringpoint.provider.SpdmeasuringpointItemProviderAdapterFactory$MeasuringpointChildCreationExtender"/>
-   </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated elasticitymeasuringpoint -->
@@ -24,6 +18,13 @@
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated elasticitymeasuringpoint -->
+      <extender
+            uri="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0"
+            class="org.palladiosimulator.elasticitymeasuringpoint.provider.ElasticitymeasuringpointItemProviderAdapterFactory$MeasuringpointChildCreationExtender"/>
    </extension>
 
 </plugin>
