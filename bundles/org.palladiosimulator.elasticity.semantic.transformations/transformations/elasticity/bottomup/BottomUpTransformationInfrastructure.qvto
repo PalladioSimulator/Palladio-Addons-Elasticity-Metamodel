@@ -1,6 +1,6 @@
 library BottomUpTransformationResourceEnvironment;
 
-import spd.common.AdjustmentCalculator;
+import elasticity.common.AdjustmentCalculator;
 import pcm.helpers.Commons;
 import pcm.helpers.Constructors;
 
@@ -16,16 +16,16 @@ modeltype PCM_COMP uses 'http://palladiosimulator.org/PalladioComponentModel/Cor
 modeltype PCM_ENTITY uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2';
 modeltype PCM_PARAM uses 'http://palladiosimulator.org/PalladioComponentModel/Parameter/5.2';
 
-modeltype SPD_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
-modeltype SPD_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
-modeltype SPD_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
-modeltype SPD_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
+modeltype ELASTICITY_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
+modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
+modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
 
-modeltype SPD_CON uses 'http://palladiosimulator.org/Elasticity/Constraints/1.0';
-modeltype SPD_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
-modeltype SPD_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
+modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constraints/1.0';
+modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
+modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
-modeltype SPD_SEM uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemantic/1.0';
 
 
 /**
@@ -61,7 +61,7 @@ mapping inout ElasticInfrastructureCfg::transformElasticInfrastructure(enactedPo
 * In case the returned set contains elements that exist in the ElasticInfrastructureCfg.elements then either a scale in or no scale occurs.
 * In case the returned set contains new Resource Containers then the ElasticInfrastructureCfg then the ElasticInfrastructure scales out. 
 *
-* @param adjustment 				The type of adjustmend from the enacted policy from SPD.
+* @param adjustment 				The type of adjustmend from the enacted policy from the Elasticity Spec.
 * @param elasticInfrastructureCfg	The elastic infrastructure configuration that is modified.
 * @return Set(ResourceContainer)	The set of resource containers to be added or removed from the ElasticInfrastructureCfg
 */

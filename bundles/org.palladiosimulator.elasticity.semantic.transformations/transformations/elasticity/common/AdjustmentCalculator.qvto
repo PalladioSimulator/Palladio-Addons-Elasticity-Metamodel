@@ -1,11 +1,11 @@
 library AdjustmentCalculator;
 
-modeltype SPD_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
-modeltype SPD_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
-modeltype SPD_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
-modeltype SPD_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
+modeltype ELASTICITY_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
+modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
+modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
 
-modeltype SPD_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
+modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
 /**
 * Interpretation of the AdjustmentType given the currentSize of the TargetGroup. 
