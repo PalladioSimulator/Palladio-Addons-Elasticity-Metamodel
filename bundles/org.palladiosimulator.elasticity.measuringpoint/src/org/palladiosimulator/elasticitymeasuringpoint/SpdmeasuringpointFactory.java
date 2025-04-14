@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint;
+package org.palladiosimulator.elasticitymeasuringpoint;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EFactory;
  * <!-- begin-user-doc --> The <b>Factory</b> for the model. It provides a create method for each
  * non-abstract class of the model. <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage
+ * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage
  * @generated
  */
 public interface SpdmeasuringpointFactory extends EFactory {
@@ -17,7 +17,7 @@ public interface SpdmeasuringpointFactory extends EFactory {
      *
      * @generated
      */
-    SpdmeasuringpointFactory eINSTANCE = org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointFactoryImpl
+    SpdmeasuringpointFactory eINSTANCE = org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointFactoryImpl
         .init();
 
     /**

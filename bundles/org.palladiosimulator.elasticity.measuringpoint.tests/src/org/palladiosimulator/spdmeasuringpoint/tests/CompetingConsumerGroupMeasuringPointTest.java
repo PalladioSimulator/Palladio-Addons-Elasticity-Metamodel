@@ -2,8 +2,8 @@
  */
 package org.palladiosimulator.spdmeasuringpoint.tests;
 
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointFactory;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;

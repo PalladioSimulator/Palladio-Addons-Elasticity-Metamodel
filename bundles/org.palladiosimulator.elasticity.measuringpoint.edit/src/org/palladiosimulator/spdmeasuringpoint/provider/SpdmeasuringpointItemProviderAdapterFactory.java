@@ -28,8 +28,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPointRepository;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointPackage;
 import org.palladiosimulator.edp2.models.measuringpoint.util.MeasuringpointSwitch;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointFactory;
-import org.palladiosimulator.spdmeasuringpoint.util.SpdmeasuringpointAdapterFactory;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointFactory;
+import org.palladiosimulator.elasticitymeasuringpoint.util.SpdmeasuringpointAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers. The
@@ -81,7 +81,7 @@ public class SpdmeasuringpointItemProviderAdapterFactory extends Spdmeasuringpoi
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint}
+     * {@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
@@ -90,7 +90,7 @@ public class SpdmeasuringpointItemProviderAdapterFactory extends Spdmeasuringpoi
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint}. <!--
+     * {@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
@@ -107,7 +107,7 @@ public class SpdmeasuringpointItemProviderAdapterFactory extends Spdmeasuringpoi
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint} instances. <!--
+     * {@link org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
@@ -116,7 +116,7 @@ public class SpdmeasuringpointItemProviderAdapterFactory extends Spdmeasuringpoi
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint}. <!--
+     * {@link org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
@@ -132,7 +132,7 @@ public class SpdmeasuringpointItemProviderAdapterFactory extends Spdmeasuringpoi
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint}
+     * {@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint}
      * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
@@ -141,7 +141,7 @@ public class SpdmeasuringpointItemProviderAdapterFactory extends Spdmeasuringpoi
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint}. <!--
+     * {@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated

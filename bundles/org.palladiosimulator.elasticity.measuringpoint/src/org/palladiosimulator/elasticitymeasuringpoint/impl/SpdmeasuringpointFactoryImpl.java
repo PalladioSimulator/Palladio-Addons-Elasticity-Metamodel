@@ -1,17 +1,17 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint.impl;
+package org.palladiosimulator.elasticitymeasuringpoint.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointFactory;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointFactory;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->

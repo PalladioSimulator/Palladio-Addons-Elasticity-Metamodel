@@ -64,7 +64,7 @@ public interface ResponseTimeSpecification extends CDOObject {
      * @return the value of the '<em>Target Response Time</em>' attribute.
      * @see #setTargetResponseTime(double)
      * @see org.palladiosimulator.elasticity.models.ModelsPackage#getResponseTimeSpecification_TargetResponseTime()
-     * @model dataType="org.palladiosimulator.spd.datatypes.PositiveDouble"
+     * @model dataType="org.palladiosimulator.elasticity.datatypes.PositiveDouble"
      * @generated
      */
     double getTargetResponseTime();

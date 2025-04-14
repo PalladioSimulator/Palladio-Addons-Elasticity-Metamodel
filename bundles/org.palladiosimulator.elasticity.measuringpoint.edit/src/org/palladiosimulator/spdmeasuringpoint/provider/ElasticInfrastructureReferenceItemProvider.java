@@ -16,11 +16,11 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference} object. <!--
+ * {@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated

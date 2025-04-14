@@ -7,14 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated SPD -->
-      <package
-            uri="http://palladiosimulator.org/Elasticity/1.0"
-            class="org.palladiosimulator.elasticity.SpdPackage"
-            genModel="model/Elasticity.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated Elasticity -->
       <package
             uri="http://palladiosimulator.org/Elasticity/1.0"

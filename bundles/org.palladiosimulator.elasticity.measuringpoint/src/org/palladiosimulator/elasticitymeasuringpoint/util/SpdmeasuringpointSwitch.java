@@ -1,18 +1,18 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint.util;
+package org.palladiosimulator.elasticitymeasuringpoint.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference;
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 
 /**
  * <!-- begin-user-doc --> The <b>Switch</b> for the model's inheritance hierarchy. It supports the
@@ -21,7 +21,7 @@ import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
  * inheritance hierarchy until a non-null result is returned, which is the result of the switch.
  * <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage
+ * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage
  * @generated
  */
 public class SpdmeasuringpointSwitch<T> extends Switch<T> {

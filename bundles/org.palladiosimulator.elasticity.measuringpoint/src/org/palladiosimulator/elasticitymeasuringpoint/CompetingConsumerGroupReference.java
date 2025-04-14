@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint;
+package org.palladiosimulator.elasticitymeasuringpoint;
 
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
@@ -13,11 +13,11 @@ import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup
+ * <li>{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup
  * <em>Competing Consumer Group</em>}</li>
  * </ul>
  *
- * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage#getCompetingConsumerGroupReference()
+ * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage#getCompetingConsumerGroupReference()
  * @model abstract="true"
  * @generated
  */
@@ -28,7 +28,7 @@ public interface CompetingConsumerGroupReference extends EObject {
      *
      * @return the value of the '<em>Competing Consumer Group</em>' reference.
      * @see #setCompetingConsumerGroup(CompetingConsumersGroup)
-     * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage#getCompetingConsumerGroupReference_CompetingConsumerGroup()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage#getCompetingConsumerGroupReference_CompetingConsumerGroup()
      * @model required="true"
      * @generated
      */
@@ -36,7 +36,7 @@ public interface CompetingConsumerGroupReference extends EObject {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup
      * <em>Competing Consumer Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value

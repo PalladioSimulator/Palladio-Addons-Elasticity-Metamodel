@@ -35,7 +35,7 @@ public interface TriggerBasedScalingPolicy extends ScalingPolicy {
      *
      * @return the value of the '<em>Adjustment Type</em>' containment reference.
      * @see #setAdjustmentType(AdjustmentType)
-     * @see org.palladiosimulator.elasticity.SpdPackage#getTriggerBasedScalingPolicy_AdjustmentType()
+     * @see org.palladiosimulator.elasticity.ElasticityPackage#getTriggerBasedScalingPolicy_AdjustmentType()
      * @model containment="true" required="true"
      * @generated
      */
@@ -60,7 +60,7 @@ public interface TriggerBasedScalingPolicy extends ScalingPolicy {
      *
      * @return the value of the '<em>Scaling Trigger</em>' containment reference.
      * @see #setScalingTrigger(ScalingTrigger)
-     * @see org.palladiosimulator.elasticity.SpdPackage#getTriggerBasedScalingPolicy_ScalingTrigger()
+     * @see org.palladiosimulator.elasticity.ElasticityPackage#getTriggerBasedScalingPolicy_ScalingTrigger()
      * @model containment="true" required="true"
      * @generated
      */

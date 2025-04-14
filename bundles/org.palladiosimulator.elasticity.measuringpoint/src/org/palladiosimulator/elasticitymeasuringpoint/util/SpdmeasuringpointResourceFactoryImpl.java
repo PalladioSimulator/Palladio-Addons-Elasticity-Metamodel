@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint.util;
+package org.palladiosimulator.elasticitymeasuringpoint.util;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
  * <!-- begin-user-doc --> The <b>Resource Factory</b> associated with the package. <!--
  * end-user-doc -->
  *
- * @see org.palladiosimulator.spdmeasuringpoint.util.SpdmeasuringpointResourceImpl
+ * @see org.palladiosimulator.elasticitymeasuringpoint.util.SpdmeasuringpointResourceImpl
  * @generated
  */
 public class SpdmeasuringpointResourceFactoryImpl extends ResourceFactoryImpl {

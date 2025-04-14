@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint;
+package org.palladiosimulator.elasticitymeasuringpoint;
 
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
@@ -13,11 +13,11 @@ import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference#getElasticInfrastructure
+ * <li>{@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference#getElasticInfrastructure
  * <em>Elastic Infrastructure</em>}</li>
  * </ul>
  *
- * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage#getElasticInfrastructureReference()
+ * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage#getElasticInfrastructureReference()
  * @model abstract="true"
  * @generated
  */
@@ -28,7 +28,7 @@ public interface ElasticInfrastructureReference extends EObject {
      *
      * @return the value of the '<em>Elastic Infrastructure</em>' reference.
      * @see #setElasticInfrastructure(ElasticInfrastructure)
-     * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage#getElasticInfrastructureReference_ElasticInfrastructure()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage#getElasticInfrastructureReference_ElasticInfrastructure()
      * @model required="true"
      * @generated
      */
@@ -36,7 +36,7 @@ public interface ElasticInfrastructureReference extends EObject {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference#getElasticInfrastructure
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference#getElasticInfrastructure
      * <em>Elastic Infrastructure</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @param value

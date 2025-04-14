@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.spdmeasuringpoint.tests;
 
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference;
 
 import junit.framework.TestCase;
 

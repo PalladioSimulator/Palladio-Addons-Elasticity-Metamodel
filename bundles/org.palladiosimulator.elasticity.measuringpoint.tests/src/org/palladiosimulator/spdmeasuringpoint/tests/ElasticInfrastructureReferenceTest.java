@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.spdmeasuringpoint.tests;
 
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference;
 
 import junit.framework.TestCase;
 

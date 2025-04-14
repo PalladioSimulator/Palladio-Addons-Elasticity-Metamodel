@@ -46,7 +46,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="model" lowerBound="1" eType="#//models/BaseModel"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adjustment" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adjustment" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"
         transient="true"/>
   </eClassifiers>
   <eSubpackages name="targets" nsURI="http://palladiosimulator.org/Elasticity/Targets/1.0"
@@ -427,9 +427,9 @@
         <details key="documentation" value="The RandomModel randomly makes scaling decisions: With the given probability, it makes an adjustment in the specified range."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="minAdjustment" lowerBound="1"
-          eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxAdjustment" lowerBound="1"
-          eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+          eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="probability" lowerBound="1"
           eType="#//datatypes/PercentDouble" defaultValueLiteral="1.0"/>
     </eClassifiers>

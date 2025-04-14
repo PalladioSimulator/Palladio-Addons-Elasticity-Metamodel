@@ -1,25 +1,25 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint.util;
+package org.palladiosimulator.elasticitymeasuringpoint.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference;
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter
  * <code>createXXX</code> method for each class of the model. <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage
+ * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage
  * @generated
  */
 public class SpdmeasuringpointAdapterFactory extends AdapterFactoryImpl {
@@ -124,13 +124,13 @@ public class SpdmeasuringpointAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint
      * <em>Elastic Infrastructure Measuring Point</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint
      * @generated
      */
     public Adapter createElasticInfrastructureMeasuringPointAdapter() {
@@ -139,13 +139,13 @@ public class SpdmeasuringpointAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint <em>Service Group
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint <em>Service Group
      * Measuring Point</em>}'. <!-- begin-user-doc --> This default implementation returns null so
      * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
      * the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint
      * @generated
      */
     public Adapter createServiceGroupMeasuringPointAdapter() {
@@ -154,13 +154,13 @@ public class SpdmeasuringpointAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint
      * <em>Competing Consumer Group Measuring Point</em>}'. <!-- begin-user-doc --> This default
      * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
      * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint
+     * @see org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint
      * @generated
      */
     public Adapter createCompetingConsumerGroupMeasuringPointAdapter() {
@@ -169,13 +169,13 @@ public class SpdmeasuringpointAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference <em>Service Group
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference <em>Service Group
      * Reference</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
      * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference
      * @generated
      */
     public Adapter createServiceGroupReferenceAdapter() {
@@ -184,13 +184,13 @@ public class SpdmeasuringpointAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference <em>Elastic
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference <em>Elastic
      * Infrastructure Reference</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference
      * @generated
      */
     public Adapter createElasticInfrastructureReferenceAdapter() {
@@ -199,13 +199,13 @@ public class SpdmeasuringpointAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference <em>Competing
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference <em>Competing
      * Consumer Group Reference</em>}'. <!-- begin-user-doc --> This default implementation returns
      * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
      * catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference
+     * @see org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference
      * @generated
      */
     public Adapter createCompetingConsumerGroupReferenceAdapter() {

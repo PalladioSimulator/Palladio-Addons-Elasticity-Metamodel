@@ -1,12 +1,12 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint.impl;
+package org.palladiosimulator.elasticitymeasuringpoint.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Competing Consumer Group
@@ -15,7 +15,7 @@ import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupReferenceImpl#getCompetingConsumerGroup
+ * <li>{@link org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupReferenceImpl#getCompetingConsumerGroup
  * <em>Competing Consumer Group</em>}</li>
  * </ul>
  *

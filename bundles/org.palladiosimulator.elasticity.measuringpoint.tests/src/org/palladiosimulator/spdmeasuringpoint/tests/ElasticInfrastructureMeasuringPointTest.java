@@ -2,8 +2,8 @@
  */
 package org.palladiosimulator.spdmeasuringpoint.tests;
 
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointFactory;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;

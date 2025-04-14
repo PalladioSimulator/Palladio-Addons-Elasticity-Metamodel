@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointFactory;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
-import org.palladiosimulator.spdmeasuringpoint.util.SpdmeasuringpointResourceFactoryImpl;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointFactory;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.util.SpdmeasuringpointResourceFactoryImpl;
 
 /**
  * <!-- begin-user-doc --> A sample utility for the '<em><b>spdmeasuringpoint</b></em>' package.

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.palladiosimulator.elasticity.measuringpoint/src"
+    modelPluginID="org.palladiosimulator.elasticity.measuringpoint" modelName="Elasticitymeasuringpoint"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="17.0"
+    copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.palladiosimulator.edp2/model/EDP2.genmodel#//models ../../org.palladiosimulator.elasticity/model/Elasticity.genmodel#//elasticity ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.palladiosimulator.metricspec/model/metricspec.genmodel#//metricspec ../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    importOrganizing="true" cleanup="true">
+  <foreignModel>elasticitymeasuringpoint.ecore</foreignModel>
+  <genPackages prefix="Elasticitymeasuringpoint" disposableProviderFactory="true"
+      ecorePackage="elasticitymeasuringpoint.ecore#/">
+    <genClasses ecoreClass="elasticitymeasuringpoint.ecore#//ElasticInfrastructureMeasuringPoint"/>
+    <genClasses ecoreClass="elasticitymeasuringpoint.ecore#//ServiceGroupMeasuringPoint"/>
+    <genClasses ecoreClass="elasticitymeasuringpoint.ecore#//CompetingConsumerGroupMeasuringPoint"/>
+    <genClasses image="false" ecoreClass="elasticitymeasuringpoint.ecore#//ServiceGroupReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference elasticitymeasuringpoint.ecore#//ServiceGroupReference/serviceGroup"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="elasticitymeasuringpoint.ecore#//ElasticInfrastructureReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference elasticitymeasuringpoint.ecore#//ElasticInfrastructureReference/elasticInfrastructure"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="elasticitymeasuringpoint.ecore#//CompetingConsumerGroupReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference elasticitymeasuringpoint.ecore#//CompetingConsumerGroupReference/competingConsumerGroup"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

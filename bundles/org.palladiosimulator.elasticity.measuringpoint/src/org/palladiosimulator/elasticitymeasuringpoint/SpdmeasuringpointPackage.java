@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint;
+package org.palladiosimulator.elasticitymeasuringpoint;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -18,7 +18,7 @@ import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointPackage;
  * </ul>
  * <!-- end-user-doc -->
  *
- * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointFactory
+ * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointFactory
  * @model kind="package"
  * @generated
  */
@@ -49,17 +49,17 @@ public interface SpdmeasuringpointPackage extends EPackage {
      *
      * @generated
      */
-    SpdmeasuringpointPackage eINSTANCE = org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl
+    SpdmeasuringpointPackage eINSTANCE = org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl
         .init();
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl
      * <em>Elastic Infrastructure Measuring Point</em>}' class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getElasticInfrastructureMeasuringPoint()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getElasticInfrastructureMeasuringPoint()
      * @generated
      */
     int ELASTIC_INFRASTRUCTURE_MEASURING_POINT = 0;
@@ -112,11 +112,11 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.spdmeasuringpoint.impl.ServiceGroupMeasuringPointImpl
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupMeasuringPointImpl
      * <em>Service Group Measuring Point</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.ServiceGroupMeasuringPointImpl
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getServiceGroupMeasuringPoint()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupMeasuringPointImpl
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getServiceGroupMeasuringPoint()
      * @generated
      */
     int SERVICE_GROUP_MEASURING_POINT = 1;
@@ -168,12 +168,12 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl
      * <em>Competing Consumer Group Measuring Point</em>}' class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getCompetingConsumerGroupMeasuringPoint()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getCompetingConsumerGroupMeasuringPoint()
      * @generated
      */
     int COMPETING_CONSUMER_GROUP_MEASURING_POINT = 2;
@@ -227,11 +227,11 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.spdmeasuringpoint.impl.ServiceGroupReferenceImpl <em>Service
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupReferenceImpl <em>Service
      * Group Reference</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.ServiceGroupReferenceImpl
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getServiceGroupReference()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupReferenceImpl
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getServiceGroupReference()
      * @generated
      */
     int SERVICE_GROUP_REFERENCE = 3;
@@ -256,12 +256,12 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureReferenceImpl
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureReferenceImpl
      * <em>Elastic Infrastructure Reference</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      *
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureReferenceImpl
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getElasticInfrastructureReference()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureReferenceImpl
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getElasticInfrastructureReference()
      * @generated
      */
     int ELASTIC_INFRASTRUCTURE_REFERENCE = 4;
@@ -286,12 +286,12 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupReferenceImpl
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupReferenceImpl
      * <em>Competing Consumer Group Reference</em>}' class. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupReferenceImpl
-     * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getCompetingConsumerGroupReference()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupReferenceImpl
+     * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getCompetingConsumerGroupReference()
      * @generated
      */
     int COMPETING_CONSUMER_GROUP_REFERENCE = 5;
@@ -316,57 +316,57 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint
      * <em>Elastic Infrastructure Measuring Point</em>}'. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      *
      * @return the meta object for class '<em>Elastic Infrastructure Measuring Point</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint
      * @generated
      */
     EClass getElasticInfrastructureMeasuringPoint();
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint <em>Service Group
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint <em>Service Group
      * Measuring Point</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Service Group Measuring Point</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint
      * @generated
      */
     EClass getServiceGroupMeasuringPoint();
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint
      * <em>Competing Consumer Group Measuring Point</em>}'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @return the meta object for class '<em>Competing Consumer Group Measuring Point</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint
+     * @see org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint
      * @generated
      */
     EClass getCompetingConsumerGroupMeasuringPoint();
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference <em>Service Group
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference <em>Service Group
      * Reference</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Service Group Reference</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference
      * @generated
      */
     EClass getServiceGroupReference();
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference#getServiceGroup
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference#getServiceGroup
      * <em>Service Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Service Group</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference#getServiceGroup()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference#getServiceGroup()
      * @see #getServiceGroupReference()
      * @generated
      */
@@ -374,22 +374,22 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference <em>Elastic
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference <em>Elastic
      * Infrastructure Reference</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Elastic Infrastructure Reference</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference
      * @generated
      */
     EClass getElasticInfrastructureReference();
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference#getElasticInfrastructure
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference#getElasticInfrastructure
      * <em>Elastic Infrastructure</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Elastic Infrastructure</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference#getElasticInfrastructure()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference#getElasticInfrastructure()
      * @see #getElasticInfrastructureReference()
      * @generated
      */
@@ -397,22 +397,22 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference <em>Competing
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference <em>Competing
      * Consumer Group Reference</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for class '<em>Competing Consumer Group Reference</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference
+     * @see org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference
      * @generated
      */
     EClass getCompetingConsumerGroupReference();
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup
+     * '{@link org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup
      * <em>Competing Consumer Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Competing Consumer Group</em>'.
-     * @see org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup()
+     * @see org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference#getCompetingConsumerGroup()
      * @see #getCompetingConsumerGroupReference()
      * @generated
      */
@@ -442,47 +442,47 @@ public interface SpdmeasuringpointPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl
+         * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl
          * <em>Elastic Infrastructure Measuring Point</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          *
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getElasticInfrastructureMeasuringPoint()
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getElasticInfrastructureMeasuringPoint()
          * @generated
          */
         EClass ELASTIC_INFRASTRUCTURE_MEASURING_POINT = eINSTANCE.getElasticInfrastructureMeasuringPoint();
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.spdmeasuringpoint.impl.ServiceGroupMeasuringPointImpl
+         * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupMeasuringPointImpl
          * <em>Service Group Measuring Point</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
          * -->
          *
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.ServiceGroupMeasuringPointImpl
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getServiceGroupMeasuringPoint()
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupMeasuringPointImpl
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getServiceGroupMeasuringPoint()
          * @generated
          */
         EClass SERVICE_GROUP_MEASURING_POINT = eINSTANCE.getServiceGroupMeasuringPoint();
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl
+         * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl
          * <em>Competing Consumer Group Measuring Point</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          *
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getCompetingConsumerGroupMeasuringPoint()
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupMeasuringPointImpl
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getCompetingConsumerGroupMeasuringPoint()
          * @generated
          */
         EClass COMPETING_CONSUMER_GROUP_MEASURING_POINT = eINSTANCE.getCompetingConsumerGroupMeasuringPoint();
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.spdmeasuringpoint.impl.ServiceGroupReferenceImpl
+         * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupReferenceImpl
          * <em>Service Group Reference</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.ServiceGroupReferenceImpl
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getServiceGroupReference()
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.ServiceGroupReferenceImpl
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getServiceGroupReference()
          * @generated
          */
         EClass SERVICE_GROUP_REFERENCE = eINSTANCE.getServiceGroupReference();
@@ -497,12 +497,12 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureReferenceImpl
+         * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureReferenceImpl
          * <em>Elastic Infrastructure Reference</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          *
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureReferenceImpl
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getElasticInfrastructureReference()
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureReferenceImpl
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getElasticInfrastructureReference()
          * @generated
          */
         EClass ELASTIC_INFRASTRUCTURE_REFERENCE = eINSTANCE.getElasticInfrastructureReference();
@@ -518,12 +518,12 @@ public interface SpdmeasuringpointPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupReferenceImpl
+         * '{@link org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupReferenceImpl
          * <em>Competing Consumer Group Reference</em>}' class. <!-- begin-user-doc --> <!--
          * end-user-doc -->
          *
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.CompetingConsumerGroupReferenceImpl
-         * @see org.palladiosimulator.spdmeasuringpoint.impl.SpdmeasuringpointPackageImpl#getCompetingConsumerGroupReference()
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.CompetingConsumerGroupReferenceImpl
+         * @see org.palladiosimulator.elasticitymeasuringpoint.impl.SpdmeasuringpointPackageImpl#getCompetingConsumerGroupReference()
          * @generated
          */
         EClass COMPETING_CONSUMER_GROUP_REFERENCE = eINSTANCE.getCompetingConsumerGroupReference();

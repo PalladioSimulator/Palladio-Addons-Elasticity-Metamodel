@@ -21,9 +21,10 @@
   <semanticResources>platform:/resource/org.palladiosimulator.pcm.edp2.measuringpoint/model/pcmmeasuringpoint.genmodel</semanticResources>
   <semanticResources>platform:/resource/org.palladiosimulator.spd/model/SPD.ecore</semanticResources>
   <semanticResources>platform:/resource/org.palladiosimulator.spd/model/SPD.genmodel</semanticResources>
-  <semanticResources>spdmeasuringpoint.genmodel</semanticResources>
   <semanticResources>platform:/resource/org.palladiosimulator.spd.semantic/model/semantic.ecore</semanticResources>
   <semanticResources>platform:/resource/org.palladiosimulator.spd.semantic/model/semantic.genmodel</semanticResources>
   <semanticResources>platform:/resource/org.palladiosimulator.elasticity/model/Elasticity.ecore</semanticResources>
   <semanticResources>platform:/resource/org.palladiosimulator.elasticity/model/Elasticity.genmodel</semanticResources>
+  <semanticResources>elasticitymeasuringpoint.genmodel</semanticResources>
+  <semanticResources>elasticitymeasuringpoint.ecore</semanticResources>
 </viewpoint:DAnalysis>

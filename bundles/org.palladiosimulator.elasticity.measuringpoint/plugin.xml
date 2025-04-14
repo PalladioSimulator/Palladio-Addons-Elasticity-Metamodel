@@ -9,14 +9,14 @@
       <!-- @generated spdmeasuringpoint -->
       <package
             uri="http://palladiosimulator.org/PCM/SPDMeasuringPoint/1.0"
-            class="org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage"
-            genModel="model/spdmeasuringpoint.genmodel"/>
+            class="org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage"
+            genModel="model/elasticitymeasuringpoint.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <!-- @generated spdmeasuringpoint -->
       <parser
             type="spdmeasuringpoint"
-            class="org.palladiosimulator.spdmeasuringpoint.util.SpdmeasuringpointResourceFactoryImpl"/>
+            class="org.palladiosimulator.elasticitymeasuringpoint.util.SpdmeasuringpointResourceFactoryImpl"/>
    </extension>
 </plugin>

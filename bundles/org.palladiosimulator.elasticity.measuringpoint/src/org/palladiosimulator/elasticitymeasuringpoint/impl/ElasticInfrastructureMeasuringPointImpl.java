@@ -1,15 +1,15 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint.impl;
+package org.palladiosimulator.elasticitymeasuringpoint.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.palladiosimulator.commons.emfutils.EMFLoadHelper;
 import org.palladiosimulator.edp2.models.measuringpoint.impl.MeasuringPointImpl;
 import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Elastic Infrastructure
@@ -18,7 +18,7 @@ import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.spdmeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl#getElasticInfrastructure
+ * <li>{@link org.palladiosimulator.elasticitymeasuringpoint.impl.ElasticInfrastructureMeasuringPointImpl#getElasticInfrastructure
  * <em>Elastic Infrastructure</em>}</li>
  * </ul>
  *

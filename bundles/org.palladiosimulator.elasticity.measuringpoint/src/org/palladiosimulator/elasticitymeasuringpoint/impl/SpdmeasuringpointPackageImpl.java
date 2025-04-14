@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.spdmeasuringpoint.impl;
+package org.palladiosimulator.elasticitymeasuringpoint.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -12,16 +12,16 @@ import org.palladiosimulator.edp2.models.Repository.RepositoryPackage;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointPackage;
 import org.palladiosimulator.elasticity.ElasticityPackage;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.CompetingConsumerGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ElasticInfrastructureReference;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointFactory;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.pcm.PcmPackage;
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.CompetingConsumerGroupReference;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ElasticInfrastructureReference;
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointFactory;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -86,7 +86,7 @@ public class SpdmeasuringpointPackageImpl extends EPackageImpl implements Spdmea
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @see org.eclipse.emf.ecore.EPackage.Registry
-     * @see org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage#eNS_URI
+     * @see org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage#eNS_URI
      * @see #init()
      * @generated
      */

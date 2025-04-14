@@ -2,7 +2,7 @@
  */
 package org.palladiosimulator.spdmeasuringpoint.tests;
 
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupReference;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupReference;
 
 import junit.framework.TestCase;
 

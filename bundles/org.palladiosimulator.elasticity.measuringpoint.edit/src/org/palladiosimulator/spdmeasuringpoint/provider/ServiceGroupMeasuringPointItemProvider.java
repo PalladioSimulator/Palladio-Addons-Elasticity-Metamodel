@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.edp2.models.measuringpoint.provider.MeasuringPointItemProvider;
-import org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.spdmeasuringpoint.ServiceGroupMeasuringPoint} object. <!--
+ * {@link org.palladiosimulator.elasticitymeasuringpoint.ServiceGroupMeasuringPoint} object. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated

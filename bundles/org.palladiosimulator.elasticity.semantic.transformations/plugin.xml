@@ -11,7 +11,7 @@
          point="org.eclipse.m2m.qvt.oml.runtime.qvtTransformation">
       <transformation
             file="transformations/pcm/helpers/Loadbalancing.qvto"
-            id="org.palladiosimulator.spd.semantic.transformations.pcm.helpers.Loadbalancing">
+            id="org.palladiosimulator.elasticity.semantic.transformations.pcm.helpers.Loadbalancing">
       </transformation>
    </extension>
 

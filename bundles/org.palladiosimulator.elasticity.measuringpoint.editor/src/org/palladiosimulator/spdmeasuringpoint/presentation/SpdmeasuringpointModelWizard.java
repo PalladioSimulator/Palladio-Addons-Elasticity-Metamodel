@@ -54,8 +54,8 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointFactory;
-import org.palladiosimulator.spdmeasuringpoint.SpdmeasuringpointPackage;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointFactory;
+import org.palladiosimulator.elasticitymeasuringpoint.SpdmeasuringpointPackage;
 import org.palladiosimulator.spdmeasuringpoint.provider.SpdmeasuringpointEditPlugin;
 
 /**
