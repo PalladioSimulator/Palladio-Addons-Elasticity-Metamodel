@@ -6,27 +6,6 @@
 
 <plugin>
 
-
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated elasticitymeasuringpoint -->
-      <factory
-            uri="http://palladiosimulator.org/PCM/ElasticityMeasuringPoint/1.0"
-            class="org.palladiosimulator.elasticitymeasuringpoint.provider.ElasticitymeasuringpointItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated elasticitymeasuringpoint -->
-      <extender
-            uri="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0"
-            class="org.palladiosimulator.elasticitymeasuringpoint.provider.ElasticitymeasuringpointItemProviderAdapterFactory$MeasuringpointChildCreationExtender"/>
-   </extension>
-
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated scalablepcmgroupmeasuringpoint -->
       <factory
