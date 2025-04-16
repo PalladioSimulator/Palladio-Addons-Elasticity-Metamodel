@@ -26,4 +26,6 @@
   <semanticResources>platform:/resource/org.palladiosimulator.elasticity/model/Elasticity.genmodel</semanticResources>
   <semanticResources>scalablepcmgroupmeasuringpoint.ecore</semanticResources>
   <semanticResources>scalablepcmgroupmeasuringpoint.genmodel</semanticResources>
+  <semanticResources>platform:/resource/org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.ecore</semanticResources>
+  <semanticResources>platform:/resource/org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.genmodel</semanticResources>
 </viewpoint:DAnalysis>

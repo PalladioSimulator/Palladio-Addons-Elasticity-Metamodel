@@ -92,13 +92,13 @@ public interface ScalablePCMGroupMeasuringPointPackage extends EPackage {
     int INFRASTRUCTURE_GROUP_MEASURING_POINT__RESOURCE_URI_REPRESENTATION = MeasuringpointPackage.MEASURING_POINT__RESOURCE_URI_REPRESENTATION;
 
     /**
-     * The feature id for the '<em><b>Elastic Infrastructure</b></em>' reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * The feature id for the '<em><b>Infrastructure Group</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE = MeasuringpointPackage.MEASURING_POINT_FEATURE_COUNT
+    int INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP = MeasuringpointPackage.MEASURING_POINT_FEATURE_COUNT
             + 0;
 
     /**
@@ -267,13 +267,13 @@ public interface ScalablePCMGroupMeasuringPointPackage extends EPackage {
     int INFRASTRUCTURE_GROUP_REFERENCE = 4;
 
     /**
-     * The feature id for the '<em><b>Elastic Infrastructure</b></em>' reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * The feature id for the '<em><b>Infrastructure Group</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE = 0;
+    int INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP = 0;
 
     /**
      * The number of structural features of the '<em>Infrastructure Group Reference</em>' class.
@@ -385,15 +385,15 @@ public interface ScalablePCMGroupMeasuringPointPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupReference#getElasticInfrastructure
-     * <em>Elastic Infrastructure</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupReference#getInfrastructureGroup
+     * <em>Infrastructure Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return the meta object for the reference '<em>Elastic Infrastructure</em>'.
-     * @see org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupReference#getElasticInfrastructure()
+     * @return the meta object for the reference '<em>Infrastructure Group</em>'.
+     * @see org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupReference#getInfrastructureGroup()
      * @see #getInfrastructureGroupReference()
      * @generated
      */
-    EReference getInfrastructureGroupReference_ElasticInfrastructure();
+    EReference getInfrastructureGroupReference_InfrastructureGroup();
 
     /**
      * Returns the meta object for class
@@ -508,13 +508,13 @@ public interface ScalablePCMGroupMeasuringPointPackage extends EPackage {
         EClass INFRASTRUCTURE_GROUP_REFERENCE = eINSTANCE.getInfrastructureGroupReference();
 
         /**
-         * The meta object literal for the '<em><b>Elastic Infrastructure</b></em>' reference
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Infrastructure Group</b></em>' reference feature.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @generated
          */
-        EReference INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE = eINSTANCE
-            .getInfrastructureGroupReference_ElasticInfrastructure();
+        EReference INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP = eINSTANCE
+            .getInfrastructureGroupReference_InfrastructureGroup();
 
         /**
          * The meta object literal for the

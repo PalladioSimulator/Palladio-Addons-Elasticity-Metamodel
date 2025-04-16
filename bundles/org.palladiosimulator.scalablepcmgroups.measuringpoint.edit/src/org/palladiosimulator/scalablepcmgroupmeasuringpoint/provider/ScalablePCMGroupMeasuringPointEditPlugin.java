@@ -9,6 +9,7 @@ import org.palladiosimulator.edp2.models.ExperimentData.provider.EDP2EditPlugin;
 import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 import org.palladiosimulator.metricspec.provider.MetricSpecEditPlugin;
 import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
+import org.palladiosimulator.scalablepcmgroups.provider.ScalablePCMGroupsEditPlugin;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
 import de.uka.ipd.sdq.probfunction.provider.ProbabilityFunctionEditPlugin;
@@ -44,7 +45,8 @@ public final class ScalablePCMGroupMeasuringPointEditPlugin extends EMFPlugin {
     public ScalablePCMGroupMeasuringPointEditPlugin() {
         super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, EDP2EditPlugin.INSTANCE, ElasticityEditPlugin.INSTANCE,
                 IdentifierEditPlugin.INSTANCE, MetricSpecEditPlugin.INSTANCE, PalladioComponentModelEditPlugin.INSTANCE,
-                ProbabilityFunctionEditPlugin.INSTANCE, StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE, });
+                ProbabilityFunctionEditPlugin.INSTANCE, ScalablePCMGroupsEditPlugin.INSTANCE, StoexEditPlugin.INSTANCE,
+                UnitsEditPlugin.INSTANCE, });
     }
 
     /**

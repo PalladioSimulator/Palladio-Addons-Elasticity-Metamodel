@@ -3,10 +3,7 @@
 package org.palladiosimulator.scalablepcmgroupmeasuringpoint.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.palladiosimulator.commons.emfutils.EMFLoadHelper;
 import org.palladiosimulator.edp2.models.measuringpoint.impl.MeasuringPointImpl;
-import org.palladiosimulator.elasticity.targets.ServiceGroup;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ServiceGroupMeasuringPoint;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ServiceGroupReference;
@@ -50,8 +47,8 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
      * @generated
      */
     @Override
-    public ServiceGroup getServiceGroup() {
-        return (ServiceGroup) this.eDynamicGet(
+    public org.palladiosimulator.scalablepcmgroups.ServiceGroup getServiceGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.ServiceGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, true, true);
     }
@@ -61,8 +58,8 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
      *
      * @generated
      */
-    public ServiceGroup basicGetServiceGroup() {
-        return (ServiceGroup) this.eDynamicGet(
+    public org.palladiosimulator.scalablepcmgroups.ServiceGroup basicGetServiceGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.ServiceGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, false, true);
     }
@@ -73,7 +70,7 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
      * @generated
      */
     @Override
-    public void setServiceGroup(final ServiceGroup newServiceGroup) {
+    public void setServiceGroup(final org.palladiosimulator.scalablepcmgroups.ServiceGroup newServiceGroup) {
         this.eDynamicSet(ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, newServiceGroup);
     }
@@ -104,7 +101,7 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP:
-            this.setServiceGroup((ServiceGroup) newValue);
+            this.setServiceGroup((org.palladiosimulator.scalablepcmgroups.ServiceGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -119,7 +116,7 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
     public void eUnset(final int featureID) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP:
-            this.setServiceGroup((ServiceGroup) null);
+            this.setServiceGroup((org.palladiosimulator.scalablepcmgroups.ServiceGroup) null);
             return;
         }
         super.eUnset(featureID);
@@ -173,51 +170,6 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated NOT
-     */
-    @Override
-    public String getStringRepresentation() {
-        if (this.getServiceGroup() == null) {
-            return "";
-        }
-
-        if (this.getServiceGroup()
-            .getEntityName() == null) {
-            return super.getStringRepresentation();
-        }
-
-        EcoreUtil.resolveAll(this);
-
-        final StringBuilder result = new StringBuilder();
-
-        result.append("Service Group ");
-        result.append(this.getServiceGroup()
-            .getEntityName());
-        result.append(" [");
-        result.append(this.getServiceGroup()
-            .getId());
-        result.append("]");
-
-        return result.toString();
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated NOT
-     */
-    @Override
-    public String getResourceURIRepresentation() {
-        if (this.getServiceGroup() == null) {
-            return "";
-        }
-        EcoreUtil.resolveAll(this);
-        return EMFLoadHelper.getResourceURI(this.getServiceGroup());
     }
 
 } // ServiceGroupMeasuringPointImpl

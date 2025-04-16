@@ -11,7 +11,6 @@ import org.palladiosimulator.edp2.models.ExperimentData.ExperimentDataPackage;
 import org.palladiosimulator.edp2.models.Repository.RepositoryPackage;
 import org.palladiosimulator.edp2.models.measuringpoint.MeasuringpointPackage;
 import org.palladiosimulator.elasticity.ElasticityPackage;
-import org.palladiosimulator.elasticity.targets.TargetsPackage;
 import org.palladiosimulator.metricspec.MetricSpecPackage;
 import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.CompetingConsumerGroupMeasuringPoint;
@@ -22,6 +21,7 @@ import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeas
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ServiceGroupMeasuringPoint;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ServiceGroupReference;
+import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -140,6 +140,7 @@ public class ScalablePCMGroupMeasuringPointPackageImpl extends EPackageImpl
         MetricSpecPackage.eINSTANCE.eClass();
         PcmPackage.eINSTANCE.eClass();
         ProbfunctionPackage.eINSTANCE.eClass();
+        scalablepcmgroupsPackage.eINSTANCE.eClass();
         StoexPackage.eINSTANCE.eClass();
         UnitsPackage.eINSTANCE.eClass();
 
@@ -225,7 +226,7 @@ public class ScalablePCMGroupMeasuringPointPackageImpl extends EPackageImpl
      * @generated
      */
     @Override
-    public EReference getInfrastructureGroupReference_ElasticInfrastructure() {
+    public EReference getInfrastructureGroupReference_InfrastructureGroup() {
         return (EReference) this.infrastructureGroupReferenceEClass.getEStructuralFeatures()
             .get(0);
     }
@@ -292,7 +293,7 @@ public class ScalablePCMGroupMeasuringPointPackageImpl extends EPackageImpl
 
         this.infrastructureGroupReferenceEClass = this.createEClass(INFRASTRUCTURE_GROUP_REFERENCE);
         this.createEReference(this.infrastructureGroupReferenceEClass,
-                INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE);
+                INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP);
 
         this.competingConsumerGroupReferenceEClass = this.createEClass(COMPETING_CONSUMER_GROUP_REFERENCE);
         this.createEReference(this.competingConsumerGroupReferenceEClass,
@@ -326,8 +327,8 @@ public class ScalablePCMGroupMeasuringPointPackageImpl extends EPackageImpl
         // Obtain other dependent packages
         final MeasuringpointPackage theMeasuringpointPackage = (MeasuringpointPackage) EPackage.Registry.INSTANCE
             .getEPackage(MeasuringpointPackage.eNS_URI);
-        final TargetsPackage theTargetsPackage = (TargetsPackage) EPackage.Registry.INSTANCE
-            .getEPackage(TargetsPackage.eNS_URI);
+        final scalablepcmgroupsPackage thescalablepcmgroupsPackage = (scalablepcmgroupsPackage) EPackage.Registry.INSTANCE
+            .getEPackage(scalablepcmgroupsPackage.eNS_URI);
 
         // Create type parameters
 
@@ -359,21 +360,21 @@ public class ScalablePCMGroupMeasuringPointPackageImpl extends EPackageImpl
 
         this.initEClass(this.serviceGroupReferenceEClass, ServiceGroupReference.class, "ServiceGroupReference",
                 IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getServiceGroupReference_ServiceGroup(), theTargetsPackage.getServiceGroup(), null,
-                "serviceGroup", null, 1, 1, ServiceGroupReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getServiceGroupReference_ServiceGroup(), thescalablepcmgroupsPackage.getServiceGroup(),
+                null, "serviceGroup", null, 1, 1, ServiceGroupReference.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.infrastructureGroupReferenceEClass, InfrastructureGroupReference.class,
                 "InfrastructureGroupReference", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getInfrastructureGroupReference_ElasticInfrastructure(),
-                theTargetsPackage.getElasticInfrastructure(), null, "elasticInfrastructure", null, 1, 1,
+        this.initEReference(this.getInfrastructureGroupReference_InfrastructureGroup(),
+                thescalablepcmgroupsPackage.getInfrastructureGroup(), null, "infrastructureGroup", null, 1, 1,
                 InfrastructureGroupReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.competingConsumerGroupReferenceEClass, CompetingConsumerGroupReference.class,
                 "CompetingConsumerGroupReference", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getCompetingConsumerGroupReference_CompetingConsumerGroup(),
-                theTargetsPackage.getCompetingConsumersGroup(), null, "competingConsumerGroup", null, 1, 1,
+                thescalablepcmgroupsPackage.getCompetingConsumersGroup(), null, "competingConsumerGroup", null, 1, 1,
                 CompetingConsumerGroupReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

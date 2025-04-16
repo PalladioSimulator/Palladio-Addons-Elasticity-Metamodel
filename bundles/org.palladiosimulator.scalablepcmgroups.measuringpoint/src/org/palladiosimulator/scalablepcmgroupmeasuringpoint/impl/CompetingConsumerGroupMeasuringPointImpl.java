@@ -6,7 +6,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.palladiosimulator.commons.emfutils.EMFLoadHelper;
 import org.palladiosimulator.edp2.models.measuringpoint.impl.MeasuringPointImpl;
-import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.CompetingConsumerGroupMeasuringPoint;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.CompetingConsumerGroupReference;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage;
@@ -51,8 +50,8 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
      * @generated
      */
     @Override
-    public CompetingConsumersGroup getCompetingConsumerGroup() {
-        return (CompetingConsumersGroup) this.eDynamicGet(
+    public org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup getCompetingConsumerGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
                 true, true);
@@ -63,8 +62,8 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
      *
      * @generated
      */
-    public CompetingConsumersGroup basicGetCompetingConsumerGroup() {
-        return (CompetingConsumersGroup) this.eDynamicGet(
+    public org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup basicGetCompetingConsumerGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
                 false, true);
@@ -76,7 +75,8 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
      * @generated
      */
     @Override
-    public void setCompetingConsumerGroup(final CompetingConsumersGroup newCompetingConsumerGroup) {
+    public void setCompetingConsumerGroup(
+            final org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup newCompetingConsumerGroup) {
         this.eDynamicSet(
                 ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
@@ -109,7 +109,7 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
-            this.setCompetingConsumerGroup((CompetingConsumersGroup) newValue);
+            this.setCompetingConsumerGroup((org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -124,7 +124,7 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
     public void eUnset(final int featureID) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_MEASURING_POINT__COMPETING_CONSUMER_GROUP:
-            this.setCompetingConsumerGroup((CompetingConsumersGroup) null);
+            this.setCompetingConsumerGroup((org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) null);
             return;
         }
         super.eUnset(featureID);
@@ -178,37 +178,6 @@ public class CompetingConsumerGroupMeasuringPointImpl extends MeasuringPointImpl
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated NOT
-     */
-    @Override
-    public String getStringRepresentation() {
-        if (this.getCompetingConsumerGroup() == null) {
-            return "";
-        }
-
-        if (this.getCompetingConsumerGroup()
-            .getEntityName() == null) {
-            return super.getStringRepresentation();
-        }
-
-        EcoreUtil.resolveAll(this);
-
-        final StringBuilder result = new StringBuilder();
-
-        result.append("Competing Consumer Group ");
-        result.append(this.getCompetingConsumerGroup()
-            .getEntityName());
-        result.append(" [");
-        result.append(this.getCompetingConsumerGroup()
-            .getId());
-        result.append("]");
-
-        return result.toString();
     }
 
     /**

@@ -4,9 +4,9 @@ package org.palladiosimulator.scalablepcmgroupmeasuringpoint.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupReference;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage;
+import org.palladiosimulator.scalablepcmgroups.InfrastructureGroup;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Infrastructure Group
@@ -15,8 +15,8 @@ import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeas
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.scalablepcmgroupmeasuringpoint.impl.InfrastructureGroupReferenceImpl#getElasticInfrastructure
- * <em>Elastic Infrastructure</em>}</li>
+ * <li>{@link org.palladiosimulator.scalablepcmgroupmeasuringpoint.impl.InfrastructureGroupReferenceImpl#getInfrastructureGroup
+ * <em>Infrastructure Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,10 +58,10 @@ public abstract class InfrastructureGroupReferenceImpl extends MinimalEObjectImp
      * @generated
      */
     @Override
-    public ElasticInfrastructure getElasticInfrastructure() {
-        return (ElasticInfrastructure) this.eDynamicGet(
-                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
-                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
+    public InfrastructureGroup getInfrastructureGroup() {
+        return (InfrastructureGroup) this.eDynamicGet(
+                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
+                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
                 true, true);
     }
 
@@ -70,10 +70,10 @@ public abstract class InfrastructureGroupReferenceImpl extends MinimalEObjectImp
      *
      * @generated
      */
-    public ElasticInfrastructure basicGetElasticInfrastructure() {
-        return (ElasticInfrastructure) this.eDynamicGet(
-                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
-                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
+    public InfrastructureGroup basicGetInfrastructureGroup() {
+        return (InfrastructureGroup) this.eDynamicGet(
+                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
+                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
                 false, true);
     }
 
@@ -83,10 +83,10 @@ public abstract class InfrastructureGroupReferenceImpl extends MinimalEObjectImp
      * @generated
      */
     @Override
-    public void setElasticInfrastructure(final ElasticInfrastructure newElasticInfrastructure) {
-        this.eDynamicSet(ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
-                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
-                newElasticInfrastructure);
+    public void setInfrastructureGroup(final InfrastructureGroup newInfrastructureGroup) {
+        this.eDynamicSet(ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
+                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
+                newInfrastructureGroup);
     }
 
     /**
@@ -97,11 +97,11 @@ public abstract class InfrastructureGroupReferenceImpl extends MinimalEObjectImp
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE:
+        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP:
             if (resolve) {
-                return this.getElasticInfrastructure();
+                return this.getInfrastructureGroup();
             }
-            return this.basicGetElasticInfrastructure();
+            return this.basicGetInfrastructureGroup();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -114,8 +114,8 @@ public abstract class InfrastructureGroupReferenceImpl extends MinimalEObjectImp
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE:
-            this.setElasticInfrastructure((ElasticInfrastructure) newValue);
+        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP:
+            this.setInfrastructureGroup((InfrastructureGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -129,8 +129,8 @@ public abstract class InfrastructureGroupReferenceImpl extends MinimalEObjectImp
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE:
-            this.setElasticInfrastructure((ElasticInfrastructure) null);
+        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP:
+            this.setInfrastructureGroup((InfrastructureGroup) null);
             return;
         }
         super.eUnset(featureID);
@@ -144,8 +144,8 @@ public abstract class InfrastructureGroupReferenceImpl extends MinimalEObjectImp
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE:
-            return this.basicGetElasticInfrastructure() != null;
+        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP:
+            return this.basicGetInfrastructureGroup() != null;
         }
         return super.eIsSet(featureID);
     }

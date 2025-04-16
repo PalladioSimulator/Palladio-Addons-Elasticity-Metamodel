@@ -3,13 +3,11 @@
 package org.palladiosimulator.scalablepcmgroupmeasuringpoint.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.palladiosimulator.commons.emfutils.EMFLoadHelper;
 import org.palladiosimulator.edp2.models.measuringpoint.impl.MeasuringPointImpl;
-import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupMeasuringPoint;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupReference;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage;
+import org.palladiosimulator.scalablepcmgroups.InfrastructureGroup;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Infrastructure Group
@@ -18,8 +16,8 @@ import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeas
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.scalablepcmgroupmeasuringpoint.impl.InfrastructureGroupMeasuringPointImpl#getElasticInfrastructure
- * <em>Elastic Infrastructure</em>}</li>
+ * <li>{@link org.palladiosimulator.scalablepcmgroupmeasuringpoint.impl.InfrastructureGroupMeasuringPointImpl#getInfrastructureGroup
+ * <em>Infrastructure Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,10 +49,10 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
      * @generated
      */
     @Override
-    public ElasticInfrastructure getElasticInfrastructure() {
-        return (ElasticInfrastructure) this.eDynamicGet(
-                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE,
-                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
+    public InfrastructureGroup getInfrastructureGroup() {
+        return (InfrastructureGroup) this.eDynamicGet(
+                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP,
+                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
                 true, true);
     }
 
@@ -63,10 +61,10 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
      *
      * @generated
      */
-    public ElasticInfrastructure basicGetElasticInfrastructure() {
-        return (ElasticInfrastructure) this.eDynamicGet(
-                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE,
-                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
+    public InfrastructureGroup basicGetInfrastructureGroup() {
+        return (InfrastructureGroup) this.eDynamicGet(
+                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP,
+                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
                 false, true);
     }
 
@@ -76,11 +74,11 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
      * @generated
      */
     @Override
-    public void setElasticInfrastructure(final ElasticInfrastructure newElasticInfrastructure) {
+    public void setInfrastructureGroup(final InfrastructureGroup newInfrastructureGroup) {
         this.eDynamicSet(
-                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE,
-                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
-                newElasticInfrastructure);
+                ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP,
+                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
+                newInfrastructureGroup);
     }
 
     /**
@@ -91,11 +89,11 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE:
+        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP:
             if (resolve) {
-                return this.getElasticInfrastructure();
+                return this.getInfrastructureGroup();
             }
-            return this.basicGetElasticInfrastructure();
+            return this.basicGetInfrastructureGroup();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -108,8 +106,8 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE:
-            this.setElasticInfrastructure((ElasticInfrastructure) newValue);
+        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP:
+            this.setInfrastructureGroup((InfrastructureGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -123,8 +121,8 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE:
-            this.setElasticInfrastructure((ElasticInfrastructure) null);
+        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP:
+            this.setInfrastructureGroup((InfrastructureGroup) null);
             return;
         }
         super.eUnset(featureID);
@@ -138,8 +136,8 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE:
-            return this.basicGetElasticInfrastructure() != null;
+        case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP:
+            return this.basicGetInfrastructureGroup() != null;
         }
         return super.eIsSet(featureID);
     }
@@ -153,8 +151,8 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
     public int eBaseStructuralFeatureID(final int derivedFeatureID, final Class<?> baseClass) {
         if (baseClass == InfrastructureGroupReference.class) {
             switch (derivedFeatureID) {
-            case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE:
-                return ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE;
+            case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP:
+                return ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP;
             default:
                 return -1;
             }
@@ -171,58 +169,13 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
     public int eDerivedStructuralFeatureID(final int baseFeatureID, final Class<?> baseClass) {
         if (baseClass == InfrastructureGroupReference.class) {
             switch (baseFeatureID) {
-            case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE:
-                return ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__ELASTIC_INFRASTRUCTURE;
+            case ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP:
+                return ScalablePCMGroupMeasuringPointPackage.INFRASTRUCTURE_GROUP_MEASURING_POINT__INFRASTRUCTURE_GROUP;
             default:
                 return -1;
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated NOT
-     */
-    @Override
-    public String getStringRepresentation() {
-        if (this.getElasticInfrastructure() == null) {
-            return "";
-        }
-
-        if (this.getElasticInfrastructure()
-            .getEntityName() == null) {
-            return super.getStringRepresentation();
-        }
-
-        EcoreUtil.resolveAll(this);
-
-        final StringBuilder result = new StringBuilder();
-
-        result.append("Elastic Infrastructure ");
-        result.append(this.getElasticInfrastructure()
-            .getEntityName());
-        result.append(" [");
-        result.append(this.getElasticInfrastructure()
-            .getId());
-        result.append("]");
-
-        return result.toString();
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated NOT
-     */
-    @Override
-    public String getResourceURIRepresentation() {
-        if (this.getElasticInfrastructure() == null) {
-            return "";
-        }
-        EcoreUtil.resolveAll(this);
-        return EMFLoadHelper.getResourceURI(this.getElasticInfrastructure());
     }
 
 } // InfrastructureGroupMeasuringPointImpl

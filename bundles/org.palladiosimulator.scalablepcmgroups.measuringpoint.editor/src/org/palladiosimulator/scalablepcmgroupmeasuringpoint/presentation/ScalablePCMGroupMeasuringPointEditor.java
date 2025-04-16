@@ -152,6 +152,7 @@ import org.palladiosimulator.pcm.subsystem.provider.SubsystemItemProviderAdapter
 import org.palladiosimulator.pcm.system.provider.SystemItemProviderAdapterFactory;
 import org.palladiosimulator.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.provider.ScalablePCMGroupMeasuringPointItemProviderAdapterFactory;
+import org.palladiosimulator.scalablepcmgroups.provider.scalablepcmgroupsItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
@@ -744,6 +745,7 @@ public class ScalablePCMGroupMeasuringPointEditor extends MultiPageEditorPart
         this.adapterFactory.addAdapterFactory(new AllocationItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new SubsystemItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ProbfunctionItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new scalablepcmgroupsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UnitsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());

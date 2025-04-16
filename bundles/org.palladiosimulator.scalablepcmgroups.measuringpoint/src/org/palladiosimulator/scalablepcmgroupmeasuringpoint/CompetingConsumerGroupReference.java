@@ -32,7 +32,7 @@ public interface CompetingConsumerGroupReference extends EObject {
      * @model required="true"
      * @generated
      */
-    CompetingConsumersGroup getCompetingConsumerGroup();
+    org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup getCompetingConsumerGroup();
 
     /**
      * Sets the value of the
@@ -44,6 +44,6 @@ public interface CompetingConsumerGroupReference extends EObject {
      * @see #getCompetingConsumerGroup()
      * @generated
      */
-    void setCompetingConsumerGroup(CompetingConsumersGroup value);
+    void setCompetingConsumerGroup(org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup value);
 
 } // CompetingConsumerGroupReference

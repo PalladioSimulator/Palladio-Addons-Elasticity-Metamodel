@@ -48,25 +48,25 @@ public class InfrastructureGroupReferenceItemProvider extends ItemProviderAdapte
         if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            this.addElasticInfrastructurePropertyDescriptor(object);
+            this.addInfrastructureGroupPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the Elastic Infrastructure feature. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * This adds a property descriptor for the Infrastructure Group feature. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
-    protected void addElasticInfrastructurePropertyDescriptor(final Object object) {
+    protected void addInfrastructureGroupPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InfrastructureGroupReference_elasticInfrastructure_feature"),
+                this.getString("_UI_InfrastructureGroupReference_infrastructureGroup_feature"),
                 this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_InfrastructureGroupReference_elasticInfrastructure_feature",
+                        "_UI_InfrastructureGroupReference_infrastructureGroup_feature",
                         "_UI_InfrastructureGroupReference_type"),
-                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__ELASTIC_INFRASTRUCTURE,
+                ScalablePCMGroupMeasuringPointPackage.Literals.INFRASTRUCTURE_GROUP_REFERENCE__INFRASTRUCTURE_GROUP,
                 true, false, true, null, null, null));
     }
 

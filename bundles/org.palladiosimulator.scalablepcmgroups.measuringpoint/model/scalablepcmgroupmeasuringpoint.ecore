@@ -8,14 +8,14 @@
       eSuperTypes="../../org.palladiosimulator.edp2/model/EDP2.ecore#//measuringpoint/MeasuringPoint #//CompetingConsumerGroupReference"/>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceGroupReference" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="serviceGroup" lowerBound="1"
-        eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//targets/ServiceGroup"/>
+        eType="ecore:EClass ../../org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.ecore#//ServiceGroup"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InfrastructureGroupReference" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elasticInfrastructure"
-        lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//targets/ElasticInfrastructure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="infrastructureGroup" lowerBound="1"
+        eType="ecore:EClass ../../org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.ecore#//InfrastructureGroup"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompetingConsumerGroupReference" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="competingConsumerGroup"
-        lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//targets/CompetingConsumersGroup"/>
+        lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.ecore#//CompetingConsumersGroup"/>
   </eClassifiers>
 </ecore:EPackage>
