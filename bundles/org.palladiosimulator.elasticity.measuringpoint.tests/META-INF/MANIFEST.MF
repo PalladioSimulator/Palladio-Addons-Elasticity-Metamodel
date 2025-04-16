@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: org.palladiosimulator.elasticitymeasuringpoint.tests
+Export-Package: org.palladiosimulator.scalablepcmgroupmeasuringpoint.tests
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.elasticity.measuringpoint;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,

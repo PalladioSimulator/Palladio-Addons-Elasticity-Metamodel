@@ -16,7 +16,7 @@
             name="%_UI_ElasticitymeasuringpointModelWizard_label"
             class="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/ElasticitymeasuringpointModelFile.gif">
+            icon="icons/full/obj16/ScalablePCMGroupMeasuringPointModelFile.gif">
          <description>%_UI_ElasticitymeasuringpointModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -27,10 +27,37 @@
       <editor
             id="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointEditorID"
             name="%_UI_ElasticitymeasuringpointEditor_label"
-            icon="icons/full/obj16/ElasticitymeasuringpointModelFile.gif"
+            icon="icons/full/obj16/ScalablePCMGroupMeasuringPointModelFile.gif"
             extensions="elasticitymeasuringpoint"
             class="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointEditor"
             contributorClass="org.palladiosimulator.elasticitymeasuringpoint.presentation.ElasticitymeasuringpointActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated scalablepcmgroupmeasuringpoint -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.scalablepcmgroupmeasuringpoint.presentation.ScalablePCMGroupMeasuringPointModelWizardID"
+            name="%_UI_ScalablePCMGroupMeasuringPointModelWizard_label"
+            class="org.palladiosimulator.scalablepcmgroupmeasuringpoint.presentation.ScalablePCMGroupMeasuringPointModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ScalablePCMGroupMeasuringPointModelFile.gif">
+         <description>%_UI_ScalablePCMGroupMeasuringPointModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated scalablepcmgroupmeasuringpoint -->
+      <editor
+            id="org.palladiosimulator.scalablepcmgroupmeasuringpoint.presentation.ScalablePCMGroupMeasuringPointEditorID"
+            name="%_UI_ScalablePCMGroupMeasuringPointEditor_label"
+            icon="icons/full/obj16/ScalablePCMGroupMeasuringPointModelFile.gif"
+            extensions="scalablepcmgroupmeasuringpoint"
+            class="org.palladiosimulator.scalablepcmgroupmeasuringpoint.presentation.ScalablePCMGroupMeasuringPointEditor"
+            contributorClass="org.palladiosimulator.scalablepcmgroupmeasuringpoint.presentation.ScalablePCMGroupMeasuringPointActionBarContributor">
       </editor>
    </extension>
 </plugin>
