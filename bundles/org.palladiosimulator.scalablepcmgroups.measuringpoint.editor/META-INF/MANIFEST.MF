@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.palladiosimulator.elasticity.measuringpoint.editor;singleton:=true
-Automatic-Module-Name: org.palladiosimulator.elasticity.measuringpoint.editor
+Bundle-SymbolicName: org.palladiosimulator.scalablepcmgroups.measuringpoint.editor;singleton:=true
+Automatic-Module-Name: org.palladiosimulator.scalablepcmgroups.measuringpoint.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.scalablepcmgroupmeasuringpoint.presentation.ScalablePCMGroupMeasuringPointEditorPlugin$Implementation
@@ -12,7 +12,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.palladiosimulator.scalablepcmgroupmeasuringpoint.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
- org.palladiosimulator.elasticity.measuringpoint.edit;visibility:=reexport,
+ org.palladiosimulator.scalablepcmgroups.measuringpoint.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
