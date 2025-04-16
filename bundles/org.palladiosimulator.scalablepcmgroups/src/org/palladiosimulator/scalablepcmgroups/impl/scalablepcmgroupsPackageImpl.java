@@ -21,17 +21,11 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.palladiosimulator.elasticity.ElasticityPackage;
 
 import org.palladiosimulator.pcm.PcmPackage;
-
-import org.palladiosimulator.pcm.allocation.AllocationPackage;
-
 import org.palladiosimulator.pcm.core.composition.CompositionPackage;
 
 import org.palladiosimulator.pcm.repository.RepositoryPackage;
 
 import org.palladiosimulator.pcm.resourceenvironment.ResourceenvironmentPackage;
-
-import org.palladiosimulator.pcm.system.SystemPackage;
-
 import org.palladiosimulator.pcm.usagemodel.UsagemodelPackage;
 
 import org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup;
@@ -177,7 +171,7 @@ public class scalablepcmgroupsPackageImpl extends EPackageImpl implements scalab
      * @generated
      */
     @Override
-    public EReference getScalablePCMGroups_ElasticitySpec() {
+    public EReference getScalablePCMGroups_EnactedPolicy() {
         return (EReference)scalablePCMGroupsEClass.getEStructuralFeatures().get(0);
     }
 
@@ -187,58 +181,8 @@ public class scalablepcmgroupsPackageImpl extends EPackageImpl implements scalab
      * @generated
      */
     @Override
-    public EReference getScalablePCMGroups_EnactedPolicy() {
-        return (EReference)scalablePCMGroupsEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
     public EReference getScalablePCMGroups_TargetCfgs() {
-        return (EReference)scalablePCMGroupsEClass.getEStructuralFeatures().get(2);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public EReference getScalablePCMGroups_Allocation() {
-        return (EReference)scalablePCMGroupsEClass.getEStructuralFeatures().get(3);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public EReference getScalablePCMGroups_System() {
-        return (EReference)scalablePCMGroupsEClass.getEStructuralFeatures().get(4);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public EReference getScalablePCMGroups_ResourceEnvironment() {
-        return (EReference)scalablePCMGroupsEClass.getEStructuralFeatures().get(5);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public EReference getScalablePCMGroups_Repository() {
-        return (EReference)scalablePCMGroupsEClass.getEStructuralFeatures().get(6);
+        return (EReference)scalablePCMGroupsEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -471,13 +415,8 @@ public class scalablepcmgroupsPackageImpl extends EPackageImpl implements scalab
 
         // Create classes and their features
         scalablePCMGroupsEClass = createEClass(SCALABLE_PCM_GROUPS);
-        createEReference(scalablePCMGroupsEClass, SCALABLE_PCM_GROUPS__ELASTICITY_SPEC);
         createEReference(scalablePCMGroupsEClass, SCALABLE_PCM_GROUPS__ENACTED_POLICY);
         createEReference(scalablePCMGroupsEClass, SCALABLE_PCM_GROUPS__TARGET_CFGS);
-        createEReference(scalablePCMGroupsEClass, SCALABLE_PCM_GROUPS__ALLOCATION);
-        createEReference(scalablePCMGroupsEClass, SCALABLE_PCM_GROUPS__SYSTEM);
-        createEReference(scalablePCMGroupsEClass, SCALABLE_PCM_GROUPS__RESOURCE_ENVIRONMENT);
-        createEReference(scalablePCMGroupsEClass, SCALABLE_PCM_GROUPS__REPOSITORY);
 
         targetGroupEClass = createEClass(TARGET_GROUP);
         createEReference(targetGroupEClass, TARGET_GROUP__ENACTED_POLICIES);
@@ -530,11 +469,9 @@ public class scalablepcmgroupsPackageImpl extends EPackageImpl implements scalab
 
         // Obtain other dependent packages
         ElasticityPackage theElasticityPackage = (ElasticityPackage)EPackage.Registry.INSTANCE.getEPackage(ElasticityPackage.eNS_URI);
-        AllocationPackage theAllocationPackage = (AllocationPackage)EPackage.Registry.INSTANCE.getEPackage(AllocationPackage.eNS_URI);
-        SystemPackage theSystemPackage = (SystemPackage)EPackage.Registry.INSTANCE.getEPackage(SystemPackage.eNS_URI);
         ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ResourceenvironmentPackage.eNS_URI);
-        RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
         CompositionPackage theCompositionPackage = (CompositionPackage)EPackage.Registry.INSTANCE.getEPackage(CompositionPackage.eNS_URI);
+        RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
         EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
         UsagemodelPackage theUsagemodelPackage = (UsagemodelPackage)EPackage.Registry.INSTANCE.getEPackage(UsagemodelPackage.eNS_URI);
 
@@ -549,13 +486,8 @@ public class scalablepcmgroupsPackageImpl extends EPackageImpl implements scalab
 
         // Initialize classes, features, and operations; add parameters
         initEClass(scalablePCMGroupsEClass, ScalablePCMGroups.class, "ScalablePCMGroups", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEReference(getScalablePCMGroups_ElasticitySpec(), theElasticityPackage.getElasticitySpec(), null, "elasticitySpec", null, 0, 1, ScalablePCMGroups.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScalablePCMGroups_EnactedPolicy(), theElasticityPackage.getScalingPolicy(), null, "enactedPolicy", null, 0, 1, ScalablePCMGroups.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getScalablePCMGroups_TargetCfgs(), this.getTargetGroup(), null, "targetCfgs", null, 0, -1, ScalablePCMGroups.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getScalablePCMGroups_Allocation(), theAllocationPackage.getAllocation(), null, "allocation", null, 0, 1, ScalablePCMGroups.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getScalablePCMGroups_System(), theSystemPackage.getSystem(), null, "system", null, 0, 1, ScalablePCMGroups.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getScalablePCMGroups_ResourceEnvironment(), theResourceenvironmentPackage.getResourceEnvironment(), null, "resourceEnvironment", null, 0, 1, ScalablePCMGroups.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEReference(getScalablePCMGroups_Repository(), theRepositoryPackage.getRepository(), null, "repository", null, 0, 1, ScalablePCMGroups.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(targetGroupEClass, TargetGroup.class, "TargetGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getTargetGroup_EnactedPolicies(), theElasticityPackage.getScalingPolicy(), null, "enactedPolicies", null, 0, -1, TargetGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

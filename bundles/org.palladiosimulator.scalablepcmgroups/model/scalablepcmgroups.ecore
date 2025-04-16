@@ -3,14 +3,9 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="scalablepcmgroups" nsURI="http://palladiosimulator.org/ScalablePCMGroups/1.0"
     nsPrefix="scalablepcmgroups">
   <eClassifiers xsi:type="ecore:EClass" name="ScalablePCMGroups">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elasticitySpec" eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//ElasticitySpec"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="enactedPolicy" eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//ScalingPolicy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetCfgs" upperBound="-1"
         eType="#//TargetGroup" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allocation" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//allocation/Allocation"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="system" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//system/System"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceEnvironment" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="repository" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/Repository"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TargetGroup" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="enactedPolicies" upperBound="-1"

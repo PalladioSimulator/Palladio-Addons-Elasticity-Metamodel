@@ -67,22 +67,13 @@ public interface scalablepcmgroupsPackage extends EPackage {
     int SCALABLE_PCM_GROUPS = 0;
 
     /**
-     * The feature id for the '<em><b>Elasticity Spec</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SCALABLE_PCM_GROUPS__ELASTICITY_SPEC = 0;
-
-    /**
      * The feature id for the '<em><b>Enacted Policy</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SCALABLE_PCM_GROUPS__ENACTED_POLICY = 1;
+    int SCALABLE_PCM_GROUPS__ENACTED_POLICY = 0;
 
     /**
      * The feature id for the '<em><b>Target Cfgs</b></em>' containment reference list.
@@ -91,43 +82,7 @@ public interface scalablepcmgroupsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SCALABLE_PCM_GROUPS__TARGET_CFGS = 2;
-
-    /**
-     * The feature id for the '<em><b>Allocation</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SCALABLE_PCM_GROUPS__ALLOCATION = 3;
-
-    /**
-     * The feature id for the '<em><b>System</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SCALABLE_PCM_GROUPS__SYSTEM = 4;
-
-    /**
-     * The feature id for the '<em><b>Resource Environment</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SCALABLE_PCM_GROUPS__RESOURCE_ENVIRONMENT = 5;
-
-    /**
-     * The feature id for the '<em><b>Repository</b></em>' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int SCALABLE_PCM_GROUPS__REPOSITORY = 6;
+    int SCALABLE_PCM_GROUPS__TARGET_CFGS = 1;
 
     /**
      * The number of structural features of the '<em>Scalable PCM Groups</em>' class.
@@ -136,7 +91,7 @@ public interface scalablepcmgroupsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SCALABLE_PCM_GROUPS_FEATURE_COUNT = 7;
+    int SCALABLE_PCM_GROUPS_FEATURE_COUNT = 2;
 
     /**
      * The number of operations of the '<em>Scalable PCM Groups</em>' class.
@@ -461,17 +416,6 @@ public interface scalablepcmgroupsPackage extends EPackage {
     EClass getScalablePCMGroups();
 
     /**
-     * Returns the meta object for the reference '{@link org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getElasticitySpec <em>Elasticity Spec</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Elasticity Spec</em>'.
-     * @see org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getElasticitySpec()
-     * @see #getScalablePCMGroups()
-     * @generated
-     */
-    EReference getScalablePCMGroups_ElasticitySpec();
-
-    /**
      * Returns the meta object for the reference '{@link org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getEnactedPolicy <em>Enacted Policy</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -492,50 +436,6 @@ public interface scalablepcmgroupsPackage extends EPackage {
      * @generated
      */
     EReference getScalablePCMGroups_TargetCfgs();
-
-    /**
-     * Returns the meta object for the reference '{@link org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getAllocation <em>Allocation</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Allocation</em>'.
-     * @see org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getAllocation()
-     * @see #getScalablePCMGroups()
-     * @generated
-     */
-    EReference getScalablePCMGroups_Allocation();
-
-    /**
-     * Returns the meta object for the reference '{@link org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getSystem <em>System</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>System</em>'.
-     * @see org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getSystem()
-     * @see #getScalablePCMGroups()
-     * @generated
-     */
-    EReference getScalablePCMGroups_System();
-
-    /**
-     * Returns the meta object for the reference '{@link org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getResourceEnvironment <em>Resource Environment</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Resource Environment</em>'.
-     * @see org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getResourceEnvironment()
-     * @see #getScalablePCMGroups()
-     * @generated
-     */
-    EReference getScalablePCMGroups_ResourceEnvironment();
-
-    /**
-     * Returns the meta object for the reference '{@link org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getRepository <em>Repository</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Repository</em>'.
-     * @see org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups#getRepository()
-     * @see #getScalablePCMGroups()
-     * @generated
-     */
-    EReference getScalablePCMGroups_Repository();
 
     /**
      * Returns the meta object for class '{@link org.palladiosimulator.scalablepcmgroups.TargetGroup <em>Target Group</em>}'.
@@ -786,14 +686,6 @@ public interface scalablepcmgroupsPackage extends EPackage {
         EClass SCALABLE_PCM_GROUPS = eINSTANCE.getScalablePCMGroups();
 
         /**
-         * The meta object literal for the '<em><b>Elasticity Spec</b></em>' reference feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SCALABLE_PCM_GROUPS__ELASTICITY_SPEC = eINSTANCE.getScalablePCMGroups_ElasticitySpec();
-
-        /**
          * The meta object literal for the '<em><b>Enacted Policy</b></em>' reference feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -808,38 +700,6 @@ public interface scalablepcmgroupsPackage extends EPackage {
          * @generated
          */
         EReference SCALABLE_PCM_GROUPS__TARGET_CFGS = eINSTANCE.getScalablePCMGroups_TargetCfgs();
-
-        /**
-         * The meta object literal for the '<em><b>Allocation</b></em>' reference feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SCALABLE_PCM_GROUPS__ALLOCATION = eINSTANCE.getScalablePCMGroups_Allocation();
-
-        /**
-         * The meta object literal for the '<em><b>System</b></em>' reference feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SCALABLE_PCM_GROUPS__SYSTEM = eINSTANCE.getScalablePCMGroups_System();
-
-        /**
-         * The meta object literal for the '<em><b>Resource Environment</b></em>' reference feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SCALABLE_PCM_GROUPS__RESOURCE_ENVIRONMENT = eINSTANCE.getScalablePCMGroups_ResourceEnvironment();
-
-        /**
-         * The meta object literal for the '<em><b>Repository</b></em>' reference feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EReference SCALABLE_PCM_GROUPS__REPOSITORY = eINSTANCE.getScalablePCMGroups_Repository();
 
         /**
          * The meta object literal for the '{@link org.palladiosimulator.scalablepcmgroups.impl.TargetGroupImpl <em>Target Group</em>}' class.
