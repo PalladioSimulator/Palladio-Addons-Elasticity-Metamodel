@@ -1,24 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.palladiosimulator.elasticity.measuringpoint.tests;singleton:=true
-Automatic-Module-Name: org.palladiosimulator.elasticity.measuringpoint.tests
+Bundle-SymbolicName: org.palladiosimulator.scalablepcmgroups.tests;singleton:=true
+Automatic-Module-Name: org.palladiosimulator.scalablepcmgroups.tests
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: org.palladiosimulator.elasticitymeasuringpoint.tests
+Export-Package: org.palladiosimulator.scalablepcmgroups.tests
 Require-Bundle: org.eclipse.core.runtime,
- org.palladiosimulator.elasticity.measuringpoint;visibility:=reexport,
+ org.palladiosimulator.scalablepcmgroups;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.palladiosimulator.edp2;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,
- org.palladiosimulator.metricspec;visibility:=reexport,
  org.palladiosimulator.pcm;visibility:=reexport,
  de.uka.ipd.sdq.probfunction;visibility:=reexport,
  org.palladiosimulator.elasticity;visibility:=reexport,
- org.palladiosimulator.scalablepcmgroups;visibility:=reexport,
  de.uka.ipd.sdq.stoex;visibility:=reexport,
  de.uka.ipd.sdq.units;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

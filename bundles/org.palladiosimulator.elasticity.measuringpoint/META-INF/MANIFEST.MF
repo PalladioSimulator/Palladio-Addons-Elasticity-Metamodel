@@ -24,5 +24,5 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.units;visibility:=reexport,
  org.palladiosimulator.commons,
  org.palladiosimulator.elasticity;bundle-version="1.0.0";visibility:=reexport,
- org.palladiosimulator.elasticity.semantic;visibility:=reexport
+ org.palladiosimulator.scalablepcmgroups;visibility:=reexport
 Bundle-ActivationPolicy: lazy
