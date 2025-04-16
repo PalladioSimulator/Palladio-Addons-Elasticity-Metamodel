@@ -8,9 +8,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: org.palladiosimulator.semanticelasticityspec,
- org.palladiosimulator.semanticelasticityspec.impl,
- org.palladiosimulator.semanticelasticityspec.util
+Export-Package: org.palladiosimulator.scalablepcmgroups,
+ org.palladiosimulator.scalablepcmgroups.impl,
+ org.palladiosimulator.scalablepcmgroups.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,
  org.palladiosimulator.pcm;visibility:=reexport,

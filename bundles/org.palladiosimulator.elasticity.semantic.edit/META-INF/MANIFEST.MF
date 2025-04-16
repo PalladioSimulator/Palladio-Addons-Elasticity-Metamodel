@@ -5,11 +5,11 @@ Bundle-SymbolicName: org.palladiosimulator.elasticity.semantic.edit;singleton:=t
 Automatic-Module-Name: org.palladiosimulator.elasticity.semantic.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.palladiosimulator.semanticelasticityspec.provider.SemanticEditPlugin$Implementation
+Bundle-Activator: org.palladiosimulator.scalablepcmgroups.provider.ScalablePCMGroupsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: org.palladiosimulator.semanticelasticityspec.provider
+Export-Package: org.palladiosimulator.scalablepcmgroups.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.elasticity.semantic;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,

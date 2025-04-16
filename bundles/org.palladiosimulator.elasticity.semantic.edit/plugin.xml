@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated semantic -->
+      <!-- @generated scalablepcmgroups -->
       <factory
-            uri="http://palladiosimulator.org/ElasticitySpecSemantic/1.0"
-            class="org.palladiosimulator.semanticelasticityspec.provider.SemanticelasticityItemProviderAdapterFactory"
+            uri="http://palladiosimulator.org/ScalablePCMGroups/1.0"
+            class="org.palladiosimulator.scalablepcmgroups.provider.scalablepcmgroupsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

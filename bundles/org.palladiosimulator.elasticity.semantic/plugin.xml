@@ -6,50 +6,12 @@
 
 <plugin>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated semantic -->
+      <!-- @generated scalablepcmgroups -->
       <package
-            uri="http://palladiosimulator.org/ElasticitySpecSemantic/1.0"
-            class="org.palladiosimulator.semanticelasticityspec.SemanticelasticityPackage"
-            genModel="model/semantic.genmodel"/>
+            uri="http://palladiosimulator.org/ScalablePCMGroups/1.0"
+            class="org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage"
+            genModel="model/scalablepcmgroups.genmodel"/>
    </extension>
 
 </plugin>
