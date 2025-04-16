@@ -144,7 +144,7 @@ public class ElasticitySpecItemProvider extends EntityItemProvider {
                 ElasticityFactory.eINSTANCE.createModelBasedScalingPolicy()));
 
         newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS,
-                TargetsFactory.eINSTANCE.createElasticInfrastructure()));
+                TargetsFactory.eINSTANCE.createInfrastructureGroup()));
 
         newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS,
                 TargetsFactory.eINSTANCE.createServiceGroup()));

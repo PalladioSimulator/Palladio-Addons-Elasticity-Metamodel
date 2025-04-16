@@ -5,33 +5,35 @@ package org.palladiosimulator.elasticity.targets.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
 import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
 import org.palladiosimulator.pcm.resourceenvironment.ResourceEnvironment;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '<em><b>Elastic
- * Infrastructure</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Infrastructure
+ * Group</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.targets.impl.ElasticInfrastructureImpl#getPCM_ResourceEnvironment
+ * <li>{@link org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupImpl#getPCM_ResourceEnvironment
  * <em>PCM Resource Environment</em>}</li>
- * <li>{@link org.palladiosimulator.elasticity.targets.impl.ElasticInfrastructureImpl#getUnit
+ * <li>{@link org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupImpl#getUnit
  * <em>Unit</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupImpl#getInfrastructureGroup
+ * <em>Infrastructure Group</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ElasticInfrastructureImpl extends TargetGroupImpl implements ElasticInfrastructure {
+public class InfrastructureGroupImpl extends TargetGroupImpl implements InfrastructureGroup {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected ElasticInfrastructureImpl() {
+    protected InfrastructureGroupImpl() {
         super();
     }
 
@@ -42,7 +44,7 @@ public class ElasticInfrastructureImpl extends TargetGroupImpl implements Elasti
      */
     @Override
     protected EClass eStaticClass() {
-        return TargetsPackage.Literals.ELASTIC_INFRASTRUCTURE;
+        return TargetsPackage.Literals.INFRASTRUCTURE_GROUP;
     }
 
     /**
@@ -93,8 +95,8 @@ public class ElasticInfrastructureImpl extends TargetGroupImpl implements Elasti
      */
     @Override
     public ResourceContainer getUnit() {
-        return (ResourceContainer) this.eDynamicGet(TargetsPackage.ELASTIC_INFRASTRUCTURE__UNIT,
-                TargetsPackage.Literals.ELASTIC_INFRASTRUCTURE__UNIT, true, true);
+        return (ResourceContainer) this.eDynamicGet(TargetsPackage.INFRASTRUCTURE_GROUP__UNIT,
+                TargetsPackage.Literals.INFRASTRUCTURE_GROUP__UNIT, true, true);
     }
 
     /**
@@ -103,8 +105,8 @@ public class ElasticInfrastructureImpl extends TargetGroupImpl implements Elasti
      * @generated
      */
     public ResourceContainer basicGetUnit() {
-        return (ResourceContainer) this.eDynamicGet(TargetsPackage.ELASTIC_INFRASTRUCTURE__UNIT,
-                TargetsPackage.Literals.ELASTIC_INFRASTRUCTURE__UNIT, false, true);
+        return (ResourceContainer) this.eDynamicGet(TargetsPackage.INFRASTRUCTURE_GROUP__UNIT,
+                TargetsPackage.Literals.INFRASTRUCTURE_GROUP__UNIT, false, true);
     }
 
     /**
@@ -114,8 +116,43 @@ public class ElasticInfrastructureImpl extends TargetGroupImpl implements Elasti
      */
     @Override
     public void setUnit(final ResourceContainer newUnit) {
-        this.eDynamicSet(TargetsPackage.ELASTIC_INFRASTRUCTURE__UNIT,
-                TargetsPackage.Literals.ELASTIC_INFRASTRUCTURE__UNIT, newUnit);
+        this.eDynamicSet(TargetsPackage.INFRASTRUCTURE_GROUP__UNIT, TargetsPackage.Literals.INFRASTRUCTURE_GROUP__UNIT,
+                newUnit);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public org.palladiosimulator.scalablepcmgroups.InfrastructureGroup getInfrastructureGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.InfrastructureGroup) this.eDynamicGet(
+                TargetsPackage.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP,
+                TargetsPackage.Literals.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public org.palladiosimulator.scalablepcmgroups.InfrastructureGroup basicGetInfrastructureGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.InfrastructureGroup) this.eDynamicGet(
+                TargetsPackage.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP,
+                TargetsPackage.Literals.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP, false, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setInfrastructureGroup(
+            final org.palladiosimulator.scalablepcmgroups.InfrastructureGroup newInfrastructureGroup) {
+        this.eDynamicSet(TargetsPackage.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP,
+                TargetsPackage.Literals.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP, newInfrastructureGroup);
     }
 
     /**
@@ -126,16 +163,21 @@ public class ElasticInfrastructureImpl extends TargetGroupImpl implements Elasti
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case TargetsPackage.ELASTIC_INFRASTRUCTURE__PCM_RESOURCE_ENVIRONMENT:
+        case TargetsPackage.INFRASTRUCTURE_GROUP__PCM_RESOURCE_ENVIRONMENT:
             if (resolve) {
                 return this.getPCM_ResourceEnvironment();
             }
             return this.basicGetPCM_ResourceEnvironment();
-        case TargetsPackage.ELASTIC_INFRASTRUCTURE__UNIT:
+        case TargetsPackage.INFRASTRUCTURE_GROUP__UNIT:
             if (resolve) {
                 return this.getUnit();
             }
             return this.basicGetUnit();
+        case TargetsPackage.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP:
+            if (resolve) {
+                return this.getInfrastructureGroup();
+            }
+            return this.basicGetInfrastructureGroup();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -148,8 +190,11 @@ public class ElasticInfrastructureImpl extends TargetGroupImpl implements Elasti
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case TargetsPackage.ELASTIC_INFRASTRUCTURE__UNIT:
+        case TargetsPackage.INFRASTRUCTURE_GROUP__UNIT:
             this.setUnit((ResourceContainer) newValue);
+            return;
+        case TargetsPackage.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP:
+            this.setInfrastructureGroup((org.palladiosimulator.scalablepcmgroups.InfrastructureGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -163,8 +208,11 @@ public class ElasticInfrastructureImpl extends TargetGroupImpl implements Elasti
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case TargetsPackage.ELASTIC_INFRASTRUCTURE__UNIT:
+        case TargetsPackage.INFRASTRUCTURE_GROUP__UNIT:
             this.setUnit((ResourceContainer) null);
+            return;
+        case TargetsPackage.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP:
+            this.setInfrastructureGroup((org.palladiosimulator.scalablepcmgroups.InfrastructureGroup) null);
             return;
         }
         super.eUnset(featureID);
@@ -178,12 +226,14 @@ public class ElasticInfrastructureImpl extends TargetGroupImpl implements Elasti
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case TargetsPackage.ELASTIC_INFRASTRUCTURE__PCM_RESOURCE_ENVIRONMENT:
+        case TargetsPackage.INFRASTRUCTURE_GROUP__PCM_RESOURCE_ENVIRONMENT:
             return this.isSetPCM_ResourceEnvironment();
-        case TargetsPackage.ELASTIC_INFRASTRUCTURE__UNIT:
+        case TargetsPackage.INFRASTRUCTURE_GROUP__UNIT:
             return this.basicGetUnit() != null;
+        case TargetsPackage.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP:
+            return this.basicGetInfrastructureGroup() != null;
         }
         return super.eIsSet(featureID);
     }
 
-} // ElasticInfrastructureImpl
+} // InfrastructureGroupImpl

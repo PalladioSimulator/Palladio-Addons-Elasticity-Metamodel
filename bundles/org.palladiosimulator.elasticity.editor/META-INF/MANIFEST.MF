@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.palladiosimulator.elasticity.editor;singleton:=true
 Automatic-Module-Name: org.palladiosimulator.elasticity.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.palladiosimulator.elasticity.presentation.ElasticitySpecEditorPlugin$Implementation
+Bundle-Activator: org.palladiosimulator.elasticity.presentation.ElasticityEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
@@ -31,6 +31,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.monitorrepository.edit;visibility:=reexport,
  org.palladiosimulator.pcm.edit;visibility:=reexport,
  de.uka.ipd.sdq.probfunction.edit;visibility:=reexport,
+ org.palladiosimulator.scalablepcmgroups.edit;visibility:=reexport,
  org.palladiosimulator.servicelevelobjective.edit;visibility:=reexport,
  de.uka.ipd.sdq.stoex.edit;visibility:=reexport,
  de.uka.ipd.sdq.units.edit;visibility:=reexport

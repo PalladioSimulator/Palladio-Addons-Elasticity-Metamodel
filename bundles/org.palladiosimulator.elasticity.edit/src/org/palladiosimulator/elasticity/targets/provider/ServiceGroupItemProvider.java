@@ -43,6 +43,7 @@ public class ServiceGroupItemProvider extends TargetGroupItemProvider {
             super.getPropertyDescriptors(object);
 
             this.addUnitAssemblyPropertyDescriptor(object);
+            this.addServiceGroupPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -60,6 +61,21 @@ public class ServiceGroupItemProvider extends TargetGroupItemProvider {
                 this.getString("_UI_PropertyDescriptor_description", "_UI_ServiceGroup_unitAssembly_feature",
                         "_UI_ServiceGroup_type"),
                 TargetsPackage.Literals.SERVICE_GROUP__UNIT_ASSEMBLY, true, false, true, null, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Service Group feature. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addServiceGroupPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_ServiceGroup_serviceGroup_feature"),
+                this.getString("_UI_PropertyDescriptor_description", "_UI_ServiceGroup_serviceGroup_feature",
+                        "_UI_ServiceGroup_type"),
+                TargetsPackage.Literals.SERVICE_GROUP__SERVICE_GROUP, true, false, true, null, null, null));
     }
 
     /*

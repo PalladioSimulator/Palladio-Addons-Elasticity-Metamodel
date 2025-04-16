@@ -48,6 +48,8 @@ import org.palladiosimulator.elasticity.triggers.stimuli.TargetGroupStateStimulu
 import org.palladiosimulator.elasticity.triggers.stimuli.TaskCount;
 import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.repository.RepositoryPackage;
+import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
+import org.palladiosimulator.scalablepcmgroups.impl.scalablepcmgroupsPackageImpl;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -266,6 +268,10 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
         final DatatypesPackageImpl theDatatypesPackage = (DatatypesPackageImpl) (registeredPackage instanceof DatatypesPackageImpl
                 ? registeredPackage
                 : DatatypesPackage.eINSTANCE);
+        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(scalablepcmgroupsPackage.eNS_URI);
+        final scalablepcmgroupsPackageImpl thescalablepcmgroupsPackage = (scalablepcmgroupsPackageImpl) (registeredPackage instanceof scalablepcmgroupsPackageImpl
+                ? registeredPackage
+                : scalablepcmgroupsPackage.eINSTANCE);
 
         // Create package meta-data objects
         theStimuliPackage.createPackageContents();
@@ -279,6 +285,7 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
         theExpectationsPackage.createPackageContents();
         theModelsPackage.createPackageContents();
         theDatatypesPackage.createPackageContents();
+        thescalablepcmgroupsPackage.createPackageContents();
 
         // Initialize created meta-data
         theStimuliPackage.initializePackageContents();
@@ -292,6 +299,7 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
         theExpectationsPackage.initializePackageContents();
         theModelsPackage.initializePackageContents();
         theDatatypesPackage.initializePackageContents();
+        thescalablepcmgroupsPackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         theStimuliPackage.freeze();

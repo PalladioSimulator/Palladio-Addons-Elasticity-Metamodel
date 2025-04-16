@@ -8,7 +8,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
-import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
 import org.palladiosimulator.elasticity.targets.ServiceGroup;
 import org.palladiosimulator.elasticity.targets.TargetGroup;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
@@ -78,8 +78,8 @@ public class TargetsAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseElasticInfrastructure(final ElasticInfrastructure object) {
-            return TargetsAdapterFactory.this.createElasticInfrastructureAdapter();
+        public Adapter caseInfrastructureGroup(final InfrastructureGroup object) {
+            return TargetsAdapterFactory.this.createInfrastructureGroupAdapter();
         }
 
         @Override
@@ -153,16 +153,16 @@ public class TargetsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure <em>Elastic
-     * Infrastructure</em>}'. <!-- begin-user-doc --> This default implementation returns null so
-     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
-     * the cases anyway. <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup <em>Infrastructure
+     * Group</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can
+     * easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases
+     * anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.elasticity.targets.ElasticInfrastructure
+     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroup
      * @generated
      */
-    public Adapter createElasticInfrastructureAdapter() {
+    public Adapter createInfrastructureGroupAdapter() {
         return null;
     }
 

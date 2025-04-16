@@ -43,6 +43,7 @@ public class CompetingConsumersGroupItemProvider extends TargetGroupItemProvider
             super.getPropertyDescriptors(object);
 
             this.addUnitAssemblyPropertyDescriptor(object);
+            this.addCompetingConsumersGroupPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
@@ -60,6 +61,23 @@ public class CompetingConsumersGroupItemProvider extends TargetGroupItemProvider
                 this.getString("_UI_PropertyDescriptor_description", "_UI_CompetingConsumersGroup_unitAssembly_feature",
                         "_UI_CompetingConsumersGroup_type"),
                 TargetsPackage.Literals.COMPETING_CONSUMERS_GROUP__UNIT_ASSEMBLY, true, false, true, null, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Competing Consumers Group feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected void addCompetingConsumersGroupPropertyDescriptor(final Object object) {
+        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
+                this.getString("_UI_CompetingConsumersGroup_competingConsumersGroup_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CompetingConsumersGroup_competingConsumersGroup_feature",
+                        "_UI_CompetingConsumersGroup_type"),
+                TargetsPackage.Literals.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP, true, false, true, null,
+                null, null));
     }
 
     /*

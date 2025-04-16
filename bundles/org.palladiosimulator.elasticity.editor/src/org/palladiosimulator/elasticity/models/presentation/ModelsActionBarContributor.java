@@ -34,7 +34,7 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
-import org.palladiosimulator.elasticity.presentation.ElasticitySpecEditorPlugin;
+import org.palladiosimulator.elasticity.presentation.ElasticityEditorPlugin;
 
 /**
  * This is the action bar contributor for the Models model editor. <!-- begin-user-doc --> <!--
@@ -64,14 +64,14 @@ public class ModelsActionBarContributor extends EditingDomainActionBarContributo
      * @generated
      */
     protected IAction showPropertiesViewAction = new Action(
-            ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+            ElasticityEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
         @Override
         public void run() {
             try {
                 ModelsActionBarContributor.this.getPage()
                     .showView("org.eclipse.ui.views.PropertySheet");
             } catch (final PartInitException exception) {
-                ElasticitySpecEditorPlugin.INSTANCE.log(exception);
+                ElasticityEditorPlugin.INSTANCE.log(exception);
             }
         }
     };
@@ -84,7 +84,7 @@ public class ModelsActionBarContributor extends EditingDomainActionBarContributo
      * @generated
      */
     protected IAction refreshViewerAction = new Action(
-            ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+            ElasticityEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
         @Override
         public boolean isEnabled() {
             return ModelsActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
@@ -171,7 +171,7 @@ public class ModelsActionBarContributor extends EditingDomainActionBarContributo
         super.contributeToMenu(menuManager);
 
         final IMenuManager submenuManager = new MenuManager(
-                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ModelsEditor_menu"),
+                ElasticityEditorPlugin.INSTANCE.getString("_UI_ModelsEditor_menu"),
                 "org.palladiosimulator.elasticity.modelsMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
@@ -182,13 +182,13 @@ public class ModelsActionBarContributor extends EditingDomainActionBarContributo
         // Prepare for CreateChild item addition or removal.
         //
         this.createChildMenuManager = new MenuManager(
-                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+                ElasticityEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         submenuManager.insertBefore("additions", this.createChildMenuManager);
 
         // Prepare for CreateSibling item addition or removal.
         //
         this.createSiblingMenuManager = new MenuManager(
-                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+                ElasticityEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         submenuManager.insertBefore("additions", this.createSiblingMenuManager);
 
         // Force an update because Eclipse hides empty menus now.
@@ -385,11 +385,11 @@ public class ModelsActionBarContributor extends EditingDomainActionBarContributo
         super.menuAboutToShow(menuManager);
         MenuManager submenuManager = null;
 
-        submenuManager = new MenuManager(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+        submenuManager = new MenuManager(ElasticityEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         this.populateManager(submenuManager, this.createChildActions, null);
         menuManager.insertBefore("edit", submenuManager);
 
-        submenuManager = new MenuManager(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+        submenuManager = new MenuManager(ElasticityEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         this.populateManager(submenuManager, this.createSiblingActions, null);
         menuManager.insertBefore("edit", submenuManager);
     }

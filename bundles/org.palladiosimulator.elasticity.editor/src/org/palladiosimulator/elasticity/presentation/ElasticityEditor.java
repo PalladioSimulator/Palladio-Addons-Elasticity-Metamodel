@@ -149,6 +149,7 @@ import org.palladiosimulator.pcm.seff.seff_reliability.provider.SeffReliabilityI
 import org.palladiosimulator.pcm.subsystem.provider.SubsystemItemProviderAdapterFactory;
 import org.palladiosimulator.pcm.system.provider.SystemItemProviderAdapterFactory;
 import org.palladiosimulator.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
+import org.palladiosimulator.scalablepcmgroups.provider.scalablepcmgroupsItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
@@ -533,7 +534,7 @@ public class ElasticityEditor extends MultiPageEditorPart
                         });
                 }
             } catch (final CoreException exception) {
-                ElasticitySpecEditorPlugin.INSTANCE.log(exception);
+                ElasticityEditorPlugin.INSTANCE.log(exception);
             }
         }
     };
@@ -646,7 +647,7 @@ public class ElasticityEditor extends MultiPageEditorPart
                     this.setActivePage(lastEditorPage);
                     this.showTabs();
                 } catch (final PartInitException exception) {
-                    ElasticitySpecEditorPlugin.INSTANCE.log(exception);
+                    ElasticityEditorPlugin.INSTANCE.log(exception);
                 }
             }
 
@@ -654,7 +655,7 @@ public class ElasticityEditor extends MultiPageEditorPart
                 try {
                     this.markerHelper.updateMarkers(diagnostic);
                 } catch (final CoreException exception) {
-                    ElasticitySpecEditorPlugin.INSTANCE.log(exception);
+                    ElasticityEditorPlugin.INSTANCE.log(exception);
                 }
             }
         }
@@ -726,6 +727,7 @@ public class ElasticityEditor extends MultiPageEditorPart
         this.adapterFactory.addAdapterFactory(new AllocationItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new SubsystemItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ProbfunctionItemProviderAdapterFactory());
+        this.adapterFactory.addAdapterFactory(new scalablepcmgroupsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new UnitsItemProviderAdapterFactory());
         this.adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
@@ -1597,7 +1599,7 @@ public class ElasticityEditor extends MultiPageEditorPart
         } catch (final Exception exception) {
             // Something went wrong that shouldn't.
             //
-            ElasticitySpecEditorPlugin.INSTANCE.log(exception);
+            ElasticityEditorPlugin.INSTANCE.log(exception);
         }
         this.updateProblemIndication = true;
         this.updateProblemIndication();
@@ -1817,7 +1819,7 @@ public class ElasticityEditor extends MultiPageEditorPart
      * @generated
      */
     private static String getString(final String key) {
-        return ElasticitySpecEditorPlugin.INSTANCE.getString(key);
+        return ElasticityEditorPlugin.INSTANCE.getString(key);
     }
 
     /**
@@ -1827,7 +1829,7 @@ public class ElasticityEditor extends MultiPageEditorPart
      * @generated
      */
     private static String getString(final String key, final Object s1) {
-        return ElasticitySpecEditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
+        return ElasticityEditorPlugin.INSTANCE.getString(key, new Object[] { s1 });
     }
 
     /**

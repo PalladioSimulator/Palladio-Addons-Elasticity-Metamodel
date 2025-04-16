@@ -32,6 +32,8 @@ import org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl;
 import org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage;
 import org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl;
 import org.palladiosimulator.pcm.PcmPackage;
+import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
+import org.palladiosimulator.scalablepcmgroups.impl.scalablepcmgroupsPackageImpl;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -173,6 +175,10 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
         final ModelsPackageImpl theModelsPackage = (ModelsPackageImpl) (registeredPackage instanceof ModelsPackageImpl
                 ? registeredPackage
                 : ModelsPackage.eINSTANCE);
+        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(scalablepcmgroupsPackage.eNS_URI);
+        final scalablepcmgroupsPackageImpl thescalablepcmgroupsPackage = (scalablepcmgroupsPackageImpl) (registeredPackage instanceof scalablepcmgroupsPackageImpl
+                ? registeredPackage
+                : scalablepcmgroupsPackage.eINSTANCE);
 
         // Create package meta-data objects
         theDatatypesPackage.createPackageContents();
@@ -186,6 +192,7 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
         theStimuliPackage.createPackageContents();
         theExpectationsPackage.createPackageContents();
         theModelsPackage.createPackageContents();
+        thescalablepcmgroupsPackage.createPackageContents();
 
         // Initialize created meta-data
         theDatatypesPackage.initializePackageContents();
@@ -199,6 +206,7 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
         theStimuliPackage.initializePackageContents();
         theExpectationsPackage.initializePackageContents();
         theModelsPackage.initializePackageContents();
+        thescalablepcmgroupsPackage.initializePackageContents();
 
         // Register package validator
         EValidator.Registry.INSTANCE.put(theDatatypesPackage, new EValidator.Descriptor() {

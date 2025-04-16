@@ -64,14 +64,14 @@ public class ElasticityActionBarContributor extends EditingDomainActionBarContri
      * @generated
      */
     protected IAction showPropertiesViewAction = new Action(
-            ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+            ElasticityEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
         @Override
         public void run() {
             try {
                 ElasticityActionBarContributor.this.getPage()
                     .showView("org.eclipse.ui.views.PropertySheet");
             } catch (final PartInitException exception) {
-                ElasticitySpecEditorPlugin.INSTANCE.log(exception);
+                ElasticityEditorPlugin.INSTANCE.log(exception);
             }
         }
     };
@@ -84,7 +84,7 @@ public class ElasticityActionBarContributor extends EditingDomainActionBarContri
      * @generated
      */
     protected IAction refreshViewerAction = new Action(
-            ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+            ElasticityEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
         @Override
         public boolean isEnabled() {
             return ElasticityActionBarContributor.this.activeEditorPart instanceof IViewerProvider;
@@ -172,7 +172,7 @@ public class ElasticityActionBarContributor extends EditingDomainActionBarContri
         super.contributeToMenu(menuManager);
 
         final IMenuManager submenuManager = new MenuManager(
-                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ElasticityEditor_menu"),
+                ElasticityEditorPlugin.INSTANCE.getString("_UI_ElasticityEditor_menu"),
                 "org.palladiosimulator.elasticityMenuID");
         menuManager.insertAfter("additions", submenuManager);
         submenuManager.add(new Separator("settings"));
@@ -183,13 +183,13 @@ public class ElasticityActionBarContributor extends EditingDomainActionBarContri
         // Prepare for CreateChild item addition or removal.
         //
         this.createChildMenuManager = new MenuManager(
-                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+                ElasticityEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         submenuManager.insertBefore("additions", this.createChildMenuManager);
 
         // Prepare for CreateSibling item addition or removal.
         //
         this.createSiblingMenuManager = new MenuManager(
-                ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+                ElasticityEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         submenuManager.insertBefore("additions", this.createSiblingMenuManager);
 
         // Force an update because Eclipse hides empty menus now.
@@ -386,11 +386,11 @@ public class ElasticityActionBarContributor extends EditingDomainActionBarContri
         super.menuAboutToShow(menuManager);
         MenuManager submenuManager = null;
 
-        submenuManager = new MenuManager(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+        submenuManager = new MenuManager(ElasticityEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
         this.populateManager(submenuManager, this.createChildActions, null);
         menuManager.insertBefore("edit", submenuManager);
 
-        submenuManager = new MenuManager(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+        submenuManager = new MenuManager(ElasticityEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
         this.populateManager(submenuManager, this.createSiblingActions, null);
         menuManager.insertBefore("edit", submenuManager);
     }

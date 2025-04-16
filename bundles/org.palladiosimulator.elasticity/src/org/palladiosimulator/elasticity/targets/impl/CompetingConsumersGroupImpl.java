@@ -17,6 +17,8 @@ import org.palladiosimulator.pcm.core.composition.AssemblyContext;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl#getUnitAssembly
  * <em>Unit Assembly</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl#getCompetingConsumersGroup
+ * <em>Competing Consumers Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +81,42 @@ public class CompetingConsumersGroupImpl extends TargetGroupImpl implements Comp
      * @generated
      */
     @Override
+    public org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup getCompetingConsumersGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) this.eDynamicGet(
+                TargetsPackage.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP,
+                TargetsPackage.Literals.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP, true, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup basicGetCompetingConsumersGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) this.eDynamicGet(
+                TargetsPackage.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP,
+                TargetsPackage.Literals.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP, false, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setCompetingConsumersGroup(
+            final org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup newCompetingConsumersGroup) {
+        this.eDynamicSet(TargetsPackage.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP,
+                TargetsPackage.Literals.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP,
+                newCompetingConsumersGroup);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case TargetsPackage.COMPETING_CONSUMERS_GROUP__UNIT_ASSEMBLY:
@@ -86,6 +124,11 @@ public class CompetingConsumersGroupImpl extends TargetGroupImpl implements Comp
                 return this.getUnitAssembly();
             }
             return this.basicGetUnitAssembly();
+        case TargetsPackage.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP:
+            if (resolve) {
+                return this.getCompetingConsumersGroup();
+            }
+            return this.basicGetCompetingConsumersGroup();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -100,6 +143,9 @@ public class CompetingConsumersGroupImpl extends TargetGroupImpl implements Comp
         switch (featureID) {
         case TargetsPackage.COMPETING_CONSUMERS_GROUP__UNIT_ASSEMBLY:
             this.setUnitAssembly((AssemblyContext) newValue);
+            return;
+        case TargetsPackage.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP:
+            this.setCompetingConsumersGroup((org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -116,6 +162,9 @@ public class CompetingConsumersGroupImpl extends TargetGroupImpl implements Comp
         case TargetsPackage.COMPETING_CONSUMERS_GROUP__UNIT_ASSEMBLY:
             this.setUnitAssembly((AssemblyContext) null);
             return;
+        case TargetsPackage.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP:
+            this.setCompetingConsumersGroup((org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -130,6 +179,8 @@ public class CompetingConsumersGroupImpl extends TargetGroupImpl implements Comp
         switch (featureID) {
         case TargetsPackage.COMPETING_CONSUMERS_GROUP__UNIT_ASSEMBLY:
             return this.basicGetUnitAssembly() != null;
+        case TargetsPackage.COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP:
+            return this.basicGetCompetingConsumersGroup() != null;
         }
         return super.eIsSet(featureID);
     }

@@ -17,6 +17,8 @@ import org.palladiosimulator.pcm.core.composition.AssemblyContext;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl#getUnitAssembly
  * <em>Unit Assembly</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl#getServiceGroup
+ * <em>Service Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +81,40 @@ public class ServiceGroupImpl extends TargetGroupImpl implements ServiceGroup {
      * @generated
      */
     @Override
+    public org.palladiosimulator.scalablepcmgroups.ServiceGroup getServiceGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.ServiceGroup) this.eDynamicGet(
+                TargetsPackage.SERVICE_GROUP__SERVICE_GROUP, TargetsPackage.Literals.SERVICE_GROUP__SERVICE_GROUP, true,
+                true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    public org.palladiosimulator.scalablepcmgroups.ServiceGroup basicGetServiceGroup() {
+        return (org.palladiosimulator.scalablepcmgroups.ServiceGroup) this.eDynamicGet(
+                TargetsPackage.SERVICE_GROUP__SERVICE_GROUP, TargetsPackage.Literals.SERVICE_GROUP__SERVICE_GROUP,
+                false, true);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public void setServiceGroup(final org.palladiosimulator.scalablepcmgroups.ServiceGroup newServiceGroup) {
+        this.eDynamicSet(TargetsPackage.SERVICE_GROUP__SERVICE_GROUP,
+                TargetsPackage.Literals.SERVICE_GROUP__SERVICE_GROUP, newServiceGroup);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case TargetsPackage.SERVICE_GROUP__UNIT_ASSEMBLY:
@@ -86,6 +122,11 @@ public class ServiceGroupImpl extends TargetGroupImpl implements ServiceGroup {
                 return this.getUnitAssembly();
             }
             return this.basicGetUnitAssembly();
+        case TargetsPackage.SERVICE_GROUP__SERVICE_GROUP:
+            if (resolve) {
+                return this.getServiceGroup();
+            }
+            return this.basicGetServiceGroup();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -100,6 +141,9 @@ public class ServiceGroupImpl extends TargetGroupImpl implements ServiceGroup {
         switch (featureID) {
         case TargetsPackage.SERVICE_GROUP__UNIT_ASSEMBLY:
             this.setUnitAssembly((AssemblyContext) newValue);
+            return;
+        case TargetsPackage.SERVICE_GROUP__SERVICE_GROUP:
+            this.setServiceGroup((org.palladiosimulator.scalablepcmgroups.ServiceGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -116,6 +160,9 @@ public class ServiceGroupImpl extends TargetGroupImpl implements ServiceGroup {
         case TargetsPackage.SERVICE_GROUP__UNIT_ASSEMBLY:
             this.setUnitAssembly((AssemblyContext) null);
             return;
+        case TargetsPackage.SERVICE_GROUP__SERVICE_GROUP:
+            this.setServiceGroup((org.palladiosimulator.scalablepcmgroups.ServiceGroup) null);
+            return;
         }
         super.eUnset(featureID);
     }
@@ -130,6 +177,8 @@ public class ServiceGroupImpl extends TargetGroupImpl implements ServiceGroup {
         switch (featureID) {
         case TargetsPackage.SERVICE_GROUP__UNIT_ASSEMBLY:
             return this.basicGetUnitAssembly() != null;
+        case TargetsPackage.SERVICE_GROUP__SERVICE_GROUP:
+            return this.basicGetServiceGroup() != null;
         }
         return super.eIsSet(featureID);
     }

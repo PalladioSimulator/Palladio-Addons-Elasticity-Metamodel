@@ -3,25 +3,25 @@
  */
 package org.palladiosimulator.elasticity.targets.tests;
 
-import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
 import org.palladiosimulator.elasticity.targets.TargetsFactory;
 
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc --> A test case for the model object '<em><b>Elastic
- * Infrastructure</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A test case for the model object '<em><b>Infrastructure Group</b></em>'.
+ * <!-- end-user-doc -->
  * <p>
  * The following features are tested:
  * <ul>
- * <li>{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getPCM_ResourceEnvironment()
+ * <li>{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup#getPCM_ResourceEnvironment()
  * <em>PCM Resource Environment</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ElasticInfrastructureTest extends TargetGroupTest {
+public class InfrastructureGroupTest extends TargetGroupTest {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -29,28 +29,28 @@ public class ElasticInfrastructureTest extends TargetGroupTest {
      * @generated
      */
     public static void main(final String[] args) {
-        TestRunner.run(ElasticInfrastructureTest.class);
+        TestRunner.run(InfrastructureGroupTest.class);
     }
 
     /**
-     * Constructs a new Elastic Infrastructure test case with the given name. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * Constructs a new Infrastructure Group test case with the given name. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
-    public ElasticInfrastructureTest(final String name) {
+    public InfrastructureGroupTest(final String name) {
         super(name);
     }
 
     /**
-     * Returns the fixture for this Elastic Infrastructure test case. <!-- begin-user-doc --> <!--
+     * Returns the fixture for this Infrastructure Group test case. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
     @Override
-    protected ElasticInfrastructure getFixture() {
-        return (ElasticInfrastructure) this.fixture;
+    protected InfrastructureGroup getFixture() {
+        return (InfrastructureGroup) this.fixture;
     }
 
     /**
@@ -61,7 +61,7 @@ public class ElasticInfrastructureTest extends TargetGroupTest {
      */
     @Override
     protected void setUp() throws Exception {
-        this.setFixture(TargetsFactory.eINSTANCE.createElasticInfrastructure());
+        this.setFixture(TargetsFactory.eINSTANCE.createInfrastructureGroup());
     }
 
     /**
@@ -77,11 +77,11 @@ public class ElasticInfrastructureTest extends TargetGroupTest {
 
     /**
      * Tests the
-     * '{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getPCM_ResourceEnvironment()
+     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup#getPCM_ResourceEnvironment()
      * <em>PCM Resource Environment</em>}' feature getter. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      *
-     * @see org.palladiosimulator.elasticity.targets.ElasticInfrastructure#getPCM_ResourceEnvironment()
+     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroup#getPCM_ResourceEnvironment()
      * @generated
      */
     public void testGetPCM_ResourceEnvironment() {
@@ -92,11 +92,11 @@ public class ElasticInfrastructureTest extends TargetGroupTest {
 
     /**
      * Tests the
-     * '{@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure#isSetPCM_ResourceEnvironment()
+     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup#isSetPCM_ResourceEnvironment()
      * <em>isSetPCM_ResourceEnvironment()</em>}' method. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      *
-     * @see org.palladiosimulator.elasticity.targets.ElasticInfrastructure#isSetPCM_ResourceEnvironment()
+     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroup#isSetPCM_ResourceEnvironment()
      * @generated
      */
     public void testIsSetPCM_ResourceEnvironment() {
@@ -105,4 +105,4 @@ public class ElasticInfrastructureTest extends TargetGroupTest {
         fail();
     }
 
-} // ElasticInfrastructureTest
+} // InfrastructureGroupTest

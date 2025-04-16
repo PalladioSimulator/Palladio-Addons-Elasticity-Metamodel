@@ -72,27 +72,27 @@ public class TargetsItemProviderAdapterFactory extends TargetsAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure} instances. <!--
+     * {@link org.palladiosimulator.elasticity.targets.InfrastructureGroup} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected ElasticInfrastructureItemProvider elasticInfrastructureItemProvider;
+    protected InfrastructureGroupItemProvider infrastructureGroupItemProvider;
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.targets.ElasticInfrastructure}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * {@link org.palladiosimulator.elasticity.targets.InfrastructureGroup}. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
-    public Adapter createElasticInfrastructureAdapter() {
-        if (this.elasticInfrastructureItemProvider == null) {
-            this.elasticInfrastructureItemProvider = new ElasticInfrastructureItemProvider(this);
+    public Adapter createInfrastructureGroupAdapter() {
+        if (this.infrastructureGroupItemProvider == null) {
+            this.infrastructureGroupItemProvider = new InfrastructureGroupItemProvider(this);
         }
 
-        return this.elasticInfrastructureItemProvider;
+        return this.infrastructureGroupItemProvider;
     }
 
     /**
@@ -247,8 +247,8 @@ public class TargetsItemProviderAdapterFactory extends TargetsAdapterFactory
      */
     @Override
     public void dispose() {
-        if (this.elasticInfrastructureItemProvider != null) {
-            this.elasticInfrastructureItemProvider.dispose();
+        if (this.infrastructureGroupItemProvider != null) {
+            this.infrastructureGroupItemProvider.dispose();
         }
         if (this.serviceGroupItemProvider != null) {
             this.serviceGroupItemProvider.dispose();

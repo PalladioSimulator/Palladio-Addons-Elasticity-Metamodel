@@ -39,6 +39,8 @@ import org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl
 import org.palladiosimulator.elasticity.util.ElasticityValidator;
 import org.palladiosimulator.pcm.PcmPackage;
 import org.palladiosimulator.pcm.core.entity.EntityPackage;
+import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
+import org.palladiosimulator.scalablepcmgroups.impl.scalablepcmgroupsPackageImpl;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -180,6 +182,10 @@ public class ElasticityPackageImpl extends EPackageImpl implements ElasticityPac
         final DatatypesPackageImpl theDatatypesPackage = (DatatypesPackageImpl) (registeredPackage instanceof DatatypesPackageImpl
                 ? registeredPackage
                 : DatatypesPackage.eINSTANCE);
+        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(scalablepcmgroupsPackage.eNS_URI);
+        final scalablepcmgroupsPackageImpl thescalablepcmgroupsPackage = (scalablepcmgroupsPackageImpl) (registeredPackage instanceof scalablepcmgroupsPackageImpl
+                ? registeredPackage
+                : scalablepcmgroupsPackage.eINSTANCE);
 
         // Create package meta-data objects
         theElasticityPackage.createPackageContents();
@@ -193,6 +199,7 @@ public class ElasticityPackageImpl extends EPackageImpl implements ElasticityPac
         theExpectationsPackage.createPackageContents();
         theModelsPackage.createPackageContents();
         theDatatypesPackage.createPackageContents();
+        thescalablepcmgroupsPackage.createPackageContents();
 
         // Initialize created meta-data
         theElasticityPackage.initializePackageContents();
@@ -206,6 +213,7 @@ public class ElasticityPackageImpl extends EPackageImpl implements ElasticityPac
         theExpectationsPackage.initializePackageContents();
         theModelsPackage.initializePackageContents();
         theDatatypesPackage.initializePackageContents();
+        thescalablepcmgroupsPackage.initializePackageContents();
 
         // Register package validator
         EValidator.Registry.INSTANCE.put(theElasticityPackage, new EValidator.Descriptor() {

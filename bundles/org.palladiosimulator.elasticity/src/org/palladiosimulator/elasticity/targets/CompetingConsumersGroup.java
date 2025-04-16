@@ -23,6 +23,8 @@ import org.palladiosimulator.pcm.core.composition.AssemblyContext;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getUnitAssembly
  * <em>Unit Assembly</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getCompetingConsumersGroup
+ * <em>Competing Consumers Group</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.targets.TargetsPackage#getCompetingConsumersGroup()
@@ -57,4 +59,28 @@ public interface CompetingConsumersGroup extends TargetGroup {
      * @generated
      */
     void setUnitAssembly(AssemblyContext value);
+
+    /**
+     * Returns the value of the '<em><b>Competing Consumers Group</b></em>' reference. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Competing Consumers Group</em>' reference.
+     * @see #setCompetingConsumersGroup(org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup)
+     * @see org.palladiosimulator.elasticity.targets.TargetsPackage#getCompetingConsumersGroup_CompetingConsumersGroup()
+     * @model
+     * @generated
+     */
+    org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup getCompetingConsumersGroup();
+
+    /**
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getCompetingConsumersGroup
+     * <em>Competing Consumers Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Competing Consumers Group</em>' reference.
+     * @see #getCompetingConsumersGroup()
+     * @generated
+     */
+    void setCompetingConsumersGroup(org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup value);
 } // CompetingConsumersGroup

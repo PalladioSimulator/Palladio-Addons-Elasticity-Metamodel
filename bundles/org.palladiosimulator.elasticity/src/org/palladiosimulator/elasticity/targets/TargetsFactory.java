@@ -21,13 +21,13 @@ public interface TargetsFactory extends EFactory {
     TargetsFactory eINSTANCE = org.palladiosimulator.elasticity.targets.impl.TargetsFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Elastic Infrastructure</em>'. <!-- begin-user-doc --> <!--
+     * Returns a new object of class '<em>Infrastructure Group</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
-     * @return a new object of class '<em>Elastic Infrastructure</em>'.
+     * @return a new object of class '<em>Infrastructure Group</em>'.
      * @generated
      */
-    ElasticInfrastructure createElasticInfrastructure();
+    InfrastructureGroup createInfrastructureGroup();
 
     /**
      * Returns a new object of class '<em>Service Group</em>'. <!-- begin-user-doc --> <!--

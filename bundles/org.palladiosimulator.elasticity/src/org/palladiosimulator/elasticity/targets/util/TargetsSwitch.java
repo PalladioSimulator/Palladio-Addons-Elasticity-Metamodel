@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
-import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
 import org.palladiosimulator.elasticity.targets.ServiceGroup;
 import org.palladiosimulator.elasticity.targets.TargetGroup;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
@@ -94,26 +94,26 @@ public class TargetsSwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case TargetsPackage.ELASTIC_INFRASTRUCTURE: {
-            final ElasticInfrastructure elasticInfrastructure = (ElasticInfrastructure) theEObject;
-            T result = this.caseElasticInfrastructure(elasticInfrastructure);
+        case TargetsPackage.INFRASTRUCTURE_GROUP: {
+            final InfrastructureGroup infrastructureGroup = (InfrastructureGroup) theEObject;
+            T result = this.caseInfrastructureGroup(infrastructureGroup);
             if (result == null) {
-                result = this.caseTargetGroup(elasticInfrastructure);
+                result = this.caseTargetGroup(infrastructureGroup);
             }
             if (result == null) {
-                result = this.caseEntity(elasticInfrastructure);
+                result = this.caseEntity(infrastructureGroup);
             }
             if (result == null) {
-                result = this.caseIdentifier(elasticInfrastructure);
+                result = this.caseIdentifier(infrastructureGroup);
             }
             if (result == null) {
-                result = this.caseNamedElement(elasticInfrastructure);
+                result = this.caseNamedElement(infrastructureGroup);
             }
             if (result == null) {
-                result = this.casePCMBaseClass(elasticInfrastructure);
+                result = this.casePCMBaseClass(infrastructureGroup);
             }
             if (result == null) {
-                result = this.casePCMClass(elasticInfrastructure);
+                result = this.casePCMClass(infrastructureGroup);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -193,18 +193,18 @@ public class TargetsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Elastic
-     * Infrastructure</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
-     * non-null result will terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Infrastructure
+     * Group</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * result will terminate the switch. <!-- end-user-doc -->
      *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Elastic
-     *         Infrastructure</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Infrastructure
+     *         Group</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseElasticInfrastructure(final ElasticInfrastructure object) {
+    public T caseInfrastructureGroup(final InfrastructureGroup object) {
         return null;
     }
 

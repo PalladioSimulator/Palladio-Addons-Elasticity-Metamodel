@@ -55,7 +55,7 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
-import org.palladiosimulator.elasticity.presentation.ElasticitySpecEditorPlugin;
+import org.palladiosimulator.elasticity.presentation.ElasticityEditorPlugin;
 import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
 import org.palladiosimulator.elasticity.triggers.expectations.ExpectationsFactory;
 import org.palladiosimulator.elasticity.triggers.expectations.ExpectationsPackage;
@@ -73,7 +73,7 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(
-            Arrays.asList(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ExpectationsEditorFilenameExtensions")
+            Arrays.asList(ElasticityEditorPlugin.INSTANCE.getString("_UI_ExpectationsEditorFilenameExtensions")
                 .split("\\s*,\\s*")));
 
     /**
@@ -82,7 +82,7 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
      *
      * @generated
      */
-    public static final String FORMATTED_FILE_EXTENSIONS = ElasticitySpecEditorPlugin.INSTANCE
+    public static final String FORMATTED_FILE_EXTENSIONS = ElasticityEditorPlugin.INSTANCE
         .getString("_UI_ExpectationsEditorFilenameExtensions")
         .replaceAll("\\s*,\\s*", ", ");
 
@@ -146,9 +146,9 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
     public void init(final IWorkbench workbench, final IStructuredSelection selection) {
         this.workbench = workbench;
         this.selection = selection;
-        this.setWindowTitle(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+        this.setWindowTitle(ElasticityEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
         this.setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
-            .getImageDescriptor(ElasticitySpecEditorPlugin.INSTANCE.getImage("full/wizban/NewExpectations")));
+            .getImageDescriptor(ElasticityEditorPlugin.INSTANCE.getImage("full/wizban/NewExpectations")));
     }
 
     /**
@@ -231,7 +231,7 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
                                 ExpectationsModelWizard.this.initialObjectCreationPage.getEncoding());
                         resource.save(options);
                     } catch (final Exception exception) {
-                        ElasticitySpecEditorPlugin.INSTANCE.log(exception);
+                        ElasticityEditorPlugin.INSTANCE.log(exception);
                     } finally {
                         progressMonitor.done();
                     }
@@ -267,14 +267,13 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
                     .getId());
             } catch (final PartInitException exception) {
                 MessageDialog.openError(workbenchWindow.getShell(),
-                        ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"),
-                        exception.getMessage());
+                        ElasticityEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
                 return false;
             }
 
             return true;
         } catch (final Exception exception) {
-            ElasticitySpecEditorPlugin.INSTANCE.log(exception);
+            ElasticityEditorPlugin.INSTANCE.log(exception);
             return false;
         }
     }
@@ -307,8 +306,8 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
                 if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
                     final String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions"
                             : "_WARN_FilenameExtension";
-                    this.setErrorMessage(ElasticitySpecEditorPlugin.INSTANCE.getString(key,
-                            new Object[] { FORMATTED_FILE_EXTENSIONS }));
+                    this.setErrorMessage(
+                            ElasticityEditorPlugin.INSTANCE.getString(key, new Object[] { FORMATTED_FILE_EXTENSIONS }));
                     return false;
                 }
                 return true;
@@ -387,7 +386,7 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
 
             final Label containerLabel = new Label(composite, SWT.LEFT);
             {
-                containerLabel.setText(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
+                containerLabel.setText(ElasticityEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
                 final GridData data = new GridData();
                 data.horizontalAlignment = GridData.FILL;
@@ -413,7 +412,7 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
 
             final Label encodingLabel = new Label(composite, SWT.LEFT);
             {
-                encodingLabel.setText(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
+                encodingLabel.setText(ElasticityEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
                 final GridData data = new GridData();
                 data.horizontalAlignment = GridData.FILL;
@@ -516,7 +515,7 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
             try {
                 return ElasticityEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
             } catch (final MissingResourceException mre) {
-                ElasticitySpecEditorPlugin.INSTANCE.log(mre);
+                ElasticityEditorPlugin.INSTANCE.log(mre);
             }
             return typeName;
         }
@@ -530,7 +529,7 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
             if (this.encodings == null) {
                 this.encodings = new ArrayList<>();
                 for (final StringTokenizer stringTokenizer = new StringTokenizer(
-                        ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
+                        ElasticityEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
                             .hasMoreTokens();) {
                     this.encodings.add(stringTokenizer.nextToken());
                 }
@@ -551,12 +550,12 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
         //
         this.newFileCreationPage = new ExpectationsModelWizardNewFileCreationPage("Whatever", this.selection);
         this.newFileCreationPage
-            .setTitle(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ExpectationsModelWizard_label"));
+            .setTitle(ElasticityEditorPlugin.INSTANCE.getString("_UI_ExpectationsModelWizard_label"));
         this.newFileCreationPage
-            .setDescription(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ExpectationsModelWizard_description"));
+            .setDescription(ElasticityEditorPlugin.INSTANCE.getString("_UI_ExpectationsModelWizard_description"));
         this.newFileCreationPage
-            .setFileName(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ExpectationsEditorFilenameDefaultBase")
-                    + "." + FILE_EXTENSIONS.get(0));
+            .setFileName(ElasticityEditorPlugin.INSTANCE.getString("_UI_ExpectationsEditorFilenameDefaultBase") + "."
+                    + FILE_EXTENSIONS.get(0));
         this.addPage(this.newFileCreationPage);
 
         // Try and get the resource selection to determine a current directory for the file dialog.
@@ -583,7 +582,7 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
 
                     // Make up a unique new name here.
                     //
-                    final String defaultModelBaseFilename = ElasticitySpecEditorPlugin.INSTANCE
+                    final String defaultModelBaseFilename = ElasticityEditorPlugin.INSTANCE
                         .getString("_UI_ExpectationsEditorFilenameDefaultBase");
                     final String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
                     String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
@@ -596,9 +595,9 @@ public class ExpectationsModelWizard extends Wizard implements INewWizard {
         }
         this.initialObjectCreationPage = new ExpectationsModelWizardInitialObjectCreationPage("Whatever2");
         this.initialObjectCreationPage
-            .setTitle(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_ExpectationsModelWizard_label"));
+            .setTitle(ElasticityEditorPlugin.INSTANCE.getString("_UI_ExpectationsModelWizard_label"));
         this.initialObjectCreationPage
-            .setDescription(ElasticitySpecEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+            .setDescription(ElasticityEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
         this.addPage(this.initialObjectCreationPage);
     }
 

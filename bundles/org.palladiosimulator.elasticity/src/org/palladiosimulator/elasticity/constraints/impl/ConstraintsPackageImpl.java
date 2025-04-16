@@ -33,6 +33,8 @@ import org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl;
 import org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage;
 import org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl;
 import org.palladiosimulator.pcm.PcmPackage;
+import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
+import org.palladiosimulator.scalablepcmgroups.impl.scalablepcmgroupsPackageImpl;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -167,6 +169,10 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
         final DatatypesPackageImpl theDatatypesPackage = (DatatypesPackageImpl) (registeredPackage instanceof DatatypesPackageImpl
                 ? registeredPackage
                 : DatatypesPackage.eINSTANCE);
+        registeredPackage = EPackage.Registry.INSTANCE.getEPackage(scalablepcmgroupsPackage.eNS_URI);
+        final scalablepcmgroupsPackageImpl thescalablepcmgroupsPackage = (scalablepcmgroupsPackageImpl) (registeredPackage instanceof scalablepcmgroupsPackageImpl
+                ? registeredPackage
+                : scalablepcmgroupsPackage.eINSTANCE);
 
         // Create package meta-data objects
         theConstraintsPackage.createPackageContents();
@@ -180,6 +186,7 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
         theExpectationsPackage.createPackageContents();
         theModelsPackage.createPackageContents();
         theDatatypesPackage.createPackageContents();
+        thescalablepcmgroupsPackage.createPackageContents();
 
         // Initialize created meta-data
         theConstraintsPackage.initializePackageContents();
@@ -193,6 +200,7 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
         theExpectationsPackage.initializePackageContents();
         theModelsPackage.initializePackageContents();
         theDatatypesPackage.initializePackageContents();
+        thescalablepcmgroupsPackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
         theConstraintsPackage.freeze();

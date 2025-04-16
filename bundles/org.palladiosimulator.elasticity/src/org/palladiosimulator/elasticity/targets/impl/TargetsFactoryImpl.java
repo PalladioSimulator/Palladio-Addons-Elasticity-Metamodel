@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
-import org.palladiosimulator.elasticity.targets.ElasticInfrastructure;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
 import org.palladiosimulator.elasticity.targets.ServiceGroup;
 import org.palladiosimulator.elasticity.targets.TargetsFactory;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
@@ -55,8 +55,8 @@ public class TargetsFactoryImpl extends EFactoryImpl implements TargetsFactory {
     @Override
     public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case TargetsPackage.ELASTIC_INFRASTRUCTURE:
-            return this.createElasticInfrastructure();
+        case TargetsPackage.INFRASTRUCTURE_GROUP:
+            return this.createInfrastructureGroup();
         case TargetsPackage.SERVICE_GROUP:
             return this.createServiceGroup();
         case TargetsPackage.COMPETING_CONSUMERS_GROUP:
@@ -72,9 +72,9 @@ public class TargetsFactoryImpl extends EFactoryImpl implements TargetsFactory {
      * @generated
      */
     @Override
-    public ElasticInfrastructure createElasticInfrastructure() {
-        final ElasticInfrastructureImpl elasticInfrastructure = new ElasticInfrastructureImpl();
-        return elasticInfrastructure;
+    public InfrastructureGroup createInfrastructureGroup() {
+        final InfrastructureGroupImpl infrastructureGroup = new InfrastructureGroupImpl();
+        return infrastructureGroup;
     }
 
     /**

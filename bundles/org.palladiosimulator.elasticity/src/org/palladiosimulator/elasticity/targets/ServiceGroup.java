@@ -19,6 +19,8 @@ import org.palladiosimulator.pcm.core.composition.AssemblyContext;
  * <ul>
  * <li>{@link org.palladiosimulator.elasticity.targets.ServiceGroup#getUnitAssembly <em>Unit
  * Assembly</em>}</li>
+ * <li>{@link org.palladiosimulator.elasticity.targets.ServiceGroup#getServiceGroup <em>Service
+ * Group</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.elasticity.targets.TargetsPackage#getServiceGroup()
@@ -53,4 +55,28 @@ public interface ServiceGroup extends TargetGroup {
      * @generated
      */
     void setUnitAssembly(AssemblyContext value);
+
+    /**
+     * Returns the value of the '<em><b>Service Group</b></em>' reference. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     *
+     * @return the value of the '<em>Service Group</em>' reference.
+     * @see #setServiceGroup(org.palladiosimulator.scalablepcmgroups.ServiceGroup)
+     * @see org.palladiosimulator.elasticity.targets.TargetsPackage#getServiceGroup_ServiceGroup()
+     * @model
+     * @generated
+     */
+    org.palladiosimulator.scalablepcmgroups.ServiceGroup getServiceGroup();
+
+    /**
+     * Sets the value of the
+     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroup#getServiceGroup <em>Service
+     * Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @param value
+     *            the new value of the '<em>Service Group</em>' reference.
+     * @see #getServiceGroup()
+     * @generated
+     */
+    void setServiceGroup(org.palladiosimulator.scalablepcmgroups.ServiceGroup value);
 } // ServiceGroup
