@@ -10,7 +10,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.palladiosimulator.elasticity.triggers.stimuli.OperationResponseTime;
 import org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage;
+import org.palladiosimulator.pcm.repository.OperationSignature;
 
 /**
  * This is the item provider adapter for a
@@ -81,7 +83,15 @@ public class OperationResponseTimeItemProvider extends SourceInterfaceStimulusIt
      */
     @Override
     public String getText(final Object object) {
-        return this.getString("_UI_OperationResponseTime_type") + this.getRoleText(object);
+        final OperationResponseTime operationResponseTime = (OperationResponseTime) object;
+        final OperationSignature operationSignature = operationResponseTime.getOperationSignature();
+        // TODO this should ideally show the actual name of the operation response time - however i
+        // only got this to spit out "aName" at most (even if an entityName exists for the
+        // referenced operation!)
+        return operationSignature != null
+                ? this.getString("_UI_OperationResponseTime_type") + " " + operationSignature.getId()
+                        + this.getRoleText(object)
+                : this.getString("_UI_OperationResponseTime_type");
     }
 
     /**

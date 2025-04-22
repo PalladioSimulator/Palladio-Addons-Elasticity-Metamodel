@@ -743,11 +743,11 @@ public interface ModelsPackage extends EPackage {
     EClass getResponseTimeSpecification();
 
     /**
-     * Returns the meta object for the reference
+     * Returns the meta object for the containment reference
      * '{@link org.palladiosimulator.elasticity.models.ResponseTimeSpecification#getResponseTimeStimulus
      * <em>Response Time Stimulus</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return the meta object for the reference '<em>Response Time Stimulus</em>'.
+     * @return the meta object for the containment reference '<em>Response Time Stimulus</em>'.
      * @see org.palladiosimulator.elasticity.models.ResponseTimeSpecification#getResponseTimeStimulus()
      * @see #getResponseTimeSpecification()
      * @generated
@@ -979,8 +979,8 @@ public interface ModelsPackage extends EPackage {
         EClass RESPONSE_TIME_SPECIFICATION = eINSTANCE.getResponseTimeSpecification();
 
         /**
-         * The meta object literal for the '<em><b>Response Time Stimulus</b></em>' reference
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Response Time Stimulus</b></em>' containment
+         * reference feature. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
          * @generated
          */

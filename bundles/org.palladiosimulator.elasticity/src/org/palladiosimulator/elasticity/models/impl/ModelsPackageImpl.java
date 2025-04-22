@@ -657,14 +657,14 @@ public class ModelsPackageImpl extends EPackageImpl implements ModelsPackage {
                 "ResponseTimeSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         this.initEReference(this.getResponseTimeSpecification_ResponseTimeStimulus(),
                 theStimuliPackage.getOperationResponseTime(), null, "responseTimeStimulus", null, 1, 1,
-                ResponseTimeSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+                ResponseTimeSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getResponseTimeSpecification_TargetResponseTime(),
-                theDatatypesPackage.getPositiveDouble(), "targetResponseTime", null, 0, 1,
+                theDatatypesPackage.getPositiveDouble(), "targetResponseTime", null, 1, 1,
                 ResponseTimeSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getResponseTimeSpecification_ResponseTimeAggregationMethod(),
-                theTriggersPackage.getAGGREGATIONMETHOD(), "responseTimeAggregationMethod", null, 0, 1,
+                theTriggersPackage.getAGGREGATIONMETHOD(), "responseTimeAggregationMethod", null, 1, 1,
                 ResponseTimeSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
                 IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

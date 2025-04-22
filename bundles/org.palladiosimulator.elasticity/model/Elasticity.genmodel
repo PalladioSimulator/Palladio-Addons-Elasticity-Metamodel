@@ -227,8 +227,7 @@
       </genClasses>
       <genClasses ecoreClass="Elasticity.ecore#//models/FuzzySARSAModel"/>
       <genClasses ecoreClass="Elasticity.ecore#//models/ResponseTimeSpecification">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference Elasticity.ecore#//models/ResponseTimeSpecification/responseTimeStimulus"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//models/ResponseTimeSpecification/responseTimeStimulus"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/ResponseTimeSpecification/targetResponseTime"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/ResponseTimeSpecification/responseTimeAggregationMethod"/>
       </genClasses>

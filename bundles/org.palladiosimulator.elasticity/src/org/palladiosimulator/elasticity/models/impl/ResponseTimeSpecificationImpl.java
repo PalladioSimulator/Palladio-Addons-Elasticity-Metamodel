@@ -3,7 +3,9 @@
  */
 package org.palladiosimulator.elasticity.models.impl;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.palladiosimulator.elasticity.models.ModelsPackage;
 import org.palladiosimulator.elasticity.models.ResponseTimeSpecification;
@@ -94,10 +96,11 @@ public class ResponseTimeSpecificationImpl extends CDOObjectImpl implements Resp
      *
      * @generated
      */
-    public OperationResponseTime basicGetResponseTimeStimulus() {
-        return (OperationResponseTime) this.eDynamicGet(
-                ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS,
-                ModelsPackage.Literals.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS, false, true);
+    public NotificationChain basicSetResponseTimeStimulus(final OperationResponseTime newResponseTimeStimulus,
+            NotificationChain msgs) {
+        msgs = this.eDynamicInverseAdd((InternalEObject) newResponseTimeStimulus,
+                ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS, msgs);
+        return msgs;
     }
 
     /**
@@ -163,13 +166,25 @@ public class ResponseTimeSpecificationImpl extends CDOObjectImpl implements Resp
      * @generated
      */
     @Override
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
+        switch (featureID) {
+        case ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS:
+            return this.basicSetResponseTimeStimulus(null, msgs);
+        }
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
         case ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS:
-            if (resolve) {
-                return this.getResponseTimeStimulus();
-            }
-            return this.basicGetResponseTimeStimulus();
+            return this.getResponseTimeStimulus();
         case ModelsPackage.RESPONSE_TIME_SPECIFICATION__TARGET_RESPONSE_TIME:
             return this.getTargetResponseTime();
         case ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_AGGREGATION_METHOD:
@@ -229,7 +244,7 @@ public class ResponseTimeSpecificationImpl extends CDOObjectImpl implements Resp
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
         case ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS:
-            return this.basicGetResponseTimeStimulus() != null;
+            return this.getResponseTimeStimulus() != null;
         case ModelsPackage.RESPONSE_TIME_SPECIFICATION__TARGET_RESPONSE_TIME:
             return this.getTargetResponseTime() != TARGET_RESPONSE_TIME_EDEFAULT;
         case ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_AGGREGATION_METHOD:

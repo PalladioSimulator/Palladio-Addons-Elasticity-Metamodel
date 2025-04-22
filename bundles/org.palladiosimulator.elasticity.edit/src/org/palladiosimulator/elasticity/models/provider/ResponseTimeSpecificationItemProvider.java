@@ -9,6 +9,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -22,6 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.elasticity.models.ModelsPackage;
 import org.palladiosimulator.elasticity.models.ResponseTimeSpecification;
 import org.palladiosimulator.elasticity.provider.ElasticityEditPlugin;
+import org.palladiosimulator.elasticity.triggers.stimuli.StimuliFactory;
 
 /**
  * This is the item provider adapter for a
@@ -53,28 +55,10 @@ public class ResponseTimeSpecificationItemProvider extends ItemProviderAdapter i
         if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            this.addResponseTimeStimulusPropertyDescriptor(object);
             this.addTargetResponseTimePropertyDescriptor(object);
             this.addResponseTimeAggregationMethodPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the Response Time Stimulus feature. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    protected void addResponseTimeStimulusPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_ResponseTimeSpecification_responseTimeStimulus_feature"),
-                this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_ResponseTimeSpecification_responseTimeStimulus_feature",
-                        "_UI_ResponseTimeSpecification_type"),
-                ModelsPackage.Literals.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS, true, false, true, null,
-                null, null));
     }
 
     /**
@@ -109,6 +93,37 @@ public class ResponseTimeSpecificationItemProvider extends ItemProviderAdapter i
                         "_UI_ResponseTimeSpecification_type"),
                 ModelsPackage.Literals.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_AGGREGATION_METHOD, true, false,
                 false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+    }
+
+    /**
+     * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate
+     * feature for an {@link org.eclipse.emf.edit.command.AddCommand},
+     * {@link org.eclipse.emf.edit.command.RemoveCommand} or
+     * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Collection<? extends EStructuralFeature> getChildrenFeatures(final Object object) {
+        if (this.childrenFeatures == null) {
+            super.getChildrenFeatures(object);
+            this.childrenFeatures.add(ModelsPackage.Literals.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS);
+        }
+        return this.childrenFeatures;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    protected EStructuralFeature getChildFeature(final Object object, final Object child) {
+        // Check the type of the specified child object and return the proper feature to use for
+        // adding (see {@link AddCommand}) it as a child.
+
+        return super.getChildFeature(object, child);
     }
 
     /**
@@ -151,6 +166,9 @@ public class ResponseTimeSpecificationItemProvider extends ItemProviderAdapter i
         case ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_AGGREGATION_METHOD:
             this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
+        case ModelsPackage.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS:
+            this.fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+            return;
         }
         super.notifyChanged(notification);
     }
@@ -164,6 +182,10 @@ public class ResponseTimeSpecificationItemProvider extends ItemProviderAdapter i
     @Override
     protected void collectNewChildDescriptors(final Collection<Object> newChildDescriptors, final Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
+
+        newChildDescriptors
+            .add(this.createChildParameter(ModelsPackage.Literals.RESPONSE_TIME_SPECIFICATION__RESPONSE_TIME_STIMULUS,
+                    StimuliFactory.eINSTANCE.createOperationResponseTime()));
     }
 
     /**

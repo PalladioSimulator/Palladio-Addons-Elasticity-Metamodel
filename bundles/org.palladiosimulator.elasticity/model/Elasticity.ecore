@@ -484,10 +484,11 @@
         <details key="documentation" value="The ResponseTimeSpecification groups settings regarding the observation of response times including the performed aggregation and the target response time a learning model should adhere to."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="responseTimeStimulus"
-          lowerBound="1" eType="#//triggers/stimuli/OperationResponseTime"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetResponseTime" eType="#//datatypes/PositiveDouble"/>
+          lowerBound="1" eType="#//triggers/stimuli/OperationResponseTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetResponseTime" lowerBound="1"
+          eType="#//datatypes/PositiveDouble"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseTimeAggregationMethod"
-          eType="#//triggers/AGGREGATIONMETHOD"/>
+          lowerBound="1" eType="#//triggers/AGGREGATIONMETHOD"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="datatypes" nsURI="http://palladiosimulator.org/Elasticity/Datatypes/1.0"

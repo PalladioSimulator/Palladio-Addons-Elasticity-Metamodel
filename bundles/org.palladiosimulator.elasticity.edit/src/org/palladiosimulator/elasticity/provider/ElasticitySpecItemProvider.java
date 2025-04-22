@@ -102,9 +102,9 @@ public class ElasticitySpecItemProvider extends EntityItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ElasticitySpec) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_ElasticitySpec_type")
-                : this.getString("_UI_ElasticitySpec_type") + " " + label;
+        final String name = ((ElasticitySpec) object).getEntityName();
+        return name == null || name.length() == 0 ? this.getString("_UI_ElasticitySpec_type")
+                : this.getString("_UI_ElasticitySpec_type") + " " + name;
     }
 
     /**

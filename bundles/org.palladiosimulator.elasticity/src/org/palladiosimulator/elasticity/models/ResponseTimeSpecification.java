@@ -48,10 +48,11 @@ public interface ResponseTimeSpecification extends CDOObject {
     /**
      * Sets the value of the
      * '{@link org.palladiosimulator.elasticity.models.ResponseTimeSpecification#getResponseTimeStimulus
-     * <em>Response Time Stimulus</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <em>Response Time Stimulus</em>}' containment reference. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      *
      * @param value
-     *            the new value of the '<em>Response Time Stimulus</em>' reference.
+     *            the new value of the '<em>Response Time Stimulus</em>' containment reference.
      * @see #getResponseTimeStimulus()
      * @generated
      */
@@ -91,7 +92,7 @@ public interface ResponseTimeSpecification extends CDOObject {
      * @see org.palladiosimulator.elasticity.triggers.AGGREGATIONMETHOD
      * @see #setResponseTimeAggregationMethod(AGGREGATIONMETHOD)
      * @see org.palladiosimulator.elasticity.models.ModelsPackage#getResponseTimeSpecification_ResponseTimeAggregationMethod()
-     * @model
+     * @model required="true"
      * @generated
      */
     AGGREGATIONMETHOD getResponseTimeAggregationMethod();
