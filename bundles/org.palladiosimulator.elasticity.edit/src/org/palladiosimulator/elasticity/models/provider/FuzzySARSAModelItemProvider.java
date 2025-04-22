@@ -9,7 +9,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.palladiosimulator.elasticity.models.FuzzySARSAModel;
 
 /**
  * This is the item provider adapter for a
@@ -58,12 +57,11 @@ public class FuzzySARSAModelItemProvider extends FuzzyLearningModelItemProvider 
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      *
-     * @generated
+     * @generated NOT
      */
     @Override
     public String getText(final Object object) {
-        final FuzzySARSAModel fuzzySARSAModel = (FuzzySARSAModel) object;
-        return this.getString("_UI_FuzzySARSAModel_type") + " " + fuzzySARSAModel.getInterval();
+        return this.getString("_UI_FuzzySARSAModel_type");
     }
 
     /**

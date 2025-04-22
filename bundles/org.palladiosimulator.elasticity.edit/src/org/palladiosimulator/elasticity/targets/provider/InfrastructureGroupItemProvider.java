@@ -111,12 +111,12 @@ public class InfrastructureGroupItemProvider extends TargetGroupItemProvider {
      * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
      *
-     * @generated
+     * @generated NOT
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InfrastructureGroup) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_InfrastructureGroup_type")
+        final String label = ((InfrastructureGroup) object).getEntityName();
+        return label == null || label.isBlank() ? this.getString("_UI_InfrastructureGroup_type")
                 : this.getString("_UI_InfrastructureGroup_type") + " " + label;
     }
 

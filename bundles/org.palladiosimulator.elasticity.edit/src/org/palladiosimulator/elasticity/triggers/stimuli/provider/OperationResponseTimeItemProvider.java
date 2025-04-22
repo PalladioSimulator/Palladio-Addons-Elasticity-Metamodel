@@ -85,13 +85,10 @@ public class OperationResponseTimeItemProvider extends SourceInterfaceStimulusIt
     public String getText(final Object object) {
         final OperationResponseTime operationResponseTime = (OperationResponseTime) object;
         final OperationSignature operationSignature = operationResponseTime.getOperationSignature();
-        // TODO this should ideally show the actual name of the operation response time - however i
-        // only got this to spit out "aName" at most (even if an entityName exists for the
-        // referenced operation!)
         return operationSignature != null
-                ? this.getString("_UI_OperationResponseTime_type") + " " + operationSignature.getId()
+                ? this.getString("_UI_OperationResponseTime_type") + " " + operationSignature.getEntityName()
                         + this.getRoleText(object)
-                : this.getString("_UI_OperationResponseTime_type");
+                : this.getString("_UI_OperationResponseTime_type") + this.getRoleText(object);
     }
 
     /**
