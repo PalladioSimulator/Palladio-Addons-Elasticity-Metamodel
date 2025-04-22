@@ -12,14 +12,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-
+import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
+import org.palladiosimulator.scalablepcmgroups.TargetGroup;
 import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
 
 /**
@@ -29,13 +24,7 @@ import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
  * @generated
  */
 public class TargetGroupItemProvider 
-    extends ItemProviderAdapter
-    implements
-        IEditingDomainItemProvider,
-        IStructuredItemContentProvider,
-        ITreeItemContentProvider,
-        IItemLabelProvider,
-        IItemPropertySource {
+    extends EntityItemProvider {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -92,7 +81,10 @@ public class TargetGroupItemProvider
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_TargetGroup_type");
+        String label = ((TargetGroup)object).getId();
+        return label == null || label.length() == 0 ?
+            getString("_UI_TargetGroup_type") :
+            getString("_UI_TargetGroup_type") + " " + label;
     }
 
 

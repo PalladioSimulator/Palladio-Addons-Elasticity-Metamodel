@@ -3,10 +3,8 @@
 package org.palladiosimulator.scalablepcmgroups;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
-
 import org.palladiosimulator.elasticity.ScalingPolicy;
+import org.palladiosimulator.pcm.core.entity.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +22,7 @@ import org.palladiosimulator.elasticity.ScalingPolicy;
  * @model abstract="true"
  * @generated
  */
-public interface TargetGroup extends EObject {
+public interface TargetGroup extends Entity {
     /**
      * Returns the value of the '<em><b>Enacted Policies</b></em>' reference list.
      * The list contents are of type {@link org.palladiosimulator.elasticity.ScalingPolicy}.

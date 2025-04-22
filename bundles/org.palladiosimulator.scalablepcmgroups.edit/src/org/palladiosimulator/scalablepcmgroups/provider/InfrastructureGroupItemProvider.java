@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
+import org.palladiosimulator.scalablepcmgroups.InfrastructureGroup;
 import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
 
 /**
@@ -157,7 +157,10 @@ public class InfrastructureGroupItemProvider extends TargetGroupItemProvider {
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_InfrastructureGroup_type");
+        String label = ((InfrastructureGroup)object).getId();
+        return label == null || label.length() == 0 ?
+            getString("_UI_InfrastructureGroup_type") :
+            getString("_UI_InfrastructureGroup_type") + " " + label;
     }
 
 

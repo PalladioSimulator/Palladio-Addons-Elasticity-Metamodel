@@ -2,11 +2,15 @@
  */
 package org.palladiosimulator.scalablepcmgroups.util;
 
+import de.uka.ipd.sdq.identifier.Identifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
+import org.palladiosimulator.pcm.PCMBaseClass;
+import org.palladiosimulator.pcm.PCMClass;
+import org.palladiosimulator.pcm.core.entity.Entity;
+import org.palladiosimulator.pcm.core.entity.NamedElement;
 import org.palladiosimulator.scalablepcmgroups.*;
 
 /**
@@ -69,12 +73,22 @@ public class scalablepcmgroupsSwitch<T> extends Switch<T> {
             case scalablepcmgroupsPackage.SCALABLE_PCM_GROUPS: {
                 ScalablePCMGroups scalablePCMGroups = (ScalablePCMGroups)theEObject;
                 T result = caseScalablePCMGroups(scalablePCMGroups);
+                if (result == null) result = caseEntity(scalablePCMGroups);
+                if (result == null) result = caseIdentifier(scalablePCMGroups);
+                if (result == null) result = caseNamedElement(scalablePCMGroups);
+                if (result == null) result = casePCMBaseClass(scalablePCMGroups);
+                if (result == null) result = casePCMClass(scalablePCMGroups);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
             case scalablepcmgroupsPackage.TARGET_GROUP: {
                 TargetGroup targetGroup = (TargetGroup)theEObject;
                 T result = caseTargetGroup(targetGroup);
+                if (result == null) result = caseEntity(targetGroup);
+                if (result == null) result = caseIdentifier(targetGroup);
+                if (result == null) result = caseNamedElement(targetGroup);
+                if (result == null) result = casePCMBaseClass(targetGroup);
+                if (result == null) result = casePCMClass(targetGroup);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -82,6 +96,11 @@ public class scalablepcmgroupsSwitch<T> extends Switch<T> {
                 InfrastructureGroup infrastructureGroup = (InfrastructureGroup)theEObject;
                 T result = caseInfrastructureGroup(infrastructureGroup);
                 if (result == null) result = caseTargetGroup(infrastructureGroup);
+                if (result == null) result = caseEntity(infrastructureGroup);
+                if (result == null) result = caseIdentifier(infrastructureGroup);
+                if (result == null) result = caseNamedElement(infrastructureGroup);
+                if (result == null) result = casePCMBaseClass(infrastructureGroup);
+                if (result == null) result = casePCMClass(infrastructureGroup);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -89,6 +108,11 @@ public class scalablepcmgroupsSwitch<T> extends Switch<T> {
                 ServiceGroup serviceGroup = (ServiceGroup)theEObject;
                 T result = caseServiceGroup(serviceGroup);
                 if (result == null) result = caseTargetGroup(serviceGroup);
+                if (result == null) result = caseEntity(serviceGroup);
+                if (result == null) result = caseIdentifier(serviceGroup);
+                if (result == null) result = caseNamedElement(serviceGroup);
+                if (result == null) result = casePCMBaseClass(serviceGroup);
+                if (result == null) result = casePCMClass(serviceGroup);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -96,6 +120,11 @@ public class scalablepcmgroupsSwitch<T> extends Switch<T> {
                 CompetingConsumersGroup competingConsumersGroup = (CompetingConsumersGroup)theEObject;
                 T result = caseCompetingConsumersGroup(competingConsumersGroup);
                 if (result == null) result = caseTargetGroup(competingConsumersGroup);
+                if (result == null) result = caseEntity(competingConsumersGroup);
+                if (result == null) result = caseIdentifier(competingConsumersGroup);
+                if (result == null) result = caseNamedElement(competingConsumersGroup);
+                if (result == null) result = casePCMBaseClass(competingConsumersGroup);
+                if (result == null) result = casePCMClass(competingConsumersGroup);
                 if (result == null) result = defaultCase(theEObject);
                 return result;
             }
@@ -196,6 +225,81 @@ public class scalablepcmgroupsSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseQueue(Queue object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseIdentifier(Identifier object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>PCM Class</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>PCM Class</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePCMClass(PCMClass object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>PCM Base Class</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>PCM Base Class</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T casePCMBaseClass(PCMBaseClass object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseNamedElement(NamedElement object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseEntity(Entity object) {
         return null;
     }
 

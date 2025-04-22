@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
+import org.palladiosimulator.scalablepcmgroups.ServiceGroup;
 import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
 
 /**
@@ -134,7 +134,10 @@ public class ServiceGroupItemProvider extends TargetGroupItemProvider {
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_ServiceGroup_type");
+        String label = ((ServiceGroup)object).getId();
+        return label == null || label.length() == 0 ?
+            getString("_UI_ServiceGroup_type") :
+            getString("_UI_ServiceGroup_type") + " " + label;
     }
 
 

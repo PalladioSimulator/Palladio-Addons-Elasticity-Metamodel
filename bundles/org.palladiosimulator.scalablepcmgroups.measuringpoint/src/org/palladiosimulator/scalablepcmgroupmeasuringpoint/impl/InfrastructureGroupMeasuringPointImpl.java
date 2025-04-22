@@ -3,6 +3,8 @@
 package org.palladiosimulator.scalablepcmgroupmeasuringpoint.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.palladiosimulator.commons.emfutils.EMFLoadHelper;
 import org.palladiosimulator.edp2.models.measuringpoint.impl.MeasuringPointImpl;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupMeasuringPoint;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.InfrastructureGroupReference;
@@ -176,6 +178,51 @@ public class InfrastructureGroupMeasuringPointImpl extends MeasuringPointImpl
             }
         }
         return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated NOT
+     */
+    @Override
+    public String getStringRepresentation() {
+        if (this.getInfrastructureGroup() == null) {
+            return "";
+        }
+
+        if (this.getInfrastructureGroup()
+            .getEntityName() == null) {
+            return super.getStringRepresentation();
+        }
+
+        EcoreUtil.resolveAll(this);
+
+        final StringBuilder result = new StringBuilder();
+
+        result.append("Elastic Infrastructure ");
+        result.append(this.getInfrastructureGroup()
+            .getEntityName());
+        result.append(" [");
+        result.append(this.getInfrastructureGroup()
+            .getId());
+        result.append("]");
+
+        return result.toString();
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated NOT
+     */
+    @Override
+    public String getResourceURIRepresentation() {
+        if (this.getInfrastructureGroup() == null) {
+            return "";
+        }
+        EcoreUtil.resolveAll(this);
+        return EMFLoadHelper.getResourceURI(this.getInfrastructureGroup());
     }
 
 } // InfrastructureGroupMeasuringPointImpl

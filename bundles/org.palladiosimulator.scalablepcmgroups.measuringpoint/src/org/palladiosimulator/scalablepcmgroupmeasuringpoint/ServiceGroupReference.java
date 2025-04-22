@@ -3,6 +3,7 @@
 package org.palladiosimulator.scalablepcmgroupmeasuringpoint;
 
 import org.eclipse.emf.ecore.EObject;
+import org.palladiosimulator.scalablepcmgroups.ServiceGroup;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Service Group
@@ -26,12 +27,12 @@ public interface ServiceGroupReference extends EObject {
      * <!-- end-user-doc -->
      *
      * @return the value of the '<em>Service Group</em>' reference.
-     * @see #setServiceGroup(org.palladiosimulator.scalablepcmgroups.ServiceGroup)
+     * @see #setServiceGroup(ServiceGroup)
      * @see org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage#getServiceGroupReference_ServiceGroup()
      * @model required="true"
      * @generated
      */
-    org.palladiosimulator.scalablepcmgroups.ServiceGroup getServiceGroup();
+    ServiceGroup getServiceGroup();
 
     /**
      * Sets the value of the
@@ -43,6 +44,6 @@ public interface ServiceGroupReference extends EObject {
      * @see #getServiceGroup()
      * @generated
      */
-    void setServiceGroup(org.palladiosimulator.scalablepcmgroups.ServiceGroup value);
+    void setServiceGroup(ServiceGroup value);
 
 } // ServiceGroupReference

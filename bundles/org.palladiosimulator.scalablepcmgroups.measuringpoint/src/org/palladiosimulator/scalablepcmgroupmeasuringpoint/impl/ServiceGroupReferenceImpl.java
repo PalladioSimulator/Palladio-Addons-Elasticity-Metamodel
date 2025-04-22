@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ServiceGroupReference;
+import org.palladiosimulator.scalablepcmgroups.ServiceGroup;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Service Group
@@ -56,8 +57,8 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
      * @generated
      */
     @Override
-    public org.palladiosimulator.scalablepcmgroups.ServiceGroup getServiceGroup() {
-        return (org.palladiosimulator.scalablepcmgroups.ServiceGroup) this.eDynamicGet(
+    public ServiceGroup getServiceGroup() {
+        return (ServiceGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, true, true);
     }
@@ -67,8 +68,8 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
      *
      * @generated
      */
-    public org.palladiosimulator.scalablepcmgroups.ServiceGroup basicGetServiceGroup() {
-        return (org.palladiosimulator.scalablepcmgroups.ServiceGroup) this.eDynamicGet(
+    public ServiceGroup basicGetServiceGroup() {
+        return (ServiceGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, false, true);
     }
@@ -79,7 +80,7 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
      * @generated
      */
     @Override
-    public void setServiceGroup(final org.palladiosimulator.scalablepcmgroups.ServiceGroup newServiceGroup) {
+    public void setServiceGroup(final ServiceGroup newServiceGroup) {
         this.eDynamicSet(ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, newServiceGroup);
     }
@@ -110,7 +111,7 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
-            this.setServiceGroup((org.palladiosimulator.scalablepcmgroups.ServiceGroup) newValue);
+            this.setServiceGroup((ServiceGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -125,7 +126,7 @@ public abstract class ServiceGroupReferenceImpl extends MinimalEObjectImpl.Conta
     public void eUnset(final int featureID) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_REFERENCE__SERVICE_GROUP:
-            this.setServiceGroup((org.palladiosimulator.scalablepcmgroups.ServiceGroup) null);
+            this.setServiceGroup((ServiceGroup) null);
             return;
         }
         super.eUnset(featureID);

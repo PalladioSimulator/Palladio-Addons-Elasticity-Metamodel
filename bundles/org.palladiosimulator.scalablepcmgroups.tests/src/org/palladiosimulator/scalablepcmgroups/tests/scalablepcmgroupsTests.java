@@ -31,6 +31,10 @@ public class scalablepcmgroupsTests extends TestSuite {
      */
     public static Test suite() {
         TestSuite suite = new scalablepcmgroupsTests("scalablepcmgroups Tests");
+        suite.addTestSuite(ScalablePCMGroupsTest.class);
+        suite.addTestSuite(InfrastructureGroupTest.class);
+        suite.addTestSuite(ServiceGroupTest.class);
+        suite.addTestSuite(CompetingConsumersGroupTest.class);
         return suite;
     }
 

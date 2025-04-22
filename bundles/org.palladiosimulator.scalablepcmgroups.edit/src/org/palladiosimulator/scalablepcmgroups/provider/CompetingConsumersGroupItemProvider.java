@@ -169,7 +169,10 @@ public class CompetingConsumersGroupItemProvider extends TargetGroupItemProvider
      */
     @Override
     public String getText(Object object) {
-        return getString("_UI_CompetingConsumersGroup_type");
+        String label = ((CompetingConsumersGroup)object).getId();
+        return label == null || label.length() == 0 ?
+            getString("_UI_CompetingConsumersGroup_type") :
+            getString("_UI_CompetingConsumersGroup_type") + " " + label;
     }
 
 

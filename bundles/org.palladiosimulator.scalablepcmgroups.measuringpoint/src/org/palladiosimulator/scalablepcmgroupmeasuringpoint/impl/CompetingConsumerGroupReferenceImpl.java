@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.CompetingConsumerGroupReference;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage;
+import org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Competing Consumer Group
@@ -57,8 +58,8 @@ public abstract class CompetingConsumerGroupReferenceImpl extends MinimalEObject
      * @generated
      */
     @Override
-    public org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup getCompetingConsumerGroup() {
-        return (org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) this.eDynamicGet(
+    public CompetingConsumersGroup getCompetingConsumerGroup() {
+        return (CompetingConsumersGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
                 true, true);
@@ -69,8 +70,8 @@ public abstract class CompetingConsumerGroupReferenceImpl extends MinimalEObject
      *
      * @generated
      */
-    public org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup basicGetCompetingConsumerGroup() {
-        return (org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) this.eDynamicGet(
+    public CompetingConsumersGroup basicGetCompetingConsumerGroup() {
+        return (CompetingConsumersGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
                 false, true);
@@ -82,8 +83,7 @@ public abstract class CompetingConsumerGroupReferenceImpl extends MinimalEObject
      * @generated
      */
     @Override
-    public void setCompetingConsumerGroup(
-            final org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup newCompetingConsumerGroup) {
+    public void setCompetingConsumerGroup(final CompetingConsumersGroup newCompetingConsumerGroup) {
         this.eDynamicSet(
                 ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP,
@@ -116,7 +116,7 @@ public abstract class CompetingConsumerGroupReferenceImpl extends MinimalEObject
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP:
-            this.setCompetingConsumerGroup((org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) newValue);
+            this.setCompetingConsumerGroup((CompetingConsumersGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -131,7 +131,7 @@ public abstract class CompetingConsumerGroupReferenceImpl extends MinimalEObject
     public void eUnset(final int featureID) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.COMPETING_CONSUMER_GROUP_REFERENCE__COMPETING_CONSUMER_GROUP:
-            this.setCompetingConsumerGroup((org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup) null);
+            this.setCompetingConsumerGroup((CompetingConsumersGroup) null);
             return;
         }
         super.eUnset(featureID);

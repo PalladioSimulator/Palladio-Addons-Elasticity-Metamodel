@@ -7,6 +7,7 @@ import org.palladiosimulator.edp2.models.measuringpoint.impl.MeasuringPointImpl;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ScalablePCMGroupMeasuringPointPackage;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ServiceGroupMeasuringPoint;
 import org.palladiosimulator.scalablepcmgroupmeasuringpoint.ServiceGroupReference;
+import org.palladiosimulator.scalablepcmgroups.ServiceGroup;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Service Group Measuring
@@ -47,8 +48,8 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
      * @generated
      */
     @Override
-    public org.palladiosimulator.scalablepcmgroups.ServiceGroup getServiceGroup() {
-        return (org.palladiosimulator.scalablepcmgroups.ServiceGroup) this.eDynamicGet(
+    public ServiceGroup getServiceGroup() {
+        return (ServiceGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, true, true);
     }
@@ -58,8 +59,8 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
      *
      * @generated
      */
-    public org.palladiosimulator.scalablepcmgroups.ServiceGroup basicGetServiceGroup() {
-        return (org.palladiosimulator.scalablepcmgroups.ServiceGroup) this.eDynamicGet(
+    public ServiceGroup basicGetServiceGroup() {
+        return (ServiceGroup) this.eDynamicGet(
                 ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, false, true);
     }
@@ -70,7 +71,7 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
      * @generated
      */
     @Override
-    public void setServiceGroup(final org.palladiosimulator.scalablepcmgroups.ServiceGroup newServiceGroup) {
+    public void setServiceGroup(final ServiceGroup newServiceGroup) {
         this.eDynamicSet(ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP,
                 ScalablePCMGroupMeasuringPointPackage.Literals.SERVICE_GROUP_REFERENCE__SERVICE_GROUP, newServiceGroup);
     }
@@ -101,7 +102,7 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP:
-            this.setServiceGroup((org.palladiosimulator.scalablepcmgroups.ServiceGroup) newValue);
+            this.setServiceGroup((ServiceGroup) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -116,7 +117,7 @@ public class ServiceGroupMeasuringPointImpl extends MeasuringPointImpl implement
     public void eUnset(final int featureID) {
         switch (featureID) {
         case ScalablePCMGroupMeasuringPointPackage.SERVICE_GROUP_MEASURING_POINT__SERVICE_GROUP:
-            this.setServiceGroup((org.palladiosimulator.scalablepcmgroups.ServiceGroup) null);
+            this.setServiceGroup((ServiceGroup) null);
             return;
         }
         super.eUnset(featureID);

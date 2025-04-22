@@ -7,13 +7,10 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.palladiosimulator.elasticity.ScalingPolicy;
-
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 import org.palladiosimulator.scalablepcmgroups.TargetGroup;
 import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
 
@@ -30,7 +27,7 @@ import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
  *
  * @generated
  */
-public abstract class TargetGroupImpl extends MinimalEObjectImpl.Container implements TargetGroup {
+public abstract class TargetGroupImpl extends EntityImpl implements TargetGroup {
     /**
      * The cached value of the '{@link #getEnactedPolicies() <em>Enacted Policies</em>}' reference list.
      * <!-- begin-user-doc -->

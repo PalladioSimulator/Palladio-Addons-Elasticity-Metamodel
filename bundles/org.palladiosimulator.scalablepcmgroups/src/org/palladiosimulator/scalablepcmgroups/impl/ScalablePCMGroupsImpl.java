@@ -13,11 +13,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.elasticity.ScalingPolicy;
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 import org.palladiosimulator.scalablepcmgroups.ScalablePCMGroups;
 import org.palladiosimulator.scalablepcmgroups.TargetGroup;
 import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
@@ -36,7 +35,7 @@ import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
  *
  * @generated
  */
-public class ScalablePCMGroupsImpl extends MinimalEObjectImpl.Container implements ScalablePCMGroups {
+public class ScalablePCMGroupsImpl extends EntityImpl implements ScalablePCMGroups {
     /**
      * The cached value of the '{@link #getEnactedPolicy() <em>Enacted Policy</em>}' reference.
      * <!-- begin-user-doc -->
