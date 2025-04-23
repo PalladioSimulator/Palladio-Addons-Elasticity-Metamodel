@@ -3,18 +3,18 @@
  */
 package org.palladiosimulator.elasticity.targets.tests;
 
-import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
+import org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget;
 import org.palladiosimulator.elasticity.targets.TargetsFactory;
 
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc --> A test case for the model object '<em><b>Competing Consumers
- * Group</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> A test case for the model object '<em><b>Competing Consumers Group
+ * Target</b></em>'. <!-- end-user-doc -->
  *
  * @generated
  */
-public class CompetingConsumersGroupTest extends TargetGroupTest {
+public class CompetingConsumersGroupTargetTest extends TargetGroupTest {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -22,28 +22,28 @@ public class CompetingConsumersGroupTest extends TargetGroupTest {
      * @generated
      */
     public static void main(final String[] args) {
-        TestRunner.run(CompetingConsumersGroupTest.class);
+        TestRunner.run(CompetingConsumersGroupTargetTest.class);
     }
 
     /**
-     * Constructs a new Competing Consumers Group test case with the given name. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * Constructs a new Competing Consumers Group Target test case with the given name. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    public CompetingConsumersGroupTest(final String name) {
+    public CompetingConsumersGroupTargetTest(final String name) {
         super(name);
     }
 
     /**
-     * Returns the fixture for this Competing Consumers Group test case. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns the fixture for this Competing Consumers Group Target test case. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
-    protected CompetingConsumersGroup getFixture() {
-        return (CompetingConsumersGroup) this.fixture;
+    protected CompetingConsumersGroupTarget getFixture() {
+        return (CompetingConsumersGroupTarget) this.fixture;
     }
 
     /**
@@ -54,7 +54,7 @@ public class CompetingConsumersGroupTest extends TargetGroupTest {
      */
     @Override
     protected void setUp() throws Exception {
-        this.setFixture(TargetsFactory.eINSTANCE.createCompetingConsumersGroup());
+        this.setFixture(TargetsFactory.eINSTANCE.createCompetingConsumersGroupTarget());
     }
 
     /**
@@ -68,4 +68,4 @@ public class CompetingConsumersGroupTest extends TargetGroupTest {
         this.setFixture(null);
     }
 
-} // CompetingConsumersGroupTest
+} // CompetingConsumersGroupTargetTest

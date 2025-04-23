@@ -3,7 +3,7 @@
 package org.palladiosimulator.scalablepcmgroupmeasuringpoint;
 
 import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
+import org.palladiosimulator.scalablepcmgroups.CompetingConsumersGroup;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Competing Consumer Group

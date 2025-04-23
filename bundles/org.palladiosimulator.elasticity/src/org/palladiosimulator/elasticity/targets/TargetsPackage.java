@@ -101,14 +101,14 @@ public interface TargetsPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupImpl
-     * <em>Infrastructure Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupTargetImpl
+     * <em>Infrastructure Group Target</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @see org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupImpl
-     * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getInfrastructureGroup()
+     * @see org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupTargetImpl
+     * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getInfrastructureGroupTarget()
      * @generated
      */
-    int INFRASTRUCTURE_GROUP = 1;
+    int INFRASTRUCTURE_GROUP_TARGET = 1;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -117,7 +117,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INFRASTRUCTURE_GROUP__ID = TARGET_GROUP__ID;
+    int INFRASTRUCTURE_GROUP_TARGET__ID = TARGET_GROUP__ID;
 
     /**
      * The feature id for the '<em><b>Entity Name</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -126,7 +126,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INFRASTRUCTURE_GROUP__ENTITY_NAME = TARGET_GROUP__ENTITY_NAME;
+    int INFRASTRUCTURE_GROUP_TARGET__ENTITY_NAME = TARGET_GROUP__ENTITY_NAME;
 
     /**
      * The feature id for the '<em><b>Target Constraints</b></em>' containment reference list. <!--
@@ -135,25 +135,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INFRASTRUCTURE_GROUP__TARGET_CONSTRAINTS = TARGET_GROUP__TARGET_CONSTRAINTS;
-
-    /**
-     * The feature id for the '<em><b>PCM Resource Environment</b></em>' reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int INFRASTRUCTURE_GROUP__PCM_RESOURCE_ENVIRONMENT = TARGET_GROUP_FEATURE_COUNT + 0;
-
-    /**
-     * The feature id for the '<em><b>Unit</b></em>' reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int INFRASTRUCTURE_GROUP__UNIT = TARGET_GROUP_FEATURE_COUNT + 1;
+    int INFRASTRUCTURE_GROUP_TARGET__TARGET_CONSTRAINTS = TARGET_GROUP__TARGET_CONSTRAINTS;
 
     /**
      * The feature id for the '<em><b>Infrastructure Group</b></em>' reference. <!-- begin-user-doc
@@ -162,27 +144,27 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP = TARGET_GROUP_FEATURE_COUNT + 2;
+    int INFRASTRUCTURE_GROUP_TARGET__INFRASTRUCTURE_GROUP = TARGET_GROUP_FEATURE_COUNT + 0;
 
     /**
-     * The number of structural features of the '<em>Infrastructure Group</em>' class. <!--
+     * The number of structural features of the '<em>Infrastructure Group Target</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int INFRASTRUCTURE_GROUP_FEATURE_COUNT = TARGET_GROUP_FEATURE_COUNT + 3;
+    int INFRASTRUCTURE_GROUP_TARGET_FEATURE_COUNT = TARGET_GROUP_FEATURE_COUNT + 1;
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl <em>Service
-     * Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupTargetImpl <em>Service
+     * Group Target</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @see org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl
-     * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getServiceGroup()
+     * @see org.palladiosimulator.elasticity.targets.impl.ServiceGroupTargetImpl
+     * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getServiceGroupTarget()
      * @generated
      */
-    int SERVICE_GROUP = 2;
+    int SERVICE_GROUP_TARGET = 2;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -191,7 +173,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SERVICE_GROUP__ID = TARGET_GROUP__ID;
+    int SERVICE_GROUP_TARGET__ID = TARGET_GROUP__ID;
 
     /**
      * The feature id for the '<em><b>Entity Name</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -200,7 +182,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SERVICE_GROUP__ENTITY_NAME = TARGET_GROUP__ENTITY_NAME;
+    int SERVICE_GROUP_TARGET__ENTITY_NAME = TARGET_GROUP__ENTITY_NAME;
 
     /**
      * The feature id for the '<em><b>Target Constraints</b></em>' containment reference list. <!--
@@ -209,16 +191,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SERVICE_GROUP__TARGET_CONSTRAINTS = TARGET_GROUP__TARGET_CONSTRAINTS;
-
-    /**
-     * The feature id for the '<em><b>Unit Assembly</b></em>' reference. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int SERVICE_GROUP__UNIT_ASSEMBLY = TARGET_GROUP_FEATURE_COUNT + 0;
+    int SERVICE_GROUP_TARGET__TARGET_CONSTRAINTS = TARGET_GROUP__TARGET_CONSTRAINTS;
 
     /**
      * The feature id for the '<em><b>Service Group</b></em>' reference. <!-- begin-user-doc -->
@@ -227,27 +200,28 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int SERVICE_GROUP__SERVICE_GROUP = TARGET_GROUP_FEATURE_COUNT + 1;
+    int SERVICE_GROUP_TARGET__SERVICE_GROUP = TARGET_GROUP_FEATURE_COUNT + 0;
 
     /**
-     * The number of structural features of the '<em>Service Group</em>' class. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
+     * The number of structural features of the '<em>Service Group Target</em>' class. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int SERVICE_GROUP_FEATURE_COUNT = TARGET_GROUP_FEATURE_COUNT + 2;
+    int SERVICE_GROUP_TARGET_FEATURE_COUNT = TARGET_GROUP_FEATURE_COUNT + 1;
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl
-     * <em>Competing Consumers Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupTargetImpl
+     * <em>Competing Consumers Group Target</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
      *
-     * @see org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl
-     * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getCompetingConsumersGroup()
+     * @see org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupTargetImpl
+     * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getCompetingConsumersGroupTarget()
      * @generated
      */
-    int COMPETING_CONSUMERS_GROUP = 3;
+    int COMPETING_CONSUMERS_GROUP_TARGET = 3;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -256,7 +230,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int COMPETING_CONSUMERS_GROUP__ID = TARGET_GROUP__ID;
+    int COMPETING_CONSUMERS_GROUP_TARGET__ID = TARGET_GROUP__ID;
 
     /**
      * The feature id for the '<em><b>Entity Name</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -265,7 +239,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int COMPETING_CONSUMERS_GROUP__ENTITY_NAME = TARGET_GROUP__ENTITY_NAME;
+    int COMPETING_CONSUMERS_GROUP_TARGET__ENTITY_NAME = TARGET_GROUP__ENTITY_NAME;
 
     /**
      * The feature id for the '<em><b>Target Constraints</b></em>' containment reference list. <!--
@@ -274,16 +248,7 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int COMPETING_CONSUMERS_GROUP__TARGET_CONSTRAINTS = TARGET_GROUP__TARGET_CONSTRAINTS;
-
-    /**
-     * The feature id for the '<em><b>Unit Assembly</b></em>' reference. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int COMPETING_CONSUMERS_GROUP__UNIT_ASSEMBLY = TARGET_GROUP_FEATURE_COUNT + 0;
+    int COMPETING_CONSUMERS_GROUP_TARGET__TARGET_CONSTRAINTS = TARGET_GROUP__TARGET_CONSTRAINTS;
 
     /**
      * The feature id for the '<em><b>Competing Consumers Group</b></em>' reference. <!--
@@ -292,16 +257,16 @@ public interface TargetsPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP = TARGET_GROUP_FEATURE_COUNT + 1;
+    int COMPETING_CONSUMERS_GROUP_TARGET__COMPETING_CONSUMERS_GROUP = TARGET_GROUP_FEATURE_COUNT + 0;
 
     /**
-     * The number of structural features of the '<em>Competing Consumers Group</em>' class. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * The number of structural features of the '<em>Competing Consumers Group Target</em>' class.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int COMPETING_CONSUMERS_GROUP_FEATURE_COUNT = TARGET_GROUP_FEATURE_COUNT + 2;
+    int COMPETING_CONSUMERS_GROUP_TARGET_FEATURE_COUNT = TARGET_GROUP_FEATURE_COUNT + 1;
 
     /**
      * Returns the meta object for class
@@ -328,120 +293,72 @@ public interface TargetsPackage extends EPackage {
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup <em>Infrastructure
-     * Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget <em>Infrastructure
+     * Group Target</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return the meta object for class '<em>Infrastructure Group</em>'.
-     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroup
+     * @return the meta object for class '<em>Infrastructure Group Target</em>'.
+     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget
      * @generated
      */
-    EClass getInfrastructureGroup();
+    EClass getInfrastructureGroupTarget();
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup#getPCM_ResourceEnvironment
-     * <em>PCM Resource Environment</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the reference '<em>PCM Resource Environment</em>'.
-     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroup#getPCM_ResourceEnvironment()
-     * @see #getInfrastructureGroup()
-     * @generated
-     */
-    EReference getInfrastructureGroup_PCM_ResourceEnvironment();
-
-    /**
-     * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup#getUnit <em>Unit</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the reference '<em>Unit</em>'.
-     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroup#getUnit()
-     * @see #getInfrastructureGroup()
-     * @generated
-     */
-    EReference getInfrastructureGroup_Unit();
-
-    /**
-     * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup#getInfrastructureGroup
+     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget#getInfrastructureGroup
      * <em>Infrastructure Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Infrastructure Group</em>'.
-     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroup#getInfrastructureGroup()
-     * @see #getInfrastructureGroup()
+     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget#getInfrastructureGroup()
+     * @see #getInfrastructureGroupTarget()
      * @generated
      */
-    EReference getInfrastructureGroup_InfrastructureGroup();
+    EReference getInfrastructureGroupTarget_InfrastructureGroup();
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroup <em>Service Group</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroupTarget <em>Service Group
+     * Target</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return the meta object for class '<em>Service Group</em>'.
-     * @see org.palladiosimulator.elasticity.targets.ServiceGroup
+     * @return the meta object for class '<em>Service Group Target</em>'.
+     * @see org.palladiosimulator.elasticity.targets.ServiceGroupTarget
      * @generated
      */
-    EClass getServiceGroup();
+    EClass getServiceGroupTarget();
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroup#getUnitAssembly <em>Unit
-     * Assembly</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the reference '<em>Unit Assembly</em>'.
-     * @see org.palladiosimulator.elasticity.targets.ServiceGroup#getUnitAssembly()
-     * @see #getServiceGroup()
-     * @generated
-     */
-    EReference getServiceGroup_UnitAssembly();
-
-    /**
-     * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroup#getServiceGroup <em>Service
-     * Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroupTarget#getServiceGroup
+     * <em>Service Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Service Group</em>'.
-     * @see org.palladiosimulator.elasticity.targets.ServiceGroup#getServiceGroup()
-     * @see #getServiceGroup()
+     * @see org.palladiosimulator.elasticity.targets.ServiceGroupTarget#getServiceGroup()
+     * @see #getServiceGroupTarget()
      * @generated
      */
-    EReference getServiceGroup_ServiceGroup();
+    EReference getServiceGroupTarget_ServiceGroup();
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup <em>Competing
-     * Consumers Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget <em>Competing
+     * Consumers Group Target</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
-     * @return the meta object for class '<em>Competing Consumers Group</em>'.
-     * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroup
+     * @return the meta object for class '<em>Competing Consumers Group Target</em>'.
+     * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget
      * @generated
      */
-    EClass getCompetingConsumersGroup();
+    EClass getCompetingConsumersGroupTarget();
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getUnitAssembly
-     * <em>Unit Assembly</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for the reference '<em>Unit Assembly</em>'.
-     * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getUnitAssembly()
-     * @see #getCompetingConsumersGroup()
-     * @generated
-     */
-    EReference getCompetingConsumersGroup_UnitAssembly();
-
-    /**
-     * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getCompetingConsumersGroup
+     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget#getCompetingConsumersGroup
      * <em>Competing Consumers Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the meta object for the reference '<em>Competing Consumers Group</em>'.
-     * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroup#getCompetingConsumersGroup()
-     * @see #getCompetingConsumersGroup()
+     * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget#getCompetingConsumersGroup()
+     * @see #getCompetingConsumersGroupTarget()
      * @generated
      */
-    EReference getCompetingConsumersGroup_CompetingConsumersGroup();
+    EReference getCompetingConsumersGroupTarget_CompetingConsumersGroup();
 
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
@@ -486,31 +403,15 @@ public interface TargetsPackage extends EPackage {
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupImpl
-         * <em>Infrastructure Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupTargetImpl
+         * <em>Infrastructure Group Target</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc
+         * -->
          *
-         * @see org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupImpl
-         * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getInfrastructureGroup()
+         * @see org.palladiosimulator.elasticity.targets.impl.InfrastructureGroupTargetImpl
+         * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getInfrastructureGroupTarget()
          * @generated
          */
-        EClass INFRASTRUCTURE_GROUP = eINSTANCE.getInfrastructureGroup();
-
-        /**
-         * The meta object literal for the '<em><b>PCM Resource Environment</b></em>' reference
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference INFRASTRUCTURE_GROUP__PCM_RESOURCE_ENVIRONMENT = eINSTANCE
-            .getInfrastructureGroup_PCM_ResourceEnvironment();
-
-        /**
-         * The meta object literal for the '<em><b>Unit</b></em>' reference feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference INFRASTRUCTURE_GROUP__UNIT = eINSTANCE.getInfrastructureGroup_Unit();
+        EClass INFRASTRUCTURE_GROUP_TARGET = eINSTANCE.getInfrastructureGroupTarget();
 
         /**
          * The meta object literal for the '<em><b>Infrastructure Group</b></em>' reference feature.
@@ -518,26 +419,19 @@ public interface TargetsPackage extends EPackage {
          *
          * @generated
          */
-        EReference INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP = eINSTANCE.getInfrastructureGroup_InfrastructureGroup();
+        EReference INFRASTRUCTURE_GROUP_TARGET__INFRASTRUCTURE_GROUP = eINSTANCE
+            .getInfrastructureGroupTarget_InfrastructureGroup();
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl <em>Service
-         * Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.targets.impl.ServiceGroupTargetImpl <em>Service
+         * Group Target</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          *
-         * @see org.palladiosimulator.elasticity.targets.impl.ServiceGroupImpl
-         * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getServiceGroup()
+         * @see org.palladiosimulator.elasticity.targets.impl.ServiceGroupTargetImpl
+         * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getServiceGroupTarget()
          * @generated
          */
-        EClass SERVICE_GROUP = eINSTANCE.getServiceGroup();
-
-        /**
-         * The meta object literal for the '<em><b>Unit Assembly</b></em>' reference feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference SERVICE_GROUP__UNIT_ASSEMBLY = eINSTANCE.getServiceGroup_UnitAssembly();
+        EClass SERVICE_GROUP_TARGET = eINSTANCE.getServiceGroupTarget();
 
         /**
          * The meta object literal for the '<em><b>Service Group</b></em>' reference feature. <!--
@@ -545,26 +439,19 @@ public interface TargetsPackage extends EPackage {
          *
          * @generated
          */
-        EReference SERVICE_GROUP__SERVICE_GROUP = eINSTANCE.getServiceGroup_ServiceGroup();
+        EReference SERVICE_GROUP_TARGET__SERVICE_GROUP = eINSTANCE.getServiceGroupTarget_ServiceGroup();
 
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl
-         * <em>Competing Consumers Group</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupTargetImpl
+         * <em>Competing Consumers Group Target</em>}' class. <!-- begin-user-doc --> <!--
+         * end-user-doc -->
          *
-         * @see org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupImpl
-         * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getCompetingConsumersGroup()
+         * @see org.palladiosimulator.elasticity.targets.impl.CompetingConsumersGroupTargetImpl
+         * @see org.palladiosimulator.elasticity.targets.impl.TargetsPackageImpl#getCompetingConsumersGroupTarget()
          * @generated
          */
-        EClass COMPETING_CONSUMERS_GROUP = eINSTANCE.getCompetingConsumersGroup();
-
-        /**
-         * The meta object literal for the '<em><b>Unit Assembly</b></em>' reference feature. <!--
-         * begin-user-doc --> <!-- end-user-doc -->
-         *
-         * @generated
-         */
-        EReference COMPETING_CONSUMERS_GROUP__UNIT_ASSEMBLY = eINSTANCE.getCompetingConsumersGroup_UnitAssembly();
+        EClass COMPETING_CONSUMERS_GROUP_TARGET = eINSTANCE.getCompetingConsumersGroupTarget();
 
         /**
          * The meta object literal for the '<em><b>Competing Consumers Group</b></em>' reference
@@ -572,8 +459,8 @@ public interface TargetsPackage extends EPackage {
          *
          * @generated
          */
-        EReference COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP = eINSTANCE
-            .getCompetingConsumersGroup_CompetingConsumersGroup();
+        EReference COMPETING_CONSUMERS_GROUP_TARGET__COMPETING_CONSUMERS_GROUP = eINSTANCE
+            .getCompetingConsumersGroupTarget_CompetingConsumersGroup();
 
     }
 

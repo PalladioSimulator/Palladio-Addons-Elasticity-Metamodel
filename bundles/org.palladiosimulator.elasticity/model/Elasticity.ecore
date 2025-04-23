@@ -58,37 +58,23 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="targetConstraints" upperBound="-1"
           eType="#//constraints/target/TargetConstraint" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureGroup" eSuperTypes="#//targets/TargetGroup">
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureGroupTarget" eSuperTypes="#//targets/TargetGroup">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The ElasticInfrastructure target groups resource containers on which components are allocated. The ElasticInfrastructure allows the definition of scaling policies for the whole infrastructure which is a common use case covered by the prominent cloud providers. For example, AWS allows the definition of an Autoscaling Group where EC2 instances are automatically provisioned."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="PCM_ResourceEnvironment"
-          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"
-          changeable="false" volatile="true" transient="true" unsettable="true" derived="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceContainer"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="infrastructureGroup"
           eType="ecore:EClass ../../org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.ecore#//InfrastructureGroup"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ServiceGroup" eSuperTypes="#//targets/TargetGroup">
+    <eClassifiers xsi:type="ecore:EClass" name="ServiceGroupTarget" eSuperTypes="#//targets/TargetGroup">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The ServiceGroup groups a set of components that are load balanced and can be horizontally replicated. Upon replication the load balancer distributes the load to the new replicas according to the predefined load balancing strategy."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="unitAssembly" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The unitAssembly is used to point to the ServiceGroup in PCM. It is used also for disinguishing between different service groups. A prerequisite is that the unit assembly is already connected in a Service Group structure in PCM. "/>
-        </eAnnotations>
-      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="serviceGroup" eType="ecore:EClass ../../org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.ecore#//ServiceGroup"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CompetingConsumersGroup" eSuperTypes="#//targets/TargetGroup">
+    <eClassifiers xsi:type="ecore:EClass" name="CompetingConsumersGroupTarget" eSuperTypes="#//targets/TargetGroup">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The CompetingConsumersGroup represents a set of elements that consume messages from a channel/queue asynchronously. In Palladio and the Elasticity extension it is represented as a set of assembly context that deplete a queue modelled through a PassiveResource. The intention of use behind CompetingConsumersGroup is to represent services that asynchronously process workload by fetching messages from a queue. For understanding the pattern itself one can read https://www.enterpriseintegrationpatterns.com/patterns/messaging/CompetingConsumers.html.  "/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="unitAssembly" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The unitAssembly of the CompetingConsumersGroup identifies the AssemblyContext which exists in the System model and which shall be replicated upon scaling out. Furthermore, the unit assembly is the one which will exist throughout the simulation independent of the adaptations. "/>
-        </eAnnotations>
-      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="competingConsumersGroup"
           eType="ecore:EClass ../../org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.ecore#//CompetingConsumersGroup"/>
     </eClassifiers>

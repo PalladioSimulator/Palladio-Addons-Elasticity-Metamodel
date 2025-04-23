@@ -10,24 +10,24 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.palladiosimulator.elasticity.targets.ServiceGroup;
+import org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.targets.ServiceGroup} object. <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
-public class ServiceGroupItemProvider extends TargetGroupItemProvider {
+public class CompetingConsumersGroupTargetItemProvider extends TargetGroupItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
-    public ServiceGroupItemProvider(final AdapterFactory adapterFactory) {
+    public CompetingConsumersGroupTargetItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -42,45 +42,30 @@ public class ServiceGroupItemProvider extends TargetGroupItemProvider {
         if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            this.addUnitAssemblyPropertyDescriptor(object);
-            this.addServiceGroupPropertyDescriptor(object);
+            this.addCompetingConsumersGroupPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
     }
 
     /**
-     * This adds a property descriptor for the Unit Assembly feature. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * This adds a property descriptor for the Competing Consumers Group feature. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected void addUnitAssemblyPropertyDescriptor(final Object object) {
+    protected void addCompetingConsumersGroupPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_ServiceGroup_unitAssembly_feature"),
-                this.getString("_UI_PropertyDescriptor_description", "_UI_ServiceGroup_unitAssembly_feature",
-                        "_UI_ServiceGroup_type"),
-                TargetsPackage.Literals.SERVICE_GROUP__UNIT_ASSEMBLY, true, false, true, null, null, null));
+                this.getString("_UI_CompetingConsumersGroupTarget_competingConsumersGroup_feature"),
+                this.getString("_UI_PropertyDescriptor_description",
+                        "_UI_CompetingConsumersGroupTarget_competingConsumersGroup_feature",
+                        "_UI_CompetingConsumersGroupTarget_type"),
+                TargetsPackage.Literals.COMPETING_CONSUMERS_GROUP_TARGET__COMPETING_CONSUMERS_GROUP, true, false, true,
+                null, null, null));
     }
 
     /**
-     * This adds a property descriptor for the Service Group feature. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @generated
-     */
-    protected void addServiceGroupPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_ServiceGroup_serviceGroup_feature"),
-                this.getString("_UI_PropertyDescriptor_description", "_UI_ServiceGroup_serviceGroup_feature",
-                        "_UI_ServiceGroup_type"),
-                TargetsPackage.Literals.SERVICE_GROUP__SERVICE_GROUP, true, false, true, null, null, null));
-    }
-
-    /*
-     * This overrides and reuses the icon for a TargetGroup. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * This returns CompetingConsumersGroupTarget.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated NOT
      */
@@ -97,9 +82,9 @@ public class ServiceGroupItemProvider extends TargetGroupItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((ServiceGroup) object).getId();
-        return label == null || label.length() == 0 ? this.getString("_UI_ServiceGroup_type")
-                : this.getString("_UI_ServiceGroup_type") + " " + label;
+        final String label = ((CompetingConsumersGroupTarget) object).getId();
+        return label == null || label.length() == 0 ? this.getString("_UI_CompetingConsumersGroupTarget_type")
+                : this.getString("_UI_CompetingConsumersGroupTarget_type") + " " + label;
     }
 
     /**

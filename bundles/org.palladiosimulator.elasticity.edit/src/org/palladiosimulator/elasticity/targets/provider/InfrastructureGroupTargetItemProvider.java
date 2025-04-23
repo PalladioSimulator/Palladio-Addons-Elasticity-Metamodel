@@ -10,24 +10,24 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
 
 /**
  * This is the item provider adapter for a
- * {@link org.palladiosimulator.elasticity.targets.InfrastructureGroup} object. <!-- begin-user-doc
- * --> <!-- end-user-doc -->
+ * {@link org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget} object. <!--
+ * begin-user-doc --> <!-- end-user-doc -->
  *
  * @generated
  */
-public class InfrastructureGroupItemProvider extends TargetGroupItemProvider {
+public class InfrastructureGroupTargetItemProvider extends TargetGroupItemProvider {
     /**
      * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
-    public InfrastructureGroupItemProvider(final AdapterFactory adapterFactory) {
+    public InfrastructureGroupTargetItemProvider(final AdapterFactory adapterFactory) {
         super(adapterFactory);
     }
 
@@ -42,42 +42,9 @@ public class InfrastructureGroupItemProvider extends TargetGroupItemProvider {
         if (this.itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
-            this.addPCM_ResourceEnvironmentPropertyDescriptor(object);
-            this.addUnitPropertyDescriptor(object);
             this.addInfrastructureGroupPropertyDescriptor(object);
         }
         return this.itemPropertyDescriptors;
-    }
-
-    /**
-     * This adds a property descriptor for the PCM Resource Environment feature. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    protected void addPCM_ResourceEnvironmentPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InfrastructureGroup_PCM_ResourceEnvironment_feature"),
-                this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_InfrastructureGroup_PCM_ResourceEnvironment_feature", "_UI_InfrastructureGroup_type"),
-                TargetsPackage.Literals.INFRASTRUCTURE_GROUP__PCM_RESOURCE_ENVIRONMENT, false, false, false, null, null,
-                null));
-    }
-
-    /**
-     * This adds a property descriptor for the Unit feature. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @generated
-     */
-    protected void addUnitPropertyDescriptor(final Object object) {
-        this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
-                ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InfrastructureGroup_unit_feature"),
-                this.getString("_UI_PropertyDescriptor_description", "_UI_InfrastructureGroup_unit_feature",
-                        "_UI_InfrastructureGroup_type"),
-                TargetsPackage.Literals.INFRASTRUCTURE_GROUP__UNIT, true, false, true, null, null, null));
     }
 
     /**
@@ -89,16 +56,16 @@ public class InfrastructureGroupItemProvider extends TargetGroupItemProvider {
     protected void addInfrastructureGroupPropertyDescriptor(final Object object) {
         this.itemPropertyDescriptors.add(this.createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) this.adapterFactory).getRootAdapterFactory(), this.getResourceLocator(),
-                this.getString("_UI_InfrastructureGroup_infrastructureGroup_feature"),
+                this.getString("_UI_InfrastructureGroupTarget_infrastructureGroup_feature"),
                 this.getString("_UI_PropertyDescriptor_description",
-                        "_UI_InfrastructureGroup_infrastructureGroup_feature", "_UI_InfrastructureGroup_type"),
-                TargetsPackage.Literals.INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP, true, false, true, null, null,
-                null));
+                        "_UI_InfrastructureGroupTarget_infrastructureGroup_feature",
+                        "_UI_InfrastructureGroupTarget_type"),
+                TargetsPackage.Literals.INFRASTRUCTURE_GROUP_TARGET__INFRASTRUCTURE_GROUP, true, false, true, null,
+                null, null));
     }
 
     /**
-     * This overrides and reuses the icon for a TargetGroup. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * This returns InfrastructureGroupTarget.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated NOT
      */
@@ -115,9 +82,10 @@ public class InfrastructureGroupItemProvider extends TargetGroupItemProvider {
      */
     @Override
     public String getText(final Object object) {
-        final String label = ((InfrastructureGroup) object).getEntityName();
-        return label == null || label.isBlank() ? this.getString("_UI_InfrastructureGroup_type")
-                : this.getString("_UI_InfrastructureGroup_type") + " " + label;
+        final String label = ((InfrastructureGroupTarget) object).getInfrastructureGroup()
+            .getEntityName();
+        return label == null || label.length() == 0 ? this.getString("_UI_InfrastructureGroupTarget_type")
+                : this.getString("_UI_InfrastructureGroupTarget_type") + " " + label;
     }
 
     /**

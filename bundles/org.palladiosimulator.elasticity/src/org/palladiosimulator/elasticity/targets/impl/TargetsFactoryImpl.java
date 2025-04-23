@@ -8,9 +8,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
-import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
-import org.palladiosimulator.elasticity.targets.ServiceGroup;
+import org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget;
+import org.palladiosimulator.elasticity.targets.ServiceGroupTarget;
 import org.palladiosimulator.elasticity.targets.TargetsFactory;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
 
@@ -55,12 +55,12 @@ public class TargetsFactoryImpl extends EFactoryImpl implements TargetsFactory {
     @Override
     public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case TargetsPackage.INFRASTRUCTURE_GROUP:
-            return this.createInfrastructureGroup();
-        case TargetsPackage.SERVICE_GROUP:
-            return this.createServiceGroup();
-        case TargetsPackage.COMPETING_CONSUMERS_GROUP:
-            return this.createCompetingConsumersGroup();
+        case TargetsPackage.INFRASTRUCTURE_GROUP_TARGET:
+            return this.createInfrastructureGroupTarget();
+        case TargetsPackage.SERVICE_GROUP_TARGET:
+            return this.createServiceGroupTarget();
+        case TargetsPackage.COMPETING_CONSUMERS_GROUP_TARGET:
+            return this.createCompetingConsumersGroupTarget();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -72,9 +72,9 @@ public class TargetsFactoryImpl extends EFactoryImpl implements TargetsFactory {
      * @generated
      */
     @Override
-    public InfrastructureGroup createInfrastructureGroup() {
-        final InfrastructureGroupImpl infrastructureGroup = new InfrastructureGroupImpl();
-        return infrastructureGroup;
+    public InfrastructureGroupTarget createInfrastructureGroupTarget() {
+        final InfrastructureGroupTargetImpl infrastructureGroupTarget = new InfrastructureGroupTargetImpl();
+        return infrastructureGroupTarget;
     }
 
     /**
@@ -83,9 +83,9 @@ public class TargetsFactoryImpl extends EFactoryImpl implements TargetsFactory {
      * @generated
      */
     @Override
-    public ServiceGroup createServiceGroup() {
-        final ServiceGroupImpl serviceGroup = new ServiceGroupImpl();
-        return serviceGroup;
+    public ServiceGroupTarget createServiceGroupTarget() {
+        final ServiceGroupTargetImpl serviceGroupTarget = new ServiceGroupTargetImpl();
+        return serviceGroupTarget;
     }
 
     /**
@@ -94,9 +94,9 @@ public class TargetsFactoryImpl extends EFactoryImpl implements TargetsFactory {
      * @generated
      */
     @Override
-    public CompetingConsumersGroup createCompetingConsumersGroup() {
-        final CompetingConsumersGroupImpl competingConsumersGroup = new CompetingConsumersGroupImpl();
-        return competingConsumersGroup;
+    public CompetingConsumersGroupTarget createCompetingConsumersGroupTarget() {
+        final CompetingConsumersGroupTargetImpl competingConsumersGroupTarget = new CompetingConsumersGroupTargetImpl();
+        return competingConsumersGroupTarget;
     }
 
     /**

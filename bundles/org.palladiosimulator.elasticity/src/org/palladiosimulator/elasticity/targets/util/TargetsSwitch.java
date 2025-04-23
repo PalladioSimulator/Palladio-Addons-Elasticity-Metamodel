@@ -6,9 +6,9 @@ package org.palladiosimulator.elasticity.targets.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
-import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
-import org.palladiosimulator.elasticity.targets.ServiceGroup;
+import org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget;
+import org.palladiosimulator.elasticity.targets.ServiceGroupTarget;
 import org.palladiosimulator.elasticity.targets.TargetGroup;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
 import org.palladiosimulator.pcm.PCMBaseClass;
@@ -94,78 +94,78 @@ public class TargetsSwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case TargetsPackage.INFRASTRUCTURE_GROUP: {
-            final InfrastructureGroup infrastructureGroup = (InfrastructureGroup) theEObject;
-            T result = this.caseInfrastructureGroup(infrastructureGroup);
+        case TargetsPackage.INFRASTRUCTURE_GROUP_TARGET: {
+            final InfrastructureGroupTarget infrastructureGroupTarget = (InfrastructureGroupTarget) theEObject;
+            T result = this.caseInfrastructureGroupTarget(infrastructureGroupTarget);
             if (result == null) {
-                result = this.caseTargetGroup(infrastructureGroup);
+                result = this.caseTargetGroup(infrastructureGroupTarget);
             }
             if (result == null) {
-                result = this.caseEntity(infrastructureGroup);
+                result = this.caseEntity(infrastructureGroupTarget);
             }
             if (result == null) {
-                result = this.caseIdentifier(infrastructureGroup);
+                result = this.caseIdentifier(infrastructureGroupTarget);
             }
             if (result == null) {
-                result = this.caseNamedElement(infrastructureGroup);
+                result = this.caseNamedElement(infrastructureGroupTarget);
             }
             if (result == null) {
-                result = this.casePCMBaseClass(infrastructureGroup);
+                result = this.casePCMBaseClass(infrastructureGroupTarget);
             }
             if (result == null) {
-                result = this.casePCMClass(infrastructureGroup);
-            }
-            if (result == null) {
-                result = this.defaultCase(theEObject);
-            }
-            return result;
-        }
-        case TargetsPackage.SERVICE_GROUP: {
-            final ServiceGroup serviceGroup = (ServiceGroup) theEObject;
-            T result = this.caseServiceGroup(serviceGroup);
-            if (result == null) {
-                result = this.caseTargetGroup(serviceGroup);
-            }
-            if (result == null) {
-                result = this.caseEntity(serviceGroup);
-            }
-            if (result == null) {
-                result = this.caseIdentifier(serviceGroup);
-            }
-            if (result == null) {
-                result = this.caseNamedElement(serviceGroup);
-            }
-            if (result == null) {
-                result = this.casePCMBaseClass(serviceGroup);
-            }
-            if (result == null) {
-                result = this.casePCMClass(serviceGroup);
+                result = this.casePCMClass(infrastructureGroupTarget);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
         }
-        case TargetsPackage.COMPETING_CONSUMERS_GROUP: {
-            final CompetingConsumersGroup competingConsumersGroup = (CompetingConsumersGroup) theEObject;
-            T result = this.caseCompetingConsumersGroup(competingConsumersGroup);
+        case TargetsPackage.SERVICE_GROUP_TARGET: {
+            final ServiceGroupTarget serviceGroupTarget = (ServiceGroupTarget) theEObject;
+            T result = this.caseServiceGroupTarget(serviceGroupTarget);
             if (result == null) {
-                result = this.caseTargetGroup(competingConsumersGroup);
+                result = this.caseTargetGroup(serviceGroupTarget);
             }
             if (result == null) {
-                result = this.caseEntity(competingConsumersGroup);
+                result = this.caseEntity(serviceGroupTarget);
             }
             if (result == null) {
-                result = this.caseIdentifier(competingConsumersGroup);
+                result = this.caseIdentifier(serviceGroupTarget);
             }
             if (result == null) {
-                result = this.caseNamedElement(competingConsumersGroup);
+                result = this.caseNamedElement(serviceGroupTarget);
             }
             if (result == null) {
-                result = this.casePCMBaseClass(competingConsumersGroup);
+                result = this.casePCMBaseClass(serviceGroupTarget);
             }
             if (result == null) {
-                result = this.casePCMClass(competingConsumersGroup);
+                result = this.casePCMClass(serviceGroupTarget);
+            }
+            if (result == null) {
+                result = this.defaultCase(theEObject);
+            }
+            return result;
+        }
+        case TargetsPackage.COMPETING_CONSUMERS_GROUP_TARGET: {
+            final CompetingConsumersGroupTarget competingConsumersGroupTarget = (CompetingConsumersGroupTarget) theEObject;
+            T result = this.caseCompetingConsumersGroupTarget(competingConsumersGroupTarget);
+            if (result == null) {
+                result = this.caseTargetGroup(competingConsumersGroupTarget);
+            }
+            if (result == null) {
+                result = this.caseEntity(competingConsumersGroupTarget);
+            }
+            if (result == null) {
+                result = this.caseIdentifier(competingConsumersGroupTarget);
+            }
+            if (result == null) {
+                result = this.caseNamedElement(competingConsumersGroupTarget);
+            }
+            if (result == null) {
+                result = this.casePCMBaseClass(competingConsumersGroupTarget);
+            }
+            if (result == null) {
+                result = this.casePCMClass(competingConsumersGroupTarget);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -193,49 +193,50 @@ public class TargetsSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Infrastructure
-     * Group</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * Returns the result of interpreting the object as an instance of '<em>Infrastructure Group
+     * Target</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
      * result will terminate the switch. <!-- end-user-doc -->
      *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Infrastructure
-     *         Group</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Infrastructure Group
+     *         Target</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseInfrastructureGroup(final InfrastructureGroup object) {
+    public T caseInfrastructureGroupTarget(final InfrastructureGroupTarget object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Service Group</em>'.
-     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Service Group
+     * Target</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
+     * result will terminate the switch. <!-- end-user-doc -->
      *
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Service Group</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Service Group
+     *         Target</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseServiceGroup(final ServiceGroup object) {
+    public T caseServiceGroupTarget(final ServiceGroupTarget object) {
         return null;
     }
 
     /**
      * Returns the result of interpreting the object as an instance of '<em>Competing Consumers
-     * Group</em>'. <!-- begin-user-doc --> This implementation returns null; returning a non-null
-     * result will terminate the switch. <!-- end-user-doc -->
+     * Group Target</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
+     * non-null result will terminate the switch. <!-- end-user-doc -->
      *
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Competing Consumers
-     *         Group</em>'.
+     *         Group Target</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseCompetingConsumersGroup(final CompetingConsumersGroup object) {
+    public T caseCompetingConsumersGroupTarget(final CompetingConsumersGroupTarget object) {
         return null;
     }
 

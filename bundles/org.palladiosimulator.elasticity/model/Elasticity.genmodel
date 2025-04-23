@@ -34,24 +34,17 @@
       <genClasses image="false" ecoreClass="Elasticity.ecore#//targets/TargetGroup">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//targets/TargetGroup/targetConstraints"/>
       </genClasses>
-      <genClasses ecoreClass="Elasticity.ecore#//targets/InfrastructureGroup">
-        <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference Elasticity.ecore#//targets/InfrastructureGroup/PCM_ResourceEnvironment"/>
+      <genClasses ecoreClass="Elasticity.ecore#//targets/InfrastructureGroupTarget">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/InfrastructureGroup/unit"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/InfrastructureGroup/infrastructureGroup"/>
+            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/InfrastructureGroupTarget/infrastructureGroup"/>
       </genClasses>
-      <genClasses ecoreClass="Elasticity.ecore#//targets/ServiceGroup">
+      <genClasses ecoreClass="Elasticity.ecore#//targets/ServiceGroupTarget">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/ServiceGroup/unitAssembly"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/ServiceGroup/serviceGroup"/>
+            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/ServiceGroupTarget/serviceGroup"/>
       </genClasses>
-      <genClasses ecoreClass="Elasticity.ecore#//targets/CompetingConsumersGroup">
+      <genClasses ecoreClass="Elasticity.ecore#//targets/CompetingConsumersGroupTarget">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/CompetingConsumersGroup/unitAssembly"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/CompetingConsumersGroup/competingConsumersGroup"/>
+            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/CompetingConsumersGroupTarget/competingConsumersGroup"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Adjustments" basePackage="org.palladiosimulator.elasticity"

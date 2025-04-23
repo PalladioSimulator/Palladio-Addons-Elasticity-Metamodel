@@ -31,9 +31,9 @@ public class TargetsTests extends TestSuite {
      */
     public static Test suite() {
         final TestSuite suite = new TargetsTests("targets Tests");
-        suite.addTestSuite(InfrastructureGroupTest.class);
-        suite.addTestSuite(ServiceGroupTest.class);
-        suite.addTestSuite(CompetingConsumersGroupTest.class);
+        suite.addTestSuite(InfrastructureGroupTargetTest.class);
+        suite.addTestSuite(ServiceGroupTargetTest.class);
+        suite.addTestSuite(CompetingConsumersGroupTargetTest.class);
         return suite;
     }
 

@@ -3,18 +3,18 @@
  */
 package org.palladiosimulator.elasticity.targets.tests;
 
-import org.palladiosimulator.elasticity.targets.ServiceGroup;
+import org.palladiosimulator.elasticity.targets.ServiceGroupTarget;
 import org.palladiosimulator.elasticity.targets.TargetsFactory;
 
 import junit.textui.TestRunner;
 
 /**
- * <!-- begin-user-doc --> A test case for the model object '<em><b>Service Group</b></em>'. <!--
- * end-user-doc -->
+ * <!-- begin-user-doc --> A test case for the model object '<em><b>Service Group Target</b></em>'.
+ * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ServiceGroupTest extends TargetGroupTest {
+public class ServiceGroupTargetTest extends TargetGroupTest {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -22,28 +22,28 @@ public class ServiceGroupTest extends TargetGroupTest {
      * @generated
      */
     public static void main(final String[] args) {
-        TestRunner.run(ServiceGroupTest.class);
+        TestRunner.run(ServiceGroupTargetTest.class);
     }
 
     /**
-     * Constructs a new Service Group test case with the given name. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * Constructs a new Service Group Target test case with the given name. <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      *
      * @generated
      */
-    public ServiceGroupTest(final String name) {
+    public ServiceGroupTargetTest(final String name) {
         super(name);
     }
 
     /**
-     * Returns the fixture for this Service Group test case. <!-- begin-user-doc --> <!--
+     * Returns the fixture for this Service Group Target test case. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      *
      * @generated
      */
     @Override
-    protected ServiceGroup getFixture() {
-        return (ServiceGroup) this.fixture;
+    protected ServiceGroupTarget getFixture() {
+        return (ServiceGroupTarget) this.fixture;
     }
 
     /**
@@ -54,7 +54,7 @@ public class ServiceGroupTest extends TargetGroupTest {
      */
     @Override
     protected void setUp() throws Exception {
-        this.setFixture(TargetsFactory.eINSTANCE.createServiceGroup());
+        this.setFixture(TargetsFactory.eINSTANCE.createServiceGroupTarget());
     }
 
     /**
@@ -68,4 +68,4 @@ public class ServiceGroupTest extends TargetGroupTest {
         this.setFixture(null);
     }
 
-} // ServiceGroupTest
+} // ServiceGroupTargetTest

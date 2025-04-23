@@ -21,31 +21,31 @@ public interface TargetsFactory extends EFactory {
     TargetsFactory eINSTANCE = org.palladiosimulator.elasticity.targets.impl.TargetsFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Infrastructure Group</em>'. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @return a new object of class '<em>Infrastructure Group</em>'.
-     * @generated
-     */
-    InfrastructureGroup createInfrastructureGroup();
-
-    /**
-     * Returns a new object of class '<em>Service Group</em>'. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     *
-     * @return a new object of class '<em>Service Group</em>'.
-     * @generated
-     */
-    ServiceGroup createServiceGroup();
-
-    /**
-     * Returns a new object of class '<em>Competing Consumers Group</em>'. <!-- begin-user-doc -->
+     * Returns a new object of class '<em>Infrastructure Group Target</em>'. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      *
-     * @return a new object of class '<em>Competing Consumers Group</em>'.
+     * @return a new object of class '<em>Infrastructure Group Target</em>'.
      * @generated
      */
-    CompetingConsumersGroup createCompetingConsumersGroup();
+    InfrastructureGroupTarget createInfrastructureGroupTarget();
+
+    /**
+     * Returns a new object of class '<em>Service Group Target</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     *
+     * @return a new object of class '<em>Service Group Target</em>'.
+     * @generated
+     */
+    ServiceGroupTarget createServiceGroupTarget();
+
+    /**
+     * Returns a new object of class '<em>Competing Consumers Group Target</em>'. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @return a new object of class '<em>Competing Consumers Group Target</em>'.
+     * @generated
+     */
+    CompetingConsumersGroupTarget createCompetingConsumersGroupTarget();
 
     /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->

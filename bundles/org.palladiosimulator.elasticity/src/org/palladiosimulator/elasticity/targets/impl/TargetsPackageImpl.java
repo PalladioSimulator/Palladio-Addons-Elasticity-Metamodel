@@ -22,9 +22,9 @@ import org.palladiosimulator.elasticity.datatypes.impl.DatatypesPackageImpl;
 import org.palladiosimulator.elasticity.impl.ElasticityPackageImpl;
 import org.palladiosimulator.elasticity.models.ModelsPackage;
 import org.palladiosimulator.elasticity.models.impl.ModelsPackageImpl;
-import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
-import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
-import org.palladiosimulator.elasticity.targets.ServiceGroup;
+import org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget;
+import org.palladiosimulator.elasticity.targets.ServiceGroupTarget;
 import org.palladiosimulator.elasticity.targets.TargetGroup;
 import org.palladiosimulator.elasticity.targets.TargetsFactory;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
@@ -35,9 +35,7 @@ import org.palladiosimulator.elasticity.triggers.impl.TriggersPackageImpl;
 import org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage;
 import org.palladiosimulator.elasticity.triggers.stimuli.impl.StimuliPackageImpl;
 import org.palladiosimulator.pcm.PcmPackage;
-import org.palladiosimulator.pcm.core.composition.CompositionPackage;
 import org.palladiosimulator.pcm.core.entity.EntityPackage;
-import org.palladiosimulator.pcm.resourceenvironment.ResourceenvironmentPackage;
 import org.palladiosimulator.scalablepcmgroups.scalablepcmgroupsPackage;
 import org.palladiosimulator.scalablepcmgroups.impl.scalablepcmgroupsPackageImpl;
 
@@ -64,21 +62,21 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
      *
      * @generated
      */
-    private EClass infrastructureGroupEClass = null;
+    private EClass infrastructureGroupTargetEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    private EClass serviceGroupEClass = null;
+    private EClass serviceGroupTargetEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    private EClass competingConsumersGroupEClass = null;
+    private EClass competingConsumersGroupTargetEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -249,8 +247,8 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
      * @generated
      */
     @Override
-    public EClass getInfrastructureGroup() {
-        return this.infrastructureGroupEClass;
+    public EClass getInfrastructureGroupTarget() {
+        return this.infrastructureGroupTargetEClass;
     }
 
     /**
@@ -259,8 +257,8 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
      * @generated
      */
     @Override
-    public EReference getInfrastructureGroup_PCM_ResourceEnvironment() {
-        return (EReference) this.infrastructureGroupEClass.getEStructuralFeatures()
+    public EReference getInfrastructureGroupTarget_InfrastructureGroup() {
+        return (EReference) this.infrastructureGroupTargetEClass.getEStructuralFeatures()
             .get(0);
     }
 
@@ -270,9 +268,8 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
      * @generated
      */
     @Override
-    public EReference getInfrastructureGroup_Unit() {
-        return (EReference) this.infrastructureGroupEClass.getEStructuralFeatures()
-            .get(1);
+    public EClass getServiceGroupTarget() {
+        return this.serviceGroupTargetEClass;
     }
 
     /**
@@ -281,29 +278,8 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
      * @generated
      */
     @Override
-    public EReference getInfrastructureGroup_InfrastructureGroup() {
-        return (EReference) this.infrastructureGroupEClass.getEStructuralFeatures()
-            .get(2);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EClass getServiceGroup() {
-        return this.serviceGroupEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EReference getServiceGroup_UnitAssembly() {
-        return (EReference) this.serviceGroupEClass.getEStructuralFeatures()
+    public EReference getServiceGroupTarget_ServiceGroup() {
+        return (EReference) this.serviceGroupTargetEClass.getEStructuralFeatures()
             .get(0);
     }
 
@@ -313,9 +289,8 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
      * @generated
      */
     @Override
-    public EReference getServiceGroup_ServiceGroup() {
-        return (EReference) this.serviceGroupEClass.getEStructuralFeatures()
-            .get(1);
+    public EClass getCompetingConsumersGroupTarget() {
+        return this.competingConsumersGroupTargetEClass;
     }
 
     /**
@@ -324,30 +299,9 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
      * @generated
      */
     @Override
-    public EClass getCompetingConsumersGroup() {
-        return this.competingConsumersGroupEClass;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EReference getCompetingConsumersGroup_UnitAssembly() {
-        return (EReference) this.competingConsumersGroupEClass.getEStructuralFeatures()
+    public EReference getCompetingConsumersGroupTarget_CompetingConsumersGroup() {
+        return (EReference) this.competingConsumersGroupTargetEClass.getEStructuralFeatures()
             .get(0);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EReference getCompetingConsumersGroup_CompetingConsumersGroup() {
-        return (EReference) this.competingConsumersGroupEClass.getEStructuralFeatures()
-            .get(1);
     }
 
     /**
@@ -383,18 +337,15 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
         this.targetGroupEClass = this.createEClass(TARGET_GROUP);
         this.createEReference(this.targetGroupEClass, TARGET_GROUP__TARGET_CONSTRAINTS);
 
-        this.infrastructureGroupEClass = this.createEClass(INFRASTRUCTURE_GROUP);
-        this.createEReference(this.infrastructureGroupEClass, INFRASTRUCTURE_GROUP__PCM_RESOURCE_ENVIRONMENT);
-        this.createEReference(this.infrastructureGroupEClass, INFRASTRUCTURE_GROUP__UNIT);
-        this.createEReference(this.infrastructureGroupEClass, INFRASTRUCTURE_GROUP__INFRASTRUCTURE_GROUP);
+        this.infrastructureGroupTargetEClass = this.createEClass(INFRASTRUCTURE_GROUP_TARGET);
+        this.createEReference(this.infrastructureGroupTargetEClass, INFRASTRUCTURE_GROUP_TARGET__INFRASTRUCTURE_GROUP);
 
-        this.serviceGroupEClass = this.createEClass(SERVICE_GROUP);
-        this.createEReference(this.serviceGroupEClass, SERVICE_GROUP__UNIT_ASSEMBLY);
-        this.createEReference(this.serviceGroupEClass, SERVICE_GROUP__SERVICE_GROUP);
+        this.serviceGroupTargetEClass = this.createEClass(SERVICE_GROUP_TARGET);
+        this.createEReference(this.serviceGroupTargetEClass, SERVICE_GROUP_TARGET__SERVICE_GROUP);
 
-        this.competingConsumersGroupEClass = this.createEClass(COMPETING_CONSUMERS_GROUP);
-        this.createEReference(this.competingConsumersGroupEClass, COMPETING_CONSUMERS_GROUP__UNIT_ASSEMBLY);
-        this.createEReference(this.competingConsumersGroupEClass, COMPETING_CONSUMERS_GROUP__COMPETING_CONSUMERS_GROUP);
+        this.competingConsumersGroupTargetEClass = this.createEClass(COMPETING_CONSUMERS_GROUP_TARGET);
+        this.createEReference(this.competingConsumersGroupTargetEClass,
+                COMPETING_CONSUMERS_GROUP_TARGET__COMPETING_CONSUMERS_GROUP);
     }
 
     /**
@@ -426,12 +377,8 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
             .getEPackage(EntityPackage.eNS_URI);
         final TargetPackage theTargetPackage = (TargetPackage) EPackage.Registry.INSTANCE
             .getEPackage(TargetPackage.eNS_URI);
-        final ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage) EPackage.Registry.INSTANCE
-            .getEPackage(ResourceenvironmentPackage.eNS_URI);
         final scalablepcmgroupsPackage thescalablepcmgroupsPackage = (scalablepcmgroupsPackage) EPackage.Registry.INSTANCE
             .getEPackage(scalablepcmgroupsPackage.eNS_URI);
-        final CompositionPackage theCompositionPackage = (CompositionPackage) EPackage.Registry.INSTANCE
-            .getEPackage(CompositionPackage.eNS_URI);
 
         // Create type parameters
 
@@ -440,11 +387,11 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
         // Add supertypes to classes
         this.targetGroupEClass.getESuperTypes()
             .add(theEntityPackage.getEntity());
-        this.infrastructureGroupEClass.getESuperTypes()
+        this.infrastructureGroupTargetEClass.getESuperTypes()
             .add(this.getTargetGroup());
-        this.serviceGroupEClass.getESuperTypes()
+        this.serviceGroupTargetEClass.getESuperTypes()
             .add(this.getTargetGroup());
-        this.competingConsumersGroupEClass.getESuperTypes()
+        this.competingConsumersGroupTargetEClass.getESuperTypes()
             .add(this.getTargetGroup());
 
         // Initialize classes and features; add operations and parameters
@@ -454,37 +401,24 @@ public class TargetsPackageImpl extends EPackageImpl implements TargetsPackage {
                 "targetConstraints", null, 0, -1, TargetGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        this.initEClass(this.infrastructureGroupEClass, InfrastructureGroup.class, "InfrastructureGroup", !IS_ABSTRACT,
-                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getInfrastructureGroup_PCM_ResourceEnvironment(),
-                theResourceenvironmentPackage.getResourceEnvironment(), null, "PCM_ResourceEnvironment", null, 0, 1,
-                InfrastructureGroup.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-                IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getInfrastructureGroup_Unit(), theResourceenvironmentPackage.getResourceContainer(),
-                null, "unit", null, 0, 1, InfrastructureGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getInfrastructureGroup_InfrastructureGroup(),
+        this.initEClass(this.infrastructureGroupTargetEClass, InfrastructureGroupTarget.class,
+                "InfrastructureGroupTarget", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getInfrastructureGroupTarget_InfrastructureGroup(),
                 thescalablepcmgroupsPackage.getInfrastructureGroup(), null, "infrastructureGroup", null, 0, 1,
-                InfrastructureGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                InfrastructureGroupTarget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        this.initEClass(this.serviceGroupEClass, ServiceGroup.class, "ServiceGroup", !IS_ABSTRACT, !IS_INTERFACE,
-                IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getServiceGroup_UnitAssembly(), theCompositionPackage.getAssemblyContext(), null,
-                "unitAssembly", null, 0, 1, ServiceGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getServiceGroup_ServiceGroup(), thescalablepcmgroupsPackage.getServiceGroup(), null,
-                "serviceGroup", null, 0, 1, ServiceGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+        this.initEClass(this.serviceGroupTargetEClass, ServiceGroupTarget.class, "ServiceGroupTarget", !IS_ABSTRACT,
+                !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getServiceGroupTarget_ServiceGroup(), thescalablepcmgroupsPackage.getServiceGroup(),
+                null, "serviceGroup", null, 0, 1, ServiceGroupTarget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        this.initEClass(this.competingConsumersGroupEClass, CompetingConsumersGroup.class, "CompetingConsumersGroup",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getCompetingConsumersGroup_UnitAssembly(), theCompositionPackage.getAssemblyContext(),
-                null, "unitAssembly", null, 0, 1, CompetingConsumersGroup.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getCompetingConsumersGroup_CompetingConsumersGroup(),
+        this.initEClass(this.competingConsumersGroupTargetEClass, CompetingConsumersGroupTarget.class,
+                "CompetingConsumersGroupTarget", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getCompetingConsumersGroupTarget_CompetingConsumersGroup(),
                 thescalablepcmgroupsPackage.getCompetingConsumersGroup(), null, "competingConsumersGroup", null, 0, 1,
-                CompetingConsumersGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                CompetingConsumersGroupTarget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     }
 

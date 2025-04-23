@@ -2,42 +2,42 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="scalablepcmgroups" nsURI="http://palladiosimulator.org/ScalablePCMGroups/1.0"
     nsPrefix="scalablepcmgroups">
-  <eClassifiers xsi:type="ecore:EClass" name="ScalablePCMGroups" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="ScalablePCMGroups" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="enactedPolicy" eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//ScalingPolicy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetCfgs" upperBound="-1"
         eType="#//TargetGroup" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TargetGroup" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+  <eClassifiers xsi:type="ecore:EClass" name="TargetGroup" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="enactedPolicies" upperBound="-1"
         eType="ecore:EClass ../../org.palladiosimulator.elasticity/model/Elasticity.ecore#//ScalingPolicy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InfrastructureGroup" eSuperTypes="#//TargetGroup">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceContainer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceContainer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkingResource" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/LinkingResource"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceEnvironment" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
+        upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkingResource" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/LinkingResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceEnvironment" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/ResourceEnvironment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServiceGroup" eSuperTypes="#//TargetGroup">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+        upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loadBalancingAssembly"
-        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompetingConsumersGroup" eSuperTypes="#//TargetGroup">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="brokerAssembly" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+        upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="brokerAssembly" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="unitQueues" lowerBound="1"
         upperBound="-1" eType="#//Queue" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Queue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="passiveResourceQueueMessages"
-        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/PassiveResource"/>
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/PassiveResource"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="usageScenarioForConsumption"
-        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/UsageScenario"/>
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/UsageScenario"/>
   </eClassifiers>
 </ecore:EPackage>

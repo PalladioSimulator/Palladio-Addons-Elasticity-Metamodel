@@ -7,9 +7,9 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.elasticity.targets.CompetingConsumersGroup;
-import org.palladiosimulator.elasticity.targets.InfrastructureGroup;
-import org.palladiosimulator.elasticity.targets.ServiceGroup;
+import org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget;
+import org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget;
+import org.palladiosimulator.elasticity.targets.ServiceGroupTarget;
 import org.palladiosimulator.elasticity.targets.TargetGroup;
 import org.palladiosimulator.elasticity.targets.TargetsPackage;
 import org.palladiosimulator.pcm.PCMBaseClass;
@@ -78,18 +78,18 @@ public class TargetsAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseInfrastructureGroup(final InfrastructureGroup object) {
-            return TargetsAdapterFactory.this.createInfrastructureGroupAdapter();
+        public Adapter caseInfrastructureGroupTarget(final InfrastructureGroupTarget object) {
+            return TargetsAdapterFactory.this.createInfrastructureGroupTargetAdapter();
         }
 
         @Override
-        public Adapter caseServiceGroup(final ServiceGroup object) {
-            return TargetsAdapterFactory.this.createServiceGroupAdapter();
+        public Adapter caseServiceGroupTarget(final ServiceGroupTarget object) {
+            return TargetsAdapterFactory.this.createServiceGroupTargetAdapter();
         }
 
         @Override
-        public Adapter caseCompetingConsumersGroup(final CompetingConsumersGroup object) {
-            return TargetsAdapterFactory.this.createCompetingConsumersGroupAdapter();
+        public Adapter caseCompetingConsumersGroupTarget(final CompetingConsumersGroupTarget object) {
+            return TargetsAdapterFactory.this.createCompetingConsumersGroupTargetAdapter();
         }
 
         @Override
@@ -153,46 +153,46 @@ public class TargetsAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroup <em>Infrastructure
-     * Group</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can
-     * easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases
-     * anyway. <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget <em>Infrastructure
+     * Group Target</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
+     * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
+     * cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroup
+     * @see org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget
      * @generated
      */
-    public Adapter createInfrastructureGroupAdapter() {
+    public Adapter createInfrastructureGroupTargetAdapter() {
         return null;
     }
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroup <em>Service Group</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.ServiceGroupTarget <em>Service Group
+     * Target</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
+     * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
+     * cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.elasticity.targets.ServiceGroup
+     * @see org.palladiosimulator.elasticity.targets.ServiceGroupTarget
      * @generated
      */
-    public Adapter createServiceGroupAdapter() {
+    public Adapter createServiceGroupTargetAdapter() {
         return null;
     }
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup <em>Competing
-     * Consumers Group</em>}'. <!-- begin-user-doc --> This default implementation returns null so
-     * that we can easily ignore cases; it's useful to ignore a case when inheritance will catch all
-     * the cases anyway. <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget <em>Competing
+     * Consumers Group Target</em>}'. <!-- begin-user-doc --> This default implementation returns
+     * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
+     * catch all the cases anyway. <!-- end-user-doc -->
      *
      * @return the new adapter.
-     * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroup
+     * @see org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget
      * @generated
      */
-    public Adapter createCompetingConsumersGroupAdapter() {
+    public Adapter createCompetingConsumersGroupTargetAdapter() {
         return null;
     }
 

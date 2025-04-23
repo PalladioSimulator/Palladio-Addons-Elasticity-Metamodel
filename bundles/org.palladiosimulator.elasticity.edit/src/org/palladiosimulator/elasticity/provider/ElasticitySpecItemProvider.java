@@ -144,13 +144,13 @@ public class ElasticitySpecItemProvider extends EntityItemProvider {
                 ElasticityFactory.eINSTANCE.createModelBasedScalingPolicy()));
 
         newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS,
-                TargetsFactory.eINSTANCE.createInfrastructureGroup()));
+                TargetsFactory.eINSTANCE.createInfrastructureGroupTarget()));
 
         newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS,
-                TargetsFactory.eINSTANCE.createServiceGroup()));
+                TargetsFactory.eINSTANCE.createServiceGroupTarget()));
 
         newChildDescriptors.add(this.createChildParameter(ElasticityPackage.Literals.ELASTICITY_SPEC__TARGET_GROUPS,
-                TargetsFactory.eINSTANCE.createCompetingConsumersGroup()));
+                TargetsFactory.eINSTANCE.createCompetingConsumersGroupTarget()));
     }
 
     /**

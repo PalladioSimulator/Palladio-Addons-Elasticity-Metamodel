@@ -72,76 +72,77 @@ public class TargetsItemProviderAdapterFactory extends TargetsAdapterFactory
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.targets.InfrastructureGroup} instances. <!--
+     * {@link org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget} instances. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected InfrastructureGroupItemProvider infrastructureGroupItemProvider;
+    protected InfrastructureGroupTargetItemProvider infrastructureGroupTargetItemProvider;
 
     /**
      * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.targets.InfrastructureGroup}. <!-- begin-user-doc -->
+     * {@link org.palladiosimulator.elasticity.targets.InfrastructureGroupTarget}. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    @Override
+    public Adapter createInfrastructureGroupTargetAdapter() {
+        if (this.infrastructureGroupTargetItemProvider == null) {
+            this.infrastructureGroupTargetItemProvider = new InfrastructureGroupTargetItemProvider(this);
+        }
+
+        return this.infrastructureGroupTargetItemProvider;
+    }
+
+    /**
+     * This keeps track of the one adapter used for all
+     * {@link org.palladiosimulator.elasticity.targets.ServiceGroupTarget} instances. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     */
+    protected ServiceGroupTargetItemProvider serviceGroupTargetItemProvider;
+
+    /**
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.targets.ServiceGroupTarget}. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      *
      * @generated
      */
     @Override
-    public Adapter createInfrastructureGroupAdapter() {
-        if (this.infrastructureGroupItemProvider == null) {
-            this.infrastructureGroupItemProvider = new InfrastructureGroupItemProvider(this);
+    public Adapter createServiceGroupTargetAdapter() {
+        if (this.serviceGroupTargetItemProvider == null) {
+            this.serviceGroupTargetItemProvider = new ServiceGroupTargetItemProvider(this);
         }
 
-        return this.infrastructureGroupItemProvider;
+        return this.serviceGroupTargetItemProvider;
     }
 
     /**
      * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.targets.ServiceGroup} instances. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    protected ServiceGroupItemProvider serviceGroupItemProvider;
-
-    /**
-     * This creates an adapter for a {@link org.palladiosimulator.elasticity.targets.ServiceGroup}.
+     * {@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget} instances.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    @Override
-    public Adapter createServiceGroupAdapter() {
-        if (this.serviceGroupItemProvider == null) {
-            this.serviceGroupItemProvider = new ServiceGroupItemProvider(this);
-        }
-
-        return this.serviceGroupItemProvider;
-    }
+    protected CompetingConsumersGroupTargetItemProvider competingConsumersGroupTargetItemProvider;
 
     /**
-     * This keeps track of the one adapter used for all
-     * {@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup} instances. <!--
+     * This creates an adapter for a
+     * {@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroupTarget}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      */
-    protected CompetingConsumersGroupItemProvider competingConsumersGroupItemProvider;
-
-    /**
-     * This creates an adapter for a
-     * {@link org.palladiosimulator.elasticity.targets.CompetingConsumersGroup}. <!-- begin-user-doc
-     * --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
     @Override
-    public Adapter createCompetingConsumersGroupAdapter() {
-        if (this.competingConsumersGroupItemProvider == null) {
-            this.competingConsumersGroupItemProvider = new CompetingConsumersGroupItemProvider(this);
+    public Adapter createCompetingConsumersGroupTargetAdapter() {
+        if (this.competingConsumersGroupTargetItemProvider == null) {
+            this.competingConsumersGroupTargetItemProvider = new CompetingConsumersGroupTargetItemProvider(this);
         }
 
-        return this.competingConsumersGroupItemProvider;
+        return this.competingConsumersGroupTargetItemProvider;
     }
 
     /**
@@ -247,14 +248,14 @@ public class TargetsItemProviderAdapterFactory extends TargetsAdapterFactory
      */
     @Override
     public void dispose() {
-        if (this.infrastructureGroupItemProvider != null) {
-            this.infrastructureGroupItemProvider.dispose();
+        if (this.infrastructureGroupTargetItemProvider != null) {
+            this.infrastructureGroupTargetItemProvider.dispose();
         }
-        if (this.serviceGroupItemProvider != null) {
-            this.serviceGroupItemProvider.dispose();
+        if (this.serviceGroupTargetItemProvider != null) {
+            this.serviceGroupTargetItemProvider.dispose();
         }
-        if (this.competingConsumersGroupItemProvider != null) {
-            this.competingConsumersGroupItemProvider.dispose();
+        if (this.competingConsumersGroupTargetItemProvider != null) {
+            this.competingConsumersGroupTargetItemProvider.dispose();
         }
     }
 
