@@ -28,7 +28,6 @@ modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups
 
 transformation BottomUpTransformation(	inout pcmAllocation : PCM_ALLOC,
 										in pcmSystem : PCM_SYS,
-										inout repository : PCM_REP,
 										in elasticitySpec : ELASTICITY_MOD,
 										inout elasticitySpecSemantic : SCALABLEPCMGROUPS);
 	
@@ -43,7 +42,6 @@ main() {
 		var resourceEnvironment : ResourceEnvironment = scalablePCMGroups.enactedPolicy.targetGroup.oclAsType(InfrastructureGroup).resourceEnvironment;
 		var system : System = pcmSystem.objects()[System]->any(true);
 		var allocation : Allocation = pcmAllocation.objects()[Allocation]->any(true);
-		var repository : Repository = repository.objects()[Repository]->any(true);
 		
 		
 		// check preconditions

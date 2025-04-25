@@ -32,7 +32,6 @@ modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constrai
 modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 transformation MainTransformation(	inout pcmAllocation : PCM_ALLOC,
-									inout repository : PCM_REP,
 									inout pcmSystem : PCM_SYS,
 									in elasticitySpec : ELASTICITY_MOD,
 									inout scalablePCMGroupsMod : SCALABLEPCMGROUPS,
@@ -43,8 +42,8 @@ configuration property max_assemblies_per_host : Integer;
 
 main() {
 		
-	var bottomUpTransformation : Transformation := new BottomUpTransformation(pcmAllocation, pcmSystem, repository, elasticitySpec, scalablePCMGroupsMod);
-	var topDownTransformation : Transformation := new TopDownTransformation(pcmAllocation, pcmSystem, repository, elasticitySpec, scalablePCMGroupsMod);
+	var bottomUpTransformation : Transformation := new BottomUpTransformation(pcmAllocation, pcmSystem, elasticitySpec, scalablePCMGroupsMod);
+	var topDownTransformation : Transformation := new TopDownTransformation(pcmAllocation, pcmSystem, elasticitySpec, scalablePCMGroupsMod);
 
 	//elasticitySpec model
 	var elasticitySpec : ElasticitySpec = elasticitySpec.objects()[ElasticitySpec]->any(true);
@@ -58,9 +57,8 @@ main() {
 	// Palladio models
 	var system : System = pcmSystem.objects()[System]->any(true);
 	var allocation : Allocation = pcmAllocation.objects()[Allocation]->any(true);
-	var repository : Repository = repository.objects()[Repository]->any(true);
 	
-	preconditions(scalablePCMGroups, allocation, system, repository, elasticitySpec);
+	preconditions(scalablePCMGroups, allocation, system, elasticitySpec);
 	
 	
 	if(scalablePCMGroups.enactedPolicy.targetGroup.oclIsTypeOf(InfrastructureGroup)){
@@ -78,7 +76,7 @@ main() {
 	}
 }
 
-helper preconditions(scalablePCMGroups:ScalablePCMGroups, allocation:Allocation, system:System, repo:Repository, elasticitySpecModel:ElasticitySpec) {
+helper preconditions(scalablePCMGroups:ScalablePCMGroups, allocation:Allocation, system:System, elasticitySpecModel:ElasticitySpec) {
     // check preconditions with respect to the Palladio models
     // TODO temporarily removed while restructuring the metamodel
     //assert fatal(scalablePCMGroups.resourceEnvironment=resourceEnvironment) 

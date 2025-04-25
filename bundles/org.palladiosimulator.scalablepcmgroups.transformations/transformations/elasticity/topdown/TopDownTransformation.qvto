@@ -29,7 +29,6 @@ modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups
 
 transformation TopDownTransformation(	inout pcmAllocation : PCM_ALLOC,
 										in pcmSystem: PCM_SYS,
-										inout repository : PCM_REP,
 										in elasticitySpec : ELASTICITY_MOD,
 										inout scalablePCMGroupsMod : SCALABLEPCMGROUPS);
 	
@@ -42,7 +41,6 @@ main(){
 		// Palladio models
 		var system : System = pcmSystem.objects()[System]->any(true);
 		var allocation : Allocation = pcmAllocation.objects()[Allocation]->any(true);
-		var repository : Repository = repository.objects()[Repository]->any(true);
 		
 		// *********************
 		// Transform Service Group of the Scaling Policy
