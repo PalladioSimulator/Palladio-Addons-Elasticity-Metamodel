@@ -25,7 +25,7 @@ modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constrain
 modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
 modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
-modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 
 /**

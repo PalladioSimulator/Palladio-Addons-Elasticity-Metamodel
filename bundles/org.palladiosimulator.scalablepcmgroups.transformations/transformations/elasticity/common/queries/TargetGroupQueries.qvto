@@ -90,5 +90,5 @@ query SCALABLEPCMGROUPS::TargetGroup::isServicePattern():Boolean {
 }
 
 query TargetGroup::isServicePattern():Boolean {
-	return self.oclIsKindOf(ServiceGroup) or self.oclIsKindOf(CompetingConsumersGroup);
+	return self.oclIsKindOf(ServiceGroupTarget) or self.oclIsKindOf(CompetingConsumersGroupTarget);
 }

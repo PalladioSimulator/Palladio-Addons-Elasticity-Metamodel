@@ -28,8 +28,7 @@ modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups
 
 
 transformation TopDownTransformation(	inout pcmAllocation : PCM_ALLOC,
-										inout pcmSystem : PCM_SYS,
-										inout pcmResourceEnvironment : PCM_RES_ENV,
+										in pcmSystem: PCM_SYS,
 										inout repository : PCM_REP,
 										in elasticitySpec : ELASTICITY_MOD,
 										inout scalablePCMGroupsMod : SCALABLEPCMGROUPS);
@@ -39,9 +38,8 @@ main(){
 		var elasticitySpec : ElasticitySpec = elasticitySpec.objects()[ElasticitySpec]->any(true);
 		log('Used ElasticitySpec for transformation {name: '+ elasticitySpec.entityName+'}');	
 		//configuration
-		var scalablePCMGroups:ScalablePCMGroups = scalablePCMGroupsMod.objects()[ScalablePCMGroups]->any(true);
+		var scalablePCMGroups : ScalablePCMGroups = scalablePCMGroupsMod.objects()[ScalablePCMGroups]->any(true);
 		// Palladio models
-		var resourceEnvironment : ResourceEnvironment = pcmResourceEnvironment.objects()[ResourceEnvironment]->any(true);
 		var system : System = pcmSystem.objects()[System]->any(true);
 		var allocation : Allocation = pcmAllocation.objects()[Allocation]->any(true);
 		var repository : Repository = repository.objects()[Repository]->any(true);
@@ -49,7 +47,7 @@ main(){
 		// *********************
 		// Transform Service Group of the Scaling Policy
 		// *********************		
-		var serviceTarget:SCALABLEPCMGROUPS::TargetGroup := scalablePCMGroups.targetCfgs->retrieveServiceTargetOfPolicy(scalablePCMGroups.enactedPolicy);
+		var serviceTarget : SCALABLEPCMGROUPS::TargetGroup := scalablePCMGroups.targetCfgs->retrieveServiceTargetOfPolicy(scalablePCMGroups.enactedPolicy);
 		
 		var currentNumberOfElements : Integer := serviceTarget.numberOfElements();
 		
@@ -77,8 +75,9 @@ main(){
 		
 		
 		var infrastructureGroup : InfrastructureGroup := scalablePCMGroups.targetCfgs[InfrastructureGroup]->any(target | target.unit.id = unitResourceContainer.id);
-		assert fatal(infrastructureGroup!=null) with log('No ElasticInfrastructureCfg exist which its unit hosts the unit of the service group.');
+		assert fatal(infrastructureGroup!=null) with log('No InfrastructureGroup exist which its unit hosts the unit of the service group.');
 				
+		var resourceEnvironment : ResourceEnvironment = infrastructureGroup.resourceEnvironment;
 		
 		// *************
 		// Placement Heuristic

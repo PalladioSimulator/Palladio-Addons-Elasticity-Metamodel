@@ -19,14 +19,14 @@ modeltype PCM_PARAM uses 'http://palladiosimulator.org/PalladioComponentModel/Pa
 
 modeltype ELASTICITY_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
 
-modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemantic/1.0';
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 transformation pcm2pcm(	inout pcmAllocation : PCM_ALLOC,
 									inout pcmSystem : PCM_SYS,
 									inout pcmResourceEnvironment : PCM_RES_ENV,
 									inout repository : PCM_REP,
 									in elasticitySpec : ELASTICITY_MOD,
-									inout elasticitySpecSemantic : ELASTICITY_SEM );
+									inout scalablePCMGroups : SCALABLEPCMGROUPS );
 
 main() {
 	var myElasticitySpec : ElasticitySpec = elasticitySpec.objects()[ElasticitySpec]->any(true);
