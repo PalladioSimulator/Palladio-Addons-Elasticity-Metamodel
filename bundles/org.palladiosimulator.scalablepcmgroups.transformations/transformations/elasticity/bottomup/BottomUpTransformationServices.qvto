@@ -27,7 +27,7 @@ modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constrain
 modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
 modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
-modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemantic/1.0';
+modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 /*
 * A service group is transformed according to the number of resource containers that exist in the infrastructure. 
@@ -36,14 +36,14 @@ modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemant
 * * The number of elements in ServiceGroupCfg = Number of ProbabilisiticBranchTransitions in LoadBalancer Seff
 * * Probability = 1 / The number of ProbabilisticBranchTransitions
 */
-mapping inout ServiceGroupCfg::transformServiceGroup(enactedPolicy:ScalingPolicy, elasticInfraCfg:ElasticInfrastructureCfg, sys: System, alloc: Allocation){
+mapping inout ServiceGroup::transformServiceGroup(enactedPolicy:ScalingPolicy, infraGroup:InfrastructureGroup, sys: System, alloc: Allocation){
 	init{
 		var newAssemblies:Set(AssemblyContext) := Set{};
 		var assembliesToPreserve:Set(AssemblyContext) := Set{};
 		var system:System :=  sys;
 		var allocation:Allocation := alloc;
 		
-		elasticInfraCfg.elements->forEach(resourceContainer){
+		infraGroup.elements->forEach(resourceContainer){
 			if(allocation.allocationContexts_Allocation
 				->select(allocCtx | allocCtx.assemblyContext_AllocationContext.encapsulatedComponent__AssemblyContext=self.unit.encapsulatedComponent__AssemblyContext)
 				->select(allocCtx | allocCtx.resourceContainer_AllocationContext=resourceContainer)->size()=0){
@@ -54,9 +54,9 @@ mapping inout ServiceGroupCfg::transformServiceGroup(enactedPolicy:ScalingPolicy
 	}
 	
 	elements += newAssemblies;
-	if(newAssemblies->size()=0 and elasticInfraCfg.elements->size() < self.elements->size()){
+	if(newAssemblies->size()=0 and infraGroup.elements->size() < self.elements->size()){
 		// subset elements to those for which an allocation points to a resource container that will exist after the transformation
-		elements := allocation.allocationContexts_Allocation->select(allocCtx | elasticInfraCfg.elements->includes(allocCtx.resourceContainer_AllocationContext) 
+		elements := allocation.allocationContexts_Allocation->select(allocCtx | infraGroup.elements->includes(allocCtx.resourceContainer_AllocationContext) 
 		and elements->includes(allocCtx.assemblyContext_AllocationContext)).assemblyContext_AllocationContext;
 		
 		alloc.map modifyAllocationOnScaleIn(elements, self.unit);
@@ -69,14 +69,14 @@ mapping inout ServiceGroupCfg::transformServiceGroup(enactedPolicy:ScalingPolicy
 	enactedPolicies += enactedPolicy;
 }
 
-mapping inout CompetingConsumersGroupCfg::transformCompetingConsumersGroup(enactedPolicy:ScalingPolicy, elasticInfraCfg:ElasticInfrastructureCfg, sys: System, alloc: Allocation){
+mapping inout CompetingConsumersGroup::transformCompetingConsumersGroup(enactedPolicy:ScalingPolicy, infraGroup:InfrastructureGroup, sys: System, alloc: Allocation){
 	init{
 		var newAssemblies:Set(AssemblyContext) := Set{};
 		var assembliesToPreserve:Set(AssemblyContext) := Set{};
 		var system:System :=  sys;
 		var allocation:Allocation := alloc;
 		
-		elasticInfraCfg.elements->forEach(resourceContainer){
+		infraGroup.elements->forEach(resourceContainer){
 			if(allocation.allocationContexts_Allocation
 				->select(allocCtx | allocCtx.assemblyContext_AllocationContext.encapsulatedComponent__AssemblyContext=self.unit.encapsulatedComponent__AssemblyContext)
 				->select(allocCtx | allocCtx.resourceContainer_AllocationContext=resourceContainer)->size()=0){
@@ -88,9 +88,9 @@ mapping inout CompetingConsumersGroupCfg::transformCompetingConsumersGroup(enact
 	
 	elements += newAssemblies;
  
- 	if(newAssemblies->size()=0 and elasticInfraCfg.elements->size() < self.elements->size()){
+ 	if(newAssemblies->size()=0 and infraGroup.elements->size() < self.elements->size()){
 		// subset elements to those for which an allocation points to a resource container that will exist after the transformation
-		elements := allocation.allocationContexts_Allocation->select(allocCtx | elasticInfraCfg.elements->includes(allocCtx.resourceContainer_AllocationContext) 
+		elements := allocation.allocationContexts_Allocation->select(allocCtx | infraGroup.elements->includes(allocCtx.resourceContainer_AllocationContext) 
 		and elements->includes(allocCtx.assemblyContext_AllocationContext)).assemblyContext_AllocationContext;
 		
 		alloc.map modifyAllocationOnScaleIn(elements, self.unit);

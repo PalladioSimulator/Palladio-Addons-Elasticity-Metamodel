@@ -23,7 +23,7 @@ modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constrain
 modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
 modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
-modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemantic/1.0';
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 
 transformation BottomUpTransformation(	inout pcmAllocation : PCM_ALLOC,
@@ -31,7 +31,7 @@ transformation BottomUpTransformation(	inout pcmAllocation : PCM_ALLOC,
 										inout pcmResourceEnvironment : PCM_RES_ENV,
 										inout repository : PCM_REP,
 										in elasticitySpec : ELASTICITY_MOD,
-										inout elasticitySpecSemantic : ELASTICITY_SEM);
+										inout elasticitySpecSemantic : SCALABLEPCMGROUPS);
 	
 										
 main() {
@@ -39,7 +39,7 @@ main() {
 		var elasticitySpec : ElasticitySpec = elasticitySpec.objects()[ElasticitySpec]->any(true);
 		log('Used ElasticitySpec for transformation {name: '+ elasticitySpec.entityName+'}');	
 		//configuration
-		var cfg:ELASTICITY_SEM::Configuration = elasticitySpecSemantic.objects()[ELASTICITY_SEM::Configuration]->any(true);
+		var scalablePCMGroups:ScalablePCMGroups = elasticitySpecSemantic.objects()[ScalablePCMGroups]->any(true);
 		// Palladio models
 		var resourceEnvironment : ResourceEnvironment = pcmResourceEnvironment.objects()[ResourceEnvironment]->any(true);
 		var system : System = pcmSystem.objects()[System]->any(true);
@@ -56,29 +56,29 @@ main() {
 		var invariantResourceContainers:Set(ResourceContainer) := Set{};		
 	
 	
-		var elasticInfrastructureCfg : ElasticInfrastructureCfg := cfg.targetCfgs[ElasticInfrastructureCfg]->any(target | target.unit.id = cfg.enactedPolicy.targetGroup.oclAsType(ElasticInfrastructure).unit.id);
-		assert fatal(elasticInfrastructureCfg!=null) with log('No ElasticInfrastructureCfg exist with the same unit on which the policy applies. Please configure the elastic environment appropriatly.');
+		var infrastructureGroup : InfrastructureGroup := scalablePCMGroups.targetCfgs[InfrastructureGroup]->any(target | target.unit.id = scalablePCMGroups.enactedPolicy.targetGroup.oclAsType(InfrastructureGroup).unit.id);
+		assert fatal(InfrastructureGroup!=null) with log('No InfrastructureGroup exist with the same unit on which the policy applies. Please configure the elastic environment appropriatly.');
 			
 	
 		resourceEnvironment.resourceContainer_ResourceEnvironment->forEach(rc){
-			if(elasticInfrastructureCfg.elements->excludes(rc)){
+			if(infrastructureGroup.elements->excludes(rc)){
 				invariantResourceContainers += rc;		
 			};
 		};
 		
-		elasticInfrastructureCfg.map transformElasticInfrastructure(cfg.enactedPolicy);
-		resourceEnvironment.map modifyResourceEnvironment(elasticInfrastructureCfg, invariantResourceContainers);
+		infrastructureGroup.map transformInfrastructureGroup(scalablePCMGroups.enactedPolicy);
+		resourceEnvironment.map modifyResourceEnvironment(infrastructureGroup, invariantResourceContainers);
 		
 		// *******************************
 		// Modify simulated service groups
 		// *******************************
 		
 		//** Filter Service Groups and Competing Consumer Groups only for those contained in the unit of the homegenous elastic infrastructure **
-		var allocations : Set(AllocationContext) = allocation.allocationContexts_Allocation->select(alloc | alloc.resourceContainer_AllocationContext.id = elasticInfrastructureCfg.unit.id);
+		var allocations : Set(AllocationContext) = allocation.allocationContexts_Allocation->select(alloc | alloc.resourceContainer_AllocationContext.id = infrastructureGroup.unit.id);
 		var assembliesInUnit : Bag(AssemblyContext) = allocations.assemblyContext_AllocationContext;
 		
-		cfg.targetCfgs[ServiceGroupCfg]->select(cfgs | assembliesInUnit->includes(cfgs.unit))->map transformServiceGroup(cfg.enactedPolicy, elasticInfrastructureCfg, system, allocation);
-		cfg.targetCfgs[CompetingConsumersGroupCfg]->select(cfgs | assembliesInUnit->includes(cfgs.unit))->map transformCompetingConsumersGroup(cfg.enactedPolicy, elasticInfrastructureCfg, system, allocation);
+		scalablePCMGroups.targetCfgs[ServiceGroup]->select(cfgs | assembliesInUnit->includes(cfgs.unit))->map transformServiceGroup(scalablePCMGroups.enactedPolicy, infrastructureGroup, system, allocation);
+		scalablePCMGroups.targetCfgs[CompetingConsumersGroup]->select(cfgs | assembliesInUnit->includes(cfgs.unit))->map transformCompetingConsumersGroup(scalablePCMGroups.enactedPolicy, infrastructureGroup, system, allocation);
 }
 
 helper homogeneous_environment_assertion(){

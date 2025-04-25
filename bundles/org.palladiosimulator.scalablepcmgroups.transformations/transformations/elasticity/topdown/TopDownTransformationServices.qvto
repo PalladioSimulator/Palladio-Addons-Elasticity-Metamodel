@@ -29,11 +29,11 @@ modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constrain
 modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
 modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
-modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemantic/1.0';
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 
 // The mapping transforms the service group configuration, as a side-effect creates new assemblies that are not allocated.
-mapping inout ServiceGroupCfg::transformServiceGroup(enactedPolicy:ScalingPolicy, system:System){
+mapping inout ServiceGroup::transformServiceGroup(enactedPolicy:ScalingPolicy, system:System){
 	init {
 		var assembliesDiff:OrderedSet(AssemblyContext) := ComputeDiffBasedOnAdjustmentType(self.unit, enactedPolicy, system, self);
 		var newAssemblies:OrderedSet(AssemblyContext) := OrderedSet{};
@@ -62,7 +62,7 @@ mapping inout ServiceGroupCfg::transformServiceGroup(enactedPolicy:ScalingPolicy
 	};	
 }
 
-mapping inout CompetingConsumersGroupCfg::transformCompetingConsumersGroup(enactedPolicy:ScalingPolicy, system:System){
+mapping inout CompetingConsumersGroup::transformCompetingConsumersGroup(enactedPolicy:ScalingPolicy, system:System){
 	init {
 		var assembliesDiff:OrderedSet(AssemblyContext) := ComputeDiffBasedOnAdjustmentType(self.unit, enactedPolicy, system, self);
 		var newAssemblies:OrderedSet(AssemblyContext) := OrderedSet{};
@@ -91,10 +91,10 @@ mapping inout CompetingConsumersGroupCfg::transformCompetingConsumersGroup(enact
 //
 //
 // @return Set(AssemblyContext) assemblies that should be added or removed.
-helper ComputeDiffBasedOnAdjustmentType(unitAssembly:AssemblyContext, policy: ScalingPolicy, system:System, targetGroupCfg:TargetGroupCfg) : OrderedSet(AssemblyContext){
+helper ComputeDiffBasedOnAdjustmentType(unitAssembly:AssemblyContext, policy: ScalingPolicy, system:System, targetGroup:SCALABLEPCMGROUPS::TargetGroup) : OrderedSet(AssemblyContext){
 
-	assert fatal(targetGroupCfg.isServicePattern()) with log('ComputeDifBasedOnAdjustmentType applicable only for service targets');
-	var numberOfElements:Integer := targetGroupCfg.numberOfElements();	
+	assert fatal(targetGroup.isServicePattern()) with log('ComputeDifBasedOnAdjustmentType applicable only for service targets');
+	var numberOfElements:Integer := targetGroup.numberOfElements();	
 
 	var assembliesDiff : OrderedSet(AssemblyContext) := OrderedSet{};
 	var desiredChange : Real = 0;
@@ -136,8 +136,8 @@ helper ComputeDiffBasedOnAdjustmentType(unitAssembly:AssemblyContext, policy: Sc
 		* post: result->size() = upper -lower + 1
 		* post: Sequence{lower..upper}->forAll( index | result->at(index - lower + 1) = self->at(index))
 		*/
-		assembliesDiff += targetGroupCfg.retrieveAssemblyElements()->subOrderedSet(1, index);
-		assert fatal(assembliesDiff->includes(targetGroupCfg.retrieveUnit())) with log('The assembly unit is not contained in the final elements, check whether unit is not the first element in elements.');
+		assembliesDiff += targetGroup.retrieveAssemblyElements()->subOrderedSet(1, index);
+		assert fatal(assembliesDiff->includes(targetGroup.retrieveUnit())) with log('The assembly unit is not contained in the final elements, check whether unit is not the first element in elements.');
 	};	
 	return assembliesDiff;
 

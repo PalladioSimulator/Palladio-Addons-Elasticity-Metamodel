@@ -10,7 +10,7 @@ modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustmen
 modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
 modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
 modeltype PCM_RES_ENV uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2';
-modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemantic/1.0';
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 modeltype PCM uses 'http://palladiosimulator.org/PalladioComponentModel/5.2';
 modeltype PCM_ALLOC uses 'http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2';
@@ -30,9 +30,9 @@ modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constrai
 modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
 
-mapping inout BasicComponent::modifyLoadBalancer(serviceGroupCfg:ServiceGroupCfg){
+mapping inout BasicComponent::modifyLoadBalancer(serviceGroup:ServiceGroup){
 	init{
-		var operationProvidedRole := serviceGroupCfg.unit.encapsulatedComponent__AssemblyContext.providedRoles_InterfaceProvidingEntity.oclAsType(OperationProvidedRole);
+		var operationProvidedRole := serviceGroup.unit.encapsulatedComponent__AssemblyContext.providedRoles_InterfaceProvidingEntity.oclAsType(OperationProvidedRole);
 		var operationInterface := operationProvidedRole.providedInterface__OperationProvidedRole;
 		
 		var branchActions:Set(BranchAction) := Set{};
@@ -44,9 +44,9 @@ mapping inout BasicComponent::modifyLoadBalancer(serviceGroupCfg:ServiceGroupCfg
 		};
 		
 		var actualNumberOfRequiredRoles:Integer := self.requiredRoles_InterfaceRequiringEntity.oclAsType(OperationRequiredRole)->size();
-		var numberOfnewRoles:Integer :=  serviceGroupCfg.elements->size()-actualNumberOfRequiredRoles;
+		var numberOfnewRoles:Integer :=  serviceGroup.elements->size()-actualNumberOfRequiredRoles;
 		var newRoles:Set(OperationRequiredRole) := Set{};
-		var existingProvidedRole:OperationProvidedRole := serviceGroupCfg.unit.encapsulatedComponent__AssemblyContext[BasicComponent].providedRoles_InterfaceProvidingEntity[OperationProvidedRole]->any(true);
+		var existingProvidedRole:OperationProvidedRole := serviceGroup.unit.encapsulatedComponent__AssemblyContext[BasicComponent].providedRoles_InterfaceProvidingEntity[OperationProvidedRole]->any(true);
 		var counterRoles : Integer := 1;
 		while(counterRoles <= (numberOfnewRoles)){
 			log('operation required roles+needed:'+numberOfnewRoles.toString());
@@ -56,7 +56,7 @@ mapping inout BasicComponent::modifyLoadBalancer(serviceGroupCfg:ServiceGroupCfg
 	}
 	
 	requiredRoles_InterfaceRequiringEntity += newRoles;
-	branchActions-> modifyBranchAction(serviceGroupCfg, operationInterface->any(true), newRoles);
+	branchActions-> modifyBranchAction(serviceGroup, operationInterface->any(true), newRoles);
 	
 	branchActions->forEach(branchAction){	
 		branchAction.branches_Branch->select(b | b.oclIsTypeOf(ProbabilisticBranchTransition))[ProbabilisticBranchTransition]->map modifyProbability(requiredRoles_InterfaceRequiringEntity->size());
@@ -64,7 +64,7 @@ mapping inout BasicComponent::modifyLoadBalancer(serviceGroupCfg:ServiceGroupCfg
 
 }
 
-mapping inout BasicComponent::modifyLoadBalancerOnScaleIn(serviceGroupCfg:ServiceGroupCfg){
+mapping inout BasicComponent::modifyLoadBalancerOnScaleIn(serviceGroupCfg:ServiceGroup){
 	init {
 		var branchActions:Set(BranchAction) := Set{};
 		
@@ -87,7 +87,7 @@ mapping inout BasicComponent::modifyLoadBalancerOnScaleIn(serviceGroupCfg:Servic
 	}
 }
 
-mapping inout BranchAction::modifyBranchAction(serviceGroupCfg:ServiceGroupCfg, opInterface:OperationInterface, newRoles:Set(OperationRequiredRole)){
+mapping inout BranchAction::modifyBranchAction(serviceGroup:ServiceGroup, opInterface:OperationInterface, newRoles:Set(OperationRequiredRole)){
 	init {
 		var newProbabilisticBranches:Set(ProbabilisticBranchTransition) := Set{};
 		newRoles->forEach(role){
@@ -112,17 +112,17 @@ mapping inout ProbabilisticBranchTransition::modifyProbability(replicas:Integer)
 	branchProbability := 1.0/replicas;
 }
 
-mapping inout System::modifySystemModelOnScaleIn(serviceCfg:ServiceGroupCfg){
+mapping inout System::modifySystemModelOnScaleIn(serviceGroup:ServiceGroup){
 	init{
 		var assembliesToPreserve:Set(AssemblyContext) := self.assemblyContexts__ComposedStructure
 		->select(assembly | 
-			serviceCfg.elements->includes(assembly) 
-			or assembly.encapsulatedComponent__AssemblyContext<>serviceCfg.unit.encapsulatedComponent__AssemblyContext);
+			serviceGroup.elements->includes(assembly) 
+			or assembly.encapsulatedComponent__AssemblyContext<>serviceGroup.unit.encapsulatedComponent__AssemblyContext);
 
 		var assembliesForDeletion:Set(AssemblyContext) :=  self.assemblyContexts__ComposedStructure
 		->select(assembly | 
-			serviceCfg.elements->excludes(assembly)
-			and assembly.encapsulatedComponent__AssemblyContext=serviceCfg.unit.encapsulatedComponent__AssemblyContext);
+			serviceGroup.elements->excludes(assembly)
+			and assembly.encapsulatedComponent__AssemblyContext=serviceGroup.unit.encapsulatedComponent__AssemblyContext);
 		
 		var connectorsToRemove:Set(Connector) := self.selectConnectorsForRemoval(assembliesForDeletion);
 		var connectorsToPreserve:Set(Connector) := self.connectors__ComposedStructure - connectorsToRemove;
@@ -131,16 +131,16 @@ mapping inout System::modifySystemModelOnScaleIn(serviceCfg:ServiceGroupCfg){
 	connectors__ComposedStructure := connectorsToPreserve;
 }
 
-mapping inout System::modifySystemModel(serviceCfg:ServiceGroupCfg){
+mapping inout System::modifySystemModel(serviceGroup:ServiceGroup){
 	init {
 		var newAssemblies:OrderedSet(AssemblyContext) := OrderedSet{};
-		serviceCfg.elements->forEach(element){
+		serviceGroup.elements->forEach(element){
 			if(self.connectors__ComposedStructure[AssemblyConnector]->exists(connector | connector.providingAssemblyContext_AssemblyConnector=element)=false){
 				newAssemblies += element;
 			}
 		}	
 	}
-	connectExistingLoadBalancerAndNewAssemblyContexts(serviceCfg.unit, serviceCfg.loadBalancingAssembly, newAssemblies, self);
+	connectExistingLoadBalancerAndNewAssemblyContexts(serviceGroup.unit, serviceGroup.loadBalancingAssembly, newAssemblies, self);
 }
 
 

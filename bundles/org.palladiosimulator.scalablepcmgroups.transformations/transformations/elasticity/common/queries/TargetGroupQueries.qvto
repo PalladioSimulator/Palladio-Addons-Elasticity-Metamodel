@@ -12,7 +12,7 @@ modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/
 modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
 
 modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
-modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemantic/1.0';
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 
 modeltype PCM uses 'http://palladiosimulator.org/PalladioComponentModel/5.2';
@@ -28,16 +28,16 @@ modeltype PCM_PARAM uses 'http://palladiosimulator.org/PalladioComponentModel/Pa
 modeltype PCM_USG uses 'http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2';
 
 
-query TargetGroupCfg::numberOfElements():Integer{
+query SCALABLEPCMGROUPS::TargetGroup::numberOfElements():Integer{
 	switch { 
-		case (self.oclIsKindOf(ServiceGroupCfg)) {
-			return self.oclAsType(ServiceGroupCfg).elements->size();		
+		case (self.oclIsKindOf(ServiceGroup)) {
+			return self.oclAsType(ServiceGroup).elements->size();		
 		} 
-		case (self.oclIsKindOf(CompetingConsumersGroupCfg)) {
-			return self.oclAsType(CompetingConsumersGroupCfg).elements->size();
+		case (self.oclIsKindOf(CompetingConsumersGroup)) {
+			return self.oclAsType(CompetingConsumersGroup).elements->size();
 		} 
-		case (self.oclIsKindOf(ElasticInfrastructureCfg)){
-			return self.oclAsType(ElasticInfrastructureCfg).elements->size();
+		case (self.oclIsKindOf(InfrastructureGroup)){
+			return self.oclAsType(InfrastructureGroup).elements->size();
 		}
 		else {
 			return assert fatal(false) with log('Number of elements invoked for an unknown subtype of TargetGroupCfg');
@@ -45,48 +45,48 @@ query TargetGroupCfg::numberOfElements():Integer{
 	};
 }
 
-query OrderedSet(TargetGroupCfg)::retrieveServiceTargetCfgOfPolicy(policy:ScalingPolicy) : TargetGroupCfg {
+query OrderedSet(SCALABLEPCMGROUPS::TargetGroup)::retrieveServiceTargetOfPolicy(policy:ScalingPolicy) : SCALABLEPCMGROUPS::TargetGroup {
 	return self->selectOne(cfg | cfg.retrieveUnit() = policy.targetGroup.retrieveUnit());
 }
 
 query TargetGroup::retrieveUnit():AssemblyContext {
 	switch { 
-		case (self.oclIsKindOf(ServiceGroup)) {
-			return self.oclAsType(ServiceGroup).unitAssembly.oclAsType(AssemblyContext);		
+		case (self.oclIsKindOf(ServiceGroupTarget)) {
+			return self.oclAsType(ServiceGroupTarget).serviceGroup.unit.oclAsType(AssemblyContext);		
 		} 
-		case (self.oclIsKindOf(CompetingConsumersGroup)) {
-			return self.oclAsType(CompetingConsumersGroup).unitAssembly.oclAsType(AssemblyContext);
+		case (self.oclIsKindOf(CompetingConsumersGroupTarget)) {
+			return self.oclAsType(CompetingConsumersGroupTarget).competingConsumersGroup.unit.oclAsType(AssemblyContext);
 		} 
 	};
 	return assert fatal (false) with log('cannot retrieve unit assembly for non-services');	
 }
 
-query TargetGroupCfg::retrieveAssemblyElements():OrderedSet(AssemblyContext){
+query SCALABLEPCMGROUPS::TargetGroup::retrieveAssemblyElements():OrderedSet(AssemblyContext){
 	switch { 
-		case (self.oclIsKindOf(ServiceGroupCfg)) {
-			return self.oclAsType(ServiceGroupCfg).elements;		
+		case (self.oclIsKindOf(ServiceGroup)) {
+			return self.oclAsType(ServiceGroup).elements;		
 		} 
-		case (self.oclIsKindOf(CompetingConsumersGroupCfg)) {
-			return self.oclAsType(CompetingConsumersGroupCfg).elements;
+		case (self.oclIsKindOf(CompetingConsumersGroup)) {
+			return self.oclAsType(CompetingConsumersGroup).elements;
 		} 
 	};
 	return assert fatal (not self.isServicePattern()) with log('cannot retrieve assembly elements for non-services');	
 }
 
-query TargetGroupCfg::retrieveUnit():AssemblyContext{
+query SCALABLEPCMGROUPS::TargetGroup::retrieveUnit():AssemblyContext{
 	switch { 
-		case (self.oclIsKindOf(ServiceGroupCfg)) {
-			return self.oclAsType(ServiceGroupCfg).unit;		
+		case (self.oclIsKindOf(ServiceGroup)) {
+			return self.oclAsType(ServiceGroup).unit;		
 		} 
-		case (self.oclIsKindOf(CompetingConsumersGroupCfg)) {
-			return self.oclAsType(CompetingConsumersGroupCfg).unit;
+		case (self.oclIsKindOf(CompetingConsumersGroup)) {
+			return self.oclAsType(CompetingConsumersGroup).unit;
 		} 
 	};
 	return assert fatal (not self.isServicePattern()) with log('cannot retrieve unit assembly for non-services');	
 }
 
-query TargetGroupCfg::isServicePattern():Boolean {
-	return self.oclIsKindOf(ServiceGroupCfg) or self.oclIsKindOf(CompetingConsumersGroupCfg);
+query SCALABLEPCMGROUPS::TargetGroup::isServicePattern():Boolean {
+	return self.oclIsKindOf(ServiceGroup) or self.oclIsKindOf(CompetingConsumersGroup);
 }
 
 query TargetGroup::isServicePattern():Boolean {

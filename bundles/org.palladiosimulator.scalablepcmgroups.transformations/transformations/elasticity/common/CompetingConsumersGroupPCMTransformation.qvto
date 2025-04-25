@@ -10,7 +10,7 @@ modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustmen
 modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
 modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
 modeltype PCM_RES_ENV uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2';
-modeltype ELASTICITY_SEM uses 'http://palladiosimulator.org/ElasticitySpecSemantic/1.0';
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
 
 modeltype PCM uses 'http://palladiosimulator.org/PalladioComponentModel/5.2';
 modeltype PCM_ALLOC uses 'http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2';
@@ -29,18 +29,18 @@ modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constrain
 modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
 modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
 
-mapping inout UsageScenario::modifyUsageScenarioOnScaleOut(competingConsumersGroupCfg:CompetingConsumersGroupCfg, newRoles:Set(OperationProvidedRole)){
+mapping inout UsageScenario::modifyUsageScenarioOnScaleOut(competingConsumersGroup:CompetingConsumersGroup, newRoles:Set(OperationProvidedRole)){
 	init {
 		var branches:Set(Branch) := Set{};	
 		assert fatal(self.scenarioBehaviour_UsageScenario.actions_ScenarioBehaviour->selectByKind(Branch)->size()=1) with log('There must be exactly one branch action in the usage scenario');
 	}
-	scenarioBehaviour_UsageScenario.actions_ScenarioBehaviour[Branch].map modifyUsageScenarioBranch(competingConsumersGroupCfg, newRoles);
-	workload_UsageScenario[ClosedWorkload].map modifyClosedWorkload(competingConsumersGroupCfg.elements->size());
+	scenarioBehaviour_UsageScenario.actions_ScenarioBehaviour[Branch].map modifyUsageScenarioBranch(competingConsumersGroup, newRoles);
+	workload_UsageScenario[ClosedWorkload].map modifyClosedWorkload(competingConsumersGroup.elements->size());
 }
 
-mapping inout UsageScenario::modifyUsageScenarioOnScaleIn(competingConsumersGroupCfg:CompetingConsumersGroupCfg, deletedRoles:Set(OperationProvidedRole)){
-	scenarioBehaviour_UsageScenario.actions_ScenarioBehaviour[Branch].map modifyUsageScenarioBranchOnScaleIn(competingConsumersGroupCfg, deletedRoles);
-	workload_UsageScenario[ClosedWorkload].map modifyClosedWorkload(deletedRoles->size()+competingConsumersGroupCfg.elements->size(),competingConsumersGroupCfg.elements->size());
+mapping inout UsageScenario::modifyUsageScenarioOnScaleIn(competingConsumersGroup:CompetingConsumersGroup, deletedRoles:Set(OperationProvidedRole)){
+	scenarioBehaviour_UsageScenario.actions_ScenarioBehaviour[Branch].map modifyUsageScenarioBranchOnScaleIn(competingConsumersGroup, deletedRoles);
+	workload_UsageScenario[ClosedWorkload].map modifyClosedWorkload(deletedRoles->size()+competingConsumersGroup.elements->size(),competingConsumersGroup.elements->size());
 }
 
 mapping inout ClosedWorkload::modifyClosedWorkload(numberOfReplicas:Integer){
@@ -52,7 +52,7 @@ mapping inout ClosedWorkload::modifyClosedWorkload(currentNumber:Integer, newNum
 	_population := self._population.div(currentNumber) * newNumberOfReplicas;
 }
 
-mapping inout Branch::modifyUsageScenarioBranch(competingConsumersGroupCfg:CompetingConsumersGroupCfg, newRoles:Set(OperationProvidedRole)){
+mapping inout Branch::modifyUsageScenarioBranch(competingConsumersGroup:CompetingConsumersGroup, newRoles:Set(OperationProvidedRole)){
 	init {
 		var newProbabilisticBranches:Set(BranchTransition) := Set{};
 		var branchTransition:BranchTransition := self.branchTransitions_Branch[BranchTransition]->any(true);
@@ -62,11 +62,11 @@ mapping inout Branch::modifyUsageScenarioBranch(competingConsumersGroupCfg:Compe
 		}	
 	}
 	branchTransitions_Branch += newProbabilisticBranches;
-	branchTransitions_Branch->map modifyProbability(competingConsumersGroupCfg.elements->size());
+	branchTransitions_Branch->map modifyProbability(competingConsumersGroup.elements->size());
 }
 
 
-mapping inout Branch::modifyUsageScenarioBranchOnScaleIn(competingConsumersGroupCfg:CompetingConsumersGroupCfg, deletedRoles:Set(OperationProvidedRole)){
+mapping inout Branch::modifyUsageScenarioBranchOnScaleIn(competingConsumersGroup:CompetingConsumersGroup, deletedRoles:Set(OperationProvidedRole)){
 	
 	init {
 		var opprovidedRoles:Bag(OperationProvidedRole) := self.branchTransitions_Branch[BranchTransition].branchedBehaviour_BranchTransition.actions_ScenarioBehaviour[EntryLevelSystemCall].providedRole_EntryLevelSystemCall;
@@ -77,14 +77,14 @@ mapping inout Branch::modifyUsageScenarioBranchOnScaleIn(competingConsumersGroup
 	}
 	
 	branchTransitions_Branch := branchTransitionsToPreserve;
-	branchTransitions_Branch->map modifyProbability(competingConsumersGroupCfg.elements->size());
+	branchTransitions_Branch->map modifyProbability(competingConsumersGroup.elements->size());
 }
 
 mapping inout BranchTransition::modifyProbability(numberOfReplicas:Integer){
 	self.branchProbability := 1/numberOfReplicas;
 }
 
-mapping inout System::modifySystemModel(competingConsumers:CompetingConsumersGroupCfg, newAssemblies:Set(AssemblyContext)){
+mapping inout System::modifySystemModel(competingConsumers:CompetingConsumersGroup, newAssemblies:Set(AssemblyContext)){
 	init {
 		var provDelegationConnectorsOfUnit : Set(ProvidedDelegationConnector) := self.connectors__ComposedStructure[ProvidedDelegationConnector]->select(pvc | pvc.assemblyContext_ProvidedDelegationConnector=competingConsumers.unit);
 		var newProvidedRoles : Set(OperationProvidedRole) := Set{};
@@ -121,7 +121,7 @@ mapping inout System::modifySystemModel(competingConsumers:CompetingConsumersGro
 	
 }
 
-mapping inout System::modifySystemModelOnScaleIn(queueConsumers:CompetingConsumersGroupCfg){
+mapping inout System::modifySystemModelOnScaleIn(queueConsumers:CompetingConsumersGroup){
 	init{
 		var assembliesToPreserve:Set(AssemblyContext) := self.assemblyContexts__ComposedStructure
 		->select(assembly | 
