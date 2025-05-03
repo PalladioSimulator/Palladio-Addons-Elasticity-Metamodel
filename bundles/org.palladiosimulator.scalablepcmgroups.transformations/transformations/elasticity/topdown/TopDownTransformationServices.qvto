@@ -1,0 +1,145 @@
+library TopDownTransformationServices;
+import elasticity.common.AdjustmentCalculator;
+import elasticity.common.ServiceGroupRepositoryTransformation;
+
+import pcm.helpers.Constructors;
+import pcm.helpers.Commons;
+import pcm.helpers.Wiring;
+import elasticity.common.queries.TargetGroupQueries;
+import elasticity.common.CompetingConsumersGroupPCMTransformation;
+
+modeltype PCM uses 'http://palladiosimulator.org/PalladioComponentModel/5.2';
+modeltype PCM_ALLOC uses 'http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2';
+modeltype PCM_REP uses 'http://palladiosimulator.org/PalladioComponentModel/Repository/5.2';
+modeltype PCM_SEFF uses 'http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2';
+modeltype PCM_SYS uses 'http://palladiosimulator.org/PalladioComponentModel/System/5.2';
+modeltype PCM_RES_ENV uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2';
+modeltype PCM_RES_TYPE uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceType/5.2';
+modeltype PCM_CORE uses 'http://palladiosimulator.org/PalladioComponentModel/Core/5.2';
+modeltype PCM_COMP uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2';
+modeltype PCM_ENTITY uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2';
+modeltype PCM_PARAM uses 'http://palladiosimulator.org/PalladioComponentModel/Parameter/5.2';
+
+modeltype ELASTICITY_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
+modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
+modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
+
+modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constraints/1.0';
+modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
+modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
+
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
+
+
+// The mapping transforms the service group configuration, as a side-effect creates new assemblies that are not allocated.
+mapping inout ServiceGroup::transformServiceGroup(enactedPolicy:ScalingPolicy, system:System){
+	init {
+		var assembliesDiff:OrderedSet(AssemblyContext) := ComputeDiffBasedOnAdjustmentType(self.unit, enactedPolicy, system, self);
+		var newAssemblies:OrderedSet(AssemblyContext) := OrderedSet{};
+		var intersection:Set(AssemblyContext) := self.elements->intersection(assembliesDiff);
+		if(intersection->size()=0){
+			//append all assemblies to elements
+			newAssemblies := self.elements;
+			assembliesDiff->forEach(assembly){
+				newAssemblies := newAssemblies->append(assembly);
+			}
+		} else {
+			newAssemblies := assembliesDiff;
+		}
+	}
+	elements := newAssemblies;
+	enactedPolicies += enactedPolicy;
+	
+	if(intersection->size()=0 and assembliesDiff->size()>0){
+		self.loadBalancingAssembly.encapsulatedComponent__AssemblyContext[BasicComponent].map modifyLoadBalancer(self);
+		system.map modifySystemModel(self);
+	};	
+	
+	if(intersection->size()>0){
+		system.map modifySystemModelOnScaleIn(self);
+		self.loadBalancingAssembly.encapsulatedComponent__AssemblyContext[BasicComponent].map modifyLoadBalancerOnScaleIn(self);
+	};	
+}
+
+mapping inout CompetingConsumersGroup::transformCompetingConsumersGroup(enactedPolicy:ScalingPolicy, system:System){
+	init {
+		var assembliesDiff:OrderedSet(AssemblyContext) := ComputeDiffBasedOnAdjustmentType(self.unit, enactedPolicy, system, self);
+		var newAssemblies:OrderedSet(AssemblyContext) := OrderedSet{};
+		var intersection:Set(AssemblyContext) := self.elements->intersection(assembliesDiff);
+		if(intersection->size()=0){
+			//append all assemblies to elements
+			newAssemblies := self.elements;
+			assembliesDiff->forEach(assembly){
+				newAssemblies := newAssemblies->append(assembly);
+			}
+		} else {
+			newAssemblies := assembliesDiff;
+		}
+	}
+	elements := newAssemblies;
+	enactedPolicies += enactedPolicy;
+	
+	if(intersection->size()=0 and assembliesDiff->size()>0){
+		system.map modifySystemModel(self, assembliesDiff);
+	};	
+		
+	if(intersection->size()>0){
+		system.map modifySystemModelOnScaleIn(self);
+	};	
+}
+//
+//
+// @return Set(AssemblyContext) assemblies that should be added or removed.
+helper ComputeDiffBasedOnAdjustmentType(unitAssembly:AssemblyContext, policy: ScalingPolicy, system:System, targetGroup:SCALABLEPCMGROUPS::TargetGroup) : OrderedSet(AssemblyContext){
+
+	assert fatal(targetGroup.isServicePattern()) with log('ComputeDifBasedOnAdjustmentType applicable only for service targets');
+	var numberOfElements:Integer := targetGroup.numberOfElements();	
+
+	var assembliesDiff : OrderedSet(AssemblyContext) := OrderedSet{};
+	var desiredChange : Real = 0;
+	
+	if (policy.oclIsTypeOf(TriggerBasedScalingPolicy)){	
+		var adjustment: AdjustmentType := policy.oclAsType(TriggerBasedScalingPolicy).adjustmentType;
+		desiredChange := Interprete_adjustmentType(adjustment, numberOfElements);
+	} else {
+		desiredChange := policy.oclAsType(ModelBasedScalingPolicy).adjustment;
+	};
+	
+	if(policy.targetGroup.targetConstraints[TargetGroupSizeConstraint]->notEmpty()){
+		desiredChange := Interprete_GroupSizeConstraints(numberOfElements, desiredChange, policy.targetGroup.targetConstraints[TargetGroupSizeConstraint]->any(true));
+	};
+	
+	
+	log('Current number of assemblies ' + numberOfElements.toString());
+	var uniqueContext:AssemblyContext := unitAssembly;
+	//TODO:Create Assemblies	
+	// in case 0 -> no change desired, in case > 0 -> add by creating new ones, in case < 0 -> select existing
+	if(desiredChange>0) {
+		var i : Integer := 0;
+		while (i < desiredChange) {
+			log('lets create');		
+			var assemblyCtx := Commons_createAssemblyContextNoAllocation(unitAssembly.encapsulatedComponent__AssemblyContext, uniqueContext, system);
+			uniqueContext := assemblyCtx;
+			assembliesDiff += assemblyCtx;
+			i := i + 1;
+		};						
+	} else if (desiredChange<0){
+		desiredChange := desiredChange.abs();
+		var minimalNumberOfAssemblies : Integer := 1;
+		var index : Integer := minimalNumberOfAssemblies.max(numberOfElements-desiredChange.round());
+		/*
+		* subOrderedSet contract:
+		* pre : 1 <= lower
+		* pre : lower <= upper
+		* pre : upper <= self->size()
+		* post: result->size() = upper -lower + 1
+		* post: Sequence{lower..upper}->forAll( index | result->at(index - lower + 1) = self->at(index))
+		*/
+		assembliesDiff += targetGroup.retrieveAssemblyElements()->subOrderedSet(1, index);
+		assert fatal(assembliesDiff->includes(targetGroup.retrieveUnit())) with log('The assembly unit is not contained in the final elements, check whether unit is not the first element in elements.');
+	};	
+	return assembliesDiff;
+
+}
+

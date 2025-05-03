@@ -1,0 +1,25 @@
+library ResourceEnvironmentTransformation;
+
+modeltype ELASTICITY_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
+modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
+modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
+modeltype PCM_RES_ENV uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2';
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
+
+
+mapping inout ResourceEnvironment::modifyResourceEnvironment(infrastructureGroup:InfrastructureGroup, invariantResourceContainers:Set(ResourceContainer)){
+	init { 
+		var completeSetOfResourceContainers:Set(ResourceContainer) := Set{};
+		completeSetOfResourceContainers+=infrastructureGroup.elements;
+		completeSetOfResourceContainers+=invariantResourceContainers;
+	}
+	resourceContainer_ResourceEnvironment := completeSetOfResourceContainers;
+	linkingResources__ResourceEnvironment.map modifyLinkingResource(completeSetOfResourceContainers);
+}
+
+mapping inout LinkingResource::modifyLinkingResource(resourceContainers:Set(ResourceContainer)){
+	connectedResourceContainers_LinkingResource := resourceContainers;
+}
+
+

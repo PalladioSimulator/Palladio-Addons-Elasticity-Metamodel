@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated scalablepcmgroups -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.scalablepcmgroups.presentation.scalablepcmgroupsModelWizardID"
+            name="%_UI_scalablepcmgroupsModelWizard_label"
+            class="org.palladiosimulator.scalablepcmgroups.presentation.scalablepcmgroupsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/scalablepcmgroupsModelFile.gif">
+         <description>%_UI_scalablepcmgroupsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated scalablepcmgroups -->
+      <editor
+            id="org.palladiosimulator.scalablepcmgroups.presentation.scalablepcmgroupsEditorID"
+            name="%_UI_scalablepcmgroupsEditor_label"
+            icon="icons/full/obj16/scalablepcmgroupsModelFile.gif"
+            extensions="scalablepcmgroups"
+            class="org.palladiosimulator.scalablepcmgroups.presentation.scalablepcmgroupsEditor"
+            contributorClass="org.palladiosimulator.scalablepcmgroups.presentation.scalablepcmgroupsActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

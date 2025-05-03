@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright 2022 by palladiosimulator.org" modelDirectory="/org.palladiosimulator.elasticity/src"
+    editDirectory="/org.palladiosimulator.elasticity.edit/src" editorDirectory="/org.palladiosimulator.elasticity.editor/src"
+    modelPluginID="org.palladiosimulator.elasticity" modelName="Elasticity" editPluginClass="org.palladiosimulator.elasticity.provider.ElasticityEditPlugin"
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic"
+    complianceLevel="17.0" copyrightFields="false" editPluginID="org.palladiosimulator.elasticity.edit"
+    editorPluginID="org.palladiosimulator.elasticity.editor" language="en" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../org.palladiosimulator.scalablepcmgroups/model/scalablepcmgroups.genmodel#//scalablepcmgroups platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    importOrganizing="true" cleanup="true">
+  <foreignModel>Elasticity.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Elasticity" basePackage="org.palladiosimulator" disposableProviderFactory="true"
+      ecorePackage="Elasticity.ecore#/">
+    <genClasses ecoreClass="Elasticity.ecore#//TriggerBasedScalingPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//TriggerBasedScalingPolicy/adjustmentType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//TriggerBasedScalingPolicy/scalingTrigger"/>
+    </genClasses>
+    <genClasses ecoreClass="Elasticity.ecore#//ElasticitySpec">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//ElasticitySpec/scalingPolicies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//ElasticitySpec/targetGroups"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Elasticity.ecore#//ScalingPolicy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//ScalingPolicy/active"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//ScalingPolicy/policyConstraints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Elasticity.ecore#//ScalingPolicy/targetGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="Elasticity.ecore#//ModelBasedScalingPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//ModelBasedScalingPolicy/model"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//ModelBasedScalingPolicy/adjustment"/>
+    </genClasses>
+    <nestedGenPackages prefix="Targets" basePackage="org.palladiosimulator.elasticity"
+        disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//targets">
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//targets/TargetGroup">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//targets/TargetGroup/targetConstraints"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//targets/InfrastructureGroupTarget">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/InfrastructureGroupTarget/infrastructureGroup"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//targets/ServiceGroupTarget">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/ServiceGroupTarget/serviceGroup"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//targets/CompetingConsumersGroupTarget">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference Elasticity.ecore#//targets/CompetingConsumersGroupTarget/competingConsumersGroup"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Adjustments" basePackage="org.palladiosimulator.elasticity"
+        disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//adjustments">
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//adjustments/AdjustmentType"/>
+      <genClasses ecoreClass="Elasticity.ecore#//adjustments/RelativeAdjustment">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//adjustments/RelativeAdjustment/percentageGrowthValue"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//adjustments/RelativeAdjustment/minAdjustmentValue"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//adjustments/AbsoluteAdjustment">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//adjustments/AbsoluteAdjustment/goalValue"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//adjustments/StepAdjustment">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//adjustments/StepAdjustment/stepValue"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Constraints" basePackage="org.palladiosimulator.elasticity"
+        disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//constraints">
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//constraints/AbstractConstraint"/>
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//constraints/TemporalConstraint"/>
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//constraints/StateBasedContraint"/>
+      <nestedGenPackages prefix="Policy" basePackage="org.palladiosimulator.elasticity.constraints"
+          disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//constraints/policy">
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//constraints/policy/PolicyConstraint"/>
+        <genClasses ecoreClass="Elasticity.ecore#//constraints/policy/IntervalConstraint">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//constraints/policy/IntervalConstraint/offset"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//constraints/policy/IntervalConstraint/intervalDuration"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//constraints/policy/IntervalConstraint/repeat"/>
+        </genClasses>
+        <genClasses ecoreClass="Elasticity.ecore#//constraints/policy/CooldownConstraint">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//constraints/policy/CooldownConstraint/cooldownTime"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//constraints/policy/CooldownConstraint/maxScalingOperations"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Target" basePackage="org.palladiosimulator.elasticity.constraints"
+          disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//constraints/target">
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//constraints/target/TargetConstraint"/>
+        <genClasses ecoreClass="Elasticity.ecore#//constraints/target/TargetGroupSizeConstraint">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//constraints/target/TargetGroupSizeConstraint/minSize"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//constraints/target/TargetGroupSizeConstraint/maxSize"/>
+        </genClasses>
+        <genClasses ecoreClass="Elasticity.ecore#//constraints/target/ThrashingConstraint">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//constraints/target/ThrashingConstraint/minimumTimeNoThrashing"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Triggers" basePackage="org.palladiosimulator.elasticity"
+        disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//triggers">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="Elasticity.ecore#//triggers/AGGREGATIONMETHOD">
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/AGGREGATIONMETHOD/AVERAGE"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/AGGREGATIONMETHOD/MAX"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/AGGREGATIONMETHOD/MIN"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/AGGREGATIONMETHOD/MEDIAN"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/AGGREGATIONMETHOD/SUM"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/AGGREGATIONMETHOD/RATEOFCHANGE"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/AGGREGATIONMETHOD/PERCENTILE95"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/AGGREGATIONMETHOD/PERCENTILE90"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="Elasticity.ecore#//triggers/HDDUSAGETYPE">
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/HDDUSAGETYPE/READ"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/HDDUSAGETYPE/WRITE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="Elasticity.ecore#//triggers/NETWORKUSAGETYPE">
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/NETWORKUSAGETYPE/SEND"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/NETWORKUSAGETYPE/RECEIVE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="Elasticity.ecore#//triggers/LogicalOperator">
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/LogicalOperator/AND"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/LogicalOperator/OR"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/LogicalOperator/XOR"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="Elasticity.ecore#//triggers/RelationalOperator">
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/RelationalOperator/LessThan"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/RelationalOperator/GreaterThan"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/RelationalOperator/EqualTo"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/RelationalOperator/LessThanOrEqualTo"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/RelationalOperator/GreaterThanOrEqualTo"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="Elasticity.ecore#//triggers/TrendPattern">
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/TrendPattern/Increasing"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/TrendPattern/Decreasing"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/TrendPattern/NonIncreasing"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//triggers/TrendPattern/NonDecreasing"/>
+      </genEnums>
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/ScalingTrigger"/>
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/BaseTrigger">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//triggers/BaseTrigger/stimulus"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//triggers/BaseTrigger/expectedValue"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//triggers/ComposedTrigger">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//triggers/ComposedTrigger/scalingtrigger"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/ComposedTrigger/logicalOperator"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//triggers/SimpleFireOnValue">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/SimpleFireOnValue/relationalOperator"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//triggers/SimpleFireOnTrend"/>
+      <nestedGenPackages prefix="Stimuli" basePackage="org.palladiosimulator.elasticity.triggers"
+          disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//triggers/stimuli">
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/stimuli/Stimulus"/>
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/stimuli/TargetGroupStateStimulus"/>
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/stimuli/SimulationStateStimulus"/>
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/stimuli/SourceInterfaceStimulus"/>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/OperationResponseTime">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference Elasticity.ecore#//triggers/stimuli/OperationResponseTime/operationSignature"/>
+        </genClasses>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/NumberOfElements"/>
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/stimuli/ManagedElementsStateStimulus">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/stimuli/ManagedElementsStateStimulus/aggregationOverElements"/>
+        </genClasses>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/CPUUtilization"/>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/MemoryUtilization"/>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/SimulationTime"/>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/HDDUtilization">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/stimuli/HDDUtilization/usageType"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/stimuli/ResourceUtilizationStimulus"/>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/TaskCount"/>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/QueueLength">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference Elasticity.ecore#//triggers/stimuli/QueueLength/passiveResource"/>
+        </genClasses>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/stimuli/NetworkUtilization">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/stimuli/NetworkUtilization/usageType"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Expectations" basePackage="org.palladiosimulator.elasticity.triggers"
+          disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//triggers/expectations">
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/expectations/ExpectedValue"/>
+        <genClasses image="false" ecoreClass="Elasticity.ecore#//triggers/expectations/ExpectedPrimitive"/>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/expectations/NoExpectation"/>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/expectations/ExpectedPercentage">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/expectations/ExpectedPercentage/value"/>
+        </genClasses>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/expectations/ExpectedCount">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/expectations/ExpectedCount/count"/>
+        </genClasses>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/expectations/ExpectedTime">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/expectations/ExpectedTime/value"/>
+        </genClasses>
+        <genClasses ecoreClass="Elasticity.ecore#//triggers/expectations/ExpectedTrend">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//triggers/expectations/ExpectedTrend/trend"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Models" basePackage="org.palladiosimulator.elasticity"
+        disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//models">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="Elasticity.ecore#//models/InitializationType">
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//models/InitializationType/OPTIMISTIC"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//models/InitializationType/PESSIMISTIC"/>
+        <genEnumLiterals ecoreEnumLiteral="Elasticity.ecore#//models/InitializationType/KNOWLEDGE"/>
+      </genEnums>
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//models/BaseModel">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/BaseModel/interval"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/BaseModel/intervalOffset"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//models/RandomModel">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/RandomModel/minAdjustment"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/RandomModel/maxAdjustment"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/RandomModel/probability"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//models/FuzzyQLearningModel"/>
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//models/LearningBasedModel">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/LearningBasedModel/learningRate"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="Elasticity.ecore#//models/FuzzyLearningModel">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//models/FuzzyLearningModel/workloadStimulus"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/FuzzyLearningModel/epsilon"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/FuzzyLearningModel/discountFactor"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/FuzzyLearningModel/initializationType"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//models/FuzzyLearningModel/responseTimeSpecification"/>
+      </genClasses>
+      <genClasses ecoreClass="Elasticity.ecore#//models/FuzzySARSAModel"/>
+      <genClasses ecoreClass="Elasticity.ecore#//models/ResponseTimeSpecification">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Elasticity.ecore#//models/ResponseTimeSpecification/responseTimeStimulus"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/ResponseTimeSpecification/targetResponseTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Elasticity.ecore#//models/ResponseTimeSpecification/responseTimeAggregationMethod"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Datatypes" basePackage="org.palladiosimulator.elasticity"
+        disposableProviderFactory="true" ecorePackage="Elasticity.ecore#//datatypes">
+      <genDataTypes ecoreDataType="Elasticity.ecore#//datatypes/PercentDouble"/>
+      <genDataTypes ecoreDataType="Elasticity.ecore#//datatypes/PositiveInteger"/>
+      <genDataTypes ecoreDataType="Elasticity.ecore#//datatypes/PositiveDouble"/>
+      <genDataTypes ecoreDataType="Elasticity.ecore#//datatypes/WholePercentDouble"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

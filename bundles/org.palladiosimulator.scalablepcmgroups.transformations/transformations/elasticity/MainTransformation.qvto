@@ -1,0 +1,101 @@
+import pcm.helpers.Commons;
+import pcm.helpers.Constructors;
+import pcm.helpers.Wiring;
+import elasticity.bottomup.BottomUpTransformation;
+import elasticity.topdown.TopDownTransformation;
+import elasticity.common.queries.TargetGroupQueries;
+
+modeltype PCM uses 'http://palladiosimulator.org/PalladioComponentModel/5.2';
+modeltype PCM_ALLOC uses 'http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2';
+modeltype PCM_REP uses 'http://palladiosimulator.org/PalladioComponentModel/Repository/5.2';
+modeltype PCM_SEFF uses 'http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2';
+modeltype PCM_SYS uses 'http://palladiosimulator.org/PalladioComponentModel/System/5.2';
+modeltype PCM_RES_ENV uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2';
+modeltype PCM_RES_TYPE uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceType/5.2';
+modeltype PCM_USAGE uses 'http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2';
+modeltype PCM_FEATURE_CONF uses 'http://sdq.ipd.uka.de/FeatureConfig/2.0';
+modeltype PCM_FEATURE_MOD uses 'http://sdq.ipd.uka.de/FeatureModel/2.0';
+modeltype PCM_CORE uses 'http://palladiosimulator.org/PalladioComponentModel/Core/5.2';
+modeltype PCM_COMP uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2';
+modeltype PCM_ENTITY uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2';
+modeltype PCM_PARAM uses 'http://palladiosimulator.org/PalladioComponentModel/Parameter/5.2';
+
+modeltype ELASTICITY_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
+modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
+modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
+
+modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constraints/1.0';
+modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
+modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
+
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
+
+transformation MainTransformation(	inout pcmAllocation : PCM_ALLOC,
+									inout pcmSystem : PCM_SYS,
+									in elasticitySpec : ELASTICITY_MOD,
+									inout scalablePCMGroupsMod : SCALABLEPCMGROUPS,
+									inout usageModel : PCM_USAGE );
+									
+configuration property max_assemblies_per_host : Integer;
+
+
+main() {
+		
+	var bottomUpTransformation : Transformation := new BottomUpTransformation(pcmAllocation, pcmSystem, elasticitySpec, scalablePCMGroupsMod);
+	var topDownTransformation : Transformation := new TopDownTransformation(pcmAllocation, pcmSystem, elasticitySpec, scalablePCMGroupsMod);
+
+	//elasticitySpec model
+	var elasticitySpec : ElasticitySpec = elasticitySpec.objects()[ElasticitySpec]->any(true);
+	log('Used ElasticitySpec for transformation {name: '+ elasticitySpec.entityName+'}');	
+	
+	
+	//Scalable PCM Groups
+	var scalablePCMGroups:ScalablePCMGroups = scalablePCMGroupsMod.objects()[ScalablePCMGroups]->any(true);
+	
+	
+	// Palladio models
+	var system : System = pcmSystem.objects()[System]->any(true);
+	var allocation : Allocation = pcmAllocation.objects()[Allocation]->any(true);
+	
+	preconditions(scalablePCMGroups, allocation, system, elasticitySpec);
+	
+	
+	if(scalablePCMGroups.enactedPolicy.targetGroup.oclIsTypeOf(InfrastructureGroup)){
+		// *********************
+		// Bottom-up Transformation
+		// *********************
+		bottomUpTransformation.transform();
+
+	} else if (scalablePCMGroups.enactedPolicy.targetGroup.isServicePattern()){
+		// *********************
+		// Top-down Transformation
+		// *********************
+		topDownTransformation.transform();
+		
+	}
+}
+
+helper preconditions(scalablePCMGroups:ScalablePCMGroups, allocation:Allocation, system:System, elasticitySpecModel:ElasticitySpec) {
+    // check preconditions with respect to the Palladio models
+    // TODO temporarily removed while restructuring the metamodel
+    //assert fatal(scalablePCMGroups.resourceEnvironment=resourceEnvironment) 
+    //	with log ('configuration points to a different resource environment');
+    //assert fatal(scalablePCMGroups.allocation=allocation) 
+    //	with log ('configuration points to a different allocation');
+    //assert fatal(scalablePCMGroups.system=system) 
+    //	with log ('configuration points to a different system');
+    //assert fatal(scalablePCMGroups.repository=repo) 
+    //	with log ('configuration points to a different repository');
+    //assert fatal(scalablePCMGroups.elasticitySpec=elasticitySpecModel) 
+    //	with log ('configuration points to a different elasticitySpec');
+    
+    // at least one enacted policy
+    assert fatal(scalablePCMGroups.enactedPolicy<>null) 
+    	with log('non null enacted policy expected, terminating',scalablePCMGroups.enactedPolicy);
+    	
+   	// at least one elastic infrastructure configuration
+   	assert fatal(scalablePCMGroups.targetCfgs->any(c:SCALABLEPCMGROUPS::TargetGroup | c.oclIsTypeOf(InfrastructureGroup))<>null)
+   		with log('at least one Infr expected in the configuration')
+    
+}
