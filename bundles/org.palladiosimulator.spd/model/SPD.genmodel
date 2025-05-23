@@ -232,6 +232,7 @@
       <genDataTypes ecoreDataType="SPD.ecore#//datatypes/PercentDouble"/>
       <genDataTypes ecoreDataType="SPD.ecore#//datatypes/PositiveInteger"/>
       <genDataTypes ecoreDataType="SPD.ecore#//datatypes/PositiveDouble"/>
+      <genDataTypes ecoreDataType="SPD.ecore#//datatypes/WholePercentDouble"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>
