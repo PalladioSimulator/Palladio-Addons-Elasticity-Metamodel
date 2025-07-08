@@ -7,6 +7,8 @@
 		<unit id="de.uka.ipd.sdq.dsexplore.feature.feature.group" version="0.0.0"/>
 		<unit id="de.uka.ipd.sdq.featuremodel.feature.featureinstanceeditor.feature.group" version="0.0.0"/>
 		<unit id="de.uka.ipd.sdq.featuremodel.feature.model.feature.group" version="0.0.0"/>
+		<unit id="org.palladiosimulator.monitorrepository.feature.feature.group" version="0.0.0"/>
+		<unit id="org.palladiosimulator.servicelevelobjective.feature.feature.group" version="0.0.0"/>
 		<unit id="org.palladiosimulator.pcm.feature.feature.group" version="0.0.0"/>
 	</location>
 	</locations>
