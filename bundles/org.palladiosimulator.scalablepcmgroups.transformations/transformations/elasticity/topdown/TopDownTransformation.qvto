@@ -1,0 +1,107 @@
+import TopDownTransformationInfrastructure;
+import TopDownTransformationServices;
+import elasticity.common.ResourceEnvironmentTransformation;
+import elasticity.common.queries.TargetGroupQueries;
+
+modeltype PCM uses 'http://palladiosimulator.org/PalladioComponentModel/5.2';
+modeltype PCM_ALLOC uses 'http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2';
+modeltype PCM_REP uses 'http://palladiosimulator.org/PalladioComponentModel/Repository/5.2';
+modeltype PCM_SEFF uses 'http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2';
+modeltype PCM_SYS uses 'http://palladiosimulator.org/PalladioComponentModel/System/5.2';
+modeltype PCM_RES_ENV uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2';
+modeltype PCM_RES_TYPE uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceType/5.2';
+modeltype PCM_CORE uses 'http://palladiosimulator.org/PalladioComponentModel/Core/5.2';
+modeltype PCM_COMP uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2';
+modeltype PCM_ENTITY uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2';
+modeltype PCM_PARAM uses 'http://palladiosimulator.org/PalladioComponentModel/Parameter/5.2';
+
+modeltype ELASTICITY_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
+modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
+modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
+
+modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constraints/1.0';
+modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
+modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
+
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
+
+
+transformation TopDownTransformation(	inout pcmAllocation : PCM_ALLOC,
+										in pcmSystem: PCM_SYS,
+										in elasticitySpec : ELASTICITY_MOD,
+										inout scalablePCMGroupsMod : SCALABLEPCMGROUPS);
+	
+main(){
+		//elasticitySpec model
+		var elasticitySpec : ElasticitySpec = elasticitySpec.objects()[ElasticitySpec]->any(true);
+		log('Used ElasticitySpec for transformation {name: '+ elasticitySpec.entityName+'}');	
+		//configuration
+		var scalablePCMGroups : ScalablePCMGroups = scalablePCMGroupsMod.objects()[ScalablePCMGroups]->any(true);
+		// Palladio models
+		var system : System = pcmSystem.objects()[System]->any(true);
+		var allocation : Allocation = pcmAllocation.objects()[Allocation]->any(true);
+		
+		// *********************
+		// Transform Service Group of the Scaling Policy
+		// *********************		
+		var serviceTarget : SCALABLEPCMGROUPS::TargetGroup := scalablePCMGroups.targetCfgs->retrieveServiceTargetOfPolicy(scalablePCMGroups.enactedPolicy);
+		
+		var currentNumberOfElements : Integer := serviceTarget.numberOfElements();
+		
+		
+		switch {
+			case (serviceTarget.oclIsKindOf(ServiceGroup)) {
+				serviceTarget.oclAsType(ServiceGroup).map transformServiceGroup(scalablePCMGroups.enactedPolicy, system);
+				
+			};
+			case (serviceTarget.oclIsKindOf(CompetingConsumersGroup)) {
+				serviceTarget.oclAsType(CompetingConsumersGroup).map transformCompetingConsumersGroup(scalablePCMGroups.enactedPolicy, system);
+			};
+		};
+		
+		// *************
+		// Transform Elastic Infrastructure Accordingly 
+		// *************	
+		
+		
+		
+		
+		//** Pick the elastic infrastructure in which the unit of the service is allocated on the unit of the infrastructure.		
+		var unitAssembly : AssemblyContext = serviceTarget.retrieveUnit();
+		var unitResourceContainer : ResourceContainer = allocation.allocationContexts_Allocation->any(alloc | alloc.assemblyContext_AllocationContext.id = unitAssembly.id).resourceContainer_AllocationContext;
+		
+		
+		var infrastructureGroup : InfrastructureGroup := scalablePCMGroups.targetCfgs[InfrastructureGroup]->any(target | target.unit.id = unitResourceContainer.id);
+		assert fatal(infrastructureGroup!=null) with log('No InfrastructureGroup exist which its unit hosts the unit of the service group.');
+				
+		var resourceEnvironment : ResourceEnvironment = infrastructureGroup.resourceEnvironment;
+		
+		// *************
+		// Placement Heuristic
+		// *************
+		
+		// The number of allocations initially hosted on the unit container without load balancing allocations and others not part of service groups.
+		var unitAssemblies : Sequence(AssemblyContext) := scalablePCMGroups.targetCfgs[ServiceGroup].unit->union(scalablePCMGroups.targetCfgs[CompetingConsumersGroup].unit);
+		var serviceAssemblies : Sequence(AssemblyContext) := scalablePCMGroups.targetCfgs[ServiceGroup].elements->union(scalablePCMGroups.targetCfgs[CompetingConsumersGroup].elements);
+		
+		// count only unit assemblies of services allocated on the unit resource container to determine the initial size of service replicas
+		var max_assemblies_per_host : Integer = allocation.allocationContexts_Allocation
+												->select(allocs | allocs.resourceContainer_AllocationContext.id = infrastructureGroup.unit.id)
+												->select(alloc | unitAssemblies->includes(alloc.assemblyContext_AllocationContext))->size();
+		
+		
+		log("Placement Constraints: Max Assemblies Per Host "+max_assemblies_per_host.toString());
+												
+		
+		var invariantResourceContainers:Set(ResourceContainer) := Set{};		
+		resourceEnvironment.resourceContainer_ResourceEnvironment->forEach(rc){
+			if(infrastructureGroup.elements->excludes(rc)){
+				invariantResourceContainers += rc;		
+			};
+		};
+		
+		infrastructureGroup.map transformInfrastructureGroup(scalablePCMGroups.enactedPolicy, serviceTarget, allocation, max_assemblies_per_host, serviceAssemblies);
+		allocation.map modifyAllocation(serviceTarget, infrastructureGroup, serviceTarget.numberOfElements()-currentNumberOfElements);
+		resourceEnvironment.map modifyResourceEnvironment(infrastructureGroup, invariantResourceContainers);
+}

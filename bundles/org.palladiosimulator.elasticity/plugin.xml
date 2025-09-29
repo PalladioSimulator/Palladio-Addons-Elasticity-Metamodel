@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/1.0"
+            class="org.palladiosimulator.elasticity.ElasticityPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Targets/1.0"
+            class="org.palladiosimulator.elasticity.targets.TargetsPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Adjustments/1.0"
+            class="org.palladiosimulator.elasticity.adjustments.AdjustmentsPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Constraints/1.0"
+            class="org.palladiosimulator.elasticity.constraints.ConstraintsPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0"
+            class="org.palladiosimulator.elasticity.constraints.policy.PolicyPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Constraints/Target/1.0"
+            class="org.palladiosimulator.elasticity.constraints.target.TargetPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Triggers/1.0"
+            class="org.palladiosimulator.elasticity.triggers.TriggersPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Triggers/Stimuli/1.0"
+            class="org.palladiosimulator.elasticity.triggers.stimuli.StimuliPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Triggers/Expectations/1.0"
+            class="org.palladiosimulator.elasticity.triggers.expectations.ExpectationsPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Models/1.0"
+            class="org.palladiosimulator.elasticity.models.ModelsPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Elasticity -->
+      <package
+            uri="http://palladiosimulator.org/Elasticity/Datatypes/1.0"
+            class="org.palladiosimulator.elasticity.datatypes.DatatypesPackage"
+            genModel="model/Elasticity.genmodel"/>
+   </extension>
+
+</plugin>

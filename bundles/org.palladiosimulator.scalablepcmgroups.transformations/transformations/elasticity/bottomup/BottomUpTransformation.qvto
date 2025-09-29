@@ -1,0 +1,86 @@
+import BottomUpTransformationInfrastructure;
+import BottomUpTransformationServices;
+import elasticity.common.ResourceEnvironmentTransformation;
+
+modeltype PCM uses 'http://palladiosimulator.org/PalladioComponentModel/5.2';
+modeltype PCM_ALLOC uses 'http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2';
+modeltype PCM_REP uses 'http://palladiosimulator.org/PalladioComponentModel/Repository/5.2';
+modeltype PCM_SEFF uses 'http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2';
+modeltype PCM_SYS uses 'http://palladiosimulator.org/PalladioComponentModel/System/5.2';
+modeltype PCM_RES_ENV uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2';
+modeltype PCM_RES_TYPE uses 'http://palladiosimulator.org/PalladioComponentModel/ResourceType/5.2';
+modeltype PCM_CORE uses 'http://palladiosimulator.org/PalladioComponentModel/Core/5.2';
+modeltype PCM_COMP uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2';
+modeltype PCM_ENTITY uses 'http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2';
+modeltype PCM_PARAM uses 'http://palladiosimulator.org/PalladioComponentModel/Parameter/5.2';
+
+modeltype ELASTICITY_MOD uses 'http://palladiosimulator.org/Elasticity/1.0';
+modeltype ELASTICITY_ADJ uses 'http://palladiosimulator.org/Elasticity/Adjustments/1.0';
+modeltype ELASTICITY_TRI uses 'http://palladiosimulator.org/Elasticity/Triggers/1.0';
+modeltype ELASTICITY_TAR uses 'http://palladiosimulator.org/Elasticity/Targets/1.0';
+
+modeltype ELASTICITY_CON uses 'http://palladiosimulator.org/Elasticity/Constraints/1.0';
+modeltype ELASTICITY_CONP uses 'http://palladiosimulator.org/Elasticity/Constraints/Policy/1.0';
+modeltype ELASTICITY_CONT uses 'http://palladiosimulator.org/Elasticity/Constraints/Target/1.0';
+
+modeltype SCALABLEPCMGROUPS uses 'http://palladiosimulator.org/ScalablePCMGroups/1.0';
+
+
+transformation BottomUpTransformation(	inout pcmAllocation : PCM_ALLOC,
+										in pcmSystem : PCM_SYS,
+										in elasticitySpec : ELASTICITY_MOD,
+										inout elasticitySpecSemantic : SCALABLEPCMGROUPS);
+	
+										
+main() {
+		//elasticitySpec model
+		var elasticitySpec : ElasticitySpec = elasticitySpec.objects()[ElasticitySpec]->any(true);
+		log('Used ElasticitySpec for transformation {name: '+ elasticitySpec.entityName+'}');	
+		//configuration
+		var scalablePCMGroups : ScalablePCMGroups = elasticitySpecSemantic.objects()[ScalablePCMGroups]->any(true);
+		// Palladio models
+		var resourceEnvironment : ResourceEnvironment = scalablePCMGroups.enactedPolicy.targetGroup.oclAsType(InfrastructureGroup).resourceEnvironment;
+		var system : System = pcmSystem.objects()[System]->any(true);
+		var allocation : Allocation = pcmAllocation.objects()[Allocation]->any(true);
+		
+		
+		// check preconditions
+		homogeneous_environment_assertion();
+		
+		// *********************
+		// Modify infrastructure
+		// *********************
+		var invariantResourceContainers:Set(ResourceContainer) := Set{};		
+	
+	
+		var infrastructureGroup : InfrastructureGroup := scalablePCMGroups.targetCfgs[InfrastructureGroup]->any(target | target.unit.id = scalablePCMGroups.enactedPolicy.targetGroup.oclAsType(InfrastructureGroup).unit.id);
+		assert fatal(InfrastructureGroup!=null) with log('No InfrastructureGroup exist with the same unit on which the policy applies. Please configure the elastic environment appropriatly.');
+			
+	
+		resourceEnvironment.resourceContainer_ResourceEnvironment->forEach(rc){
+			if(infrastructureGroup.elements->excludes(rc)){
+				invariantResourceContainers += rc;		
+			};
+		};
+		
+		infrastructureGroup.map transformInfrastructureGroup(scalablePCMGroups.enactedPolicy);
+		resourceEnvironment.map modifyResourceEnvironment(infrastructureGroup, invariantResourceContainers);
+		
+		// *******************************
+		// Modify simulated service groups
+		// *******************************
+		
+		//** Filter Service Groups and Competing Consumer Groups only for those contained in the unit of the homegenous elastic infrastructure **
+		var allocations : Set(AllocationContext) = allocation.allocationContexts_Allocation->select(alloc | alloc.resourceContainer_AllocationContext.id = infrastructureGroup.unit.id);
+		var assembliesInUnit : Bag(AssemblyContext) = allocations.assemblyContext_AllocationContext;
+		
+		scalablePCMGroups.targetCfgs[ServiceGroup]->select(cfgs | assembliesInUnit->includes(cfgs.unit))->map transformServiceGroup(scalablePCMGroups.enactedPolicy, infrastructureGroup, system, allocation);
+		scalablePCMGroups.targetCfgs[CompetingConsumersGroup]->select(cfgs | assembliesInUnit->includes(cfgs.unit))->map transformCompetingConsumersGroup(scalablePCMGroups.enactedPolicy, infrastructureGroup, system, allocation);
+}
+
+helper homogeneous_environment_assertion(){
+
+	//TODO:: Check that each element of the elastic infra are homegenous, that is: they host replicated services and competing queue consumers
+	
+}
+
