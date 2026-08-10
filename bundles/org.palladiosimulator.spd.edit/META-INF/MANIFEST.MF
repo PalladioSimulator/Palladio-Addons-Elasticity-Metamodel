@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.spd.provider.ScalingPolicyDefinitionEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.palladiosimulator.spd.adjustments.provider,
  org.palladiosimulator.spd.constraints.policy.provider,
  org.palladiosimulator.spd.constraints.provider,
